@@ -1,0 +1,42 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% load humanize %}
+
+{% block content %}
+
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Curso</th>
+      <th scope="col">Clases registradas</th>
+      <th scope="col">Asistencia </th>
+      <th scope="col">Porcentaje</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Lenguaje</th>
+      <td>1</td>
+      <td>2</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th scope="row">Matematicas</th>
+      <td>4</td>
+      <td>5</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <th scope="row">Ingles</th>
+      <td>7</td>
+      <td>8</td>
+      <td>9</td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+
+  {% endblock %}

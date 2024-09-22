@@ -1,0 +1,74 @@
+/* Ajuste para centrar las cartas en el medio de la página */
+#content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Hace que el contenedor ocupe toda la altura de la ventana */
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centrar horizontalmente */
+}
+
+.card {
+    width: 300px;
+    min-height: 400px;
+    margin: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.testimonial-card .avatar {
+    width: 120px;
+    margin-top: -60px;
+    overflow: hidden;
+    border: 5px solid #fff;
+    border-radius: 50%;
+}
+
+.card-body h4 {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.testimonial-card .card-up {
+    height: 100px;
+    overflow: hidden;
+    border-top-left-radius: .25rem;
+    border-top-right-radius: .25rem;
+}
+
+.aqua-gradient {
+    background: linear-gradient(40deg, #2096ff, #05ffa3) !important;
+}
+
+
+.unidad {
+    background-color: #e0d4d3;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.unidad-header {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.arrow {
+    float: right;
+    transition: transform 0.3s;
+}
+
+.collapse.show + .unidad-header .arrow {
+    transform: rotate(180deg); /* Gira la flecha hacia arriba */
+}
+
+.btn-agregar {
+    margin-top: 10px;
+}
