@@ -1,0 +1,82 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% load humanize %}
+
+{% block content %}
+
+<div class="row">
+
+  <div class="col-md-3">
+    <div class="card">
+      <div class="card-body">
+        <div class="d-flex flex-column align-items-center text-center">
+          <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="Admin" class="rounded-circle" width="150">
+          <div class="mt-3">
+            <h4>John Doe</h4>
+            <p class="text-secondary mb-1">Apoderado</p>
+            <hr>
+            <button class="btn btn-primary">Cambiar Foto</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-9">
+    <div class="card">
+      <div class="card-body">
+        <div class="row">
+          <div class="col-md-12">
+            <h4>Tú Perfil</h4>
+            <hr>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <form>
+              <div class="form-group row">
+                <label for="firstname" class="col-4 col-form-label">Primer Nombre*</label>
+                <div class="col-8">
+                  <input id="firstname" name="firstname" placeholder="Primer nombre" class="form-control here" required="required" type="text">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="secondname" class="col-4 col-form-label">Segundo Nombre</label>
+                <div class="col-8">
+                  <input id="secondname" name="secondname" placeholder="Segundo nombre" class="form-control here" type="text">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="secondsurname" class="col-4 col-form-label">Primer Apellido*</label>
+                <div class="col-8">
+                  <input id="secondsurname" name="secondsurname" placeholder="Primer apellido" class="form-control here" required="required" type="text">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="firstsurname" class="col-4 col-form-label">Segundo Apellido</label>
+                <div class="col-8">
+                  <input id="firstsurname" name="firstsurname" placeholder="Segundo apellido" class="form-control here" type="text">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="email" class="col-4 col-form-label">Correo Electrónico*</label>
+                <div class="col-8">
+                  <input id="email" name="email" placeholder="Correo Electrónico" class="form-control here" required="required" type="text">
+                </div>
+              </div>
+              <div class="form-group row">
+                <div class="offset-4 col-8">
+                  <button name="submit" type="submit" class="btn btn-primary">Actualizar perfil</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</div>
+
+{% endblock %}

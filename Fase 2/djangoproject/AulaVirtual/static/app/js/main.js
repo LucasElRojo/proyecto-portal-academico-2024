@@ -17,8 +17,3 @@
   });
 
 })(jQuery);
-
-
-$('.unidad').on('click', function() {
-    $(this).find('.arrow').toggleClass('rotate');
-});

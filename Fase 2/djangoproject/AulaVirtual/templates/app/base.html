@@ -20,28 +20,30 @@
         <div class="p-4 pt-5">
           <a href="#" class="img logo rounded-circle mb-5" style="background-image: url('{% static "app/images/logo.jpg" %}');"></a>
           <ul class="list-unstyled components mb-5">
-            <li class="active">
-              <a href="#">Perfil</a>
+            <li class="{% if request.path == '/perfil/' %}active{% endif %}">
+                <a href="{% url 'perfil' %}">Perfil</a>
             </li>
-            <li>
-              <a href="#">Notas</a>
+            <li class="{% if request.path == '/notas/' %}active{% endif %}">
+                <a href="{% url 'notas' %}">Notas</a> 
             </li>
-            <li>
-              <a href="#">Asistencia</a>
+            <li class="{% if request.path == '/asistencia/' %}active{% endif %}">
+                <a href="{% url 'asistencia' %}">Asistencia</a> 
             </li>
-            <li>
-              <a href="#">Horario</a>
+            <li class="{% if request.path == '/horario/' %}active{% endif %}">
+                <a href="{% url 'horario' %}">Horario</a>
             </li>
-            <li>
-              <a href="#">Anotaciones</a>
+            <li class="{% if request.path == '/anotaciones/' %}active{% endif %}">
+                <a href="{% url 'anotaciones' %}">Anotaciones</a>
             </li>
-            <li>
-              <a href="#">Anuncios</a>
+            <li class="{% if request.path == '/anuncios/' %}active{% endif %}">
+                <a href="{% url 'anuncios' %}">Anuncios</a>
             </li>
-            <li>
-              <a href="#">Calendario</a>
+            <li class="{% if request.path == '/calendario/' %}active{% endif %}">
+                <a href="{% url 'calendario' %}">Calendario</a> <!-- Aún no está disponible -->
             </li>
-          </ul>
+        </ul>
+        
+        
         </div>
       </nav>
 

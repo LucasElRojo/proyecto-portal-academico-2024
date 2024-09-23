@@ -1,18 +1,18 @@
 /* Ajuste para centrar las cartas en el medio de la página */
-#content {
+#testimonials {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh; /* Hace que el contenedor ocupe toda la altura de la ventana */
 }
 
-.row {
+#testimonials .row {
     display: flex;
     flex-wrap: wrap;
     justify-content: center; /* Centrar horizontalmente */
 }
 
-.card {
+#testimonials .card {
     width: 300px;
     min-height: 400px;
     margin: 15px;
@@ -21,7 +21,7 @@
     justify-content: space-between;
 }
 
-.testimonial-card .avatar {
+#testimonials .testimonial-card .avatar {
     width: 120px;
     margin-top: -60px;
     overflow: hidden;
@@ -29,46 +29,56 @@
     border-radius: 50%;
 }
 
-.card-body h4 {
+#testimonials .card-body h4 {
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
 }
 
-.testimonial-card .card-up {
+#testimonials .testimonial-card .card-up {
     height: 100px;
     overflow: hidden;
     border-top-left-radius: .25rem;
     border-top-right-radius: .25rem;
 }
 
-.aqua-gradient {
-    background: linear-gradient(40deg, #2096ff, #05ffa3) !important;
+
+#student-announcements .announcement-item {
+    padding: 10px;
+    border-radius: 5px;
 }
 
-
-.unidad {
-    background-color: #e0d4d3;
-    padding: 20px;
-    margin-bottom: 15px;
-    border-radius: 10px;
-    cursor: pointer;
+#student-announcements .card-header {
+    font-size: 1.25rem;
 }
 
-.unidad-header {
-    font-size: 1.5rem;
-    font-weight: bold;
+#student-announcements .announcement-item h5 {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
 }
 
-.arrow {
-    float: right;
-    transition: transform 0.3s;
+#student-announcements .btn {
+    width: 100%;
 }
 
-.collapse.show + .unidad-header .arrow {
-    transform: rotate(180deg); /* Gira la flecha hacia arriba */
+#anuncio-alumno-section .card-title {
+    font-size: 1.75rem;
 }
 
-.btn-agregar {
-    margin-top: 10px;
+#anuncio-alumno-section .card-text {
+    font-size: 1.1rem;
+}
+
+#anuncio-alumno-section .btn {
+    margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+    #anuncio-alumno-section .card-title {
+        font-size: 1.5rem;
+    }
+
+    #anuncio-alumno-section .card-text {
+        font-size: 1rem;
+    }
 }

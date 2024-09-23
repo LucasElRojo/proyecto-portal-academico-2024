@@ -43,7 +43,6 @@ INSTALLED_APPS = [
     'colorfield',
     'crispy_forms',
     'rest_framework',
-    
 ]
 
 X_FRAME_OPTIONS = "SAMEORIGIN"
@@ -71,7 +70,6 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-                'django.template.context_processors.request',
             ],
         },
     },
