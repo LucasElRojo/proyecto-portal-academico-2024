@@ -1,123 +1,62 @@
 from django.db import models
+from django.contrib.auth.models import AbstractBaseUser, BaseUserManager
 
-# Create your models here.
+class UsuarioManager(BaseUserManager):
+    def create_user(self, rut, primer_nombre, primer_apellido, email, password=None, **extra_fields):
+        if not rut:
+            raise ValueError('El RUT es obligatorio.')
+        if not email:
+            raise ValueError('El email es obligatorio.')
 
+        email = self.normalize_email(email)
+        user = self.model(
+            rut=rut,
+            primer_nombre=primer_nombre,
+            primer_apellido=primer_apellido,
+            email=email,
+            **extra_fields
+        )
+        user.set_password(password)
+        user.save(using=self._db)
+        return user
 
-class usuario (models.Model):
-    rut = models.IntegerField
-    contrasena = models.CharField(max_length=128)
+    def create_superuser(self, rut, primer_nombre, primer_apellido, email, password=None, **extra_fields):
+        extra_fields.setdefault('is_staff', True)
+        extra_fields.setdefault('is_superuser', True)
 
+        if extra_fields.get('is_staff') is not True:
+            raise ValueError('Superuser must have is_staff=True.')
+        if extra_fields.get('is_superuser') is not True:
+            raise ValueError('Superuser must have is_superuser=True.')
 
-class profesor (models.Model):
+        return self.create_user(rut, primer_nombre, primer_apellido, email, password, **extra_fields)
+
+class Usuario(AbstractBaseUser):
+    rut = models.CharField(max_length=12, unique=True)
+    password = models.CharField(max_length=128)
     primer_nombre = models.CharField(max_length=120)
-    segundo_nombre = models.CharField(max_length=120)
+    segundo_nombre = models.CharField(max_length=120, blank=True, null=True)
     primer_apellido = models.CharField(max_length=120)
-    segundo_apellido = models.CharField(max_length=120)
-    email = models.EmailField(max_length=150)
-    telefono = models.IntegerField
+    segundo_apellido = models.CharField(max_length=120, blank=True, null=True)
+    email = models.EmailField(max_length=120, unique=True)
+    telefono = models.IntegerField()
 
+    is_active = models.BooleanField(default=True)
+    is_staff = models.BooleanField(default=False)
+    is_superuser = models.BooleanField(default=False)
 
-class administrador (models.Model):
-    primer_nombre = models.CharField(max_length=120)
-    segundo_nombre = models.CharField(max_length=120)
-    primer_apellido = models.CharField(max_length=120)
-    segundo_apellido = models.CharField(max_length=120)
-    email = models.EmailField(max_length=150)
-    telefono = models.IntegerField
+    USERNAME_FIELD = 'rut'
+    REQUIRED_FIELDS = ['primer_nombre', 'primer_apellido', 'email', 'telefono']
 
+    objects = UsuarioManager()
 
-class apoderado (models.Model):
-    primer_nombre = models.CharField(max_length=120)
-    segundo_nombre = models.CharField(max_length=120)
-    primer_apellido = models.CharField(max_length=120)
-    segundo_apellido = models.CharField(max_length=120)
-    email = models.EmailField(max_length=150)
-    telefono = models.IntegerField
+    def __str__(self):
+        return f"{self.primer_nombre} {self.primer_apellido}"
 
+    # Métodos para manejar permisos
+    def has_perm(self, perm, obj=None):
+        return True
 
-class alumno (models.Model):
-    primer_nombre = models.CharField(max_length=120)
-    segundo_nombre = models.CharField(max_length=120)
-    primer_apellido = models.CharField(max_length=120)
-    segundo_apellido = models.CharField(max_length=120)
-    email = models.EmailField(max_length=150)
-    telefono = models.IntegerField
-    direccion = models.CharField(max_length=120)
-    fecha_nacimiento = models.DateField
-    apoderado = models.ForeignKey(apoderado, on_delete=models.CASCADE)
-
-class curso (models.Model):
-    id_curso = models.CharField(max_length=100)
-    fecha = models.DateField
-    nombre_ano = models.IntegerField
-
-class Sala (models.Model):
-    id_sala= models.IntegerField(null = False,primary_key=True)
-    codigo = models.CharField(max_length=100)
-
-class asignatura (models.Model):
-    nombre = models.CharField(max_length=100)
-    codigo = models.CharField(max_length=50)
-    descripcion = models.CharField(max_length=150)
-    sala = models.ForeignKey(Sala, on_delete=models.CASCADE)
-    curso = models.ForeignKey(curso, on_delete=models.CASCADE)
-    profesor = models.ForeignKey(profesor, on_delete=models.CASCADE)
-
-class nota (models.Model):
-    nota = models.IntegerField
-    fecha = models.DateField
-    alumno = models.ForeignKey(alumno, on_delete=models.CASCADE)
-
-
-class anotaciones (models.Model):
-    descripcion = models.CharField(max_length=120)
-    fecha = models.DateField
-    alumno = models.ForeignKey(alumno, on_delete=models.CASCADE)
-
-
-class asistencia (models.Model):
-    fecha = models.DateField
-    estado = models.CharField(max_length=20)
-    alumno = models.ForeignKey(alumno, on_delete=models.CASCADE)
-
-class inscripcion (models.Model):
-    id_inscripcion = models.IntegerField
-    alumno = models.ForeignKey(alumno, on_delete=models.CASCADE)
-    asignatura = models.ForeignKey(asignatura, on_delete=models.CASCADE)
-
-class horario (models.Model):
-    dia = models.CharField(max_length=120)
-    hora_inicio = models.DateField
-    hora_fin = models.DateField
-    asignatura = models.ForeignKey(asignatura, on_delete=models.CASCADE)
-
-class anuncios (models.Model):
-    titulo = models.CharField(max_length=200)
-    descripcion = models.CharField(max_length=1000)
-    fecha = models.DateField
-    asignatura = models.ForeignKey(asignatura, on_delete=models.CASCADE)
-
-class material (models.Model):
-    titulo = models.CharField(max_length=200)
-    descripcion = models.CharField(max_length=800)
-    enlace = models.CharField(max_length=200)
-    fecha = models.DateField
-    asignatura = models.ForeignKey(asignatura, on_delete=models.CASCADE)
-
-
-class calendario_de_pruebas (models.Model):
-    fecha = models.DateField
-    descripcion = models.CharField(max_length=800)
-    asignatura = models.ForeignKey(asignatura, on_delete=models.CASCADE)
-
-
-
-
-
-
-
-
-
-
-
+    def has_module_perms(self, app_label):
+        return True
 

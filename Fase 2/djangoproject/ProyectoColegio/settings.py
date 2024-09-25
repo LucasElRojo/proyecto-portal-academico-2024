@@ -81,13 +81,23 @@ WSGI_APPLICATION = 'ProyectoColegio.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
+#DATABASES = {
+#    'default': {
+#        'ENGINE': 'django.db.backends.sqlite3',
+#        'NAME': BASE_DIR / 'db.sqlite3',
+#    }
+#}
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': "postgres",
+        'USER': "postgres.udkucmjyhiwdujecrjyx",
+        'PASSWORD': "qQWn4rP96zQvJHXP",
+        'HOST': "aws-0-us-east-1.pooler.supabase.com",
+        'PORT': "6543",
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
@@ -141,3 +151,14 @@ MESSAGE_STORAGE = "django.contrib.messages.storage.cookie.CookieStorage"
 
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
+
+AUTH_USER_MODEL = 'AulaVirtual.Usuario'
+
+# Tiempo de vida de la sesión (2 semanas en este caso)
+SESSION_COOKIE_AGE = 1209600  # 2 semanas en segundos
+
+# Habilitar las sesiones persistentes
+SESSION_EXPIRE_AT_BROWSER_CLOSE = False
+
+# Usar sesiones con base de datos
+SESSION_ENGINE = 'django.contrib.sessions.backends.db'

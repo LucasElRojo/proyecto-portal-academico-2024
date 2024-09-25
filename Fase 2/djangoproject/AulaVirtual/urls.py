@@ -18,4 +18,9 @@ urlpatterns = [
     path('profesoranotacionlista/', profesoranotacionlista, name ="profesoranotacionlista"),
     path('profesoranuncio/', profesoranuncio, name ="profesoranuncio"),
     path('profesormaterial/', profesormaterial, name ="profesormaterial"),
+    path('registro/', registro_view, name='registro'),
+    path('login/', login_view, name='login'),
+    path('cambiar-password/', cambiar_password_view, name='cambiar_password'),
+    path('recuperar-password/', recuperar_password_view, name='recuperar_password'),
+    path('logout/', logout_view, name='logout'),
 ]
