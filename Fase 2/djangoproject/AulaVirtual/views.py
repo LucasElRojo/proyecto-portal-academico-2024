@@ -20,8 +20,46 @@ from django.contrib.auth.models import User
 def index(request):
     return render(request, 'app/hijo.html')
 
+@login_required
 def perfil(request):
-    return render(request, 'app/perfil.html')
+    usuario = request.user  # Obtener el usuario autenticado
+
+    if request.method == 'POST':
+        email = request.POST.get('email')
+        telefono = request.POST.get('telefono')
+
+        # Validaciones básicas
+        if not email:
+            messages.error(request, 'El email es obligatorio.')
+            return redirect('perfil')
+
+        if not telefono:
+            messages.error(request, 'El teléfono es obligatorio.')
+            return redirect('perfil')
+
+        # Validar formato básico de email
+        if '@' not in email:
+            messages.error(request, 'Por favor, ingrese un email válido.')
+            return redirect('perfil')
+
+        # Validar que el teléfono contenga solo números
+        if not telefono.isdigit():
+            messages.error(request, 'El teléfono debe contener solo números.')
+            return redirect('perfil')
+
+        # Actualizar los campos email y teléfono
+        try:
+            usuario.email = email
+            usuario.telefono = telefono
+            usuario.save()
+            messages.success(request, 'Perfil actualizado exitosamente.')
+            return redirect('perfil')
+        except Exception as e:
+            messages.error(request, f'Ocurrió un error al actualizar: {str(e)}')
+            return redirect('perfil')
+
+    # Renderizar la plantilla con los datos del usuario
+    return render(request, 'app/perfil.html', {'usuario': usuario})
 
 def anotaciones(request):
     return render(request, 'app/anotaciones.html')

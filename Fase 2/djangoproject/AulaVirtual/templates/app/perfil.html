@@ -33,43 +33,74 @@
         </div>
         <div class="row">
           <div class="col-md-12">
-            <form>
+            <form method="post">
+              {% csrf_token %}
+              {% if messages %}
+                <div class="alert alert-info">
+                  {% for message in messages %}
+                    <p>{{ message }}</p>
+                  {% endfor %}
+                </div>
+              {% endif %}
+              
+              <div class="form-group row">
+                <label for="rut" class="col-4 col-form-label">RUT*</label>
+                <div class="col-8">
+                  <input id="rut" name="rut" placeholder="RUT" class="form-control here" required="required" type="text" value="{{ usuario.rut }}" readonly>
+                </div>
+              </div>
+            
               <div class="form-group row">
                 <label for="firstname" class="col-4 col-form-label">Primer Nombre*</label>
                 <div class="col-8">
-                  <input id="firstname" name="firstname" placeholder="Primer nombre" class="form-control here" required="required" type="text">
+                  <input id="firstname" name="firstname" placeholder="Primer nombre" class="form-control here" required="required" type="text" value="{{ usuario.primer_nombre }}" readonly>
                 </div>
               </div>
+            
               <div class="form-group row">
                 <label for="secondname" class="col-4 col-form-label">Segundo Nombre</label>
                 <div class="col-8">
-                  <input id="secondname" name="secondname" placeholder="Segundo nombre" class="form-control here" type="text">
+                  <input id="secondname" name="secondname" placeholder="Segundo nombre" class="form-control here" type="text" value="{{ usuario.segundo_nombre }}" readonly>
                 </div>
               </div>
+            
               <div class="form-group row">
-                <label for="secondsurname" class="col-4 col-form-label">Primer Apellido*</label>
+                <label for="lastname" class="col-4 col-form-label">Primer Apellido*</label>
                 <div class="col-8">
-                  <input id="secondsurname" name="secondsurname" placeholder="Primer apellido" class="form-control here" required="required" type="text">
+                  <input id="lastname" name="lastname" placeholder="Primer Apellido" class="form-control here" required="required" type="text" value="{{ usuario.primer_apellido }}" readonly>
                 </div>
               </div>
+            
               <div class="form-group row">
-                <label for="firstsurname" class="col-4 col-form-label">Segundo Apellido</label>
+                <label for="secondlastname" class="col-4 col-form-label">Segundo Apellido</label>
                 <div class="col-8">
-                  <input id="firstsurname" name="firstsurname" placeholder="Segundo apellido" class="form-control here" type="text">
+                  <input id="secondlastname" name="secondlastname" placeholder="Segundo Apellido" class="form-control here" type="text" value="{{ usuario.segundo_apellido }}" readonly>
                 </div>
               </div>
+            
               <div class="form-group row">
-                <label for="email" class="col-4 col-form-label">Correo Electrónico*</label>
+                <label for="email" class="col-4 col-form-label">Email*</label>
                 <div class="col-8">
-                  <input id="email" name="email" placeholder="Correo Electrónico" class="form-control here" required="required" type="text">
+                  <input id="email" name="email" placeholder="Email" class="form-control here" required="required" type="email" value="{{ usuario.email }}">
                 </div>
               </div>
+            
+              <div class="form-group row">
+                <label for="telefono" class="col-4 col-form-label">Teléfono*</label>
+                <div class="col-8">
+                  <input id="telefono" name="telefono" placeholder="Teléfono" class="form-control here" required="required" type="number" value="{{ usuario.telefono }}">
+                </div>
+              </div>
+            
               <div class="form-group row">
                 <div class="offset-4 col-8">
-                  <button name="submit" type="submit" class="btn btn-primary">Actualizar perfil</button>
+                  <button name="submit" type="submit" class="btn btn-primary">Guardar</button>
                 </div>
               </div>
+            
             </form>
+            
+            
           </div>
         </div>
 

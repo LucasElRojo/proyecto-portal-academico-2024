@@ -31,17 +31,15 @@ class UsuarioManager(BaseUserManager):
             raise ValueError('Superuser must have is_superuser=True.')
 
         return self.create_user(rut, primer_nombre, primer_apellido, email, password, **extra_fields)
-    
+
 class TipoUsuario(models.Model):
     codigo = models.IntegerField(null=False, primary_key=True)
     tipo = models.CharField(max_length=50)
     created_ad = models.DateField(auto_now_add=True)
     updated_ad = models.DateField(auto_now=True)
     
- 
     def __str__(self):
         return self.tipo
-
 
 class Usuario(AbstractBaseUser):
     rut = models.CharField(max_length=12, unique=True)
@@ -67,7 +65,6 @@ class Usuario(AbstractBaseUser):
     def __str__(self):
         return f"{self.primer_nombre} {self.primer_apellido}"
     
-    
 
     # Métodos para manejar permisos
     def has_perm(self, perm, obj=None):
@@ -75,8 +72,5 @@ class Usuario(AbstractBaseUser):
 
     def has_module_perms(self, app_label):
         return True
-    
-
-    
 
 

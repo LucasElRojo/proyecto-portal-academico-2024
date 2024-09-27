@@ -149,12 +149,17 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 MESSAGE_STORAGE = "django.contrib.messages.storage.cookie.CookieStorage"
 
+# Configurar la URL de inicio de sesión
+LOGIN_URL = '/login/'
+
+# configurar la URL a la que se redirigirá después del login
 LOGIN_REDIRECT_URL = '/'
+
 LOGOUT_REDIRECT_URL = '/'
 
 AUTH_USER_MODEL = 'AulaVirtual.Usuario'
 
-# Tiempo de vida de la sesión (2 semanas en este caso)
+# Tiempo de vida de la sesión
 SESSION_COOKIE_AGE = 1209600  # 2 semanas en segundos
 
 # Habilitar las sesiones persistentes
