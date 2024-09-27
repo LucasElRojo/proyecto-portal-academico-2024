@@ -1,0 +1,44 @@
+{% extends 'app/profesor/baseprofesor.html' %}
+{% load static %}
+{% load humanize %}
+
+
+{% block content %}
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-4">
+            <a href="{% url 'admincursos' %}" class="text-decoration-none">
+                <div class="card bg-light">
+                    <img src="https://via.placeholder.com/150" alt="Asistencia" class="card-img-top">
+                    <div class="card-footer">Cursos</div>
+                </div>
+            </a>
+        </div>
+
+        <div class="col-md-4">
+            <a href="/asistencia/" class="text-decoration-none">
+                <div class="card bg-light">
+                    <img src="https://via.placeholder.com/150" alt="Asistencia" class="card-img-top">
+                    <div class="card-footer">Primero medio B</div>
+                </div>
+            </a>
+        </div>
+
+        <div class="col-md-4">
+            <a href="/asistencia/" class="text-decoration-none">
+                <div class="card bg-light">
+                    <img src="https://via.placeholder.com/150" alt="Asistencia" class="card-img-top">
+                    <div class="card-footer">Primero medio C</div>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+{% endblock %}

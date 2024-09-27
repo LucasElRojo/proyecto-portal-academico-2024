@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+  {% load static %}
+  {% load humanize %}
+  <head>
+    <title>Aula Virtual</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{% static 'app/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'app/css/style-content.css' %}">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </head>
+  <body>
+    
+    <div class="wrapper d-flex align-items-stretch">
+      <nav id="sidebar">
+        <div class="p-4 pt-5">
+          <a href="#" class="img logo rounded-circle mb-5" style="background-image: url('{% static "app/images/logo.jpg" %}');"></a>
+          <p>{{ user.get_username }}</p>
+          <ul class="list-unstyled components mb-5">
+            <li class="{% if request.path == '/perfil/' %}active{% endif %}">
+                <a href="{% url 'perfil' %}">Perfil</a>
+            </li>
+            <li class="{% if request.path == '/notas/' %}active{% endif %}">
+                <a href="{% url 'notas' %}">Notas</a> 
+            </li>
+            <li class="{% if request.path == '/asistencia/' %}active{% endif %}">
+                <a href="{% url 'asistencia' %}">Asistencia</a> 
+            </li>
+            <li class="{% if request.path == '/horario/' %}active{% endif %}">
+                <a href="{% url 'horario' %}">Horario</a>
+            </li>
+            <li class="{% if request.path == '/anotaciones/' %}active{% endif %}">
+                <a href="{% url 'anotaciones' %}">Anotaciones</a>
+            </li>
+            <li class="{% if request.path == '/anuncios/' %}active{% endif %}">
+                <a href="{% url 'anuncios' %}">Anuncios</a>
+            </li>
+            <li class="{% if request.path == '/calendario/' %}active{% endif %}">
+                <a href="{% url 'calendario' %}">Calendario</a> <!-- Aún no está disponible -->
+            </li>
+        </ul>
+        
+        {% if user.is_authenticated %}
+        <button id="logout-btn">Cerrar sesión</button>
+        {% endif %}
+
+        <script>
+            document.getElementById('logout-btn').addEventListener('click', function() {
+                Swal.fire({
+                    title: '¿Estás seguro?',
+                    text: "Vas a cerrar sesión",
+                    icon: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: 'Sí, cerrar sesión',
+                    cancelButtonText: 'Cancelar'
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        // Redirigir a la URL de cierre de sesión
+                        window.location.href = "{% url 'logout' %}";
+                    }
+                });
+            });
+        </script>
+
+        </div>
+      </nav>
+
+      <!-- Page Content  -->
+      <div id="content" class="p-4 p-md-5">
+        {% block content %}
+        <!-- Aquí va el contenido de cada página específica -->
+        {% endblock %}
+      </div>
+
+    </div>
+
+    <script src="{% static 'app/js/jquery.min.js' %}"></script>
+    <script src="{% static 'app/js/popper.js' %}"></script>
+    <script src="{% static 'app/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'app/js/main.js' %}"></script>
+    
+  </body>
+</html>

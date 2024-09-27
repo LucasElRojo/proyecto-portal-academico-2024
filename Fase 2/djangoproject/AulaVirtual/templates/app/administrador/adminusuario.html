@@ -1,0 +1,51 @@
+{% extends 'app/profesor/baseprofesor.html' %}
+{% load static %}
+{% load humanize %}
+
+{% block content %}
+<h1>Listado de Usuarios</h1>
+
+<form method="POST" action="{% url 'adminusuario' %}">
+    {% csrf_token %}
+    <table border="1" class="table table-bordered">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre de usuario</th>
+                <th>Email</th>
+                <th>Fecha de creación</th>
+                <th>Rol Actual</th>
+                <th>Cambios</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for usuario in usuarios %}
+            <tr>
+                <td>{{ usuario.id }}</td>
+                <td>{{ usuario.primer_nombre }}</td>
+                <td>{{ usuario.email }}</td>
+                <td>{{ usuario.date_joined }}</td>
+                <td>{{ usuario.tipo_usuario.nombre }}</td>
+                <td>
+                    <select name="rol_{{ usuario.id }}">
+                        {% for rol in roles %}
+                        <option value="{{ rol.codigo }}" {% if usuario.tipo_usuario == rol %}selected{% endif %}>{{ rol.tipo }}</option>
+                        
+                        {% endfor %}
+                    </select>
+                </td>
+                <td>
+                    <a href="{% url 'adminmodificar' usuario.id %}" class="btn btn-info">Modificar</a>
+                    <a onclick="eliminarUsuario({{ usuario.id }})" class="btn btn-danger">Eliminar</a>
+                </td>
+            </tr>
+            {% empty %}
+            <tr>
+                <td colspan="6">No hay usuarios registrados.</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    
+</form>
+{% endblock %}

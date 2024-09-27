@@ -1,0 +1,41 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% load humanize %}
+
+
+
+{% block content %}
+<table class="tabla_notas">
+    <thead>
+      <tr>
+        <th scope="col">Notas</th>
+        <th scope="col">Nota 1</th>
+        <th scope="col">Nota 2 </th>
+        <th scope="col">Nota 3</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">Lenguaje</th>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <th scope="row">Matematicas</th>
+        <td>4</td>
+        <td>5</td>
+        <td>6</td>
+      </tr>
+      <tr>
+        <th scope="row">Ingles</th>
+        <td>7</td>
+        <td>8</td>
+        <td>9</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+
+{% endblock %}

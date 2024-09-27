@@ -1,0 +1,28 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% load humanize %}
+
+{% block content %}
+<h2>Formulario de Registro</h2>
+<form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Registrar</button>
+</form>
+
+<!-- SweetAlert para mostrar mensajes de éxito -->
+{% if messages %}
+    <script>
+        Swal.fire({
+            icon: 'success',
+            title: '¡Registro exitoso!',
+            text: 'Has sido registrado correctamente.',
+            confirmButtonText: 'OK'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                window.location.href = "{% url 'index' %}";
+            }
+        });
+    </script>
+{% endif %}
+{% endblock %}

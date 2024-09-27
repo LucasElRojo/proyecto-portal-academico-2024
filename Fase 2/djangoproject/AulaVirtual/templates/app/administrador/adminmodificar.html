@@ -1,0 +1,37 @@
+{% extends 'app/profesor/baseprofesor.html' %}
+{% load static %}
+{% load humanize %}
+
+{% block content %}
+
+
+<h1>Modificacion de Usuarios</h1>
+
+<div class="container-fluid">
+    <div class="row">
+            <div class="row">
+                <form action="" method="POST" enctype="multipart/form-data">
+
+                  {% csrf_token %}
+                  <table>
+                    {{ form.as_p }}
+                  </table>
+                  <input type="submit" class="btn btn-success" value="Modificar">
+              </form>
+              {% if messages %}
+                      {% for msj in messages %}
+                          <script>
+                              Swal.fire({
+                                  title: 'Guardado!',
+                                  text: '{{ msj }}',
+                                  icon: 'success',
+                                  showConfirmButton: false,
+                                  timer: 2000
+                              });
+                          </script>
+                      {% endfor %}
+              {% endif %}
+            </div>
+      </div>   
+  </div>
+{% endblock %}
