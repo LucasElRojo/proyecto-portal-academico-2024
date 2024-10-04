@@ -4,3 +4,6 @@ from .models import *
 
 admin.site.register(Usuario)
 admin.site.register(TipoUsuario)
+admin.site.register(Curso)
+admin.site.register(Unidad)
+admin.site.register(Recurso)

@@ -1,7 +1,7 @@
 from django import forms
 from django.contrib.auth import authenticate
 from django.contrib.auth.forms import UserCreationForm
-from .models import Usuario
+from .models import *
 
 
 class UserForm(forms.ModelForm):
@@ -80,3 +80,24 @@ class RecuperarPasswordForm(forms.Form):
         if nueva_password != confirmar_nueva_password:
             raise forms.ValidationError("Las contraseñas no coinciden.")
         return confirmar_nueva_password
+    
+
+
+class CursoForm(forms.ModelForm):
+    class Meta:
+        model = Curso
+        fields = ['nombre', 'profesor', 'fecha_inicio', 'fecha_fin']
+
+    # Filtrar los profesores en el dropdown
+    def __init__(self, *args, **kwargs):
+        super(CursoForm, self).__init__(*args, **kwargs)
+        # Limitar las opciones del campo 'profesor' solo a usuarios con tipo 'Profesor'
+        self.fields['profesor'].queryset = Usuario.objects.filter(tipo_usuario__tipo='Profesor')
+
+
+class RecursoForm(forms.ModelForm):
+    class Meta:
+        model = Recurso
+        fields = ['descripcion', 'archivo']
+
+

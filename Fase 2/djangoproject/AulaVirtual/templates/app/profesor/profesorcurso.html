@@ -6,23 +6,27 @@
 {% block content %}
 
 <div class="container mt-5">
+    <h1>Cursos del Profesor {{ profesor.primer_nombre }} {{ profesor.primer_apellido }}</h1>
     <div class="row">
-        <div class="col-md-3">
-            <a href="/ruta-placeholder/" class="text-decoration-none"> <!-- Aqui es donde se coloca el href-->
-                <div class="card">
-                    <span class="star-icon">★</span>
-                    <img src="https://via.placeholder.com/100" alt="Libros"> <!-- Imagenes aqui-->
-                    <div class="card-body">
-                        <h5 class="card-title">Primero Medio A</h5>
-                    </div>
+        {% if cursos %}
+            {% for curso in cursos %}
+                <div class="col-md-3 mb-4">
+                    <a href="{% url 'profesorhome' curso.id %}" class="text-decoration-none"> <!-- Enlace al curso -->
+                        <div class="card">
+                            <span class="star-icon">★</span>
+                            <img src="https://via.placeholder.com/100" alt="Imagen del Curso"> <!-- Imagen del curso (puedes cambiar el src) -->
+                            <div class="card-body">
+                                <h5 class="card-title">{{ curso.nombre }}</h5>
+                                <p>Inicio: {{ curso.fecha_inicio }} - Fin: {{ curso.fecha_fin }}</p>
+                            </div>
+                        </div>
+                    </a>
                 </div>
-            </a>
-        </div>
+            {% endfor %}
+        {% else %}
+            <p>El profesor no tiene cursos asignados.</p>
+        {% endif %}
     </div>
 </div>
-
-
-
-
 
 {% endblock %}

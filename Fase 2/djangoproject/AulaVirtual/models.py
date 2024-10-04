@@ -73,4 +73,41 @@ class Usuario(AbstractBaseUser):
     def has_module_perms(self, app_label):
         return True
 
+class Curso(models.Model):
+    nombre = models.CharField(max_length=255)
+    profesor = models.ForeignKey(Usuario, on_delete=models.CASCADE, limit_choices_to={'tipo_usuario__tipo': 'Profesor'})  
+    alumnos = models.ManyToManyField(Usuario, related_name="cursos", limit_choices_to={'tipo_usuario__tipo': 'Alumno'})  
+    fecha_inicio = models.DateField()
+    fecha_fin = models.DateField()
 
+    def __str__(self):
+        return self.nombre
+
+
+class Anotacion(models.Model):
+    alumno = models.ForeignKey(Usuario, on_delete=models.CASCADE, limit_choices_to={'tipo_usuario__tipo': 'Alumno'})
+    curso = models.ForeignKey(Curso, on_delete=models.CASCADE)
+    profesor = models.ForeignKey(Usuario, on_delete=models.CASCADE, related_name="anotaciones", limit_choices_to={'tipo_usuario__tipo': 'Profesor'})
+    comentario = models.TextField()
+    fecha = models.DateField(auto_now_add=True)
+    positiva = models.BooleanField(default=True)
+
+    def __str__(self):
+        return f"Anotación de {self.profesor} a {self.alumno} en {self.curso}"
+    
+
+
+class Unidad(models.Model):
+    nombre = models.CharField(max_length=255)
+    curso = models.ForeignKey(Curso, on_delete=models.CASCADE)
+    
+    def __str__(self):
+        return self.nombre
+
+class Recurso(models.Model):
+    unidad = models.ForeignKey(Unidad, on_delete=models.CASCADE)
+    descripcion = models.CharField(max_length=255)
+    archivo = models.FileField(upload_to='media/')  
+
+    def __str__(self):
+        return self.descripcion

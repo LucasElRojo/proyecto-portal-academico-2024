@@ -1,0 +1,16 @@
+{% extends 'app/profesor/baseprofesor.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container mt-5">
+    <h1>Agregar Contenido a {{ unidad.nombre }}</h1>
+    
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}  <!-- Renderizar el formulario -->
+        <button type="submit" class="btn btn-primary">Guardar Contenido</button>
+    </form>
+
+    <a href="{% url 'profesormaterial' unidad.curso.id %}" class="btn btn-secondary mt-3">Volver al Curso</a>
+</div>
+{% endblock %}

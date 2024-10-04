@@ -1,63 +1,42 @@
 {% extends 'app/profesor/baseprofesor.html' %}
 {% load static %}
-
 {% load humanize %}
 
 {% block content %}
 
-
-
-
-<div class="container mt-5">
-    <!-- Unidad 1 -->
-    <div class="unidad" data-toggle="collapse" data-target="#contenido1">
-        <div class="unidad-header">
-            UNIDAD 1
-            <i class="arrow fas fa-chevron-down"></i>
-        </div>
-        <div id="contenido1" class="collapse">
-            <div class="recursos">
+<!-- Mostrar todas las unidades -->
+{% for unidad in unidades %}
+<div class="unidad" data-toggle="collapse" data-target="#contenido{{ unidad.id }}">
+    <div class="unidad-header p-3 mb-2 bg-light text-dark" style="cursor: pointer;">
+        {{ unidad.nombre }}
+        <i class="fas fa-chevron-down float-right"></i>
+    </div>
+    <div id="contenido{{ unidad.id }}" class="collapse">
+        <div class="recursos p-3 bg-light">
+            <!-- Si hay recursos, mostrar la lista -->
+            {% if unidad.recurso_set.all %}
+                <ul>
+                    {% for recurso in unidad.recurso_set.all %}
+                    <li>
+                        <a href="{{ recurso.archivo.url }}" download>{{ recurso.descripcion }}</a>
+                        <i class="fas fa-download"></i>
+                    </li>
+                    {% endfor %}
+                </ul>
+            {% else %}
                 <p>No hay contenido disponible.</p>
-                <p>No hay contenido disponible.</p>
-                <p>No hay contenido disponible.</p>
-                <p>No hay contenido disponible.</p>
-                <p>No hay contenido disponible.</p>
-                <p>No hay contenido disponible.</p>
-
-            </div>
-            <!-- Botón "Agregar contenido" solo visible para profesores -->
-            <button type="button" class="btn btn-primary btn-agregar" data-toggle="modal" data-target="#modalAgregarContenido">Agregar Contenido</button>
+            {% endif %}
         </div>
         
+        <!-- Botón "Agregar contenido" solo visible para profesores -->
+        {% if es_profesor %}
+        <a href="{% url 'agregar_contenido' unidad.id %}" class="btn btn-primary btn-agregar mt-3">
+            Agregar Contenido
+        </a>
+        {% endif %}
     </div>
 </div>
-
-<!-- Modal -->
-<div class="modal fade" id="modalAgregarContenido" tabindex="-1" role="dialog" aria-labelledby="modalAgregarContenidoLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="modalAgregarContenidoLabel">Agregar Contenido</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <!-- Aquí va el formulario o los campos para agregar el contenido -->
-                <form>
-                    <div class="form-group">
-                        <label for="descripcion">Descripción del Contenido</label>
-                        <input type="text" class="form-control" id="descripcion" placeholder="Descripción">
-                    </div>
-                    <div class="form-group">
-                        <label for="archivo">Seleccionar Archivo</label>
-                        <input type="file" class="form-control-file" id="archivo">
-                    </div>
-                    <button type="submit" class="btn btn-primary">Guardar</button>
-                </form>
-            </div>
-        </div>
-    </div>
+{% endfor %}
 </div>
 
 {% endblock %}

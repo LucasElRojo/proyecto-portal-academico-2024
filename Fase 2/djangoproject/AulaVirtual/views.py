@@ -10,7 +10,7 @@ from django.http import HttpResponse
 from .forms import RegistroForm
 from .models import Usuario
 from .models import TipoUsuario
-
+from .models import *
 from .forms import CambiarPasswordForm
 from .forms import RecuperarPasswordForm
 from .forms import *
@@ -83,11 +83,28 @@ def calendario(request):
     return render(request, "app/calendario.html")
 
 # Vistas Profesor
-def profesorcurso(request):
-    return render(request, "app/profesor/profesorcurso.html")
+def profesorcurso(request, rut_profesor):
+    profesor = Usuario.objects.get(rut=rut_profesor, tipo_usuario__tipo='Profesor')
+    cursos = Curso.objects.filter(profesor=profesor)
 
-def profesorhome(request):
-    return render(request, "app/profesor/profesorhome.html")
+    context = {
+        'profesor': profesor,
+        'cursos': cursos
+    }
+
+    return render(request, "app/profesor/profesorcurso.html", context)
+
+def profesorhome(request, id_curso):
+    curso = Curso.objects.get(id=id_curso)
+
+    unidades = Unidad.objects.filter(curso=curso)
+
+    context = {
+        'curso': curso,
+        'unidades': unidades,
+        'es_profesor': request.user.tipo_usuario.tipo == 'Profesor'  
+    }
+    return render(request, "app/profesor/profesorhome.html", context)
 
 def profesorasistencia(request):
     return render(request, "app/profesor/profesorasistencia.html")
@@ -101,8 +118,38 @@ def profesoranotacionlista(request):
 def profesoranuncio(request):
     return render(request, "app/profesor/profesoranuncio.html")
 
-def profesormaterial(request):
-    return render(request, "app/profesor/profesormaterial.html")
+def profesormaterial(request, id_curso):
+    try:
+        curso = Curso.objects.get(id=id_curso)
+    except Curso.DoesNotExist:
+        return redirect('pagina_error')
+
+    unidades = Unidad.objects.filter(curso=curso)
+
+    context = {
+        'curso': curso,
+        'unidades': unidades,
+        'es_profesor': request.user.tipo_usuario.tipo == 'Profesor'  
+    }
+
+    return render(request, 'app/profesor/profesormaterial.html', context)
+
+
+def agregar_contenido(request, unidad_id):
+    unidad = Unidad.objects.get(id=unidad_id)
+    
+    if request.method == 'POST':
+        form = RecursoForm(request.POST, request.FILES)
+        if form.is_valid():
+            recurso = form.save(commit=False)
+            recurso.unidad = unidad  # Asignar la unidad al recurso
+            recurso.save()
+            return redirect('profesormaterial', id_curso=unidad.curso.id)
+    else:
+        form = RecursoForm()
+
+    return render(request, 'app/profesor/agregarcontenido.html', {'form': form, 'unidad': unidad})
+
 
 #Vista Administrador
 def adminhome(request):
