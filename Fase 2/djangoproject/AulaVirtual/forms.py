@@ -100,4 +100,14 @@ class RecursoForm(forms.ModelForm):
         model = Recurso
         fields = ['descripcion', 'archivo']
 
+class AnotacionForm(forms.ModelForm):
+    class Meta:
+        model = Anotacion
+        fields = ['comentario', 'positiva']
+
+class AnuncioForm(forms.ModelForm):
+    class Meta:
+        model = Anuncio
+        fields = ['titulo',  'comentarios', 'archivo']
+
 

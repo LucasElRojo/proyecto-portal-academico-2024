@@ -111,3 +111,18 @@ class Recurso(models.Model):
 
     def __str__(self):
         return self.descripcion
+    
+
+
+class Anuncio(models.Model):
+    titulo = models.CharField(max_length=255)
+    asignatura = models.CharField(max_length=100)
+    profesor = models.CharField(max_length=100)
+    fecha = models.DateField(auto_now_add=True)
+    comentarios = models.TextField()
+    archivo = models.FileField(upload_to='anuncios/', blank=True, null=True)
+    curso = models.ForeignKey(Curso, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.titulo
+    

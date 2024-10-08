@@ -1,0 +1,21 @@
+{% extends 'app/profesor/baseprofesor.html' %}
+{% load static %}
+{% load humanize %}
+
+
+{% block content %}
+
+
+<div class="container mt-5">
+    <h2>Agregar Anotación para {{ alumno.primer_nombre }} {{ alumno.primer_apellido }} en {{ curso.nombre }}</h2>
+
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-primary">Guardar Anotación</button>
+    </form>
+    
+    <a href="{% url 'profesoranotacionlista' alumno.id curso.id%}" class="btn btn-secondary mt-3">Cancelar</a>
+</div>
+
+{% endblock %}

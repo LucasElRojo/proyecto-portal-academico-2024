@@ -1,6 +1,6 @@
 from django.urls import path
 from .views import *
-
+from . import views
 from django.conf import settings
 from django.conf.urls.static import static
 
@@ -16,13 +16,21 @@ urlpatterns = [
     path('calendario/', calendario, name ="calendario"),
 
     path('profesorcurso/<rut_profesor>/', profesorcurso, name ="profesorcurso"),
-    path('profesorhome/<int:id_curso>/', profesorhome, name ="profesorhome"),
+    path('profesorhome/<id_curso>/', profesorhome, name ="profesorhome"),
     path('profesorasistencia/', profesorasistencia, name ="profesorasistencia"),
     path('profesornotas/', profesornotas, name ="profesornotas"),
-    path('profesoranotacionlista/', profesoranotacionlista, name ="profesoranotacionlista"),
-    path('profesoranuncio/', profesoranuncio, name ="profesoranuncio"),
-    path('curso/<int:id_curso>/material/', profesormaterial, name="profesormaterial"),
-    path('unidad/<int:unidad_id>/agregar/', agregar_contenido, name='agregar_contenido'),
+
+    path('profesoranotacionlista/profesor/<rut_profesor>/curso/<int:id_curso>/', profesoranotacionlista, name='profesoranotacionlista'),
+    path('profesoranotacion/<id_alumno>/', profesoranotacion, name ="profesoranotacion"),
+    path('profesorcrearanotacion/<id_alumno>/<id_curso>/', profesorcrearanotacion, name='profesorcrearanotacion'),
+    path('profesobservaranotacion/alumno/<id_alumno>/curso/<int:id_curso>/', profesobservaranotacion, name='profesobservaranotacion'),
+
+
+    path('profesoranuncio/<id_curso>/', profesoranuncio, name="profesoranuncio"),
+
+    path('profesoragregaranuncio/<id_curso>/', profesoragregaranuncio, name='profesoragregaranuncio'),
+    path('curso/<id_curso>/material/', profesormaterial, name="profesormaterial"),
+    path('unidad/<unidad_id>/agregar/', agregar_contenido, name='agregar_contenido'),
 
     path('adminhome/', adminhome, name ="adminhome"),
     path('admincursos/', admincursos, name ="admincursos"),

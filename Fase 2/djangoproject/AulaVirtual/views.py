@@ -15,7 +15,7 @@ from .forms import CambiarPasswordForm
 from .forms import RecuperarPasswordForm
 from .forms import *
 from django.contrib.auth.models import User
-
+from django.utils import timezone #para el tiempo en vez de la bd 
 # Create your views here.
 def index(request):
     return render(request, 'app/hijo.html')
@@ -96,27 +96,139 @@ def profesorcurso(request, rut_profesor):
 
 def profesorhome(request, id_curso):
     curso = Curso.objects.get(id=id_curso)
+    profesor = request.user
 
     unidades = Unidad.objects.filter(curso=curso)
 
     context = {
         'curso': curso,
         'unidades': unidades,
-        'es_profesor': request.user.tipo_usuario.tipo == 'Profesor'  
+        'profesor': profesor,  
+        'es_profesor': request.user.tipo_usuario.tipo == 'Profesor'
     }
     return render(request, "app/profesor/profesorhome.html", context)
+
+def profesoranotacion(request, id_alumno):
+    alumno = Usuario.objects.get(id=id_alumno, tipo_usuario__tipo='Alumno')
+    anotaciones = Anotacion.objects.filter(alumno=alumno)
+    
+    context = {
+        'alumno': alumno,
+        'anotaciones': anotaciones,
+        
+    }
+    return render(request, "app/profesor/anotacion/profesoranotacion.html", context)
+
+
+def profesorcrearanotacion(request, id_alumno, id_curso):
+    alumno = Usuario.objects.get(id=id_alumno, tipo_usuario__tipo='Alumno')
+    curso = Curso.objects.get(id=id_curso)
+    profesor = request.user  
+
+    if request.method == 'POST':
+        form = AnotacionForm(request.POST)
+        if form.is_valid():
+            nueva_anotacion = form.save(commit=False)
+            nueva_anotacion.alumno = alumno
+            nueva_anotacion.profesor = profesor
+            nueva_anotacion.curso = curso  
+            nueva_anotacion.save()
+            # Redirige correctamente con los argumentos esperados
+            return redirect('profesoranotacionlista', rut_profesor=profesor.rut, id_curso=curso.id)
+    else:
+        form = AnotacionForm()
+
+    context = {
+        'alumno': alumno,
+        'curso': curso,
+        'form': form
+    }
+
+    return render(request, "app/profesor/anotacion/profesorcrearanotacion.html", context)
+
+
+def profesobservaranotacion(request, id_alumno, id_curso):
+    # Obtener el alumno y el curso
+    alumno = Usuario.objects.get(id=id_alumno, tipo_usuario__tipo='Alumno')
+    curso = Curso.objects.get(id=id_curso)
+    
+    # Obtener todas las anotaciones del alumno en el curso
+    anotaciones = Anotacion.objects.filter(alumno=alumno, curso=curso).order_by('-fecha')
+
+    context = {
+        'alumno': alumno,
+        'curso': curso,
+        'anotaciones': anotaciones
+    }
+
+    return render(request, "app/profesor/anotacion/profesorobservaranotacion.html", context)
+
+
+
+def profesoranuncio(request, id_curso):
+    curso = Curso.objects.get(id=id_curso)  
+    anuncio = Anuncio.objects.filter(curso=id_curso)  
+    es_profesor = False
+
+
+    if request.user.is_authenticated:
+        usuario = Usuario.objects.get(id=request.user.id)
+        if usuario.tipo_usuario.tipo == 'Profesor':
+            es_profesor = True
+
+    context = {
+        'curso': curso,
+        'anuncio': anuncio,
+        'es_profesor': es_profesor
+    }
+
+    return render(request, 'app/profesor/anuncios/profesoranuncio.html', context)
+
+def profesoragregaranuncio(request, id_curso):
+    curso = Curso.objects.get(id=id_curso)
+    profesor = request.user  
+    if request.method == 'POST':
+        form = AnuncioForm(request.POST, request.FILES)
+        if form.is_valid():
+            anuncio = form.save(commit=False)
+            anuncio.asignatura = curso.nombre
+            anuncio.profesor = profesor
+            anuncio.curso = curso  
+            anuncio.fecha_creacion = timezone.now()
+            anuncio.save()
+            return redirect('profesoranuncio', id_curso=id_curso)
+    else:
+        form = AnuncioForm()
+
+    context = {
+        'curso': curso,
+        'form': form,
+        
+    }
+
+    return render(request, 'app/profesor/anuncios/profesoragregaranuncio.html', context )
 
 def profesorasistencia(request):
     return render(request, "app/profesor/profesorasistencia.html")
 
 def profesornotas(request):
-    return render(request, "app/profesor/profesornotas.html")
+    return render(request, "app/profesor/notas/profesornotas.html")
 
-def profesoranotacionlista(request):
-    return render(request, "app/profesor/profesoranotacionlista.html")
+def profesoranotacionlista(request, rut_profesor, id_curso):
+    profesor = Usuario.objects.get(rut=rut_profesor, tipo_usuario__tipo='Profesor')
+    curso = Curso.objects.get(id=id_curso, profesor=profesor)
 
-def profesoranuncio(request):
-    return render(request, "app/profesor/profesoranuncio.html")
+    # Obtener todos los alumnos del curso
+    alumnos = Usuario.objects.filter(tipo_usuario__tipo='Alumno')
+
+    context = {
+        'profesor': profesor,
+        'curso': curso,
+        'alumnos': alumnos
+    }
+
+    return render(request, "app/profesor/anotacion/profesoranotacionlista.html", context)
+
 
 def profesormaterial(request, id_curso):
     try:

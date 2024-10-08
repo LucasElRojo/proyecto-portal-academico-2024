@@ -28,10 +28,10 @@
 
 
         <div class="col-md-4">
-            <a href="/anuncios/" class="text-decoration-none">
+            <a href="{% url 'profesoranuncio' curso.id %}" class="text-decoration-none">
                 <div class="card bg-light">
-                    <img src="https://via.placeholder.com/50" alt="Anuncios">
-                    <div class="card-footer">Anuncios</div>
+                    <img src="https://via.placeholder.com/50" alt="Material">
+                    <div class="card-footer">profesoranuncio</div>
                 </div>
             </a>
         </div>
@@ -48,7 +48,7 @@
 
 
         <div class="col-md-4">
-            <a href="/anotaciones/" class="text-decoration-none">
+            <a href="{% url 'profesoranotacionlista' profesor.rut curso.id %}" class="text-decoration-none">
                 <div class="card bg-light">
                     <img src="https://via.placeholder.com/50" alt="Anotaciones">
                     <div class="card-footer">Anotaciones</div>
