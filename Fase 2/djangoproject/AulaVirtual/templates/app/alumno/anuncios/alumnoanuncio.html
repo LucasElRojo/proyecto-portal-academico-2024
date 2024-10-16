@@ -1,0 +1,24 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% load humanize %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2>Anuncios para {{ alumno.primer_nombre }} {{ alumno.primer_apellido }}</h2>
+
+    {% if anuncios %}
+        {% for anuncio in anuncios %}
+        <div class="card mb-4">
+            <div class="card-body">
+                <h5 class="card-title">{{ anuncio.titulo }}</h5>
+                <p class="card-text">{{ anuncio.descripcion }}</p>
+                <p><strong>Fecha:</strong> {{ anuncio.fecha|date:"d/m/Y" }}</p>
+                <p><strong>Curso:</strong> {{ anuncio.curso.nombre }}</p>
+            </div>
+        </div>
+        {% endfor %}
+    {% else %}
+        <p>No hay anuncios disponibles para este alumno.</p>
+    {% endif %}
+</div>
+{% endblock %}

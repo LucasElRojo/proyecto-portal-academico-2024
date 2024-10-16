@@ -1,0 +1,38 @@
+{% extends 'app/profesor/baseprofesor.html' %}
+{% load static %}
+{% block content %}
+
+<div class="container">
+    <h2>Agregar o modificar notas para el curso {{ curso.nombre }}</h2>
+    <form method="POST">
+        {% csrf_token %}
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Nº Alumno</th>
+                    {% for i in rango_notas %}
+                    <th>Nota {{ i }}</th>
+                    {% endfor %}
+                </tr>
+            </thead>
+            <tbody>
+                {% for alumno, notas in alumnos_con_notas.items %}
+                <tr>
+                    <td>{{ forloop.counter }}. {{ alumno.primer_apellido }}, {{ alumno.primer_nombre }}</td>
+                    {% for i in rango_notas %}
+                    <td>
+                        <!-- Campo para modificar cada nota -->
+                        <input type="number" name="nota{{ i }}_{{ alumno.id }}" 
+                               value="{% if notas|length >= i %}{{ notas.i.valor }}{% endif %}" 
+                               step="0.1" min="1" max="10" class="form-control">
+                    </td>
+                    {% endfor %}
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <button type="submit" class="btn btn-primary">Guardar Notas</button>
+    </form>
+</div>
+
+{% endblock %}

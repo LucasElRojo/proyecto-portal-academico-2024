@@ -1,0 +1,36 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% load humanize %}
+
+{% block content %}
+
+<div class="container mt-5">
+    <h2>Notas del Alumno: {{ alumno.primer_nombre }} {{ alumno.primer_apellido }}</h2>
+
+    {% if notas_por_curso %}
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>Curso</th>
+                    {% for i in rango_notas %}
+                    <th>Nota {{ i }}</th>
+                    {% endfor %}
+                </tr>
+            </thead>
+            <tbody>
+                {% for curso, notas in notas_por_curso.items %}
+                <tr>
+                    <td>{{ curso.nombre }}</td>
+                    {% for nota in notas %}
+                    <td>{{ nota.valor|default_if_none:"-" }}</td>
+                    {% endfor %}
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <p>No hay cursos o notas registradas para este alumno.</p>
+    {% endif %}
+</div>
+
+{% endblock %}

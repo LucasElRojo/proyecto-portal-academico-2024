@@ -7,3 +7,5 @@ admin.site.register(TipoUsuario)
 admin.site.register(Curso)
 admin.site.register(Unidad)
 admin.site.register(Recurso)
+admin.site.register(Nota)
+

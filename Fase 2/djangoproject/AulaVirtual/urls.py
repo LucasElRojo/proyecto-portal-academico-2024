@@ -15,20 +15,46 @@ urlpatterns = [
     path('notas/', notas, name ="notas"),
     path('calendario/', calendario, name ="calendario"),
 
+    #Vistas alumno
+
+    # ------- urls principales alumno---------------
+    path('alumnocurso/<rut_alumno>/', alumnocurso, name="alumnocurso"),
+    path('alumnohome/<id_curso>/', alumnohome, name="alumnohome"),
+
+    # ------- urls aprtado anotacion---------------
+    path('alumnoanotacion/<rut_alumno>/', alumnoanotacion, name="alumnoanotacion"),
+
+    # ------- urls aprtado notas---------------
+    path('alumnonotas/<rut_alumno>/', alumnonotas, name='alumnonotas'),
+
+    # ------- urls aprtado anuncio---------------
+    path('alumnoanuncio/<rut_alumno>/', alumnoanuncio, name="alumnoanuncio"),
+
+    # ------- urls aprtado material---------------
+    path('alumnomaterial/<rut_alumno>/<id_curso>/', alumnomaterial, name="alumnomaterial"),
+
+    #Vistas profesor
+
+    # ------- urls principales profesor---------------
     path('profesorcurso/<rut_profesor>/', profesorcurso, name ="profesorcurso"),
     path('profesorhome/<id_curso>/', profesorhome, name ="profesorhome"),
     path('profesorasistencia/', profesorasistencia, name ="profesorasistencia"),
-    path('profesornotas/', profesornotas, name ="profesornotas"),
 
+    # ------- Profesor apartado notas  ---------------
+    path('profesornotas/<id_curso>/', profesornotas, name ="profesornotas"),
+    path('agregarnota/<id_curso>/', agregarnota, name='agregarnota'),
+
+    # ------- Profesor apartado Anotacion  ---------------
     path('profesoranotacionlista/profesor/<rut_profesor>/curso/<int:id_curso>/', profesoranotacionlista, name='profesoranotacionlista'),
     path('profesoranotacion/<id_alumno>/', profesoranotacion, name ="profesoranotacion"),
     path('profesorcrearanotacion/<id_alumno>/<id_curso>/', profesorcrearanotacion, name='profesorcrearanotacion'),
     path('profesobservaranotacion/alumno/<id_alumno>/curso/<int:id_curso>/', profesobservaranotacion, name='profesobservaranotacion'),
 
-
+    # ------- Profesor apartado Anuncio  ---------------
     path('profesoranuncio/<id_curso>/', profesoranuncio, name="profesoranuncio"),
-
     path('profesoragregaranuncio/<id_curso>/', profesoragregaranuncio, name='profesoragregaranuncio'),
+
+    # ------- Profesor apartado Material  ---------------
     path('curso/<id_curso>/material/', profesormaterial, name="profesormaterial"),
     path('unidad/<unidad_id>/agregar/', agregar_contenido, name='agregar_contenido'),
 

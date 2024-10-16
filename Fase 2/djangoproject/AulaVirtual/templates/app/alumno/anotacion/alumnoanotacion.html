@@ -1,0 +1,35 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% load humanize %}
+
+{% block content %}
+
+<div class="container mt-5">
+    <h2>Anotaciones de {{ alumno.primer_nombre }} {{ alumno.primer_apellido }}</h2>
+
+    <!-- Mostrar las anotaciones del alumno -->
+    {% for anotacion in anotaciones %}
+    <div class="card mb-3">
+        <div class="card-body">
+            <h5 class="card-title d-flex justify-content-between">
+                <span>Curso: {{ anotacion.curso.nombre }}</span>
+                {% if anotacion.positiva %}
+                    <span class="badge badge-success">Positiva</span>
+                {% else %}
+                    <span class="badge badge-danger">Negativa</span>
+                {% endif %}
+            </h5>
+            <p><strong>Profesor:</strong> {{ anotacion.profesor.primer_nombre }} {{ anotacion.profesor.primer_apellido }}</p>
+            <p><strong>Fecha:</strong> {{ anotacion.fecha|date:"d/m/Y" }}</p>
+            <p><strong>Comentario:</strong> {{ anotacion.comentario }}</p>
+        </div>
+    </div>
+    {% endfor %}
+
+    <!-- Mensaje si no hay anotaciones -->
+    {% if not anotaciones %}
+        <p>No hay anotaciones disponibles para este alumno.</p>
+    {% endif %}
+</div>
+
+{% endblock %}

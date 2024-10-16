@@ -8288,4 +8288,51 @@ a[data-toggle="collapse"] {
   color: rgba(255, 255, 255, 0.5); }
 
 
-  
+  body {
+    font-family: Arial, sans-serif;
+}
+
+#notas-table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#notas-table th, #notas-table td {
+  border: 2px solid black;
+  padding: 8px;
+  font-family: 'Arial', sans-serif;
+  font-size: 14px;
+}
+
+#notas-table th {
+  background-color: #fdd835; /* Amarillo para las cabeceras */
+  color: #000;
+  font-weight: bold;
+}
+
+#notas-table tbody tr:nth-child(even) {
+  background-color: #f2f2f2; /* Fila gris claro alternante */
+}
+
+#notas-table tbody tr:nth-child(odd) {
+  background-color: #fff; /* Fila blanca */
+}
+
+#notas-table td {
+  text-align: center;
+  vertical-align: middle;
+}
+
+#notas-table .table-header {
+  background-color: #fdd835;
+}
+
+#notas-table th, #notas-table td {
+  border: 2px solid black;
+}
+
+.btn-warning {
+  background-color: #fdd835;
+  border: none;
+  font-weight: bold;
+}

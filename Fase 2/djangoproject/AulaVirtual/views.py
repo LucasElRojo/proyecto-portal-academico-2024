@@ -64,6 +64,8 @@ def perfil(request):
 def anotaciones(request):
     return render(request, 'app/anotaciones.html')
 
+
+
 def anuncios(request):
     return render(request, 'app/anuncios.html')
 
@@ -82,6 +84,104 @@ def notas(request):
 def calendario(request):
     return render(request, "app/calendario.html")
 
+# Vistas Alumno
+
+def alumnocurso(request, rut_alumno):
+    alumno = Usuario.objects.get(rut=rut_alumno, tipo_usuario__tipo='Alumno')
+    cursos = Curso.objects.filter(alumnos = alumno)
+
+    context ={
+        'alumno' : alumno,
+        'cursos' : cursos,
+
+    }
+
+    return render(request, 'app/alumno/alumnocurso.html', context)
+
+
+def alumnohome(request, id_curso):
+    curso = Curso.objects.get(id=id_curso)
+    alumno = request.user
+
+    unidades = Unidad.objects.filter(curso=curso)
+
+    context = {
+        'curso': curso,
+        'unidades': unidades,
+        'alumno': alumno,  
+        'es_profesor': request.user.tipo_usuario.tipo == 'Profesor'
+    }
+
+    return render(request, 'app/alumno/alumnohome.html', context)
+
+
+
+def alumnoanotacion(request, rut_alumno):
+    alumno = Usuario.objects.get(rut=rut_alumno, tipo_usuario__tipo='Alumno')
+    anotaciones = Anotacion.objects.filter(alumno=alumno).select_related('curso', 'profesor')
+
+    context = {
+        'alumno': alumno,
+        'anotaciones': anotaciones
+    }
+
+    return render(request, "app/alumno/anotacion/alumnoanotacion.html", context)
+
+
+def alumnonotas(request, rut_alumno):
+    alumno = Usuario.objects.get(rut=rut_alumno, tipo_usuario__tipo='Alumno')
+    cursos = alumno.cursos.all()
+
+    # Diccionario para almacenar las notas por curso
+    notas_por_curso = {}
+    for curso in cursos:
+        notas = list(Nota.objects.filter(alumno=alumno, curso=curso).order_by('numero_nota'))
+        
+        # Asegurarse de que siempre haya 5 notas (rellenar con None si faltan)
+        while len(notas) < 5:
+            notas.append(None)
+        
+        notas_por_curso[curso] = notas
+
+    context = {
+        'alumno': alumno,
+        'notas_por_curso': notas_por_curso,
+        'rango_notas': range(1, 6),  # Se ajusta segun las notas 
+    }
+
+    return render(request, 'app/alumno/notas/alumnonotas.html', context)
+
+
+def alumnoanuncio(request, rut_alumno):
+    alumno = Usuario.objects.get(rut=rut_alumno, tipo_usuario__tipo='Alumno')
+    cursos = alumno.cursos.all()
+
+    anuncios = Anuncio.objects.filter(curso__in=cursos).order_by('-fecha')
+
+    context = {
+        'alumno': alumno,
+        'anuncios': anuncios,
+    }
+
+    return render(request, 'app/alumno/anuncios/alumnoanuncio.html', context)
+
+def alumnomaterial(request, rut_alumno, id_curso):
+    alumno = Usuario.objects.get(rut=rut_alumno, tipo_usuario__tipo='Alumno')
+    curso = Curso.objects.get(id=id_curso, alumnos=alumno)
+
+    unidades = Unidad.objects.filter(curso=curso).prefetch_related('recurso_set')
+
+    context = {
+        'alumno': alumno,
+        'curso': curso,
+        'unidades': unidades,
+    }
+
+    return render(request, 'app/alumno/material/alumnomaterial.html', context)
+
+
+
+
 # Vistas Profesor
 def profesorcurso(request, rut_profesor):
     profesor = Usuario.objects.get(rut=rut_profesor, tipo_usuario__tipo='Profesor')
@@ -97,12 +197,16 @@ def profesorcurso(request, rut_profesor):
 def profesorhome(request, id_curso):
     curso = Curso.objects.get(id=id_curso)
     profesor = request.user
-
+    
     unidades = Unidad.objects.filter(curso=curso)
+    alumnos = Usuario.objects.filter(cursos=curso, tipo_usuario__tipo='Alumno')
 
+
+    
     context = {
         'curso': curso,
         'unidades': unidades,
+        'alumnos': alumnos,
         'profesor': profesor,  
         'es_profesor': request.user.tipo_usuario.tipo == 'Profesor'
     }
@@ -211,8 +315,71 @@ def profesoragregaranuncio(request, id_curso):
 def profesorasistencia(request):
     return render(request, "app/profesor/profesorasistencia.html")
 
-def profesornotas(request):
-    return render(request, "app/profesor/notas/profesornotas.html")
+def profesornotas(request, id_curso):
+    curso = Curso.objects.get(id=id_curso)
+    
+    # Obtener todos los alumnos inscritos en el curso
+    alumnos = Usuario.objects.filter(tipo_usuario__tipo='Alumno')
+
+    # Crear un diccionario que asocie cada alumno con sus notas
+    alumnos_con_notas = {}
+    for alumno in alumnos:
+        # Ordenar las notas por su número (si tienes un campo para el número de la nota)
+        notas = Nota.objects.filter(alumno=alumno, curso=curso).order_by('numero_nota')
+        alumnos_con_notas[alumno] = notas
+
+    context = {
+        'curso': curso,
+        'alumnos_con_notas': alumnos_con_notas,
+    }
+
+    return render(request, 'app/profesor/notas/profesornotas.html', context)
+
+
+
+
+def agregarnota(request, id_curso):
+    curso = Curso.objects.get(id=id_curso)
+    alumnos = Usuario.objects.filter(tipo_usuario__tipo='Alumno')
+    numero_minimo_notas = 5  # El número mínimo de notas
+
+    if request.method == 'POST':
+        for alumno in alumnos:
+            for numero_nota in range(1, numero_minimo_notas + 1):
+                valor_nota = request.POST.get(f'nota{numero_nota}_{alumno.id}')
+                if valor_nota:
+                    # Usar update_or_create para actualizar la nota si ya existe
+                    Nota.objects.update_or_create(
+                        alumno=alumno, curso=curso, numero_nota=numero_nota,
+                        defaults={'valor': valor_nota}  # Valores a actualizar
+                    )
+
+        messages.success(request, 'Notas guardadas exitosamente.')
+        return redirect('agregarnota', id_curso=curso.id)
+
+    # Diccionario para contener las notas de cada alumno
+    alumnos_con_notas = {}
+    for alumno in alumnos:
+        notas = Nota.objects.filter(alumno=alumno, curso=curso).order_by('numero_nota')
+        alumnos_con_notas[alumno] = notas
+
+    context = {
+        'curso': curso,
+        'alumnos_con_notas': alumnos_con_notas,
+        'rango_notas': range(1, numero_minimo_notas + 1),
+    }
+
+    return render(request, 'app/profesor/notas/agregarnota.html', context)
+
+
+
+
+
+
+
+
+
+
 
 def profesoranotacionlista(request, rut_profesor, id_curso):
     profesor = Usuario.objects.get(rut=rut_profesor, tipo_usuario__tipo='Profesor')
@@ -329,6 +496,7 @@ def eliminarUsuario(request, id):
     return redirect(to="adminusuario")
 
 
+
 def registro_view(request):
     if request.method == 'POST':
         form = RegistroForm(request.POST)
@@ -364,6 +532,9 @@ def login_view(request):
 def logout_view(request):
     logout(request)
     return redirect('index')  # Redirigir a la página de inicio después de cerrar sesión
+
+
+
 
 
 @login_required

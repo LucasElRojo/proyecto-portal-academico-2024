@@ -125,4 +125,17 @@ class Anuncio(models.Model):
 
     def __str__(self):
         return self.titulo
+
+
+
+class Nota(models.Model):
+    alumno = models.ForeignKey(Usuario, on_delete=models.CASCADE, limit_choices_to={'tipo_usuario__tipo': 'Alumno'})
+    curso = models.ForeignKey(Curso, on_delete=models.CASCADE)
+    valor = models.DecimalField(max_digits=4, decimal_places=2, null=True, blank=True)  # Este campo debe existir
+    numero_nota = models.PositiveIntegerField()
+
+    def __str__(self):
+        return f"Nota {self.numero_nota} de {self.alumno.primer_nombre} {self.alumno.primer_apellido} en {self.curso.nombre}"
+
+
     

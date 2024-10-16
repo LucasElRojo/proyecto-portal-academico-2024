@@ -1,9 +1,9 @@
-{% extends 'app/profesor/baseprofesor.html' %}
+{% extends 'app/base.html' %}
 {% load static %}
 {% load humanize %}
 
-
 {% block content %}
+
 
 <div class="container mt-5">
     <div class="row">
@@ -18,7 +18,7 @@
 
 
         <div class="col-md-4">
-            <a href="{% url 'profesornotas'  curso.id %}" class="text-decoration-none">
+            <a href="{% url 'alumnonotas'  alumno.rut %}" class="text-decoration-none">
                 <div class="card bg-light">
                     <img src="https://via.placeholder.com/50" alt="Notas">
                     <div class="card-footer">Notas</div>
@@ -28,17 +28,17 @@
 
 
         <div class="col-md-4">
-            <a href="{% url 'profesoranuncio' curso.id %}" class="text-decoration-none">
+            <a href="{% url 'alumnoanuncio'  alumno.rut %}" class="text-decoration-none">
                 <div class="card bg-light">
                     <img src="https://via.placeholder.com/50" alt="Material">
-                    <div class="card-footer">profesoranuncio</div>
+                    <div class="card-footer">anuncio</div>
                 </div>
             </a>
         </div>
 
 
         <div class="col-md-4">
-            <a href="{% url 'profesormaterial' curso.id %}" class="text-decoration-none">
+            <a href="{% url 'alumnomaterial'  alumno.rut curso.id %}" class="text-decoration-none">
                 <div class="card bg-light">
                     <img src="https://via.placeholder.com/50" alt="Material">
                     <div class="card-footer">Material</div>
@@ -48,7 +48,7 @@
 
 
         <div class="col-md-4">
-            <a href="{% url 'profesoranotacionlista' profesor.rut curso.id %}" class="text-decoration-none">
+            <a href="{% url 'alumnoanotacion'  alumno.rut %}" class="text-decoration-none">
                 <div class="card bg-light">
                     <img src="https://via.placeholder.com/50" alt="Anotaciones">
                     <div class="card-footer">Anotaciones</div>
@@ -67,8 +67,6 @@
         </div>
     </div>
 </div>
-
-
 
 
 {% endblock %}

@@ -2,6 +2,7 @@ from django import forms
 from django.contrib.auth import authenticate
 from django.contrib.auth.forms import UserCreationForm
 from .models import *
+from django.forms import modelformset_factory
 
 
 class UserForm(forms.ModelForm):
@@ -109,5 +110,15 @@ class AnuncioForm(forms.ModelForm):
     class Meta:
         model = Anuncio
         fields = ['titulo',  'comentarios', 'archivo']
+
+
+
+class NotaForm(forms.ModelForm):
+    class Meta:
+        model = Nota
+        fields = ['valor'] 
+        widgets = {
+            'valor': forms.NumberInput(attrs={'step': '0.1', 'min': '1', 'max': '10', 'class': 'form-control'})
+        }
 
 
