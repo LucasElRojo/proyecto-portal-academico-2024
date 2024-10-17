@@ -21,6 +21,9 @@ urlpatterns = [
     path('alumnocurso/<rut_alumno>/', alumnocurso, name="alumnocurso"),
     path('alumnohome/<id_curso>/', alumnohome, name="alumnohome"),
 
+    # ------- urls aprtado material---------------
+    path('alumnohome/<id_curso>/', alumnohome, name="alumnohome"),
+    
     # ------- urls aprtado anotacion---------------
     path('alumnoanotacion/<rut_alumno>/', alumnoanotacion, name="alumnoanotacion"),
 
@@ -32,6 +35,9 @@ urlpatterns = [
 
     # ------- urls aprtado material---------------
     path('alumnomaterial/<rut_alumno>/<id_curso>/', alumnomaterial, name="alumnomaterial"),
+
+    # ------- urls aprtado Asistencia---------------
+    path('detalle_clase/<id_curso>/', detalle_clase, name="detalle_clase"),
 
     #Vistas profesor
 

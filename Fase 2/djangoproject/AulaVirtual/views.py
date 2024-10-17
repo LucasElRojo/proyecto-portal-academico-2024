@@ -15,7 +15,7 @@ from .forms import CambiarPasswordForm
 from .forms import RecuperarPasswordForm
 from .forms import *
 from django.contrib.auth.models import User
-from django.utils import timezone #para el tiempo en vez de la bd
+from django.utils import timezone #para el tiempo 
 from datetime import datetime
 
 # Create your views here.
@@ -87,14 +87,14 @@ def asistencia(request):
     return render(request, "app/asistencia.html", {'cursos': cursos})
 
 def crear_clase_y_tomar_asistencia(request, curso_id):
-    curso = get_object_or_404(Curso, id=curso_id)
+    curso = Curso.objects.get(id=curso_id)
     clase = None  # Inicialmente no hay clase
-    alumnos = curso.alumnos.all()
     
-    # Obtener todas las clases del curso, ordenadas por fecha descendente
+    # Cambia esta línea para asegurar que traes a los alumnos correctos
+    alumnos = Usuario.objects.filter(tipo_usuario__tipo='Alumno')
+    
     clases = Clase.objects.filter(curso=curso).order_by('-fecha')
     
-    # Inicializar una lista para almacenar datos de asistencia por clase
     clases_con_asistencia = []
     for c in clases:
         total_alumnos = alumnos.count()
@@ -110,17 +110,15 @@ def crear_clase_y_tomar_asistencia(request, curso_id):
             'total_ausentes': total_ausentes,
             'total_justificados': total_justificados,
         })
-
+    
     if request.method == 'POST':
         action = request.POST.get('action')
         if action == 'crear_clase':
-            # Manejar la creación de la clase
             clase_form = ClaseForm(request.POST)
             if clase_form.is_valid():
                 clase = clase_form.save(commit=False)
                 clase.curso = curso
                 clase.save()
-                # Después de crear la clase, mostrar el formulario de asistencia
                 asistencia_form = AsistenciaForm(alumnos=alumnos)
                 return render(request, 'app/tomarasistencia.html', {
                     'clase_form': clase_form,
@@ -129,15 +127,7 @@ def crear_clase_y_tomar_asistencia(request, curso_id):
                     'curso': curso,
                     'clases_con_asistencia': clases_con_asistencia,
                 })
-            else:
-                # Si el formulario de clase no es válido, renderizar con errores
-                return render(request, 'app/tomarasistencia.html', {
-                    'clase_form': clase_form,
-                    'curso': curso,
-                    'clases_con_asistencia': clases_con_asistencia,
-                })
         elif action == 'tomar_asistencia':
-            # Manejar la toma de asistencia
             clase_id = request.POST.get('clase_id')
             clase = get_object_or_404(Clase, id=clase_id)
             asistencia_form = AsistenciaForm(request.POST, alumnos=alumnos)
@@ -149,7 +139,7 @@ def crear_clase_y_tomar_asistencia(request, curso_id):
                         alumno=alumno,
                         defaults={'estado': estado}
                     )
-                # Actualizar las estadísticas después de tomar asistencia
+                # Actualizar la lista de clases
                 clases = Clase.objects.filter(curso=curso).order_by('-fecha')
                 clases_con_asistencia = []
                 for c in clases:
@@ -166,10 +156,7 @@ def crear_clase_y_tomar_asistencia(request, curso_id):
                         'total_ausentes': total_ausentes,
                         'total_justificados': total_justificados,
                     })
-                # Volver al formulario de creación de clase
-                initial_data = {
-                    'fecha': datetime.today().strftime('%Y-%m-%d'),
-                }
+                initial_data = {'fecha': datetime.today().strftime('%Y-%m-%d')}
                 clase_form = ClaseForm(initial=initial_data)
                 return render(request, 'app/tomarasistencia.html', {
                     'clase_form': clase_form,
@@ -177,30 +164,15 @@ def crear_clase_y_tomar_asistencia(request, curso_id):
                     'clases_con_asistencia': clases_con_asistencia,
                     'message': 'Asistencia guardada correctamente',
                 })
-            else:
-                # Si el formulario de asistencia no es válido, renderizar con errores
-                clase_form = ClaseForm()
-                return render(request, 'app/tomarasistencia.html', {
-                    'clase_form': clase_form,
-                    'asistencia_form': asistencia_form,
-                    'clase': clase,
-                    'curso': curso,
-                    'clases_con_asistencia': clases_con_asistencia,
-                })
-        else:
-            # Acción no reconocida, devolver una respuesta adecuada
-            return HttpResponseBadRequest("Acción no válida.")
     else:
-        # Si es GET, mostrar el formulario para crear la clase
-        initial_data = {
-            'fecha': datetime.today().strftime('%Y-%m-%d'),
-        }
+        initial_data = {'fecha': datetime.today().strftime('%Y-%m-%d')}
         clase_form = ClaseForm(initial=initial_data)
         return render(request, 'app/tomarasistencia.html', {
             'clase_form': clase_form,
             'curso': curso,
             'clases_con_asistencia': clases_con_asistencia,
         })
+
 
 def horario(request):
     return render(request, "app/horario.html")
@@ -212,6 +184,13 @@ def calendario(request):
     return render(request, "app/calendario.html")
 
 # Vistas Alumno
+
+
+def detalle_clase(request, id_curso):
+    clase = get_object_or_404(Clase, id=id_curso)
+    curso = clase.curso
+    asistencias = Asistencia.objects.filter(clase=clase)
+    return render(request, 'app/detalle_clase.html', {'clase': clase, 'asistencias': asistencias})
 
 def alumnocurso(request, rut_alumno):
     alumno = Usuario.objects.get(rut=rut_alumno, tipo_usuario__tipo='Alumno')
