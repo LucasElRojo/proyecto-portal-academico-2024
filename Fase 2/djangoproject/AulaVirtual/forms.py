@@ -122,3 +122,29 @@ class NotaForm(forms.ModelForm):
         }
 
 
+# Profe Asistencia
+class ClaseForm(forms.ModelForm):
+    class Meta:
+        model = Clase
+        fields = ['fecha', 'hora_inicio', 'hora_fin']
+        widgets = {
+            'fecha': forms.DateInput(attrs={'type': 'date'}),
+            'hora_inicio': forms.TimeInput(attrs={'type': 'time'}),
+            'hora_fin': forms.TimeInput(attrs={'type': 'time'}),
+        }
+
+class AsistenciaForm(forms.Form):
+    ESTADO_ASISTENCIA = Asistencia.ESTADO_ASISTENCIA
+
+    def __init__(self, *args, **kwargs):
+        alumnos = kwargs.pop('alumnos')
+        super().__init__(*args, **kwargs)
+        self.alumno_field_pairs = []
+        for alumno in alumnos:
+            field_name = f'estado_{alumno.id}'
+            self.fields[field_name] = forms.ChoiceField(
+                choices=self.ESTADO_ASISTENCIA,
+                widget=forms.RadioSelect(attrs={'class': 'd-inline-block'}),
+                label=''
+            )
+            self.alumno_field_pairs.append((alumno, self[field_name]))

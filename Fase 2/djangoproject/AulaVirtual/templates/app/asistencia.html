@@ -4,39 +4,44 @@
 
 {% block content %}
 
+<div id="basicsAccordion">
+  {% for curso in cursos %}
+    <!-- Card -->
+    <div class="card mb-3">
+      <div class="card-header card-collapse" id="basicsHeading{{ forloop.counter }}">
+        <h5 class="mb-0">
+          <button class="btn btn-link btn-block d-flex justify-content-between card-btn p-3"
+                  data-toggle="collapse"
+                  data-target="#basicsCollapse{{ forloop.counter }}"
+                  aria-expanded="true"
+                  aria-controls="basicsCollapse{{ forloop.counter }}">
+            {{ curso.nombre }}
+            <span class="card-btn-arrow">
+              <span class="fas fa-arrow-down small"></span>
+            </span>
+          </button>
+        </h5>
+      </div>
 
-<table class="table">
-  <thead>
-    <tr>
-      <th scope="col">Curso</th>
-      <th scope="col">Clases registradas</th>
-      <th scope="col">Asistencia </th>
-      <th scope="col">Porcentaje</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">Lenguaje</th>
-      <td>1</td>
-      <td>2</td>
-      <td>3</td>
-    </tr>
-    <tr>
-      <th scope="row">Matematicas</th>
-      <td>4</td>
-      <td>5</td>
-      <td>6</td>
-    </tr>
-    <tr>
-      <th scope="row">Ingles</th>
-      <td>7</td>
-      <td>8</td>
-      <td>9</td>
-    </tr>
-  </tbody>
-</table>
+      <div id="basicsCollapse{{ forloop.counter }}" class="collapse {% if forloop.first %}show{% endif %}"
+           aria-labelledby="basicsHeading{{ forloop.counter }}"
+           data-parent="#basicsAccordion">
+        <div class="card-body">
+          {% for clase in curso.clases.all %}
+            <ul>
+              {% for asistencia in clase.asistencias.all %}
+                {% if asistencia.alumno.primer_nombre == request.user.primer_nombre and asistencia.alumno.primer_apellido == request.user.primer_apellido %}
+                  <li>{{ asistencia.alumno.primer_nombre }} {{ asistencia.alumno.primer_apellido }} - {{ asistencia.get_estado_display }} ({{ asistencia.fecha }})</li>
+                {% endif %}
+              {% endfor %}
+            </ul>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+    <!-- End Card -->
+  {% endfor %}
+</div>
 
 
-
-
-  {% endblock %}
+{% endblock %}

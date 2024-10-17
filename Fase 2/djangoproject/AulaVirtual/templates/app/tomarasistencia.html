@@ -1,0 +1,107 @@
+<!-- templates/app/tomarasistencia.html -->
+{% extends 'app/base.html' %}
+{% load static %}
+{% load humanize %}
+{% block content %}
+<h2>Registrar Nueva Clase - {{ curso.nombre }}</h2>
+
+{% if message %}
+    <div class="alert alert-success">
+        {{ message }}
+    </div>
+{% endif %}
+
+{% if not clase %}
+    <!-- Mostrar formulario para crear clase -->
+    <form method="post" id="claseForm">
+        {% csrf_token %}
+        {{ clase_form.as_p }}
+        <input type="hidden" name="action" value="crear_clase">
+        <button type="submit" id="crearClaseBtn" class="btn btn-success">Crear Clase</button>
+    </form>
+{% else %}
+    <!-- Mostrar formulario de asistencia -->
+    <h1>Tomar Asistencia para {{ clase }}</h1>
+    <form method="post">
+        {% csrf_token %}
+        <input type="hidden" name="action" value="tomar_asistencia">
+        <input type="hidden" name="clase_id" value="{{ clase.id }}">
+        <table class="table table-bordered">
+            <thead class="thead-light">
+                <tr>
+                    <th>Alumno</th>
+                    {% for key, value in asistencia_form.ESTADO_ASISTENCIA %}
+                    <th class="text-center">{{ value }}</th>
+                    {% endfor %}
+                </tr>
+            </thead>
+            <tbody>
+                {% for alumno, field in asistencia_form.alumno_field_pairs %}
+                <tr>
+                    <td>{{ alumno }}</td>
+                    {% for key, value in asistencia_form.ESTADO_ASISTENCIA %}
+                    <td class="text-center">
+                        <input type="radio" name="{{ field.name }}" value="{{ key }}" {% if field.value == key %}checked{% endif %} required>
+                    </td>
+                    {% endfor %}
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <button type="submit" class="btn btn-primary">Guardar</button>
+    </form>
+{% endif %}
+
+<!-- Listar todas las clases registradas -->
+<h2>Clases Registradas</h2>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Fecha</th>
+            <th>Hora Inicio</th>
+            <th>Hora Fin</th>
+            <th>Total Alumnos</th>
+            <th>Presentes</th>
+            <th>Ausentes</th>
+            <th>Justificados</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for item in clases_con_asistencia %}
+        <tr>
+            <td>{{ item.clase.fecha|date:"d/m/Y" }}</td>
+            <td>{{ item.clase.hora_inicio|time:"H:i" }}</td>
+            <td>{{ item.clase.hora_fin|time:"H:i" }}</td>
+            <td>{{ item.total_alumnos }}</td>
+            <td>{{ item.total_presentes }}</td>
+            <td>{{ item.total_ausentes }}</td>
+            <td>{{ item.total_justificados }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<!-- Incluir SweetAlert y el script para el retardo -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+<script>
+    {% if not clase %}
+    document.getElementById('crearClaseBtn').addEventListener('click', function(event) {
+        event.preventDefault(); // Prevenir el envío inmediato del formulario
+        Swal.fire({
+            title: 'Creando Clase...',
+            text: 'Por favor espera un momento.',
+            icon: 'info',
+            timer: 3000,
+            showConfirmButton: false,
+            allowOutsideClick: false,
+            didOpen: () => {
+                Swal.showLoading()
+            }
+        }).then(() => {
+            // Después de 3 segundos, enviar el formulario
+            document.getElementById('claseForm').submit();
+        });
+    });
+    {% endif %}
+</script>
+{% endblock %}

@@ -8,4 +8,5 @@ admin.site.register(Curso)
 admin.site.register(Unidad)
 admin.site.register(Recurso)
 admin.site.register(Nota)
-
+admin.site.register(Asistencia)
+admin.site.register(Clase)

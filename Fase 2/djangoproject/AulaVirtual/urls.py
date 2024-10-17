@@ -44,6 +44,9 @@ urlpatterns = [
     path('profesornotas/<id_curso>/', profesornotas, name ="profesornotas"),
     path('agregarnota/<id_curso>/', agregarnota, name='agregarnota'),
 
+    # ------- Profesor apartado asistencia  ---------------
+    path('profesor/cursos/<int:curso_id>/clase/nueva_tomar_asistencia/', crear_clase_y_tomar_asistencia, name='crear_clase_y_tomar_asistencia'),
+    
     # ------- Profesor apartado Anotacion  ---------------
     path('profesoranotacionlista/profesor/<rut_profesor>/curso/<int:id_curso>/', profesoranotacionlista, name='profesoranotacionlista'),
     path('profesoranotacion/<id_alumno>/', profesoranotacion, name ="profesoranotacion"),

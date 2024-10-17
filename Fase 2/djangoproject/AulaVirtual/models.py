@@ -138,4 +138,31 @@ class Nota(models.Model):
         return f"Nota {self.numero_nota} de {self.alumno.primer_nombre} {self.alumno.primer_apellido} en {self.curso.nombre}"
 
 
+# Se toma la asistencia por cada alumno, ejemplo Clase 1 alumno Lucas Rojas asistio sí
+class Asistencia(models.Model):
+    ESTADO_ASISTENCIA = [
+        ('S', 'Presente'),
+        ('N', 'Ausente'),
+        ('J', 'Justificado'),
+    ]
     
+    clase = models.ForeignKey('Clase', on_delete=models.CASCADE, related_name="asistencias")
+    alumno = models.ForeignKey('Usuario', on_delete=models.CASCADE, limit_choices_to={'tipo_usuario__tipo': 'Alumno'})
+    fecha = models.DateField(auto_now_add=True)
+    estado = models.CharField(max_length=1, choices=ESTADO_ASISTENCIA)
+
+    class Meta:
+        unique_together = ('alumno', 'fecha', 'clase')  # Incluimos 'clase' en la restricción
+
+    def __str__(self):
+        return f"{self.clase.curso} - {self.alumno} - {self.get_estado_display()} - ({self.fecha})"
+
+# Se registra una Clase (Por ejemplo: Clase 1)
+class Clase(models.Model):
+    curso = models.ForeignKey(Curso, on_delete=models.CASCADE, related_name="clases")
+    fecha = models.DateField()
+    hora_inicio = models.TimeField()
+    hora_fin = models.TimeField()
+
+    def __str__(self):
+        return f"{self.curso.nombre} - {self.fecha.strftime('%d-%m-%Y')} ({self.hora_inicio} a {self.hora_fin})"
