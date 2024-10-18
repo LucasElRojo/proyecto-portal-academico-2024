@@ -100,7 +100,11 @@
                         <td>{{ curso.nombre }}</td>
                         {% for nota in notas %}
                             {% if nota %}
-                                <td>{{ nota.valor }}</td>
+                                {% if nota.valor >= 4 %}
+                                    <td style="color: blue; font-weight: bold;">{{ nota.valor|floatformat:1 }}</td>
+                                {% else %}
+                                    <td style="color: red; font-weight: bold;">{{ nota.valor|floatformat:1 }}</td>
+                                {% endif %}
                             {% else %}
                                 <td>-</td>
                             {% endif %}
