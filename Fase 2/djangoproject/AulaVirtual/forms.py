@@ -148,3 +148,12 @@ class AsistenciaForm(forms.Form):
                 label=''
             )
             self.alumno_field_pairs.append((alumno, self[field_name]))
+            
+#Formulario pal email uwu
+class EmailForm(forms.ModelForm):
+    email = forms.EmailField(label="Email", required=True)
+    
+    class Meta:
+        model = Emails
+        exclude = ['created_at', 'edited_at', 'message', 'subject']
+        

@@ -1,6 +1,4 @@
 from django.test import TestCase
+from .models import *
 
 # Create your tests here.
-import firebase_admin
-
-print(firebase_admin)

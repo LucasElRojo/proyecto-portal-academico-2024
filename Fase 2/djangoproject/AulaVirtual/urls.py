@@ -81,6 +81,9 @@ urlpatterns = [
     path('cambiar-password/', cambiar_password_view, name='cambiar_password'),
     path('recuperar-password/', recuperar_password_view, name='recuperar_password'),
     path('logout/', logout_view, name='logout'),
+    
+    # Test email
+    path('email/', BasicEmailView.as_view(), name='my_form_view')
 ]
 
 if settings.DEBUG:

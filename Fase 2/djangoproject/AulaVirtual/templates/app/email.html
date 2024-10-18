@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Notas Mensuales - {{ user.primer_apellido }} {{ user.segundo_apellido }}</title>
+    <style>
+        /* Estilos básicos para emails */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            background-color: #ffffff;
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            color: #333333;
+        }
+        p {
+            color: #555555;
+            font-size: 16px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            padding: 12px;
+            border: 1px solid #dddddd;
+            text-align: center;
+            font-size: 14px;
+        }
+        th {
+            background-color: #007bff;
+            color: #ffffff;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        .btn {
+            display: inline-block;
+            background-color: #28a745;
+            color: #ffffff !important;
+            text-decoration: none;
+            padding: 12px 20px;
+            margin-top: 30px;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .text-center {
+            text-align: center;
+        }
+        .footer {
+            margin-top: 40px;
+            font-size: 12px;
+            color: #999999;
+            text-align: center;
+        }
+        @media only screen and (max-width: 600px) {
+            .container {
+                padding: 15px;
+            }
+            table, th, td {
+                font-size: 12px;
+            }
+            .btn {
+                padding: 10px 15px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="text-center">
+            <h1>Hola {{ user.primer_nombre }} {{ user.primer_apellido }}!</h1>
+            <p>Estas son tus notas del mes:</p>
+        </div>
+        {% if notas_por_curso %}
+            <table>
+                <thead>
+                    <tr>
+                        <th>Asignatura</th>
+                        <th>Nota 1</th>
+                        <th>Nota 2</th>
+                        <th>Nota 3</th>
+                        <th>Nota 4</th>
+                        <th>Nota 5</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for curso, notas in notas_por_curso.items %}
+                    <tr>
+                        <td>{{ curso.nombre }}</td>
+                        {% for nota in notas %}
+                            {% if nota %}
+                                <td>{{ nota.valor }}</td>
+                            {% else %}
+                                <td>-</td>
+                            {% endif %}
+                        {% endfor %}
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        {% else %}
+            <p>No hay notas registradas para ti este mes.</p>
+        {% endif %}
+        <div class="text-center">
+            <p>¿Quieres ver más detalles?</p>
+            <a href="{{ link_app }}" class="btn">Ingresa a la aplicación</a>
+        </div>
+        <div class="footer">
+            <p>Este es un mensaje automático, por favor no respondas a este correo.</p>
+        </div>
+    </div>
+</body>
+</html>

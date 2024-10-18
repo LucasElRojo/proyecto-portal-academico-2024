@@ -1,0 +1,53 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% load humanize %}
+{% load crispy_forms_tags %}
+
+
+{% block content %}
+<div class="pageholder">
+    <form method="post" action="{% url 'my_form_view' %}">
+    {% csrf_token %}
+        <div class="linkholder">
+            <div class="form1 ml-3"> {{form.email|as_crispy_field}}  </div>
+            <button class="btn-success btn-lg ml-3" type="submit" > Enviar correo :D</button>
+        </div>
+    </form>
+
+    <div class="linkholder">
+  
+        <table id="ourtable3" class="myTable m-3">
+            <thead>
+                <tr>
+                    <th>ID: </th>
+                    <th>Enviado a: </th>
+                    <th>Asunto: </th>
+                    <th>Enviado el: </th>
+                </tr>
+            </thead>
+
+            <tbody>
+                {% for a in mydata %}
+                 <tr>
+                    <td> {{a.id}} </td>
+                    <td> {{a.email}} </td>
+                    <td> {{a.subject}} </td>
+                    <td> {{a.created_ad}} </td>
+                 </tr>
+
+                {% endfor%}
+            </tbody>
+
+            
+        </table>
+
+     </div>
+
+</div>
+
+</body>
+
+
+        
+
+{% endblock %}

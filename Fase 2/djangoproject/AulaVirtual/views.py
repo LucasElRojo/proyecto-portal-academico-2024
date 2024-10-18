@@ -14,13 +14,114 @@ from .models import *
 from .forms import CambiarPasswordForm
 from .forms import RecuperarPasswordForm
 from .forms import *
-from django.contrib.auth.models import User
 from django.utils import timezone #para el tiempo 
 from datetime import datetime
+from django.views.generic import ListView, FormView
+from django.views.generic import ListView,FormView
+from django.core.mail import send_mail, EmailMultiAlternatives
+from django.template.loader import render_to_string
+from django.utils.html import strip_tags
 
 # Create your views here.
 def index(request):
     return render(request, 'app/hijo.html')
+
+class BasicEmailView(FormView, ListView):    
+    template_name = "app/emailhome.html"
+    context_object_name = 'mydata'
+    model = Emails
+    form_class = EmailForm
+    success_url = "/"
+
+    def form_valid(self, form):
+        my_subject = "¡Tus Notas Mensuales Han Llegado!"
+        my_recipient = form.cleaned_data['email']
+
+        if Usuario.objects.filter(email=my_recipient).exists():
+            user = Usuario.objects.get(email=my_recipient)
+            welcome_message = f"Hola {user.primer_nombre} {user.primer_apellido}, ¡aquí están tus notas más recientes!"
+
+            notas_por_curso = obtener_notas_usuario(user)
+        else: 
+            welcome_message = "¡Hola! Revisa tus notas del mes."
+            user = None
+            notas_por_curso = {}
+
+        link_app = "http://localhost:8000"
+
+        context = {
+            "welcome_message": welcome_message, 
+            "link_app": link_app,
+            "user": user,
+            "notas_por_curso": notas_por_curso
+        }
+                
+        html_message = render_to_string("app/email.html", context=context)
+        plain_message = strip_tags(html_message)
+
+        message = EmailMultiAlternatives(
+            subject=my_subject, 
+            body=plain_message,
+            from_email=None,
+            to=[my_recipient]
+        )
+
+        message.attach_alternative(html_message, "text/html")
+        message.send()
+
+        # Guardamos el email enviado en la base de datos
+        Emails.objects.create(
+            subject=my_subject, 
+            message="Hemos enviado este correo", 
+            email=my_recipient
+        )
+        
+        return super().form_valid(form)
+
+
+def obtener_notas_usuario(user):
+    # Obtenemos todas las notas del alumno
+    notas = Nota.objects.filter(alumno=user).select_related('curso').order_by('curso__nombre', 'numero_nota')
+    
+    # Diccionario para almacenar las notas por curso
+    notas_por_curso = {}
+    for nota in notas:
+        curso = nota.curso
+        if curso not in notas_por_curso:
+            notas_por_curso[curso] = []
+        notas_por_curso[curso].append(nota)
+    
+    # Asegurarse de que siempre haya 5 notas por curso (rellenar con None si faltan)
+    for notas_list in notas_por_curso.values():
+        while len(notas_list) < 5:
+            notas_list.append(None)
+    
+    return notas_por_curso
+
+
+
+def alumnonotas(request, rut_alumno):
+    alumno = Usuario.objects.get(rut=rut_alumno, tipo_usuario__tipo='Alumno')
+    cursos = alumno.cursos.all()
+
+    # Diccionario para almacenar las notas por curso
+    notas_por_curso = {}
+    for curso in cursos:
+        notas = list(Nota.objects.filter(alumno=alumno, curso=curso).order_by('numero_nota'))
+        
+        # Asegurarse de que siempre haya 5 notas (rellenar con None si faltan)
+        while len(notas) < 5:
+            notas.append(None)
+        
+        notas_por_curso[curso] = notas
+
+    context = {
+        'alumno': alumno,
+        'notas_por_curso': notas_por_curso,
+        'rango_notas': range(1, 6),  # Se ajusta segun las notas 
+    }
+
+    return render(request, 'app/alumno/notas/alumnonotas.html', context)
 
 @login_required
 def perfil(request):
@@ -233,29 +334,6 @@ def alumnoanotacion(request, rut_alumno):
 
     return render(request, "app/alumno/anotacion/alumnoanotacion.html", context)
 
-
-def alumnonotas(request, rut_alumno):
-    alumno = Usuario.objects.get(rut=rut_alumno, tipo_usuario__tipo='Alumno')
-    cursos = alumno.cursos.all()
-
-    # Diccionario para almacenar las notas por curso
-    notas_por_curso = {}
-    for curso in cursos:
-        notas = list(Nota.objects.filter(alumno=alumno, curso=curso).order_by('numero_nota'))
-        
-        # Asegurarse de que siempre haya 5 notas (rellenar con None si faltan)
-        while len(notas) < 5:
-            notas.append(None)
-        
-        notas_por_curso[curso] = notas
-
-    context = {
-        'alumno': alumno,
-        'notas_por_curso': notas_por_curso,
-        'rango_notas': range(1, 6),  # Se ajusta segun las notas 
-    }
-
-    return render(request, 'app/alumno/notas/alumnonotas.html', context)
 
 
 def alumnoanuncio(request, rut_alumno):

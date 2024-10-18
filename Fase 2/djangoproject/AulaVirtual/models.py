@@ -65,7 +65,6 @@ class Usuario(AbstractBaseUser):
     def __str__(self):
         return f"{self.primer_nombre} {self.primer_apellido}"
     
-
     # Métodos para manejar permisos
     def has_perm(self, perm, obj=None):
         return True
@@ -166,3 +165,14 @@ class Clase(models.Model):
 
     def __str__(self):
         return f"{self.curso.nombre} - {self.fecha.strftime('%d-%m-%Y')} ({self.hora_inicio} a {self.hora_fin})"
+
+#Enviar emails modelo xd
+class Emails(models.Model):
+    subject = models.CharField(max_length=500)
+    message = models.TextField(max_length=500)
+    email = models.EmailField()
+    created_ad = models.DateField(auto_now_add=True, blank=True, null=True)
+    updated_ad = models.DateField(auto_now=True)
+    
+    def __str__(self):
+        return self.id

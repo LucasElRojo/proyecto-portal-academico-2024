@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'AulaVirtual',
     'colorfield',
     'crispy_forms',
+    'crispy_bootstrap5',
     'rest_framework',
 ]
 
@@ -167,3 +168,15 @@ SESSION_EXPIRE_AT_BROWSER_CLOSE = False
 
 # Usar sesiones con base de datos
 SESSION_ENGINE = 'django.contrib.sessions.backends.db'
+
+# SMTP De Google (No hagan cosas malvadas :( )
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
+CRISPY_TEMPLATE_PACK = "bootstrap5"
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_USE_SSL = False
+EMAIL_HOST_USER = "lrojaspaila@gmail.com"
+EMAIL_HOST_PASSWORD = "lmjc gapy ucye uvbe"
