@@ -8,7 +8,7 @@ from django.forms import modelformset_factory
 class UserForm(forms.ModelForm):
     class Meta:
         model = Usuario
-        fields = ['rut','password','primer_nombre','segundo_nombre','primer_apellido', 'segundo_apellido', 'email', 'telefono']
+        fields = ['rut','password','primer_nombre','segundo_nombre','primer_apellido', 'segundo_apellido', 'email', 'telefono', 'tipo_usuario']
 
 class LoginForm(forms.Form):
     rut = forms.CharField(max_length=12)
@@ -157,3 +157,7 @@ class EmailForm(forms.ModelForm):
         model = Emails
         exclude = ['created_at', 'edited_at', 'message', 'subject']
         
+
+class AsignarCursoForm(forms.Form):
+    profesor = forms.ModelChoiceField(queryset=Usuario.objects.filter(tipo_usuario__tipo='Profesor'))
+    curso = forms.ModelChoiceField(queryset=Curso.objects.all())

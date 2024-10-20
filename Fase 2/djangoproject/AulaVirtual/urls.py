@@ -76,6 +76,10 @@ urlpatterns = [
     path('eliminarUsuario/<id>/',eliminarUsuario, name="eliminarUsuario"),
     path('agregar/<id>/',eliminarUsuario, name="eliminarUsuario"),
     
+    path('adminusuariohome/',adminusuariohome, name="adminusuariohome"),
+    path('adminagregarprofesor/',adminagregarprofesor, name="adminagregarprofesor"),
+ 
+
     path('registro/', registro_view, name='registro'),
     path('login/', login_view, name='login'),
     path('cambiar-password/', cambiar_password_view, name='cambiar_password'),

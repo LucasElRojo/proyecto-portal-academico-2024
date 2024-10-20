@@ -629,35 +629,50 @@ def adminagregar(request):
     if request.method == 'POST':
         form = UserForm(request.POST, request.FILES)
         if form.is_valid():
-            usuario = form.save(commit=False)
-            usuario.save()  # Guarda el usuario
+            usuario = form.save(commit=False)  
+            raw_password = form.cleaned_data.get('password')   #Aqui se encripta la contraseña
+            usuario.set_password(raw_password)  
+            usuario.save()  
 
-            # Asigna automáticamente el rol "Alumno" al nuevo usuario
-            tipo_usuario = TipoUsuario.objects.get(codigo=3)  # Suponiendo que el código 3 corresponde a "Alumno"
+
+            tipo_usuario = TipoUsuario.objects.get(codigo=3)  #Aqui se asigna automaticamente que el usuario creado sea alumno
             usuario.tipo_usuario = tipo_usuario
-            usuario.save()  # Guarda nuevamente el usuario con el tipo asignado
+            usuario.save()  
 
             messages.success(request, 'Usuario creado como Alumno correctamente!')
+            return redirect('adminusuario')
         else:
             messages.error(request, 'Hubo un error al crear el usuario.')
 
-    return render(request, 'app/administrador/adminagregar.html', {'form': form})
+    return render(request, 'app/administrador/usuarios/manejo_usuario/adminagregar.html', {'form': form})
 
-def adminmodificar(request, id): 
 
+def adminmodificar(request, id):
     usuario = Usuario.objects.get(id=id)
-    datos = {
-        'form': UserForm(instance=usuario)
-    }
+    form = UserForm(instance=usuario)  
 
     if request.method == 'POST':
-        formulario = UserForm(request.POST, files=request.FILES, instance=usuario)
-        if formulario.is_valid():
-            formulario.save()
-            messages.success(request, 'Usuario modificado correctamente!')
-            datos['form'] = formulario
+        form = UserForm(request.POST, instance=usuario)  
+        
+        if form.is_valid():
+            # Comprobar si se cambió la contraseña
+            new_password = form.cleaned_data.get('password')
+            
+            # encripta la contraseña antes de guardar
+            if new_password:
+                usuario.set_password(new_password)
 
-    return render(request, "app/administrador/adminmodificar.html", datos)
+            form.save()  # Guardar el usuario con los cambios
+            messages.success(request, 'Usuario modificado correctamente!')
+            return redirect('adminusuario')  
+
+    context = {
+        'form': form,
+        'usuario': usuario
+    }
+    return render(request, "app/administrador/usuarios/manejo_usuario/adminmodificar.html", context)
+
+
 def adminusuario(request):
     usuarios = Usuario.objects.all()
     roles = TipoUsuario.objects.all()
@@ -672,12 +687,52 @@ def adminusuario(request):
                 
         return redirect('adminusuario')
     
-    return render(request, "app/administrador/adminusuario.html", {'usuarios': usuarios, 'roles': roles})
+    return render(request, "app/administrador/usuarios/manejo_usuario/adminusuario.html", {'usuarios': usuarios, 'roles': roles})
 
 def eliminarUsuario(request, id):
     usuarios = Usuario.objects.get(id=id)
     usuarios.delete()
     return redirect(to="adminusuario")
+
+
+
+def adminusuariohome(request):
+           
+    return render(request, "app/administrador/usuarios/adminusuariohome.html")
+    
+def admincursohome(request):
+           
+    return render(request, "app/administrador/usuarios/admincursohome.html")
+
+
+
+def adminagregarprofesor(request):
+
+    # Obtener solo los usuarios que sean profesores
+    profesores = Usuario.objects.filter(tipo_usuario__tipo='Profesor')
+    cursos = Curso.objects.all()
+
+    if request.method == 'POST':
+        profesor_id = request.POST.get('profesor')
+        curso_id = request.POST.get('curso')
+
+        # Verificar que ambos existan
+        profesor = Usuario.objects.get(id=profesor_id)
+        curso = Curso.objects.get(id=curso_id)
+
+        # Asignar el curso al profesor
+        curso.profesor = profesor
+        curso.save()
+
+        messages.success(request, f'El curso {curso.nombre} ha sido asignado al profesor {profesor.primer_nombre} {profesor.primer_apellido}.')
+        return redirect('adminagregarprofesor')
+
+    context = {
+        'profesores': profesores,
+        'cursos': cursos
+    }
+           
+    return render(request, "app/administrador/usuarios/asignar_curso/adminagregarprofesor.html", context)
 
 
 
@@ -707,12 +762,21 @@ def login_view(request):
             user = authenticate(request, rut=rut, password=password)
             if user:
                 login(request, user)
-                return redirect('perfil')  # Redirigir a la pagina de perfil
+
+                # Redirigir según el tipo de usuario
+                if user.tipo_usuario.tipo == 'Profesor':
+                    return redirect('profesorcurso', rut_profesor=user.rut)
+                elif user.tipo_usuario.tipo == 'Alumno':
+                    return redirect('alumnocurso', rut_alumno = user.rut)  
+                elif user.tipo_usuario.tipo == 'Administrador':
+                    return redirect('adminhome')  
+                else:
+                    return redirect('perfil')  
+
     else:
         form = LoginForm()
 
     return render(request, 'app/login.html', {'form': form})
-
 def logout_view(request):
     logout(request)
     return redirect('index')  # Redirigir a la página de inicio después de cerrar sesión
