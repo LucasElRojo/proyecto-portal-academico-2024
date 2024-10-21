@@ -68,7 +68,7 @@ urlpatterns = [
     path('unidad/<unidad_id>/agregar/', agregar_contenido, name='agregar_contenido'),
 
     path('adminhome/', adminhome, name ="adminhome"),
-    path('admincursos/', admincursos, name ="admincursos"),
+    
     path('adminusuario/', adminusuario, name ="adminusuario"),
     path('adminprofe/', adminprofe, name ="adminprofe"),
     path('adminagregar/', adminagregar, name ="adminagregar"),
@@ -78,7 +78,12 @@ urlpatterns = [
     
     path('adminusuariohome/',adminusuariohome, name="adminusuariohome"),
     path('adminagregarprofesor/',adminagregarprofesor, name="adminagregarprofesor"),
- 
+    path('adminagregaralumno/', adminagregaralumno, name='adminagregaralumno'),
+
+    path('admincursoshome/', admincursoshome, name ="admincursoshome"),
+    path('admincursolistar/', admincursolistar, name ="admincursolistar"),
+    path('admincursoagregar/', admincursoagregar, name ="admincursoagregar"),
+    path('admincursomodificar/<id>/', admincursomodificar, name ="admincursomodificar"),
 
     path('registro/', registro_view, name='registro'),
     path('login/', login_view, name='login'),

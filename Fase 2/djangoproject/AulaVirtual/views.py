@@ -618,8 +618,8 @@ def agregar_contenido(request, unidad_id):
 def adminhome(request):
     return render(request, "app/administrador/adminhome.html")
 
-def admincursos(request):
-    return render(request, "app/administrador/admincursos.html")
+def admincursoshome(request):
+    return render(request, "app/administrador/cursos/admincursoshome.html")
 
 def adminprofe(request):
     return render(request, "app/administrador/adminprofe.html")
@@ -700,9 +700,45 @@ def adminusuariohome(request):
            
     return render(request, "app/administrador/usuarios/adminusuariohome.html")
     
-def admincursohome(request):
-           
-    return render(request, "app/administrador/usuarios/admincursohome.html")
+
+def admincursolistar(request):
+    cursos = Curso.objects.all()
+    return render(request, "app/administrador/cursos/agregar_cursos/admincursolistar.html", {'cursos': cursos})
+
+def admincursoagregar(request):
+    if request.method == 'POST':
+        form = CursoForm(request.POST)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'El curso ha sido creado correctamente.')
+            return redirect('admincursolistar')  
+    else:
+        form = CursoForm()      
+    return render(request, "app/administrador/cursos/agregar_cursos/admincursoagregar.html", {'form': form})
+
+
+def admincursomodificar(request, id):
+ curso = Curso.objects.get(id=id)  
+
+ if request.method == 'POST':
+        form = CursoForm(request.POST, instance=curso)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Curso modificado correctamente!')
+            return redirect('admincursolistar')  
+ else:
+        form = CursoForm(instance=curso)    
+ return render(request, "app/administrador/cursos/agregar_cursos/admincursomodificar.html", {'form': form})
+
+
+def eliminarcurso(request, id):
+    usuarios = Usuario.objects.get(id=id)
+    usuarios.delete()
+    return redirect(to="admincursolistar")
+
+
+
+
 
 
 
@@ -734,6 +770,39 @@ def adminagregarprofesor(request):
            
     return render(request, "app/administrador/usuarios/asignar_curso/adminagregarprofesor.html", context)
 
+
+
+
+def adminagregaralumno(request):
+    if request.method == 'POST':
+        alumno_id = request.POST.get('alumno')  # Obtenemos el ID del alumno del formulario
+        cursos_ids = request.POST.getlist('cursos')  # Obtenemos la lista de IDs de los cursos seleccionados
+
+        try:
+            alumno = Usuario.objects.get(id=alumno_id, tipo_usuario__tipo='Alumno')  # Obtenemos al alumno
+            cursos = Curso.objects.filter(id__in=cursos_ids)  # Obtenemos los cursos seleccionados
+
+            # Asignamos los cursos al alumno
+            alumno.cursos.set(cursos)  # Si quieres reemplazar todos los cursos, usa set()
+            alumno.save()
+
+            messages.success(request, f'El alumno {alumno.primer_nombre} {alumno.primer_apellido} ha sido asignado a los cursos seleccionados.')
+        except Usuario.DoesNotExist:
+            messages.error(request, 'Alumno no encontrado')
+        except Curso.DoesNotExist:
+            messages.error(request, 'Uno o más cursos no encontrados')
+
+        return redirect('adminagregaralumno')  
+    else:
+        # Obtenemos la lista de alumnos y cursos para mostrarlos en el formulario
+        alumnos = Usuario.objects.filter(tipo_usuario__tipo='Alumno')
+        cursos = Curso.objects.all()
+
+        context = {
+            'alumnos': alumnos,
+            'cursos': cursos
+        }
+        return render(request, 'app/administrador/usuarios/alumno_curso/adminagregaralumno.html', context)
 
 
 def registro_view(request):
