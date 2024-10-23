@@ -85,6 +85,11 @@ urlpatterns = [
     path('admincursoagregar/', admincursoagregar, name ="admincursoagregar"),
     path('admincursomodificar/<id>/', admincursomodificar, name ="admincursomodificar"),
 
+    path('adminunidadeslistar/', adminunidadeslistar, name ="adminunidadeslistar"),
+    path('adminunidadesagregar/', adminunidadesagregar, name ="adminunidadesagregar"),
+    path('adminunidadesmodificar/<id_unidad>/', adminunidadesmodificar, name ="adminunidadesmodificar"),
+    path('adminunidadeseliminar/<id_unidad>/', adminunidadeseliminar, name ="adminunidadeseliminar"),
+
     path('registro/', registro_view, name='registro'),
     path('login/', login_view, name='login'),
     path('cambiar-password/', cambiar_password_view, name='cambiar_password'),

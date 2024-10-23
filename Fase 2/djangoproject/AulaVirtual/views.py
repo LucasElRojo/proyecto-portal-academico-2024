@@ -556,15 +556,6 @@ def agregarnota(request, id_curso):
     return render(request, 'app/profesor/notas/agregarnota.html', context)
 
 
-
-
-
-
-
-
-
-
-
 def profesoranotacionlista(request, rut_profesor, id_curso):
     profesor = Usuario.objects.get(rut=rut_profesor, tipo_usuario__tipo='Profesor')
     curso = Curso.objects.get(id=id_curso, profesor=profesor)
@@ -619,6 +610,7 @@ def adminhome(request):
     return render(request, "app/administrador/adminhome.html")
 
 def admincursoshome(request):
+    
     return render(request, "app/administrador/cursos/admincursoshome.html")
 
 def adminprofe(request):
@@ -674,20 +666,17 @@ def adminmodificar(request, id):
 
 
 def adminusuario(request):
-    usuarios = Usuario.objects.all()
     roles = TipoUsuario.objects.all()
-    #Logica para cambiar el rol
-    if request.method == 'POST':
-        for usuario in usuarios:
-            nuevo_rol_id = request.POST.get(f'rol_{usuario.id}')
-            if nuevo_rol_id:
-                nuevo_rol = TipoUsuario.objects.get(codigo=nuevo_rol_id)
-                usuario.tipo_usuario = nuevo_rol
-                usuario.save()  # Guarda el nuevo rol del usuario
-                
-        return redirect('adminusuario')
-    
-    return render(request, "app/administrador/usuarios/manejo_usuario/adminusuario.html", {'usuarios': usuarios, 'roles': roles})
+    usuarios = Usuario.objects.all()
+
+    rol_id = request.GET.get('rol')
+    if rol_id:
+        usuarios = usuarios.filter(tipo_usuario__codigo=rol_id)
+
+    return render(request, "app/administrador/usuarios/manejo_usuario/adminusuario.html", {
+        'usuarios': usuarios,
+        'roles': roles,
+    })
 
 def eliminarUsuario(request, id):
     usuarios = Usuario.objects.get(id=id)
@@ -702,8 +691,29 @@ def adminusuariohome(request):
     
 
 def admincursolistar(request):
+    
+    profesores = Usuario.objects.filter(tipo_usuario__tipo='Profesor')
+    todos_los_cursos = Curso.objects.all()
+    
+    profesor_id = request.GET.get('profesor')
+    materia_id = request.GET.get('materia')
+    
     cursos = Curso.objects.all()
-    return render(request, "app/administrador/cursos/agregar_cursos/admincursolistar.html", {'cursos': cursos})
+    
+    if profesor_id:
+        cursos = cursos.filter(profesor__id=profesor_id)
+    
+    if materia_id:
+        cursos = cursos.filter(id=materia_id)
+    
+    context = {
+        'cursos': cursos,
+        'profesores': profesores,
+        'todos_los_cursos': todos_los_cursos
+    }
+    
+
+    return render(request, "app/administrador/cursos/agregar_cursos/admincursolistar.html", context)
 
 def admincursoagregar(request):
     if request.method == 'POST':
@@ -741,7 +751,6 @@ def eliminarcurso(request, id):
 
 
 
-
 def adminagregarprofesor(request):
 
     # Obtener solo los usuarios que sean profesores
@@ -770,6 +779,64 @@ def adminagregarprofesor(request):
            
     return render(request, "app/administrador/usuarios/asignar_curso/adminagregarprofesor.html", context)
 
+
+def adminunidadeslistar(request):
+
+    # obtiene todos los datos primero
+    profesores = Usuario.objects.filter(tipo_usuario__tipo='Profesor')
+    cursos = Curso.objects.all()
+
+    # Aqui obtiene todos los datos de la vista del listar
+    profesor_id = request.GET.get('profesor')
+    curso_id = request.GET.get('curso')
+
+    # Filtra las cosas segun los filtros seleccionados
+    unidades = Unidad.objects.all()
+
+    if curso_id:
+        unidades = unidades.filter(curso__id=curso_id)
+    
+    if profesor_id:
+        unidades = unidades.filter(curso__profesor__id=profesor_id)
+
+    context = {
+        'unidades': unidades,
+        'cursos': cursos,
+        'profesores': profesores,
+    }
+
+    return render(request, "app/administrador/cursos/unidades/adminunidadeslistar.html", context)
+
+def adminunidadesagregar(request):
+    if request.method == 'POST':
+        form = UnidadForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('adminunidadeslistar')  
+    else:
+        form = UnidadForm()
+    
+    cursos = Curso.objects.all()  
+    return render(request, "app/administrador/cursos/unidades/adminunidadesagregar.html", {'form': form, 'cursos': cursos})
+
+def adminunidadesmodificar(request, id_unidad):
+    unidad = Unidad.objects.get(id=id_unidad)  
+    if request.method == 'POST':
+        form = UnidadForm(request.POST, instance=unidad)  
+        if form.is_valid():
+            form.save()  
+            return redirect('adminunidadeslistar')  
+    else:
+        form = UnidadForm(instance=unidad)  
+    return render(request, "app/administrador/cursos/unidades/adminunidadesmodificar.html", {'form': form, 'unidad': unidad})
+
+
+
+def adminunidadeseliminar(request, id_unidad):
+    unidad = Unidad.objects.get(id=id_unidad)
+    unidad.delete()
+    messages.success(request, 'Unidad eliminada correctamente.')
+    return redirect('adminunidadeslistar')
 
 
 

@@ -161,3 +161,11 @@ class EmailForm(forms.ModelForm):
 class AsignarCursoForm(forms.Form):
     profesor = forms.ModelChoiceField(queryset=Usuario.objects.filter(tipo_usuario__tipo='Profesor'))
     curso = forms.ModelChoiceField(queryset=Curso.objects.all())
+
+
+class UnidadForm(forms.ModelForm):
+    curso = forms.ModelChoiceField(queryset=Curso.objects.all(), empty_label="Seleccionar Curso")
+
+    class Meta:
+        model = Unidad
+        fields = ['nombre', 'curso']
