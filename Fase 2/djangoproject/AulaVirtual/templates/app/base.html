@@ -38,8 +38,10 @@
             <li class="{% if request.path == '/perfil/' %}active{% endif %}">
                 <a href="{% url 'perfil' %}">Perfil</a>
             </li>
-            <li class="{% if request.path == '/notas/' %}active{% endif %}">
-                <a href="{% url 'notas' %}">Notas</a> 
+
+            {% if user.is_authenticated and user.tipo_usuario.tipo == 'Alumno'  or curso.id%}
+            <li class="{% if request.path == '/alumnonotas/' %}active{% endif %}">
+              <a href="{% url 'alumnonotas' user.rut %}">Notas</a> 
             </li>
             <li class="{% if request.path == '/asistencia/' %}active{% endif %}">
                 <a href="{% url 'asistencia' %}">Asistencia</a> 
@@ -47,15 +49,63 @@
             <li class="{% if request.path == '/horario/' %}active{% endif %}">
                 <a href="{% url 'horario' %}">Horario</a>
             </li>
-            <li class="{% if request.path == '/anotaciones/' %}active{% endif %}">
-                <a href="{% url 'anotaciones' %}">Anotaciones</a>
+            <li class="{% if request.path == '/alumnoanotacion/' %}active{% endif %}">
+                <a href="{% url 'alumnoanotacion' user.rut %}">Anotaciones</a>
             </li>
-            <li class="{% if request.path == '/anuncios/' %}active{% endif %}">
-                <a href="{% url 'anuncios' %}">Anuncios</a>
+            <li class="{% if request.path == '/alumnoanuncio/' %}active{% endif %}">
+                <a href="{% url 'alumnoanuncio' user.rut %}">Anuncios</a>
             </li>
-            <li class="{% if request.path == '/calendario/' %}active{% endif %}">
-                <a href="{% url 'calendario' %}">Calendario</a> <!-- Aún no está disponible -->
+            {% if curso.id %}
+              <li class="{% if request.path == '/alumnomaterial/' %}active{% endif %}">
+                <a href="{% url 'alumnomaterial' user.rut curso.id %}">Material</a>
+             </li>   
+            {% endif %}
+        {% endif %}
+      
+
+            {% if user.tipo_usuario.tipo == 'Administrador'  %}
+              <li class="{% if request.path == '/adminusuariohome/' %}active{% endif %}">
+                <a href="{% url 'adminhome' %}">Apartado de Usuarios </a>
+              </li>
+              <li class="{% if request.path == '/admincursohome/' %}active{% endif %}">
+                <a href="{% url 'admincursoshome' %}">Apartado de Cursos </a>
+              </li>
+            {% endif %}
+
+            
+
+        {% if user.is_authenticated and user.tipo_usuario.tipo == 'Profesor' %}
+        <li class="{% if request.path == '/profesorcurso/' %}active{% endif %}">
+          <a href="{% url 'profesorcurso' user.rut %}">Cursos profesor</a>
+        </li>
+        {% if curso.id %}
+
+            <li class="{% if request.path == '/asistencia/' %}active{% endif %}">
+              <a href="{% url 'asistencia'  %}">Asistencia</a>
+           </li>
+          
+            <li class="{% if request.path == '/profesornotas/' %}active{% endif %}">
+                <a href="{% url 'profesornotas' curso.id %}">Notas </a>
             </li>
+
+            <li class="{% if request.path == '/profesoranuncio/' %}active{% endif %}">
+              <a href="{% url 'profesoranuncio'  curso.id %}">Anuncios</a>
+           </li>
+
+
+           <li class="{% if request.path == '/profesormaterial/' %}active{% endif %}">
+              <a href="{% url 'profesormaterial'  curso.id %}">Material</a>
+           </li>
+
+           <li class="{% if request.path == '/profesoranotacion/' %}active{% endif %}">
+             <a href="{% url 'profesoranotacionlista' user.rut curso.id %}">Anotaciones </a>
+           </li>
+
+        {% endif %}
+    {% endif %}
+    
+
+
         </ul>
         
         {% if user.is_authenticated %}

@@ -316,7 +316,6 @@ def alumnohome(request, id_curso):
         'curso': curso,
         'unidades': unidades,
         'alumno': alumno,  
-        'es_profesor': request.user.tipo_usuario.tipo == 'Profesor'
     }
 
     return render(request, 'app/alumno/alumnohome.html', context)
@@ -501,7 +500,7 @@ def profesorasistencia(request):
 
 def profesornotas(request, id_curso):
     curso = Curso.objects.get(id=id_curso)
-    
+    profesor = request.user
     # Obtener todos los alumnos inscritos en el curso
     alumnos = Usuario.objects.filter(tipo_usuario__tipo='Alumno')
 
@@ -515,6 +514,7 @@ def profesornotas(request, id_curso):
     context = {
         'curso': curso,
         'alumnos_con_notas': alumnos_con_notas,
+        'profesor': profesor,
     }
 
     return render(request, 'app/profesor/notas/profesornotas.html', context)
@@ -583,7 +583,9 @@ def profesormaterial(request, id_curso):
     context = {
         'curso': curso,
         'unidades': unidades,
-        'es_profesor': request.user.tipo_usuario.tipo == 'Profesor'  
+        'es_profesor': request.user.tipo_usuario.tipo == 'Profesor' ,
+
+
     }
 
     return render(request, 'app/profesor/profesormaterial.html', context)
