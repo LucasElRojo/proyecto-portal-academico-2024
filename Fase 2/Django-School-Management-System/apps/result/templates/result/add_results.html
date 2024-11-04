@@ -1,0 +1,71 @@
+<!-- templates/add_results.html -->
+{% extends 'base.html' %}
+{% load static %}
+{% load custom_tags %}
+
+{% block title %}Agregar Notas para {{ subject.name }}{% endblock title %}
+
+{% block content %}
+<h2>Agregar Notas para {{ subject.name }}</h2>
+
+<form method="post">
+    {% csrf_token %}
+    <div class="table-responsive">
+        <table id="studenttable" class="table table-bordered table-hover" data-page-length='100'>
+          <thead class="thead-light">
+            <tr>
+                <th>Estudiante</th>
+                {% for n in n_range %}
+                <th>Nota {{ n }}</th>
+                {% endfor %}
+            </tr>
+          </thead>
+        <tbody>
+            {% for student in students %}
+            <tr>
+                <td>{{ student }}</td>
+                {% for n in n_range %}
+                <td>
+                    {% build_key student.id n as key %}
+                    <input type="number" step="0.1" name="score_{{ student.id }}_{{ n }}" value="{{ results_dict|get_item:key }}">
+                </td>
+                {% endfor %}
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <button type="submit" class="btn btn-primary">Guardar Notas</button>
+</form>
+
+<script>
+$(document).ready(function() {
+    var table = $('#resultsTable').DataTable({
+      language: {
+        "sProcessing": "Procesando...",
+        "sLengthMenu": "Mostrar _MENU_ registros",
+        "sZeroRecords": "No se encontraron resultados",
+        "sEmptyTable": "Ningún dato disponible en esta tabla",
+        "sInfo": "Mostrando registros del _START_ al _END_ de un total de _TOTAL_ registros",
+        "sInfoEmpty": "Mostrando registros del 0 al 0 de un total de 0 registros",
+        "sInfoFiltered": "(filtrado de un total de _MAX_ registros)",
+        "sInfoPostFix": "",
+        "sSearch": "Buscar:",
+        "sUrl": "",
+        "sInfoThousands": ",",
+        "sLoadingRecords": "Cargando...",
+        "oPaginate": {
+          "sFirst": "Primero",
+          "sLast": "Último",
+          "sNext": "Siguiente",
+          "sPrevious": "Anterior"
+        },
+        "oAria": {
+          "sSortAscending": ": Activar para ordenar la columna de manera ascendente",
+          "sSortDescending": ": Activar para ordenar la columna de manera descendente"
+        }
+      }
+    })
+  });
+</script>
+
+{% endblock content %}

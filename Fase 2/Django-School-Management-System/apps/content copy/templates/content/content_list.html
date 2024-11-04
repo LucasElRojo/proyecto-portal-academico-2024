@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+
+{% block title %}Contenido de la Asignatura: {{ subject.name }}{% endblock title %}
+
+
+{% block content %}
+<div class="table-responsive">
+<table id="contentTable" class="table table-bordered table-hover" data-page-length='10'>
+    <thead class="thead-light">
+    <tr>
+        <th>S/N</th>
+        <th>Título</th>
+        <th>Descripción</th>
+        <th>Fecha subida</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for content in contents %}
+        <tr onclick="window.location.href='{% url 'content_detail' content.id %}'" style="cursor: pointer;">
+        <td>{{ forloop.counter }}</td>
+        <td>{{ content.title }}</td>
+        <td>{{ content.description }}</td>
+        <td>{{ content.files.first.uploaded_at|date:"d/m/Y" }}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+<a href="{% url 'add_content' subject.id %}" class="btn btn-primary mb-3">Agregar Contenido</a>
+</div>
+{% endblock content %}
+
+{% block morejs %}
+<script>
+  $(document).ready(function() {
+    // Inicializar DataTable
+    $('#contentTable').DataTable({
+      language: {
+        "sProcessing": "Procesando...",
+        "sLengthMenu": "Mostrar _MENU_ registros",
+        "sZeroRecords": "No se encontraron resultados",
+        "sEmptyTable": "Ningún dato disponible en esta tabla",
+        "sInfo": "Mostrando registros del _START_ al _END_ de un total de _TOTAL_ registros",
+        "sInfoEmpty": "Mostrando registros del 0 al 0 de un total de 0 registros",
+        "sInfoFiltered": "(filtrado de un total de _MAX_ registros)",
+        "sSearch": "Buscar:",
+        "oPaginate": {
+          "sFirst": "Primero",
+          "sLast": "Último",
+          "sNext": "Siguiente",
+          "sPrevious": "Anterior"
+        }
+      }
+    });
+  });
+</script>
+{% endblock morejs %}

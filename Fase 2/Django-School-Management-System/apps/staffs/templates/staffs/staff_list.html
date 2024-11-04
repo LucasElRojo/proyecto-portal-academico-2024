@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+
+{% block title %}Administradores{% endblock title %}
+
+{% block breadcrumb %}
+<a class="btn btn-primary" href="{% url 'staff-create' %}"><i
+    class="fas fa-plus"></i> Nuevo administrador</a>
+<a class="btn btn-primary" href="{% url 'staff-create' %}"><i
+    class="fas fa-upload"></i> Subir administradores</a>
+{% endblock breadcrumb %}
+
+{% block content %}
+  <div class="table-responsive">
+    <table id="teachertable" class="table table-bordered table-hover" data-page-length='100'>
+      <thead class="thead-light">
+        <tr>
+          <th>S/N</th>
+          <th>RUT</th>
+          <th>Nombre administrador</th>
+          <th>Sexo</th>
+          <th>Telefono</th>
+          <th>Estado</th>
+        </tr>
+      </thead>
+      <tbody>
+
+        {% for staff in object_list %}
+          <tr class='clickable-row' data-href="{% url 'staff-detail' staff.id %}">
+            <td>{{ forloop.counter}}</td>
+            <td>{{ staff.rut}}</td>
+            <td>{{ staff.nombres }} {{ staff.apellido_paterno}} {{staff.apellido_materno }}</td>
+            <td>{{ staff.get_sexo_display}}</td>
+            <td>{{ staff.telefono}}</td>
+            <td>{{ staff.get_estado_display}}</td>
+          </tr>
+        {% endfor %}
+
+      </tbody>
+    </table>
+  </div>
+{% endblock content %}
+
+
+{% block morejs %}
+<script>
+  $('#teachertable').DataTable({
+    language: {
+      "sProcessing": "Procesando...",
+      "sLengthMenu": "Mostrar _MENU_ registros",
+      "sZeroRecords": "No se encontraron resultados",
+      "sEmptyTable": "Ningún dato disponible en esta tabla",
+      "sInfo": "Mostrando registros del _START_ al _END_ de un total de _TOTAL_ registros",
+      "sInfoEmpty": "Mostrando registros del 0 al 0 de un total de 0 registros",
+      "sInfoFiltered": "(filtrado de un total de _MAX_ registros)",
+      "sInfoPostFix": "",
+      "sSearch": "Buscar:",
+      "sUrl": "",
+      "sInfoThousands": ",",
+      "sLoadingRecords": "Cargando...",
+      "oPaginate": {
+        "sFirst": "Primero",
+        "sLast": "Último",
+        "sNext": "Siguiente",
+        "sPrevious": "Anterior"
+      },
+      "oAria": {
+        "sSortAscending": ": Activar para ordenar la columna de manera ascendente",
+        "sSortDescending": ": Activar para ordenar la columna de manera descendente"
+      }
+    }
+  });
+</script>
+{% endblock morejs %}
+

@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+
+  {% if object %}
+    Actualizar administrador {{ object }}
+  {% else %}
+    Añadir administrador
+  {% endif %}
+
+{% endblock title %}
+
+
+{% block content %}
+
+<form action="" method="POST">
+  {% csrf_token %}
+
+  {% include 'corecode/form_snippet.html' %}
+
+  {% if object %}
+    <input type="submit" class="btn btn-primary" value="Actualizar">
+  {% else %}
+    <input type="submit" class="btn btn-primary" value="Añadir nuevo administrador">
+  {% endif %}
+</form>
+
+
+{% endblock content %}

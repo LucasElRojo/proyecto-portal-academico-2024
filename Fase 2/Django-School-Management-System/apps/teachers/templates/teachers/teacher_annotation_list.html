@@ -1,0 +1,107 @@
+{% extends 'base.html' %}
+
+{% block title %}Anotaciones{% endblock title %}
+
+{% block breadcrumb %}
+<a class="btn btn-primary" href="{% url 'annotation-create' %}"><i class="fas fa-plus"></i> Nueva anotación</a>
+{% endblock breadcrumb %}
+
+{% block content %}
+  <style>
+    .positive {
+      background-color: #d4edda; /* Verde claro */
+      color: #155724; /* Verde oscuro */
+    }
+    .negative {
+      background-color: #f8d7da; /* Rojo claro */
+      color: #721c24; /* Rojo oscuro */
+    }
+  </style>
+
+  <div class="row mb-3">
+    <!-- Filtro por Alumno -->
+    <div class="col-md-6">
+      <label for="filter-student" class="form-label" style="font-weight: bold;">Alumno:</label>
+      <select id="filter-student" class="form-control">
+        <option value="">Todos</option>
+        {% for student in students %}
+          <option value="{{ student.id }}">{{ student.nombres }} {{ student.apellido_paterno }} {{ student.apellido_materno }}</option>
+        {% endfor %}
+      </select>
+    </div>
+
+    <!-- Filtro por Tipo de Anotación -->
+    <div class="col-md-6">
+      <label for="filter-type" class="form-label" style="font-weight: bold;">Tipo de Anotación:</label>
+      <select id="filter-type" class="form-control">
+        <option value="">Todas</option>
+        <option value="positive">Positiva</option>
+        <option value="negative">Negativa</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="table-responsive">
+    <table id="annotationtable" class="table table-bordered table-hover" data-page-length='100'>
+      <thead class="thead-light">
+        <tr>
+          <th>S/N</th>
+          <th>Asignatura</th>
+          <th>Alumno</th>
+          <th>Profesor</th>
+          <th>Tipo</th>
+          <th>Comentario</th>
+          <th>Fecha</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for annotation in annotations %}
+          <tr class="{% if annotation.annotation_type == 'positiva' %}positive{% elif annotation.annotation_type == 'negativa' %}negative{% endif %}">
+            <td>{{ forloop.counter }}</td>
+            <td>{{ annotation.subject }}</td>
+            <td>{{ annotation.student }}</td>
+            <td>{{ annotation.teacher }}</td>
+            <td>{{ annotation.get_annotation_type_display }}</td>
+            <td>{{ annotation.comment }}</td>
+            <td>{{ annotation.date }}</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+{% endblock content %}
+
+{% block morejs %}
+<script>
+  $(document).ready(function() {
+    var table = $('#annotationtable').DataTable({
+      language: {
+        "sProcessing": "Procesando...",
+        "sLengthMenu": "Mostrar _MENU_ registros",
+        "sZeroRecords": "No se encontraron resultados",
+        "sEmptyTable": "Ningún dato disponible en esta tabla",
+        "sInfo": "Mostrando registros del _START_ al _END_ de un total de _TOTAL_ registros",
+        "sInfoEmpty": "Mostrando registros del 0 al 0 de un total de 0 registros",
+        "sInfoFiltered": "(filtrado de un total de _MAX_ registros)",
+        "sSearch": "Buscar:",
+        "oPaginate": {
+          "sFirst": "Primero",
+          "sLast": "Último",
+          "sNext": "Siguiente",
+          "sPrevious": "Anterior"
+        }
+      }
+    });
+
+    $('#filter-student').on('change', function() {
+      var selectedStudent = $("#filter-student option:selected").text();
+      table.column(1).search(selectedStudent).draw(); 
+    });
+
+    $('#filter-type').on('change', function() {
+      var selectedType = $(this).val();
+      table.column(4).search(selectedType).draw(); 
+    });
+  });
+</script>
+{% endblock morejs %}

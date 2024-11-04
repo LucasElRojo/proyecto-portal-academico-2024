@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block title %}Crear Anotación{% endblock title %}
+
+{% block breadcrumb %}
+<a class="btn btn-secondary" href="{% url 'annotation-list' %}"><i class="fas fa-arrow-left"></i> Volver a Anotaciones</a>
+{% endblock breadcrumb %}
+
+{% block content %}
+<div class="container mt-4">
+    <h2>Crear Nueva Anotación para {{ subject.name }}</h2>
+    <form method="post">
+        {% csrf_token %}
+        
+        <div class="form-group">
+            <label for="id_student" style="font-weight: bold;">Alumno</label>
+            {{ form.student }}
+            {% if form.student.errors %}
+                <div class="text-danger">{{ form.student.errors }}</div>
+            {% endif %}
+        </div>
+
+        <div class="form-group">
+            <label for="id_annotation_type" style="font-weight: bold;">Tipo de Anotación</label>
+            {{ form.annotation_type }}
+            {% if form.annotation_type.errors %}
+                <div class="text-danger">{{ form.annotation_type.errors }}</div>
+            {% endif %}
+        </div>
+
+        <div class="form-group">
+            <label for="id_comment" style="font-weight: bold;">Comentario</label>
+            {{ form.comment }}
+            {% if form.comment.errors %}
+                <div class="text-danger">{{ form.comment.errors }}</div>
+            {% endif %}
+        </div>
+
+        <button type="submit" class="btn btn-primary mt-3"><i class="fas fa-save"></i> Guardar Anotación</button>
+        <a href="{% url 'annotation-list' %}" class="btn btn-secondary mt-3">Cancelar</a>
+    </form>
+</div>
+{% endblock content %}

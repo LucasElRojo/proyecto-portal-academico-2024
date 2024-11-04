@@ -80,7 +80,7 @@ urlpatterns = [
     path('adminagregarprofesor/',adminagregarprofesor, name="adminagregarprofesor"),
     path('adminagregaralumno/', adminagregaralumno, name='adminagregaralumno'),
 
-    path('admincursoshome/', admincursoshome, name ="admincursoshome"),
+    path('admincursoshome /', admincursoshome, name ="admincursoshome"),
     path('admincursolistar/', admincursolistar, name ="admincursolistar"),
     path('admincursoagregar/', admincursoagregar, name ="admincursoagregar"),
     path('admincursomodificar/<id>/', admincursomodificar, name ="admincursomodificar"),

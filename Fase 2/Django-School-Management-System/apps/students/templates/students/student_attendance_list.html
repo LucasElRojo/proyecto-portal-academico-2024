@@ -1,0 +1,101 @@
+{# students/templates/students/attendance_list.html #}
+{% extends 'base.html' %}
+{% load student_extras %}
+{% block title %}Asistencia de Estudiantes{% endblock title %}
+
+{% block content %}
+  <h1 class="mb-4">Registro de Asistencia</h1>
+
+  <div class="row mb-3">
+    <!-- Filtro por Asignatura -->
+    <div class="col-md-6">
+      <label for="filter-course" class="form-label" style="font-weight: bold;">Asignatura:</label>
+      <select id="filter-course" class="form-control">
+        <option value="">Todas</option>
+        {% for subject in attendances|unique_subjects %}
+          <option value="{{ subject }}">{{ subject }}</option>
+        {% endfor %}
+      </select>
+    </div>
+
+    <!-- Filtro por Nombre del Estudiante -->
+    <div class="col-md-6">
+      <label for="filter-student" class="form-label" style="font-weight: bold;">Nombre del Estudiante:</label>
+      <select id="filter-student" class="form-control">
+        <option value="">Todos</option>
+        {% for student in attendances|unique_students %}
+          <option value="{{ student }}">{{ student }}</option>
+        {% endfor %}
+      </select>
+    </div>
+  </div>
+
+  <div class="table-responsive">
+    <table id="studenttable" class="table table-bordered table-hover">
+      <thead class="thead-light">
+        <tr>
+          <th>S/N</th>
+          <th>Asignatura</th>
+          <th>Estudiante</th>
+          <th>Fecha</th>
+          <th>Estado</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for attendance in attendances %}
+          <tr>
+            <td>{{ forloop.counter }}</td>
+            <td>{{ attendance.subject.name }}</td>
+            <td>{{ attendance.student.nombres }} {{ attendance.student.apellido_paterno }} {{ attendance.student.apellido_materno }}</td>
+            <td>{{ attendance.date }}</td>
+            <td>{{ attendance.get_status_display }}</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+{% endblock content %}
+
+{% block morejs %}
+<script>
+  $(document).ready(function() {
+    var table = $('#studenttable').DataTable({
+      language: {
+        "sProcessing": "Procesando...",
+        "sLengthMenu": "Mostrar _MENU_ registros",
+        "sZeroRecords": "No se encontraron resultados",
+        "sEmptyTable": "Ningún dato disponible en esta tabla",
+        "sInfo": "Mostrando registros del _START_ al _END_ de un total de _TOTAL_ registros",
+        "sInfoEmpty": "Mostrando registros del 0 al 0 de un total de 0 registros",
+        "sInfoFiltered": "(filtrado de un total de _MAX_ registros)",
+        "sInfoPostFix": "",
+        "sSearch": "Buscar:",
+        "sUrl": "",
+        "sInfoThousands": ",",
+        "sLoadingRecords": "Cargando...",
+        "oPaginate": {
+          "sFirst": "Primero",
+          "sLast": "Último",
+          "sNext": "Siguiente",
+          "sPrevious": "Anterior"
+        },
+        "oAria": {
+          "sSortAscending": ": Activar para ordenar la columna de manera ascendente",
+          "sSortDescending": ": Activar para ordenar la columna de manera descendente"
+        }
+      }
+    });
+
+    $('#filter-course').on('change', function() {
+    var selectedCourse = $(this).val();
+    table.column(1).search(selectedCourse).draw();  // Cambiado a columna de "Asignatura"
+    });
+
+    // Filtro por Nombre del Estudiante
+    $('#filter-student').on('change', function() {
+      var selectedStudent = $(this).val();
+      table.column(2).search(selectedStudent).draw();
+    });
+  });
+</script>
+{% endblock morejs %}

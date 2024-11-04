@@ -1,0 +1,87 @@
+{% extends 'base.html' %}
+
+{% block title %}Profesores{% endblock title %}
+
+{% block breadcrumb %}
+<a class="btn btn-primary" href="{% url 'teacher-create' %}"><i
+    class="fas fa-plus"></i> Nuevo profesor</a>
+{% endblock breadcrumb %}
+
+{% block content %}
+  <div class="row mb-3">
+
+    <!-- Filtro por Sexo -->
+    <div class="col-md-6">
+      <label for="filter-gender" class="form-label" style="font-weight: bold;">Sexo:</label>
+      <select id="filter-gender" class="form-control">
+        <option value="">Todos</option>
+        <option value="Masculino">Masculino</option>
+        <option value="Femenino">Femenino</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="table-responsive">
+    <table id="studenttable" class="table table-bordered table-hover" data-page-length='100'>
+      <thead class="thead-light">
+        <tr>
+          <th>S/N</th>
+          <th>RUT</th>
+          <th>Nombre Completo</th>
+          <th>Sexo</th>
+          <th>Telefono</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for teacher in object_list %}
+          <tr class='clickable-row' data-href="{% url 'teacher-detail' teacher.id %}">
+            <td>{{ forloop.counter}}</td>
+            <td>{{ teacher.rut}}</td>
+            <td>{{ teacher.nombres }} {{ teacher.apellido_paterno}} {{teacher.apellido_materno }}</td>
+            <td>{{ teacher.get_sexo_display}}</td>
+            <td>{{ teacher.telefono}}</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+{% endblock content %}
+
+{% block morejs %}
+<script>
+  $(document).ready(function() {
+    var table = $('#studenttable').DataTable({
+      language: {
+        "sProcessing": "Procesando...",
+        "sLengthMenu": "Mostrar _MENU_ registros",
+        "sZeroRecords": "No se encontraron resultados",
+        "sEmptyTable": "Ningún dato disponible en esta tabla",
+        "sInfo": "Mostrando registros del _START_ al _END_ de un total de _TOTAL_ registros",
+        "sInfoEmpty": "Mostrando registros del 0 al 0 de un total de 0 registros",
+        "sInfoFiltered": "(filtrado de un total de _MAX_ registros)",
+        "sInfoPostFix": "",
+        "sSearch": "Buscar:",
+        "sUrl": "",
+        "sInfoThousands": ",",
+        "sLoadingRecords": "Cargando...",
+        "oPaginate": {
+          "sFirst": "Primero",
+          "sLast": "Último",
+          "sNext": "Siguiente",
+          "sPrevious": "Anterior"
+        },
+        "oAria": {
+          "sSortAscending": ": Activar para ordenar la columna de manera ascendente",
+          "sSortDescending": ": Activar para ordenar la columna de manera descendente"
+        }
+      }
+    });
+
+
+    $('#filter-gender').on('change', function() {
+      var selectedGender = $(this).val();
+      table.column(4).search(selectedGender).draw();
+    });
+  });
+</script>
+{% endblock morejs %}

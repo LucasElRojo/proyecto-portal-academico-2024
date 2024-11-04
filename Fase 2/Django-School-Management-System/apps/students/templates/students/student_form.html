@@ -1,0 +1,88 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  {% if object %}
+    Actualizar estudiante {{ object }}
+  {% else %}
+    Añadir nuevo estudiante
+  {% endif %}
+{% endblock title %}
+
+{% block content %}
+<form action="" method="POST" enctype="multipart/form-data">
+  {% csrf_token %}
+
+  {% include 'corecode/form_snippet.html' %}
+  
+  <!-- Tabla de Selección de Asignaturas -->
+  <div class="form-group">
+    <label><strong>Asignaturas:</strong></label>
+    <div class="table-responsive">
+      <table id="subject-table" class="table table-bordered table-hover">
+        <thead class="thead-light">
+          <tr>
+            <th>Nombre de la Asignatura</th>
+            <th>Seleccionar</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for subject in subjects %}
+            <tr class="subject-row" data-id="{{ subject.id }}">
+              <td>{{ subject.name }}</td>
+              <td class="text-center">
+                <input type="checkbox" class="subject-checkbox" data-id="{{ subject.id }}"
+                  {% if subject.id in selected_subjects %}checked{% endif %}>
+              </td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+    <!-- Campo oculto para almacenar los IDs seleccionados -->
+    <input type="hidden" name="subjects" id="selected-subjects" value="{{ selected_subjects|join:',' }}">
+  </div>
+
+  {% if object %}
+    <input type="submit" class="btn btn-primary" value="Actualizar registro">
+  {% else %}
+    <input type="submit" class="btn btn-primary" value="Añadir estudiante">
+  {% endif %}
+</form>
+
+{% endblock content %}
+
+{% block morejs %}
+<script>
+  $(document).ready(function() {
+    const selectedSubjects = new Set(
+      $('#selected-subjects').val().split(',').filter(Boolean).map(Number)
+    );
+
+    // Marcar las casillas de los subjects seleccionados al cargar la página
+    $('.subject-checkbox').each(function() {
+      const subjectId = $(this).data('id');
+      if (selectedSubjects.has(subjectId)) {
+        $(this).prop('checked', true);
+        $(this).closest('.subject-row').addClass('table-active');
+      }
+    });
+
+    // Actualizar el conjunto y el campo oculto cuando se seleccionan/desmarcan casillas
+    $('.subject-checkbox').on('change', function() {
+      const subjectId = $(this).data('id');
+      const row = $(this).closest('.subject-row');
+
+      if (this.checked) {
+        selectedSubjects.add(subjectId);
+        row.addClass('table-active');  // Resalta la fila seleccionada
+      } else {
+        selectedSubjects.delete(subjectId);
+        row.removeClass('table-active');  // Quita el resaltado de la fila
+      }
+
+      // Actualiza el campo oculto con los IDs seleccionados
+      $('#selected-subjects').val(Array.from(selectedSubjects).join(','));
+    });
+  });
+</script>
+{% endblock morejs %}

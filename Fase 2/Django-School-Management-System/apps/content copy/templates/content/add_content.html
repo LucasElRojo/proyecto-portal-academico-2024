@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}Agregar Contenido{% endblock title %}
+
+{% block content %}
+<form method="post" enctype="multipart/form-data">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <div class="form-group">
+    <label for="files">Archivos</label>
+    <input type="file" name="files" id="files" multiple class="form-control">
+  </div>
+  <button type="submit" class="btn btn-primary">Guardar Contenido</button>
+</form>
+{% endblock content %}

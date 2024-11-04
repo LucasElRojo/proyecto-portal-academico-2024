@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+
+{% block title %}Apoderados{% endblock title %}
+
+{% block breadcrumb %}
+<a class="btn btn-primary" href="{% url 'representatives-create' %}"><i
+    class="fas fa-plus"></i> Nuevo apoderado</a>
+<a class="btn btn-primary" href="{% url 'representatives-create' %}"><i
+    class="fas fa-upload"></i> Subir apoderados</a>
+{% endblock breadcrumb %}
+
+{% block content %}
+  <div class="table-responsive">
+    <table id="teachertable" class="table table-bordered table-hover" data-page-length='100'>
+      <thead class="thead-light">
+        <tr>
+          <th>S/N</th>
+          <th>RUT</th>
+          <th>Nombre Completo</th>
+          <th>Apoderado de</th>
+          <th>Sexo</th>
+          <th>Telefono Apoderado</th>
+          <th>Estado</th>
+        </tr>
+      </thead>
+      <tbody>
+
+        {% for representatives in object_list %}
+          <tr class='clickable-row' data-href="{% url 'representatives-detail' representatives.id %}">
+            <td>{{ forloop.counter}}</td>
+            <td>{{ representatives.rut}}</td>
+            <td>{{ representatives.nombres }} {{ representatives.apellido_paterno}} {{representatives.apellido_materno }}</td>
+            <td>{{ representatives.get_num_estudiantes }} hijo{% if representatives.get_num_estudiantes != 1 %}s{% endif %}</td>
+            <td>{{ representatives.get_sexo_display}}</td>
+            <td>{{ representatives.telefono}}</td>
+            <td>{{ representatives.get_estado_display}}</td>
+          </tr>
+        {% endfor %}
+
+      </tbody>
+    </table>
+  </div>
+{% endblock content %}
+
+
+{% block morejs %}
+<script>
+  $('#teachertable').DataTable({
+    language: {
+      "sProcessing": "Procesando...",
+      "sLengthMenu": "Mostrar _MENU_ registros",
+      "sZeroRecords": "No se encontraron resultados",
+      "sEmptyTable": "Ningún dato disponible en esta tabla",
+      "sInfo": "Mostrando registros del _START_ al _END_ de un total de _TOTAL_ registros",
+      "sInfoEmpty": "Mostrando registros del 0 al 0 de un total de 0 registros",
+      "sInfoFiltered": "(filtrado de un total de _MAX_ registros)",
+      "sInfoPostFix": "",
+      "sSearch": "Buscar:",
+      "sUrl": "",
+      "sInfoThousands": ",",
+      "sLoadingRecords": "Cargando...",
+      "oPaginate": {
+        "sFirst": "Primero",
+        "sLast": "Último",
+        "sNext": "Siguiente",
+        "sPrevious": "Anterior"
+      },
+      "oAria": {
+        "sSortAscending": ": Activar para ordenar la columna de manera ascendente",
+        "sSortDescending": ": Activar para ordenar la columna de manera descendente"
+      }
+    }
+  });
+</script>
+{% endblock morejs %}
+

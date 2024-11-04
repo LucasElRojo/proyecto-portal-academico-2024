@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+
+{% block title %}Ingresa o modifica notas{% endblock title %}
+
+{% block content %}
+<h2>Lista de asignaturas</h2>
+<div class="table-responsive">
+  <table id="subjectTable" class="table table-bordered table-hover" data-page-length='10'>
+    <thead class="thead-light">
+      <tr>
+        <th>#</th>
+        <th>Nombre de la Asignatura</th>
+        <th>Profesor a Cargo</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for subject in subjects %}
+        <tr class="clickable-row" data-href="{% url 'create_result' subject.id %}">
+          <td>{{ forloop.counter }}</td>
+          <td>{{ subject.name }}</td>
+          <td>
+            {% for teacher in subject.teachers.all %}
+              {{ teacher.nombres }} {{ teacher.apellido_paterno }} {{ teacher.apellido_materno }}
+              {% if not forloop.last %}<br>{% endif %}
+            {% empty %}
+              Sin profesor asignado
+            {% endfor %}
+          </td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endblock content %}
+
+{% block morejs %}
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="//cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
+<link rel="stylesheet" href="//cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css"/>
+
+<script>
+  $(document).ready(function() {
+    // Inicializa DataTable
+    $('#subjectTable').DataTable({
+      language: {
+        "sProcessing": "Procesando...",
+        "sLengthMenu": "Mostrar _MENU_ registros",
+        "sZeroRecords": "No se encontraron resultados",
+        "sEmptyTable": "Ningún dato disponible en esta tabla",
+        "sInfo": "Mostrando registros del _START_ al _END_ de un total de _TOTAL_ registros",
+        "sInfoEmpty": "Mostrando registros del 0 al 0 de un total de 0 registros",
+        "sInfoFiltered": "(filtrado de un total de _MAX_ registros)",
+        "sSearch": "Buscar:",
+        "oPaginate": {
+          "sFirst": "Primero",
+          "sLast": "Último",
+          "sNext": "Siguiente",
+          "sPrevious": "Anterior"
+        }
+      }
+    });
+
+    // Hace que la fila sea clickeable
+    $('#subjectTable').on('click', '.clickable-row', function() {
+      window.location = $(this).data("href");
+    });
+  });
+</script>
+{% endblock morejs %}

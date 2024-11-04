@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+
+{% block title %}Registro de Asistencia{% endblock title %}
+
+{% block content %}
+  <h3>Registrar Asistencia para {{ subject.name }}</h3>
+  <form method="post">
+    {% csrf_token %}
+    <div class="table-responsive">
+      <table id="attendance-table" class="table table-bordered table-hover">
+        <thead class="thead-light">
+          <tr>
+            <th>RUT</th>
+            <th>Nombre Completo</th>
+            <th>Asistencia</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for student in students %}
+            <tr>
+              <td>{{ student.rut }}</td>
+              <td>{{ student.nombres }} {{ student.apellido_paterno }} {{ student.apellido_materno }}</td>
+              <td>
+                <select name="status_{{ student.id }}" class="form-control">
+                  <option value="presente">Presente</option>
+                  <option value="ausente">Ausente</option>
+                  <option value="justificado">Justificado</option>
+                </select>
+              </td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+    <button type="submit" class="btn btn-success">Guardar Asistencia</button>
+  </form>
+{% endblock content %}
+
+{% block morejs %}
+<script>
+  $(document).ready(function() {
+    $('#attendance-table').DataTable({
+      language: {
+        "sProcessing": "Procesando...",
+        "sLengthMenu": "Mostrar _MENU_ registros",
+        "sZeroRecords": "No se encontraron resultados",
+        "sEmptyTable": "Ningún dato disponible en esta tabla",
+        "sInfo": "Mostrando registros del _START_ al _END_ de un total de _TOTAL_ registros",
+        "sInfoEmpty": "Mostrando registros del 0 al 0 de un total de 0 registros",
+        "sInfoFiltered": "(filtrado de un total de _MAX_ registros)",
+        "sSearch": "Buscar:",
+        "sUrl": "",
+        "oPaginate": {
+          "sFirst": "Primero",
+          "sLast": "Último",
+          "sNext": "Siguiente",
+          "sPrevious": "Anterior"
+        },
+        "oAria": {
+          "sSortAscending": ": Activar para ordenar la columna de manera ascendente",
+          "sSortDescending": ": Activar para ordenar la columna de manera descendente"
+        }
+      }
+    });
+  });
+</script>
+{% endblock morejs %}

@@ -1,0 +1,111 @@
+{% extends 'base.html' %}
+
+{% block title %}Estudiantes{% endblock title %}
+
+{% block breadcrumb %}
+<a class="btn btn-primary" href="{% url 'student-create' %}"><i
+    class="fas fa-plus"></i> Nuevo estudiante</a>
+<a class="btn btn-primary" href="{% url 'student-upload' %}"><i
+    class="fas fa-upload"></i> Subir estudiantes</a>
+{% endblock breadcrumb %}
+
+{% block content %}
+  <div class="row mb-3">
+    <!-- Filtro por Curso Actual -->
+    <div class="col-md-6">
+      <label for="filter-course" class="form-label" style="font-weight: bold;">Curso Actual:</label>
+      <select id="filter-course" class="form-control">
+        <option value="">Todos</option>
+        {% for student in object_list %}
+          {% if student.curso_actual %}
+            <option value="{{ student.curso_actual }}">{{ student.curso_actual }}</option>
+          {% endif %}
+        {% endfor %}
+      </select>
+    </div>
+
+    <!-- Filtro por Sexo -->
+    <div class="col-md-6">
+      <label for="filter-gender" class="form-label" style="font-weight: bold;">Sexo:</label>
+      <select id="filter-gender" class="form-control">
+        <option value="">Todos</option>
+        <option value="Masculino">Masculino</option>
+        <option value="Femenino">Femenino</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="table-responsive">
+    <table id="studenttable" class="table table-bordered table-hover" data-page-length='100'>
+      <thead class="thead-light">
+        <tr>
+          <th>S/N</th>
+          <th>RUT</th>
+          <th>Nombre Completo</th>
+          <th>Curso Actual</th>
+          <th>Sexo</th>
+          <th>Apoderado</th>
+          <th>Telefono Apoderado</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for student in object_list %}
+          <tr class='clickable-row' data-href="{% url 'student-detail' student.id %}">
+            <td>{{ forloop.counter}}</td>
+            <td>{{ student.rut}}</td>
+            <td>{{ student.nombres }} {{ student.apellido_paterno}} {{student.apellido_materno }}</td>
+            <td>{{ student.curso_actual}}</td>
+            <td>{{ student.get_sexo_display}}</td>
+            <td>{{ student.representante}}</td>
+            <td>{{ student.telefono_apoderado}}</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+{% endblock content %}
+
+{% block morejs %}
+<script>
+  $(document).ready(function() {
+    var table = $('#studenttable').DataTable({
+      language: {
+        "sProcessing": "Procesando...",
+        "sLengthMenu": "Mostrar _MENU_ registros",
+        "sZeroRecords": "No se encontraron resultados",
+        "sEmptyTable": "Ningún dato disponible en esta tabla",
+        "sInfo": "Mostrando registros del _START_ al _END_ de un total de _TOTAL_ registros",
+        "sInfoEmpty": "Mostrando registros del 0 al 0 de un total de 0 registros",
+        "sInfoFiltered": "(filtrado de un total de _MAX_ registros)",
+        "sInfoPostFix": "",
+        "sSearch": "Buscar:",
+        "sUrl": "",
+        "sInfoThousands": ",",
+        "sLoadingRecords": "Cargando...",
+        "oPaginate": {
+          "sFirst": "Primero",
+          "sLast": "Último",
+          "sNext": "Siguiente",
+          "sPrevious": "Anterior"
+        },
+        "oAria": {
+          "sSortAscending": ": Activar para ordenar la columna de manera ascendente",
+          "sSortDescending": ": Activar para ordenar la columna de manera descendente"
+        }
+      }
+    });
+
+    // Filtro personalizado por Curso Actual
+    $('#filter-course').on('change', function() {
+      var selectedCourse = $(this).val();
+      table.column(3).search(selectedCourse).draw();  // La columna de "Curso Actual" es la 4ta columna (índice 3)
+    });
+
+    // Filtro personalizado por Sexo
+    $('#filter-gender').on('change', function() {
+      var selectedGender = $(this).val();
+      table.column(4).search(selectedGender).draw();  // La columna de "Sexo" es la 5ta columna (índice 4)
+    });
+  });
+</script>
+{% endblock morejs %}

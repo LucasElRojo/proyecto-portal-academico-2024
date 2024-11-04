@@ -1,0 +1,12 @@
+<!-- templates/subject_detail.html -->
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Detalles de la Asignatura{% endblock title %}
+
+{% block content %}
+<h2>Detalles de la Asignatura: {{ subject.name }}</h2>
+
+<a href="{% url 'attendance_register' subject.id %}" class="btn btn-primary mt-3">Registrar Asistencia</a>
+<a href="{% url 'create_result' subject.id %}" class="btn btn-primary mt-3">Agregar Notas</a>
+{% endblock content %}

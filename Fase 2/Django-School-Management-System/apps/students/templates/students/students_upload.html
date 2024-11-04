@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+  Subir Estudiantes en Lote desde Archivo
+{% endblock title %}
+
+
+{% block content %}
+
+  <div class="col alert alert-info">
+    <h5>Instrucciones</h5>
+    <p>Por favor, <a href="{% url 'download-csv' %}">descargue el archivo CSV adjunto aquí</a>. Complete la hoja y cargue el mismo archivo en esta página. NO EDITE LA PRIMERA FILA.</p>
+  </div>
+
+  <form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    {% include 'corecode/form_snippet.html' %}
+
+    <input type="submit" class="btn btn-success" value="Enviar">
+  </form>
+
+{% endblock content %}

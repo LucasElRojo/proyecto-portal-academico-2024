@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<span class="card-title"><strong>{{ object }}</strong> a punto de ser
+  eliminado!</span>
+{% endblock title %}
+
+{% block content %}
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="card">
+        <div class="card-body">
+          <p>¿Estás seguro de que deseas eliminar el contendio <strong>{{ object }}</strong>
+            junto con todos los contenidos adjuntos?</p>
+          <div class="mt-2 red-text">Esta acción no se puede deshacer</div>
+
+          <form method="POST" class="mt-3">
+            {% csrf_token %}
+
+            <button type="submit" class="btn btn-primary">
+              Confirmar Eliminación
+              <i class="fa fa-trash-alt"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock content %}
