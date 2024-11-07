@@ -10,7 +10,9 @@ from .views import (
     SubjectDetailView,
     AnnotationListView,
     AnnotationCreateView,
-    TeacherAnnotationCreateView
+    TeacherAnnotationCreateView,
+    EventListView,
+
 )
 
 urlpatterns = [
@@ -24,5 +26,9 @@ urlpatterns = [
     path('annotations/', AnnotationListView.as_view(), name='annotation-list'),
     path('annotations/create/', AnnotationCreateView.as_view(), name='annotation-create'),
     path('annotations/<int:pk>/create/', TeacherAnnotationCreateView.as_view(), name='teacher-annotation-create'),
+    path('annotations/create/', AnnotationCreateView.as_view(), name='annotation-create'),
+    path('calendar/<int:subject_id>/', EventListView.as_view(), name="teacher-calendar"),
+
+
 
 ]

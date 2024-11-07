@@ -1,6 +1,7 @@
 import random
 import string
 from django import forms
+from django.http import JsonResponse
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.messages.views import SuccessMessageMixin
 from django.forms import widgets
@@ -13,11 +14,14 @@ from django.core.mail import send_mail
 from django.conf import settings
 from django.contrib import messages
 
+import json
+from django.utils.dateparse import parse_datetime, parse_date
+
 from apps.corecode.models import Subject
 from apps.students.models import Student
 from apps.teachers.forms import AnnotationFilterForm, AnnotationForm, TeacherAnnotationForm
 
-from .models import Annotation, Teacher
+from .models import Annotation, Teacher, Event
 
 
 class TeacherListView(ListView):
@@ -261,3 +265,85 @@ class TeacherAnnotationCreateView(CreateView):
 
     def get_success_url(self):
         return reverse_lazy("annotation-list")
+    
+
+class EventListView(ListView):
+    model = Event
+    template_name = "teachers/teacher_calendar.html"
+    context_object_name = "events"
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['is_profesor'] = self.request.user.groups.filter(name='profesor').exists()
+        return context
+
+    def get(self, request, *args, **kwargs):
+        if request.headers.get('x-requested-with') == 'XMLHttpRequest':
+            subject_id = self.kwargs.get("subject_id")
+            events = Event.objects.filter(subject_id=subject_id)
+            out = [
+                {
+                    'title': event.title,
+                    'id': event.id,
+                    'start': event.start_time.strftime("%Y-%m-%dT%H:%M:%S"),
+                    'end': event.end_time.strftime("%Y-%m-%dT%H:%M:%S") if event.end_time else event.start_time.strftime("%Y-%m-%dT%H:%M:%S"),
+                }
+                for event in events
+            ]
+            return JsonResponse(out, safe=False)
+        return super().get(request, *args, **kwargs)
+
+    def post(self, request, *args, **kwargs):
+        try:
+            data = json.loads(request.body)
+            title = data.get('title')
+            start_time = parse_datetime(data.get('start'))
+            end_time = parse_datetime(data.get('end'))
+            subject_id = self.kwargs.get("subject_id")
+
+            if not title or not start_time:
+                return JsonResponse({
+                    'status': 'error',
+                    'message': 'El título y la fecha de inicio son obligatorios.'
+                }, status=400)
+
+            event = Event.objects.create(
+                title=title,
+                start_time=start_time,
+                end_time=end_time,
+                subject_id=subject_id
+            )
+
+            return JsonResponse({
+                'status': 'success',
+                'event': {
+                    'id': event.id,
+                    'title': event.title,
+                    'start': event.start_time.isoformat(),
+                    'end': event.end_time.isoformat() if event.end_time else event.start_time.isoformat(),
+                }
+            })
+
+        except json.JSONDecodeError:
+            return JsonResponse({'status': 'error', 'message': 'Error en el formato JSON.'}, status=400)
+        except Exception as e:
+            print("Error al crear evento:", e)
+            return JsonResponse({'status': 'error', 'message': str(e)}, status=500)
+
+
+    def delete(self, request, *args, **kwargs):
+        try:
+            data = json.loads(request.body)
+            event_id = data.get("id")
+
+            if not event_id:
+                return JsonResponse({"status": "error", "message": "Falta el ID del evento."}, status=400)
+
+            event = Event.objects.get(id=event_id)
+            event.delete()
+            return JsonResponse({"status": "success"})
+        except Event.DoesNotExist:
+            return JsonResponse({"status": "error", "message": "El evento no existe."}, status=404)
+        except Exception as e:
+            print("Error al eliminar evento:", e)
+            return JsonResponse({"status": "error", "message": str(e)}, status=500)
