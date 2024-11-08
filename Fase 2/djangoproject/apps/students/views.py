@@ -1,12 +1,14 @@
 import csv
 import random
 import string
+import pandas as pd
 
 from django.contrib.auth.models import User, Group
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.messages.views import SuccessMessageMixin
 from django.forms import widgets
 from django.http import HttpResponse
+from django.shortcuts import redirect, render
 from django.urls import reverse_lazy
 from django.views.generic import DetailView, ListView, View
 from django.views.generic.edit import CreateView, DeleteView, UpdateView
@@ -16,8 +18,9 @@ from django.contrib import messages
 from django import forms
 from django.utils.dateformat import format
 
-from apps.corecode.models import Attendance, Subject
+from apps.corecode.models import Attendance, StudentClass, Subject
 from apps.finance.models import Invoice
+from apps.representatives.models import Representatives
 
 from .models import Student, StudentBulkUpload
 
@@ -230,3 +233,123 @@ class AttendanceListView(ListView):
     
     def get_queryset(self):
         return Attendance.objects.select_related('student', 'subject').order_by('date')
+    
+    
+    
+## CSV
+
+def upload_student_excel(request):
+    if request.method == "POST" and request.FILES["file"]:
+        excel_file = request.FILES["file"]
+        try:
+            df = pd.read_excel(excel_file, engine="openpyxl")
+            for _, row in df.iterrows():
+                rut = row["rut"]
+                nombres = row["nombres"]
+                apellido_paterno = row["apellido_paterno"]
+                apellido_materno = row["apellido_materno"]
+                sexo = row["sexo"]
+                fecha_nacimiento = row["fecha_nacimiento"]
+                fecha_admision = row["fecha_admision"]
+                telefono_apoderado = row["telefono_apoderado"]
+                direccion = row["direccion"]
+                observaciones = row["observaciones"]
+                email = row["email"]
+
+                # Recuperar el curso actual
+                curso_actual_name = row["curso_actual"]
+                curso = StudentClass.objects.filter(name=curso_actual_name).first()
+
+                # Recuperar el Subject
+                subject_name = row["asignatura"]
+                subject = Subject.objects.filter(name=subject_name).first()
+
+                # Recuperar el Representatives
+                representante_rut = row["representante"]
+                representante = Representatives.objects.filter(rut=representante_rut).first()
+
+                # Validaciones
+                if not curso:
+                    messages.error(request, f"Curso '{curso_actual_name}' no encontrado.")
+                    continue
+
+                if not subject:
+                    messages.error(request, f"Asignatura '{subject_name}' no encontrada.")
+                    continue
+
+                if not representante:
+                    messages.error(request, f"Representante con RUT '{representante_rut}' no encontrado.")
+                    continue
+
+                # Crear el estudiante con curso actual y representante
+                student = Student.objects.create(
+                    rut=rut,
+                    nombres=nombres,
+                    apellido_paterno=apellido_paterno,
+                    apellido_materno=apellido_materno,
+                    sexo=sexo,
+                    fecha_nacimiento=fecha_nacimiento,
+                    fecha_admision=fecha_admision,
+                    telefono_apoderado=telefono_apoderado,
+                    direccion=direccion,
+                    observaciones=observaciones,
+                    email=email,
+                    estado="activo",
+                    curso_actual=curso,
+                    representante=representante
+                )
+
+                # Asignar la asignatura al estudiante
+                student.subjects.add(subject)
+
+                # Generar contraseña y crear usuario en auth_user
+                password = generate_random_password()
+                user = User.objects.create_user(
+                    username=rut,
+                    password=password,
+                    first_name=nombres,
+                    last_name=f"{apellido_paterno} {apellido_materno}",
+                    email=email,
+                )
+
+                # Asignar grupo "Alumno" al usuario
+                alumno_group = Group.objects.get(name="Alumno")
+                user.groups.add(alumno_group)
+
+                # Enviar contraseña por correo electrónico
+                send_mail(
+                    "Tu cuenta ha sido creada",
+                    f"Tu usuario es {rut} y tu contraseña es: {password}",
+                    settings.DEFAULT_FROM_EMAIL,
+                    [email],
+                    fail_silently=False,
+                )
+
+            messages.success(request, "Estudiantes subidos y cuentas creadas exitosamente.")
+        except Exception as e:
+            messages.error(request, f"Error al procesar el archivo: {e}")
+        return redirect("upload-student-excel")
+    return render(request, "students/students_upload.html")
+
+def generate_random_password(length=8):
+    import random
+    import string
+    characters = string.ascii_letters + string.digits + string.punctuation
+    return ''.join(random.choice(characters) for i in range(length))
+
+def generate_student_excel_template(request):
+    columns = [
+        "rut", "apellido_paterno", "apellido_materno", "nombres",
+        "sexo", "fecha_nacimiento", "fecha_admision", "curso_actual", "asignatura",
+        "representante", "telefono_apoderado", "direccion", "observaciones", "email"
+    ]
+    # Crear DataFrame vacío con las columnas
+    df = pd.DataFrame(columns=columns)
+
+    # Guardar en un archivo de Excel en memoria
+    response = HttpResponse(content_type="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet")
+    response["Content-Disposition"] = "attachment; filename=plantilla_estudiantes.xlsx"
+    with pd.ExcelWriter(response, engine="openpyxl") as writer:
+        df.to_excel(writer, index=False, sheet_name="Estudiantes")
+    
+    return response

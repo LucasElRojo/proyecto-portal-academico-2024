@@ -1,23 +1,34 @@
 {% extends 'base.html' %}
 
-
 {% block title %}
   Subir Estudiantes en Lote desde Archivo
 {% endblock title %}
 
-
 {% block content %}
+    <div class="alert alert-info">
+      <h5>Instrucciones</h5>
+      <p>
+        Por favor, <a href="{% url 'download-student-template' %}">descargue el archivo Excel de plantilla aquí</a>.
+        Complete los datos de los estudiantes en la plantilla sin modificar la primera fila, y luego cargue el mismo archivo en esta página.
+      </p>
+    </div>
 
-  <div class="col alert alert-info">
-    <h5>Instrucciones</h5>
-    <p>Por favor, <a href="{% url 'download-csv' %}">descargue el archivo CSV adjunto aquí</a>. Complete la hoja y cargue el mismo archivo en esta página. NO EDITE LA PRIMERA FILA.</p>
-  </div>
+    {% if messages %}
+      {% for message in messages %}
+        <div class="alert {% if message.tags %}alert-{{ message.tags }}{% endif %}">
+          {{ message }}
+        </div>
+      {% endfor %}
+    {% endif %}
 
-  <form method="POST" enctype="multipart/form-data">
-    {% csrf_token %}
-    {% include 'corecode/form_snippet.html' %}
+    <form method="POST" enctype="multipart/form-data" class="mt-4">
+      {% csrf_token %}
+      
+      <div class="form-group">
+        <label for="file">Subir archivo Excel</label>
+        <input type="file" name="file" id="file" class="form-control-file" required>
+      </div>
 
-    <input type="submit" class="btn btn-success" value="Enviar">
-  </form>
-
+      <button type="submit" class="btn btn-success mt-3">Enviar</button>
+    </form>
 {% endblock content %}
