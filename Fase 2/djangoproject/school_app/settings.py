@@ -63,6 +63,8 @@ MIDDLEWARE = [
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
     "apps.corecode.middleware.SiteWideConfigs",
     "apps.teachers.middleware.TeacherID",
+    "apps.students.middleware.StudentID",
+    "apps.representatives.middleware.RepresentativesID",
 ]
 
 ROOT_URLCONF = "school_app.urls"

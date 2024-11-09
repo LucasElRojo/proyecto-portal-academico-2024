@@ -199,8 +199,29 @@
             {% endif %}
             
             {% if user|in_group:1 %}
-              <!-- Contenido para Alumno -->
+              <li class="nav-header" style="padding: 1.7rem 1rem .5rem;">Asignaturas</li>
+              <li class="nav-item">
+                <a href="{% url 'student-subjects-list' request.session.student_id %}" class="nav-link">
+                  <i class="nav-icon fas fa-list"></i>
+                  <p>
+                    Mis asignaturas
+                  </p>
+                </a>
+              </li>
             {% endif %}
+
+
+            {% if user|in_group:3 %}
+            <li class="nav-header" style="padding: 1.7rem 1rem .5rem;">Asignaturas</li>
+            <li class="nav-item">
+              <a href="{% url 'representative_student' request.session.Representatives_id %}" class="nav-link">
+                <i class="nav-icon fas fa-list"></i>
+                <p>
+                  Hijos
+                </p>
+              </a>
+            </li>
+          {% endif %}
 
           </ul>
         </nav>

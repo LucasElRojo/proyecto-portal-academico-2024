@@ -27358,3 +27358,2098 @@ INFO 2024-11-08 00:26:17,864 "POST /student/create/ HTTP/1.1" 200 16590
 INFO 2024-11-08 00:26:18,255 "POST /student/create/ HTTP/1.1" 200 16590
 INFO 2024-11-08 00:26:18,426 "POST /student/create/ HTTP/1.1" 200 16590
 INFO 2024-11-08 00:26:20,754 "POST /student/create/ HTTP/1.1" 200 16590
+INFO 2024-11-08 18:45:30,835 Watching for file changes with StatReloader
+INFO 2024-11-08 18:45:33,557 "GET / HTTP/1.1" 302 0
+INFO 2024-11-08 18:45:33,637 "GET /accounts/login/?next=/ HTTP/1.1" 200 4187
+INFO 2024-11-08 18:45:43,254 "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2024-11-08 18:45:43,303 "GET / HTTP/1.1" 200 9488
+INFO 2024-11-08 18:45:44,567 "GET /teacher/list/ HTTP/1.1" 200 12662
+INFO 2024-11-08 18:45:44,926 "GET /student/list HTTP/1.1" 200 14977
+INFO 2024-11-08 18:47:56,584 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\students\views.py changed, reloading.
+INFO 2024-11-08 18:47:57,349 Watching for file changes with StatReloader
+INFO 2024-11-08 18:48:05,814 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\students\views.py changed, reloading.
+INFO 2024-11-08 18:48:06,538 Watching for file changes with StatReloader
+INFO 2024-11-08 18:48:22,522 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\students\views.py changed, reloading.
+INFO 2024-11-08 18:48:23,246 Watching for file changes with StatReloader
+INFO 2024-11-08 18:48:29,725 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\students\views.py changed, reloading.
+INFO 2024-11-08 18:48:30,399 Watching for file changes with StatReloader
+INFO 2024-11-08 18:50:44,525 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\school_app\settings.py changed, reloading.
+INFO 2024-11-08 18:50:45,308 Watching for file changes with StatReloader
+INFO 2024-11-08 18:50:54,054 "GET /student/list HTTP/1.1" 200 14977
+INFO 2024-11-08 18:51:00,470 "GET /student/create/ HTTP/1.1" 200 16360
+INFO 2024-11-08 18:51:51,598 "GET /subject/list/ HTTP/1.1" 200 11677
+INFO 2024-11-08 18:51:55,762 "GET /student/list HTTP/1.1" 200 14977
+INFO 2024-11-08 18:51:57,601 "GET /student/create/ HTTP/1.1" 200 16360
+INFO 2024-11-08 18:52:05,908 "GET /student/create/ HTTP/1.1" 200 16360
+INFO 2024-11-08 18:52:07,357 "GET /student/list HTTP/1.1" 200 14977
+INFO 2024-11-08 18:52:07,950 "GET /teacher/list/ HTTP/1.1" 200 12662
+INFO 2024-11-08 18:52:08,535 "GET /student/list HTTP/1.1" 200 14977
+INFO 2024-11-08 18:52:09,341 "GET /student/create/ HTTP/1.1" 200 16360
+INFO 2024-11-08 18:52:14,849 "GET /student/list HTTP/1.1" 200 14977
+INFO 2024-11-08 18:52:16,376 "GET /student/7/ HTTP/1.1" 200 11681
+INFO 2024-11-08 18:52:16,451 "GET /static/dist/img/avatar.png HTTP/1.1" 200 8543
+INFO 2024-11-08 18:52:17,574 "GET /student/7/update/ HTTP/1.1" 200 17111
+INFO 2024-11-08 18:52:21,984 "GET /student/list HTTP/1.1" 200 14977
+INFO 2024-11-08 18:52:23,017 "GET /student/create/ HTTP/1.1" 200 16360
+INFO 2024-11-08 18:53:57,462 Watching for file changes with StatReloader
+INFO 2024-11-08 18:53:59,103 "GET / HTTP/1.1" 200 9488
+INFO 2024-11-08 18:54:01,169 "GET /student/list HTTP/1.1" 200 14977
+INFO 2024-11-08 18:54:02,114 "GET /student/create/ HTTP/1.1" 200 16360
+INFO 2024-11-08 19:01:42,835 "GET /student/create/ HTTP/1.1" 200 16360
+INFO 2024-11-08 19:01:51,869 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\students\views.py changed, reloading.
+INFO 2024-11-08 19:01:52,603 Watching for file changes with StatReloader
+INFO 2024-11-08 19:02:42,613 "POST /student/create/ HTTP/1.1" 200 16588
+INFO 2024-11-08 19:02:48,119 "POST /student/create/ HTTP/1.1" 302 0
+INFO 2024-11-08 19:02:48,145 "GET /student/list HTTP/1.1" 200 15752
+INFO 2024-11-08 19:02:55,804 "GET /student/8/ HTTP/1.1" 200 11699
+INFO 2024-11-08 19:02:55,845 "GET /static/dist/img/avatar.png HTTP/1.1" 304 0
+INFO 2024-11-08 19:02:57,328 "GET /student/8/update/ HTTP/1.1" 200 17107
+INFO 2024-11-08 19:03:02,221 "POST /student/8/update/ HTTP/1.1" 302 0
+INFO 2024-11-08 19:03:02,243 "GET /student/list HTTP/1.1" 200 15560
+INFO 2024-11-08 19:03:06,883 "GET /student/6/ HTTP/1.1" 200 11683
+INFO 2024-11-08 19:03:08,230 "GET /student/6/update/ HTTP/1.1" 200 17104
+INFO 2024-11-08 19:03:31,174 "GET /accounts/logout/ HTTP/1.1" 302 0
+INFO 2024-11-08 19:03:31,182 "GET / HTTP/1.1" 302 0
+INFO 2024-11-08 19:03:31,191 "GET /accounts/login/?next=/ HTTP/1.1" 200 4187
+INFO 2024-11-08 19:03:39,582 "POST /accounts/login/ HTTP/1.1" 200 4312
+INFO 2024-11-08 19:03:48,647 "POST /accounts/login/ HTTP/1.1" 302 0
+ERROR 2024-11-08 19:03:48,700 Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 321, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'student-subjects-list' not found. 'student-subjects-list' is not a valid view function or pattern name.
+ERROR 2024-11-08 19:03:48,703 "GET / HTTP/1.1" 500 153998
+INFO 2024-11-08 19:04:25,765 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\students\urls.py changed, reloading.
+INFO 2024-11-08 19:04:26,493 Watching for file changes with StatReloader
+INFO 2024-11-08 19:04:31,511 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\students\urls.py changed, reloading.
+INFO 2024-11-08 19:04:32,157 Watching for file changes with StatReloader
+INFO 2024-11-08 19:04:34,307 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\students\urls.py changed, reloading.
+INFO 2024-11-08 19:04:34,996 Watching for file changes with StatReloader
+INFO 2024-11-08 19:04:35,770 "GET / HTTP/1.1" 200 9505
+INFO 2024-11-08 19:04:37,206 "GET /student/6/subject/ HTTP/1.1" 200 9601
+INFO 2024-11-08 19:04:39,059 "GET /student/6/subject/ HTTP/1.1" 200 9601
+INFO 2024-11-08 19:04:39,657 "GET /student/6/subject/ HTTP/1.1" 200 9601
+INFO 2024-11-08 19:04:45,152 "GET /student/list HTTP/1.1" 200 15427
+INFO 2024-11-08 19:04:51,090 "GET /student/5/ HTTP/1.1" 200 11683
+INFO 2024-11-08 19:04:52,757 "GET /student/5/update/ HTTP/1.1" 200 17105
+INFO 2024-11-08 19:04:55,472 "POST /student/5/update/ HTTP/1.1" 302 0
+INFO 2024-11-08 19:04:55,494 "GET /student/list HTTP/1.1" 200 15577
+INFO 2024-11-08 19:04:57,162 "GET /student/6/subject/ HTTP/1.1" 200 9601
+INFO 2024-11-08 19:04:58,602 "GET /student/6/subject/ HTTP/1.1" 200 9601
+INFO 2024-11-08 19:04:59,549 "GET /student/6/subject/ HTTP/1.1" 200 9601
+INFO 2024-11-08 19:05:01,222 "GET /student/list HTTP/1.1" 200 15427
+INFO 2024-11-08 19:05:02,536 "GET /student/6/ HTTP/1.1" 200 11700
+INFO 2024-11-08 19:05:02,572 "GET /static/dist/img/avatar.png HTTP/1.1" 304 0
+INFO 2024-11-08 19:05:03,529 "GET /student/6/update/ HTTP/1.1" 200 17121
+INFO 2024-11-08 19:05:06,142 "POST /student/6/update/ HTTP/1.1" 302 0
+INFO 2024-11-08 19:05:06,165 "GET /student/list HTTP/1.1" 200 15577
+INFO 2024-11-08 19:05:07,241 "GET /student/6/subject/ HTTP/1.1" 200 11164
+INFO 2024-11-08 19:05:09,509 "GET /student/subject/2/ HTTP/1.1" 200 16599
+INFO 2024-11-08 19:05:11,542 "GET /student/calendar/2/ HTTP/1.1" 200 12579
+INFO 2024-11-08 19:05:11,661 "GET /student/calendar/2/?start=2024-10-27&end=2024-12-08&_=1731103511625 HTTP/1.1" 200 924
+INFO 2024-11-08 19:05:15,370 "GET /content/subject/2/files/ HTTP/1.1" 200 10758
+INFO 2024-11-08 19:05:28,337 "GET /result/subject_list/ HTTP/1.1" 200 11764
+INFO 2024-11-08 19:05:29,312 "GET /student/attendance/ HTTP/1.1" 200 13901
+INFO 2024-11-08 19:05:29,960 "GET /student/attendance/ HTTP/1.1" 200 13901
+INFO 2024-11-08 19:05:30,978 "GET /student/6/subject/ HTTP/1.1" 200 11164
+INFO 2024-11-08 19:05:31,862 "GET /student/subject/2/ HTTP/1.1" 200 16599
+INFO 2024-11-08 19:05:38,086 "GET /representative/list/ HTTP/1.1" 200 11510
+INFO 2024-11-08 19:05:43,918 "GET /representative/create/ HTTP/1.1" 200 13708
+INFO 2024-11-08 19:13:30,262 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\students\urls.py changed, reloading.
+INFO 2024-11-08 19:13:30,945 Watching for file changes with StatReloader
+INFO 2024-11-08 19:13:33,251 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\students\urls.py changed, reloading.
+INFO 2024-11-08 19:13:33,837 Watching for file changes with StatReloader
+INFO 2024-11-08 19:13:38,064 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\students\urls.py changed, reloading.
+INFO 2024-11-08 19:13:38,739 Watching for file changes with StatReloader
+INFO 2024-11-08 19:13:40,031 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\students\urls.py changed, reloading.
+INFO 2024-11-08 19:13:40,655 Watching for file changes with StatReloader
+INFO 2024-11-08 19:13:42,786 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\students\urls.py changed, reloading.
+INFO 2024-11-08 19:13:43,450 Watching for file changes with StatReloader
+INFO 2024-11-08 19:13:44,731 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\students\urls.py changed, reloading.
+INFO 2024-11-08 19:13:45,299 Watching for file changes with StatReloader
+INFO 2024-11-08 19:18:28,055 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\school_app\settings.py changed, reloading.
+INFO 2024-11-08 19:18:28,678 Watching for file changes with StatReloader
+INFO 2024-11-08 19:18:39,262 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\school_app\settings.py changed, reloading.
+INFO 2024-11-08 19:18:39,917 Watching for file changes with StatReloader
+INFO 2024-11-08 19:19:31,678 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\school_app\settings.py changed, reloading.
+INFO 2024-11-08 19:19:32,322 Watching for file changes with StatReloader
+INFO 2024-11-08 19:19:36,489 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\school_app\settings.py changed, reloading.
+INFO 2024-11-08 19:19:37,104 Watching for file changes with StatReloader
+INFO 2024-11-08 19:19:40,241 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\school_app\settings.py changed, reloading.
+INFO 2024-11-08 19:19:40,831 Watching for file changes with StatReloader
+INFO 2024-11-08 19:19:43,930 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\school_app\settings.py changed, reloading.
+INFO 2024-11-08 19:19:44,517 Watching for file changes with StatReloader
+INFO 2024-11-08 19:19:47,669 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\school_app\settings.py changed, reloading.
+INFO 2024-11-08 19:19:48,249 Watching for file changes with StatReloader
+ERROR 2024-11-08 19:38:14,235 Internal Server Error: /accounts/logout/
+Traceback (most recent call last):
+  File "C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\representatives\middleware.py", line 10, in __call__
+    Representatives = Representatives.objects.get(rut=request.user.username)
+                      ^^^^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'Representatives' where it is not associated with a value
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\representatives\middleware.py", line 12, in __call__
+    except Representatives.DoesNotExist:
+           ^^^^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'Representatives' where it is not associated with a value
+ERROR 2024-11-08 19:38:14,236 "GET /accounts/logout/ HTTP/1.1" 500 69175
+ERROR 2024-11-08 19:38:15,393 Internal Server Error: /accounts/logout/
+Traceback (most recent call last):
+  File "C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\representatives\middleware.py", line 10, in __call__
+    Representatives = Representatives.objects.get(rut=request.user.username)
+                      ^^^^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'Representatives' where it is not associated with a value
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\representatives\middleware.py", line 12, in __call__
+    except Representatives.DoesNotExist:
+           ^^^^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'Representatives' where it is not associated with a value
+ERROR 2024-11-08 19:38:15,394 "GET /accounts/logout/ HTTP/1.1" 500 69306
+ERROR 2024-11-08 19:38:17,481 Internal Server Error: /representative/create/
+Traceback (most recent call last):
+  File "C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\representatives\middleware.py", line 10, in __call__
+    Representatives = Representatives.objects.get(rut=request.user.username)
+                      ^^^^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'Representatives' where it is not associated with a value
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\representatives\middleware.py", line 12, in __call__
+    except Representatives.DoesNotExist:
+           ^^^^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'Representatives' where it is not associated with a value
+ERROR 2024-11-08 19:38:17,482 "GET /representative/create/ HTTP/1.1" 500 69380
+ERROR 2024-11-08 19:38:20,255 Internal Server Error: /accounts/logout/
+Traceback (most recent call last):
+  File "C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\representatives\middleware.py", line 10, in __call__
+    Representatives = Representatives.objects.get(rut=request.user.username)
+                      ^^^^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'Representatives' where it is not associated with a value
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\representatives\middleware.py", line 12, in __call__
+    except Representatives.DoesNotExist:
+           ^^^^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'Representatives' where it is not associated with a value
+ERROR 2024-11-08 19:38:20,256 "GET /accounts/logout/ HTTP/1.1" 500 69167
+ERROR 2024-11-08 19:38:24,852 Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\representatives\middleware.py", line 10, in __call__
+    Representatives = Representatives.objects.get(rut=request.user.username)
+                      ^^^^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'Representatives' where it is not associated with a value
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\representatives\middleware.py", line 12, in __call__
+    except Representatives.DoesNotExist:
+           ^^^^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'Representatives' where it is not associated with a value
+ERROR 2024-11-08 19:38:24,853 "GET / HTTP/1.1" 500 68829
+ERROR 2024-11-08 19:38:52,046 Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\representatives\middleware.py", line 10, in __call__
+    Representatives = Representatives.objects.get(rut=request.user.username)
+                      ^^^^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'Representatives' where it is not associated with a value
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\representatives\middleware.py", line 12, in __call__
+    except Representatives.DoesNotExist:
+           ^^^^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'Representatives' where it is not associated with a value
+ERROR 2024-11-08 19:38:52,047 "GET / HTTP/1.1" 500 68966
+ERROR 2024-11-08 19:38:54,628 Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\representatives\middleware.py", line 10, in __call__
+    Representatives = Representatives.objects.get(rut=request.user.username)
+                      ^^^^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'Representatives' where it is not associated with a value
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\representatives\middleware.py", line 12, in __call__
+    except Representatives.DoesNotExist:
+           ^^^^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'Representatives' where it is not associated with a value
+ERROR 2024-11-08 19:38:54,629 "GET / HTTP/1.1" 500 68829
+INFO 2024-11-08 19:38:58,191 Watching for file changes with StatReloader
+ERROR 2024-11-08 19:39:00,301 Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\representatives\middleware.py", line 10, in __call__
+    Representatives = Representatives.objects.get(rut=request.user.username)
+                      ^^^^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'Representatives' where it is not associated with a value
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\representatives\middleware.py", line 12, in __call__
+    except Representatives.DoesNotExist:
+           ^^^^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'Representatives' where it is not associated with a value
+ERROR 2024-11-08 19:39:00,302 "GET / HTTP/1.1" 500 68829
+INFO 2024-11-08 19:39:56,684 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\representatives\middleware.py changed, reloading.
+INFO 2024-11-08 19:39:57,312 Watching for file changes with StatReloader
+INFO 2024-11-08 19:40:00,447 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\representatives\middleware.py changed, reloading.
+INFO 2024-11-08 19:40:01,114 Watching for file changes with StatReloader
+INFO 2024-11-08 19:40:05,314 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\representatives\middleware.py changed, reloading.
+INFO 2024-11-08 19:40:05,926 Watching for file changes with StatReloader
+INFO 2024-11-08 19:40:28,050 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\representatives\middleware.py changed, reloading.
+INFO 2024-11-08 19:40:28,680 Watching for file changes with StatReloader
+INFO 2024-11-08 19:41:06,618 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\representatives\middleware.py changed, reloading.
+INFO 2024-11-08 19:41:07,260 Watching for file changes with StatReloader
+INFO 2024-11-08 19:41:10,392 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\representatives\middleware.py changed, reloading.
+INFO 2024-11-08 19:41:11,011 Watching for file changes with StatReloader
+INFO 2024-11-08 19:41:16,262 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\representatives\middleware.py changed, reloading.
+INFO 2024-11-08 19:41:16,885 Watching for file changes with StatReloader
+INFO 2024-11-08 19:41:20,045 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\representatives\middleware.py changed, reloading.
+INFO 2024-11-08 19:41:20,686 Watching for file changes with StatReloader
+INFO 2024-11-08 19:41:23,840 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\representatives\middleware.py changed, reloading.
+INFO 2024-11-08 19:41:24,512 Watching for file changes with StatReloader
+INFO 2024-11-08 19:41:33,816 "GET / HTTP/1.1" 200 9505
+INFO 2024-11-08 19:41:36,429 "GET /accounts/logout/ HTTP/1.1" 302 0
+INFO 2024-11-08 19:41:36,436 "GET / HTTP/1.1" 302 0
+INFO 2024-11-08 19:41:36,445 "GET /accounts/login/?next=/ HTTP/1.1" 200 4187
+INFO 2024-11-08 20:08:21,048 "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2024-11-08 20:08:21,064 "GET / HTTP/1.1" 200 9488
+INFO 2024-11-08 20:08:22,618 "GET /representative/list/ HTTP/1.1" 200 11493
+INFO 2024-11-08 20:08:24,125 "GET /representative/create/ HTTP/1.1" 200 13691
+INFO 2024-11-08 20:09:42,927 "POST /representative/create/ HTTP/1.1" 302 0
+INFO 2024-11-08 20:09:42,946 "GET /teacher/list/ HTTP/1.1" 200 13003
+INFO 2024-11-08 20:10:01,856 "GET /accounts/logout/ HTTP/1.1" 302 0
+INFO 2024-11-08 20:10:01,863 "GET / HTTP/1.1" 302 0
+INFO 2024-11-08 20:10:01,870 "GET /accounts/login/?next=/ HTTP/1.1" 200 4187
+INFO 2024-11-08 20:10:10,188 "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2024-11-08 20:10:10,204 "GET / HTTP/1.1" 200 9125
+INFO 2024-11-08 20:10:16,879 "GET /class/list/ HTTP/1.1" 200 11946
+INFO 2024-11-08 20:10:17,461 "GET /subject/list/ HTTP/1.1" 200 11314
+INFO 2024-11-08 20:10:18,354 "GET /student/attendance/ HTTP/1.1" 200 13521
+INFO 2024-11-08 20:10:20,123 "GET /result/subject_list/ HTTP/1.1" 200 11384
+INFO 2024-11-08 20:10:22,678 "GET /result/subject/2/add_results/ HTTP/1.1" 200 16742
+INFO 2024-11-08 20:10:22,694 - Broken pipe from ('127.0.0.1', 54012)
+INFO 2024-11-08 20:13:04,823 "GET /teacher/list/ HTTP/1.1" 200 12299
+INFO 2024-11-08 20:27:58,715 "GET /teacher/list/ HTTP/1.1" 200 12299
+INFO 2024-11-08 20:27:59,237 "GET /student/list HTTP/1.1" 200 15047
+INFO 2024-11-08 20:28:00,936 "GET /student/6/ HTTP/1.1" 200 11320
+INFO 2024-11-08 20:28:00,977 "GET /static/dist/img/avatar.png HTTP/1.1" 304 0
+INFO 2024-11-08 20:28:02,415 "GET /student/6/update/ HTTP/1.1" 200 16806
+INFO 2024-11-08 20:28:06,248 "POST /student/6/update/ HTTP/1.1" 302 0
+INFO 2024-11-08 20:28:06,273 "GET /student/list HTTP/1.1" 200 15210
+INFO 2024-11-08 20:28:17,858 "GET /student/5/ HTTP/1.1" 200 11303
+INFO 2024-11-08 20:28:20,129 "GET /student/5/update/ HTTP/1.1" 200 16790
+INFO 2024-11-08 20:28:23,445 "POST /student/5/update/ HTTP/1.1" 302 0
+INFO 2024-11-08 20:28:23,469 "GET /student/list HTTP/1.1" 200 15223
+INFO 2024-11-08 20:32:49,843 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\representatives\views.py changed, reloading.
+INFO 2024-11-08 20:32:50,550 Watching for file changes with StatReloader
+INFO 2024-11-08 20:35:06,534 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\representatives\views.py changed, reloading.
+INFO 2024-11-08 20:35:07,242 Watching for file changes with StatReloader
+INFO 2024-11-08 20:35:12,530 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\representatives\views.py changed, reloading.
+INFO 2024-11-08 20:35:13,187 Watching for file changes with StatReloader
+INFO 2024-11-08 20:35:18,106 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\representatives\views.py changed, reloading.
+INFO 2024-11-08 20:35:18,792 Watching for file changes with StatReloader
+INFO 2024-11-08 20:35:41,648 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\representatives\views.py changed, reloading.
+INFO 2024-11-08 20:35:42,242 Watching for file changes with StatReloader
+INFO 2024-11-08 20:46:11,231 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\representatives\views.py changed, reloading.
+INFO 2024-11-08 20:46:11,851 Watching for file changes with StatReloader
+INFO 2024-11-08 20:46:13,652 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\representatives\views.py changed, reloading.
+INFO 2024-11-08 20:46:14,254 Watching for file changes with StatReloader
+INFO 2024-11-08 20:46:47,455 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\representatives\views.py changed, reloading.
+INFO 2024-11-08 20:46:48,153 Watching for file changes with StatReloader
+INFO 2024-11-08 20:47:20,813 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\representatives\views.py changed, reloading.
+INFO 2024-11-08 20:47:21,430 Watching for file changes with StatReloader
+INFO 2024-11-08 20:47:26,683 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\representatives\views.py changed, reloading.
+INFO 2024-11-08 20:47:27,322 Watching for file changes with StatReloader
+INFO 2024-11-08 20:47:31,526 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\representatives\views.py changed, reloading.
+INFO 2024-11-08 20:47:32,169 Watching for file changes with StatReloader
+INFO 2024-11-08 20:47:34,247 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\representatives\views.py changed, reloading.
+INFO 2024-11-08 20:47:34,884 Watching for file changes with StatReloader
+INFO 2024-11-08 20:47:40,142 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\representatives\views.py changed, reloading.
+INFO 2024-11-08 20:47:40,760 Watching for file changes with StatReloader
+INFO 2024-11-08 20:47:54,401 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\representatives\views.py changed, reloading.
+INFO 2024-11-08 20:47:55,034 Watching for file changes with StatReloader
+INFO 2024-11-08 20:47:57,146 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\representatives\views.py changed, reloading.
+INFO 2024-11-08 20:47:57,757 Watching for file changes with StatReloader
+INFO 2024-11-08 20:48:21,929 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\representatives\views.py changed, reloading.
+INFO 2024-11-08 20:48:22,570 Watching for file changes with StatReloader
+INFO 2024-11-08 20:48:25,751 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\representatives\views.py changed, reloading.
+INFO 2024-11-08 20:48:26,365 Watching for file changes with StatReloader
+INFO 2024-11-08 20:48:33,723 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\representatives\views.py changed, reloading.
+INFO 2024-11-08 20:48:34,391 Watching for file changes with StatReloader
+INFO 2024-11-08 20:48:39,688 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\representatives\views.py changed, reloading.
+INFO 2024-11-08 20:48:40,344 Watching for file changes with StatReloader
+INFO 2024-11-08 20:48:42,451 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\representatives\views.py changed, reloading.
+INFO 2024-11-08 20:48:43,050 Watching for file changes with StatReloader
+INFO 2024-11-08 20:48:53,563 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\representatives\views.py changed, reloading.
+INFO 2024-11-08 20:48:54,203 Watching for file changes with StatReloader
+INFO 2024-11-08 20:49:01,559 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\representatives\views.py changed, reloading.
+INFO 2024-11-08 20:49:02,234 Watching for file changes with StatReloader
+INFO 2024-11-08 20:49:09,569 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\representatives\views.py changed, reloading.
+INFO 2024-11-08 20:49:10,170 Watching for file changes with StatReloader
+INFO 2024-11-08 20:49:13,319 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\representatives\views.py changed, reloading.
+INFO 2024-11-08 20:49:13,921 Watching for file changes with StatReloader
+INFO 2024-11-08 20:49:18,084 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\representatives\views.py changed, reloading.
+INFO 2024-11-08 20:49:18,723 Watching for file changes with StatReloader
+INFO 2024-11-08 20:49:20,802 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\representatives\views.py changed, reloading.
+INFO 2024-11-08 20:49:21,411 Watching for file changes with StatReloader
+INFO 2024-11-08 20:49:28,719 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\representatives\views.py changed, reloading.
+INFO 2024-11-08 20:49:29,359 Watching for file changes with StatReloader
+INFO 2024-11-08 20:49:32,540 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\representatives\views.py changed, reloading.
+INFO 2024-11-08 20:49:33,147 Watching for file changes with StatReloader
+INFO 2024-11-08 20:49:37,318 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\representatives\views.py changed, reloading.
+INFO 2024-11-08 20:49:38,000 Watching for file changes with StatReloader
+INFO 2024-11-08 20:49:41,135 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\representatives\views.py changed, reloading.
+INFO 2024-11-08 20:49:41,783 Watching for file changes with StatReloader
+INFO 2024-11-08 20:51:17,644 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\representatives\views.py changed, reloading.
+INFO 2024-11-08 20:51:18,361 Watching for file changes with StatReloader
+INFO 2024-11-08 20:51:33,106 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\representatives\views.py changed, reloading.
+INFO 2024-11-08 20:51:33,728 Watching for file changes with StatReloader
+INFO 2024-11-08 20:51:36,895 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\representatives\views.py changed, reloading.
+INFO 2024-11-08 20:51:37,536 Watching for file changes with StatReloader
+INFO 2024-11-08 20:51:41,404 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\representatives\views.py changed, reloading.
+INFO 2024-11-08 20:51:42,111 Watching for file changes with StatReloader
+INFO 2024-11-08 20:51:45,008 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\students\views.py changed, reloading.
+INFO 2024-11-08 20:51:45,676 Watching for file changes with StatReloader
+INFO 2024-11-08 20:51:52,722 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\representatives\views.py changed, reloading.
+INFO 2024-11-08 20:51:53,364 Watching for file changes with StatReloader
+INFO 2024-11-08 20:52:02,808 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\representatives\views.py changed, reloading.
+INFO 2024-11-08 20:52:03,416 Watching for file changes with StatReloader
+INFO 2024-11-08 20:52:05,500 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\representatives\views.py changed, reloading.
+INFO 2024-11-08 20:52:06,099 Watching for file changes with StatReloader
+INFO 2024-11-08 20:52:08,160 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\representatives\views.py changed, reloading.
+INFO 2024-11-08 20:52:08,749 Watching for file changes with StatReloader
+INFO 2024-11-08 20:52:14,716 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\representatives\views.py changed, reloading.
+INFO 2024-11-08 20:52:15,358 Watching for file changes with StatReloader
+INFO 2024-11-08 20:52:18,205 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\representatives\views.py changed, reloading.
+INFO 2024-11-08 20:52:18,796 Watching for file changes with StatReloader
+INFO 2024-11-08 20:57:10,692 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\representatives\views.py changed, reloading.
+INFO 2024-11-08 20:57:11,316 Watching for file changes with StatReloader
+INFO 2024-11-08 20:57:14,153 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\representatives\views.py changed, reloading.
+INFO 2024-11-08 20:57:14,779 Watching for file changes with StatReloader
+INFO 2024-11-08 20:57:16,863 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\representatives\views.py changed, reloading.
+INFO 2024-11-08 20:57:17,529 Watching for file changes with StatReloader
+INFO 2024-11-08 20:57:20,674 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\representatives\views.py changed, reloading.
+INFO 2024-11-08 20:57:21,307 Watching for file changes with StatReloader
+INFO 2024-11-08 20:57:23,381 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\representatives\views.py changed, reloading.
+INFO 2024-11-08 20:57:24,079 Watching for file changes with StatReloader
+INFO 2024-11-08 20:59:19,107 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\representatives\views.py changed, reloading.
+INFO 2024-11-08 20:59:19,713 Watching for file changes with StatReloader
+INFO 2024-11-08 20:59:55,555 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\representatives\urls.py changed, reloading.
+INFO 2024-11-08 20:59:56,164 Watching for file changes with StatReloader
+INFO 2024-11-08 21:00:03,553 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\representatives\urls.py changed, reloading.
+INFO 2024-11-08 21:00:04,184 Watching for file changes with StatReloader
+INFO 2024-11-08 21:00:10,629 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\representatives\urls.py changed, reloading.
+INFO 2024-11-08 21:00:11,291 Watching for file changes with StatReloader
+INFO 2024-11-08 21:00:14,096 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\representatives\urls.py changed, reloading.
+INFO 2024-11-08 21:00:14,707 Watching for file changes with StatReloader
+INFO 2024-11-08 21:00:17,507 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\representatives\urls.py changed, reloading.
+INFO 2024-11-08 21:00:18,107 Watching for file changes with StatReloader
+INFO 2024-11-08 21:00:20,196 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\representatives\urls.py changed, reloading.
+INFO 2024-11-08 21:00:20,787 Watching for file changes with StatReloader
+INFO 2024-11-08 21:00:32,339 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\representatives\urls.py changed, reloading.
+INFO 2024-11-08 21:00:32,950 Watching for file changes with StatReloader
+INFO 2024-11-08 21:00:37,117 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\representatives\urls.py changed, reloading.
+INFO 2024-11-08 21:00:37,729 Watching for file changes with StatReloader
+INFO 2024-11-08 21:00:42,978 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\representatives\urls.py changed, reloading.
+INFO 2024-11-08 21:00:43,578 Watching for file changes with StatReloader
+INFO 2024-11-08 21:00:48,800 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\representatives\urls.py changed, reloading.
+INFO 2024-11-08 21:00:49,513 Watching for file changes with StatReloader
+INFO 2024-11-08 21:00:54,855 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\representatives\urls.py changed, reloading.
+INFO 2024-11-08 21:00:55,522 Watching for file changes with StatReloader
+INFO 2024-11-08 21:01:01,874 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\representatives\urls.py changed, reloading.
+INFO 2024-11-08 21:01:02,516 Watching for file changes with StatReloader
+INFO 2024-11-08 21:01:04,618 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\representatives\urls.py changed, reloading.
+INFO 2024-11-08 21:01:05,212 Watching for file changes with StatReloader
+INFO 2024-11-08 21:01:21,207 "GET /student/list HTTP/1.1" 200 15073
+ERROR 2024-11-08 21:02:25,126 Internal Server Error: /student/list
+Traceback (most recent call last):
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 321, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'representative_students' with arguments '('',)' not found. 1 pattern(s) tried: ['representative/representatives/(?P<pk>[0-9]+)/students\\Z']
+ERROR 2024-11-08 21:02:25,129 "GET /student/list HTTP/1.1" 500 169319
+INFO 2024-11-08 21:02:52,261 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\representatives\urls.py changed, reloading.
+INFO 2024-11-08 21:02:52,899 Watching for file changes with StatReloader
+ERROR 2024-11-08 21:02:57,686 Internal Server Error: /student/list
+Traceback (most recent call last):
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 321, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'representative_student' with arguments '('',)' not found. 1 pattern(s) tried: ['representative/representatives/(?P<pk>[0-9]+)/students\\Z']
+ERROR 2024-11-08 21:02:57,689 "GET /student/list HTTP/1.1" 500 169301
+INFO 2024-11-08 21:03:26,927 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\representatives\middleware.py changed, reloading.
+INFO 2024-11-08 21:03:27,539 Watching for file changes with StatReloader
+INFO 2024-11-08 21:03:30,739 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\representatives\middleware.py changed, reloading.
+INFO 2024-11-08 21:03:31,400 Watching for file changes with StatReloader
+INFO 2024-11-08 21:03:48,212 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\representatives\urls.py changed, reloading.
+INFO 2024-11-08 21:03:48,830 Watching for file changes with StatReloader
+ERROR 2024-11-08 21:03:50,617 Internal Server Error: /student/list
+Traceback (most recent call last):
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 321, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'representative_student' with arguments '('',)' not found. 1 pattern(s) tried: ['representative/representatives/(?P<pk>[0-9]+)/students/\\Z']
+ERROR 2024-11-08 21:03:50,620 "GET /student/list HTTP/1.1" 500 169315
+ERROR 2024-11-08 21:03:52,103 Internal Server Error: /student/list
+Traceback (most recent call last):
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 321, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'representative_student' with arguments '('',)' not found. 1 pattern(s) tried: ['representative/representatives/(?P<pk>[0-9]+)/students/\\Z']
+ERROR 2024-11-08 21:03:52,105 "GET /student/list HTTP/1.1" 500 169315
+ERROR 2024-11-08 21:03:52,854 Internal Server Error: /student/list
+Traceback (most recent call last):
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 321, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'representative_student' with arguments '('',)' not found. 1 pattern(s) tried: ['representative/representatives/(?P<pk>[0-9]+)/students/\\Z']
+ERROR 2024-11-08 21:03:52,856 "GET /student/list HTTP/1.1" 500 169315
+ERROR 2024-11-08 21:04:03,292 Internal Server Error: /student/list
+Traceback (most recent call last):
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 321, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'representative_student' with arguments '('',)' not found. 1 pattern(s) tried: ['representative/representatives/(?P<pk>[0-9]+)/students/\\Z']
+ERROR 2024-11-08 21:04:03,294 "GET /student/list HTTP/1.1" 500 169321
+ERROR 2024-11-08 21:04:04,226 Internal Server Error: /student/list
+Traceback (most recent call last):
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 321, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'representative_student' with arguments '('',)' not found. 1 pattern(s) tried: ['representative/representatives/(?P<pk>[0-9]+)/students/\\Z']
+ERROR 2024-11-08 21:04:04,228 "GET /student/list HTTP/1.1" 500 169321
+ERROR 2024-11-08 21:04:04,708 Internal Server Error: /student/list
+Traceback (most recent call last):
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 321, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'representative_student' with arguments '('',)' not found. 1 pattern(s) tried: ['representative/representatives/(?P<pk>[0-9]+)/students/\\Z']
+ERROR 2024-11-08 21:04:04,710 "GET /student/list HTTP/1.1" 500 169321
+ERROR 2024-11-08 21:04:05,124 Internal Server Error: /student/list
+Traceback (most recent call last):
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 321, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'representative_student' with arguments '('',)' not found. 1 pattern(s) tried: ['representative/representatives/(?P<pk>[0-9]+)/students/\\Z']
+ERROR 2024-11-08 21:04:05,126 "GET /student/list HTTP/1.1" 500 169321
+ERROR 2024-11-08 21:04:05,428 Internal Server Error: /student/list
+Traceback (most recent call last):
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 321, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'representative_student' with arguments '('',)' not found. 1 pattern(s) tried: ['representative/representatives/(?P<pk>[0-9]+)/students/\\Z']
+ERROR 2024-11-08 21:04:05,429 "GET /student/list HTTP/1.1" 500 169321
+ERROR 2024-11-08 21:04:05,937 Internal Server Error: /student/list
+Traceback (most recent call last):
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 321, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'representative_student' with arguments '('',)' not found. 1 pattern(s) tried: ['representative/representatives/(?P<pk>[0-9]+)/students/\\Z']
+ERROR 2024-11-08 21:04:05,939 "GET /student/list HTTP/1.1" 500 169321
+ERROR 2024-11-08 21:04:06,133 Internal Server Error: /student/list
+Traceback (most recent call last):
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 321, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'representative_student' with arguments '('',)' not found. 1 pattern(s) tried: ['representative/representatives/(?P<pk>[0-9]+)/students/\\Z']
+ERROR 2024-11-08 21:04:06,135 "GET /student/list HTTP/1.1" 500 169321
+ERROR 2024-11-08 21:04:14,744 Internal Server Error: /student/list
+Traceback (most recent call last):
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 321, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'representative_student' with arguments '('',)' not found. 1 pattern(s) tried: ['representative/representatives/(?P<pk>[0-9]+)/students/\\Z']
+ERROR 2024-11-08 21:04:14,746 "GET /student/list HTTP/1.1" 500 169321
+ERROR 2024-11-08 21:04:15,498 Internal Server Error: /student/list
+Traceback (most recent call last):
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 321, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'representative_student' with arguments '('',)' not found. 1 pattern(s) tried: ['representative/representatives/(?P<pk>[0-9]+)/students/\\Z']
+ERROR 2024-11-08 21:04:15,499 "GET /student/list HTTP/1.1" 500 169321
+ERROR 2024-11-08 21:04:16,017 Internal Server Error: /student/list
+Traceback (most recent call last):
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 321, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'representative_student' with arguments '('',)' not found. 1 pattern(s) tried: ['representative/representatives/(?P<pk>[0-9]+)/students/\\Z']
+ERROR 2024-11-08 21:04:16,019 "GET /student/list HTTP/1.1" 500 169321
+ERROR 2024-11-08 21:04:16,359 Internal Server Error: /student/list
+Traceback (most recent call last):
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 321, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'representative_student' with arguments '('',)' not found. 1 pattern(s) tried: ['representative/representatives/(?P<pk>[0-9]+)/students/\\Z']
+ERROR 2024-11-08 21:04:16,361 "GET /student/list HTTP/1.1" 500 169321
+ERROR 2024-11-08 21:04:36,787 Internal Server Error: /student/list
+Traceback (most recent call last):
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 321, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'representative_student' with arguments '('',)' not found. 1 pattern(s) tried: ['representative/representatives/(?P<pk>[0-9]+)/students/\\Z']
+ERROR 2024-11-08 21:04:36,789 "GET /student/list HTTP/1.1" 500 169315
+ERROR 2024-11-08 21:04:37,386 Internal Server Error: /student/list
+Traceback (most recent call last):
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 321, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'representative_student' with arguments '('',)' not found. 1 pattern(s) tried: ['representative/representatives/(?P<pk>[0-9]+)/students/\\Z']
+ERROR 2024-11-08 21:04:37,388 "GET /student/list HTTP/1.1" 500 169315
+ERROR 2024-11-08 21:04:39,994 Internal Server Error: /student/list
+Traceback (most recent call last):
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 321, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'representative_student' with arguments '('',)' not found. 1 pattern(s) tried: ['representative/representatives/(?P<pk>[0-9]+)/students/\\Z']
+ERROR 2024-11-08 21:04:39,995 "GET /student/list HTTP/1.1" 500 169321
+ERROR 2024-11-08 21:04:40,642 Internal Server Error: /student/list
+Traceback (most recent call last):
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 321, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'representative_student' with arguments '('',)' not found. 1 pattern(s) tried: ['representative/representatives/(?P<pk>[0-9]+)/students/\\Z']
+ERROR 2024-11-08 21:04:40,644 "GET /student/list HTTP/1.1" 500 169321
+ERROR 2024-11-08 21:04:41,039 Internal Server Error: /student/list
+Traceback (most recent call last):
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 321, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'representative_student' with arguments '('',)' not found. 1 pattern(s) tried: ['representative/representatives/(?P<pk>[0-9]+)/students/\\Z']
+ERROR 2024-11-08 21:04:41,040 "GET /student/list HTTP/1.1" 500 169321
+ERROR 2024-11-08 21:04:41,219 Internal Server Error: /student/list
+Traceback (most recent call last):
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 321, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'representative_student' with arguments '('',)' not found. 1 pattern(s) tried: ['representative/representatives/(?P<pk>[0-9]+)/students/\\Z']
+ERROR 2024-11-08 21:04:41,220 "GET /student/list HTTP/1.1" 500 169321
+ERROR 2024-11-08 21:04:41,423 Internal Server Error: /student/list
+Traceback (most recent call last):
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 321, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'representative_student' with arguments '('',)' not found. 1 pattern(s) tried: ['representative/representatives/(?P<pk>[0-9]+)/students/\\Z']
+ERROR 2024-11-08 21:04:41,424 "GET /student/list HTTP/1.1" 500 169321
+INFO 2024-11-08 21:05:24,441 "GET /student/list HTTP/1.1" 200 15472
+ERROR 2024-11-08 21:05:25,968 Internal Server Error: /representative/representatives/2/students/
+Traceback (most recent call last):
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\generic\list.py", line 154, in get
+    self.object_list = self.get_queryset()
+                       ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\representatives\views.py", line 117, in get_queryset
+    representative = get_object_or_404(representative, pk=representative_id)
+                                       ^^^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'representative' where it is not associated with a value
+ERROR 2024-11-08 21:05:25,970 "GET /representative/representatives/2/students/ HTTP/1.1" 500 85080
+INFO 2024-11-08 21:06:13,571 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\representatives\views.py changed, reloading.
+INFO 2024-11-08 21:06:14,236 Watching for file changes with StatReloader
+INFO 2024-11-08 21:06:17,082 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\representatives\views.py changed, reloading.
+INFO 2024-11-08 21:06:17,732 Watching for file changes with StatReloader
+INFO 2024-11-08 21:06:21,658 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\representatives\views.py changed, reloading.
+INFO 2024-11-08 21:06:22,323 Watching for file changes with StatReloader
+INFO 2024-11-08 21:06:28,680 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\representatives\views.py changed, reloading.
+INFO 2024-11-08 21:06:29,321 Watching for file changes with StatReloader
+INFO 2024-11-08 21:06:31,148 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\representatives\views.py changed, reloading.
+INFO 2024-11-08 21:06:31,784 Watching for file changes with StatReloader
+INFO 2024-11-08 21:06:39,084 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\representatives\views.py changed, reloading.
+INFO 2024-11-08 21:06:39,765 Watching for file changes with StatReloader
+INFO 2024-11-08 21:07:01,475 "GET /representative/representatives/2/students/ HTTP/1.1" 200 9620
+ERROR 2024-11-08 21:07:08,805 Internal Server Error: /representative/list/
+Traceback (most recent call last):
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\generic\list.py", line 154, in get
+    self.object_list = self.get_queryset()
+                       ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\representatives\views.py", line 116, in get_queryset
+    representative_id = self.kwargs['pk']
+                        ~~~~~~~~~~~^^^^^^
+KeyError: 'pk'
+ERROR 2024-11-08 21:07:08,806 "GET /representative/list/ HTTP/1.1" 500 84174
+INFO 2024-11-08 21:08:31,067 "GET /term/list/ HTTP/1.1" 200 12225
+INFO 2024-11-08 21:08:31,785 "GET /subject/list/ HTTP/1.1" 200 11713
+INFO 2024-11-08 21:08:32,168 "GET /class/list/ HTTP/1.1" 200 12345
+INFO 2024-11-08 21:08:32,602 "GET /student/attendance/ HTTP/1.1" 200 13920
+INFO 2024-11-08 21:08:33,082 "GET /student/attendance/ HTTP/1.1" 200 13920
+INFO 2024-11-08 21:08:33,955 "GET /result/subject_list/ HTTP/1.1" 200 11783
+INFO 2024-11-08 21:08:34,652 "GET /representative/representatives/2/students/ HTTP/1.1" 200 9620
+WARNING 2024-11-08 21:08:37,374 "GET /static/plugins/Datatables/pdfmake.min.js.map HTTP/1.1" 404 1870
+INFO 2024-11-08 21:08:37,456 "GET /static/dist/js/adminlte.js.map HTTP/1.1" 200 113276
+INFO 2024-11-08 21:08:37,459 "GET /static/plugins/toastr/toastr.js.map HTTP/1.1" 200 25633
+INFO 2024-11-08 21:08:37,467 "GET /static/plugins/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 318045
+INFO 2024-11-08 21:08:37,484 "GET /static/dist/css/adminlte.min.css.map HTTP/1.1" 200 2149167
+INFO 2024-11-08 21:08:39,294 "GET /representative/representatives/2/students/ HTTP/1.1" 200 9620
+WARNING 2024-11-08 21:08:39,556 "GET /static/plugins/Datatables/pdfmake.min.js.map HTTP/1.1" 404 1870
+INFO 2024-11-08 21:08:39,785 "GET /representative/representatives/2/students/ HTTP/1.1" 200 9620
+WARNING 2024-11-08 21:08:40,023 "GET /static/plugins/Datatables/pdfmake.min.js.map HTTP/1.1" 404 1870
+INFO 2024-11-08 21:08:40,644 "GET /representative/representatives/2/students/ HTTP/1.1" 200 9620
+WARNING 2024-11-08 21:08:40,900 "GET /static/plugins/Datatables/pdfmake.min.js.map HTTP/1.1" 404 1870
+ERROR 2024-11-08 21:08:54,220 Internal Server Error: /representative/list/
+Traceback (most recent call last):
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\generic\list.py", line 154, in get
+    self.object_list = self.get_queryset()
+                       ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\representatives\views.py", line 116, in get_queryset
+    representative_id = self.kwargs['pk']
+                        ~~~~~~~~~~~^^^^^^
+KeyError: 'pk'
+ERROR 2024-11-08 21:08:54,221 "GET /representative/list/ HTTP/1.1" 500 84174
+WARNING 2024-11-08 21:08:57,237 "GET /static/plugins/Datatables/pdfmake.min.js.map HTTP/1.1" 404 1870
+WARNING 2024-11-08 21:08:57,251 "GET /static/plugins/Datatables/pdfmake.min.js.map HTTP/1.1" 404 1870
+WARNING 2024-11-08 21:08:57,283 "GET /static/plugins/Datatables/pdfmake.min.js.map HTTP/1.1" 404 1870
+INFO 2024-11-08 21:34:56,507 "GET /representative/representatives/2/students/ HTTP/1.1" 200 9591
+INFO 2024-11-08 21:34:56,579 "GET /static/dist/css/adminlte.min.css.map HTTP/1.1" 304 0
+INFO 2024-11-08 21:34:56,617 "GET /static/plugins/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 304 0
+INFO 2024-11-08 21:34:56,662 "GET /static/plugins/toastr/toastr.js.map HTTP/1.1" 304 0
+INFO 2024-11-08 21:34:56,662 "GET /static/dist/js/adminlte.js.map HTTP/1.1" 304 0
+WARNING 2024-11-08 21:34:56,746 "GET /static/plugins/Datatables/pdfmake.min.js.map HTTP/1.1" 404 1870
+INFO 2024-11-08 21:35:05,141 "GET /student/list HTTP/1.1" 200 15472
+WARNING 2024-11-08 21:35:05,392 "GET /static/plugins/Datatables/pdfmake.min.js.map HTTP/1.1" 404 1870
+INFO 2024-11-08 21:35:06,028 "GET /teacher/list/ HTTP/1.1" 200 12698
+WARNING 2024-11-08 21:35:06,193 "GET /static/plugins/Datatables/pdfmake.min.js.map HTTP/1.1" 404 1870
+ERROR 2024-11-08 21:35:06,619 Internal Server Error: /representative/list/
+Traceback (most recent call last):
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\generic\list.py", line 154, in get
+    self.object_list = self.get_queryset()
+                       ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\representatives\views.py", line 116, in get_queryset
+    representative_id = self.kwargs['pk']
+                        ~~~~~~~~~~~^^^^^^
+KeyError: 'pk'
+ERROR 2024-11-08 21:35:06,621 "GET /representative/list/ HTTP/1.1" 500 84145
+WARNING 2024-11-08 21:35:12,939 "GET /static/plugins/Datatables/pdfmake.min.js.map HTTP/1.1" 404 1870
+WARNING 2024-11-08 21:35:12,955 "GET /static/plugins/Datatables/pdfmake.min.js.map HTTP/1.1" 404 1870
+WARNING 2024-11-08 21:35:12,988 "GET /static/plugins/Datatables/pdfmake.min.js.map HTTP/1.1" 404 1870
+INFO 2024-11-08 21:35:13,717 "GET /student/list HTTP/1.1" 200 15472
+WARNING 2024-11-08 21:35:13,900 "GET /static/plugins/Datatables/pdfmake.min.js.map HTTP/1.1" 404 1870
+INFO 2024-11-08 21:35:18,726 "GET /student/6/ HTTP/1.1" 200 11719
+INFO 2024-11-08 21:35:18,762 "GET /static/dist/img/avatar.png HTTP/1.1" 304 0
+INFO 2024-11-08 21:35:20,017 "GET /student/6/update/ HTTP/1.1" 200 17205
+INFO 2024-11-08 21:35:25,498 "POST /student/6/update/ HTTP/1.1" 302 0
+INFO 2024-11-08 21:35:25,525 "GET /student/list HTTP/1.1" 200 15622
+INFO 2024-11-08 21:35:28,077 "GET /representative/representatives/2/students/ HTTP/1.1" 200 9591
+INFO 2024-11-08 21:35:39,962 "GET /representative/representatives/2/students/ HTTP/1.1" 200 9585
+INFO 2024-11-08 21:36:10,394 "GET /representative/representatives/2/students/ HTTP/1.1" 200 9576
+INFO 2024-11-08 21:36:20,470 "GET /representative/representatives/2/students/ HTTP/1.1" 200 9581
+INFO 2024-11-08 21:36:46,668 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\representatives\views.py changed, reloading.
+INFO 2024-11-08 21:36:47,432 Watching for file changes with StatReloader
+INFO 2024-11-08 21:36:48,326 "GET /representative/representatives/2/students/ HTTP/1.1" 200 9581
+INFO 2024-11-08 21:36:49,363 "GET /representative/representatives/2/students/ HTTP/1.1" 200 9581
+INFO 2024-11-08 21:36:51,769 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\representatives\views.py changed, reloading.
+INFO 2024-11-08 21:36:52,522 Watching for file changes with StatReloader
+INFO 2024-11-08 21:36:53,227 "GET /representative/representatives/2/students/ HTTP/1.1" 200 9581
+INFO 2024-11-09 17:15:25,967 Watching for file changes with StatReloader
+INFO 2024-11-09 17:19:57,002 Watching for file changes with StatReloader
+INFO 2024-11-09 17:19:58,279 "GET / HTTP/1.1" 302 0
+INFO 2024-11-09 17:19:58,322 "GET /accounts/login/?next=/ HTTP/1.1" 200 4187
+INFO 2024-11-09 17:19:58,488 "GET /static/plugins/fontawesome-free/css/all.min.css HTTP/1.1" 200 58582
+INFO 2024-11-09 17:19:58,530 "GET /static/dist/css/login-page.css HTTP/1.1" 200 8786
+INFO 2024-11-09 17:19:58,534 "GET /static/plugins/toastr/toastr.min.css HTTP/1.1" 200 6454
+INFO 2024-11-09 17:19:58,534 "GET /static/plugins/overlayScrollbars/css/OverlayScrollbars.min.css HTTP/1.1" 200 19736
+INFO 2024-11-09 17:19:58,544 "GET /static/dist/css/adminlte.min.css HTTP/1.1" 200 686718
+INFO 2024-11-09 17:19:58,544 "GET /static/dist/img/login.png HTTP/1.1" 200 1197223
+INFO 2024-11-09 17:19:58,548 "GET /static/plugins/jquery/jquery.min.js HTTP/1.1" 200 88147
+INFO 2024-11-09 17:19:58,559 "GET /static/dist/js/jquery.formset.js HTTP/1.1" 200 13881
+INFO 2024-11-09 17:19:58,577 "GET /static/plugins/toastr/toastr.min.js HTTP/1.1" 200 5253
+INFO 2024-11-09 17:19:58,580 "GET /static/dist/js/demo.js HTTP/1.1" 200 13042
+INFO 2024-11-09 17:19:58,594 "GET /static/dist/img/puentealto.jpg HTTP/1.1" 200 317548
+INFO 2024-11-09 17:19:58,595 "GET /static/plugins/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 200 80704
+INFO 2024-11-09 17:19:58,600 "GET /static/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js HTTP/1.1" 200 42395
+INFO 2024-11-09 17:19:58,640 "GET /static/dist/js/adminlte.js HTTP/1.1" 200 59416
+INFO 2024-11-09 17:19:58,691 "GET /static/plugins/fontawesome-free/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 79444
+WARNING 2024-11-09 17:19:58,925 Not Found: /favicon.ico
+WARNING 2024-11-09 17:19:58,925 "GET /favicon.ico HTTP/1.1" 404 6963
+INFO 2024-11-09 17:20:11,795 "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2024-11-09 17:20:11,848 "GET / HTTP/1.1" 200 9514
+INFO 2024-11-09 17:20:11,894 "GET /static/plugins/Datatables/datatables.min.css HTTP/1.1" 200 25807
+INFO 2024-11-09 17:20:13,243 "GET /static/plugins/Datatables/datatables.min.js HTTP/1.1" 200 2042927
+INFO 2024-11-09 17:20:13,384 "GET /representative/representatives/2/students/ HTTP/1.1" 200 11827
+INFO 2024-11-09 17:20:15,135 "GET /representative/representatives/2/students/ HTTP/1.1" 200 11827
+INFO 2024-11-09 17:20:15,811 "GET /representative/representatives/2/students/ HTTP/1.1" 200 11827
+INFO 2024-11-09 17:20:17,998 "GET /representative/representatives/2/students/ HTTP/1.1" 200 11827
+INFO 2024-11-09 17:20:30,536 "GET /representative/representatives/2/students/ HTTP/1.1" 200 11827
+INFO 2024-11-09 17:20:31,047 "GET /representative/representatives/2/students/ HTTP/1.1" 200 11827
+INFO 2024-11-09 17:20:31,453 "GET /representative/representatives/2/students/ HTTP/1.1" 200 11827
+INFO 2024-11-09 17:20:31,785 "GET /representative/representatives/2/students/ HTTP/1.1" 200 11827
+INFO 2024-11-09 17:20:32,101 "GET /representative/representatives/2/students/ HTTP/1.1" 200 11827
+INFO 2024-11-09 17:20:40,873 "GET /representative/representatives/2/students/ HTTP/1.1" 200 11827
+INFO 2024-11-09 17:21:00,832 "GET /representative/2/ HTTP/1.1" 200 11294
+INFO 2024-11-09 17:21:00,871 "GET /static/dist/img/avatar.png HTTP/1.1" 200 8543
+INFO 2024-11-09 17:21:04,495 "GET /representative/list/ HTTP/1.1" 200 11827
+INFO 2024-11-09 17:21:05,378 "GET /representative/list/ HTTP/1.1" 200 11827
+INFO 2024-11-09 17:21:08,011 "GET /representative/2/ HTTP/1.1" 200 11294
+INFO 2024-11-09 17:21:09,021 "GET /representative/representatives/2/students/ HTTP/1.1" 200 11827
+INFO 2024-11-09 17:22:08,486 "GET /representative/representatives/2/students/ HTTP/1.1" 200 11827
+INFO 2024-11-09 17:22:09,021 "GET /representative/representatives/2/students/ HTTP/1.1" 200 11827
+INFO 2024-11-09 17:22:09,409 "GET /representative/representatives/2/students/ HTTP/1.1" 200 11827
+INFO 2024-11-09 17:22:09,667 "GET /representative/representatives/2/students/ HTTP/1.1" 200 11827
+INFO 2024-11-09 17:22:09,872 "GET /representative/representatives/2/students/ HTTP/1.1" 200 11827
+INFO 2024-11-09 17:22:10,066 "GET /representative/representatives/2/students/ HTTP/1.1" 200 11827
+INFO 2024-11-09 17:22:10,247 "GET /representative/representatives/2/students/ HTTP/1.1" 200 11827
+INFO 2024-11-09 17:22:10,411 "GET /representative/representatives/2/students/ HTTP/1.1" 200 11827
+INFO 2024-11-09 17:22:11,354 "GET /representative/list/ HTTP/1.1" 200 11827
+INFO 2024-11-09 17:22:12,763 "GET /representative/representatives/2/students/ HTTP/1.1" 200 11827
+INFO 2024-11-09 17:40:47,349 "GET /student/list HTTP/1.1" 200 15462
+INFO 2024-11-09 17:40:48,410 "GET /student/create/ HTTP/1.1" 200 16434
+INFO 2024-11-09 17:45:49,261 Watching for file changes with StatReloader
+INFO 2024-11-09 17:45:51,061 "GET / HTTP/1.1" 302 0
+INFO 2024-11-09 17:45:51,081 "GET /accounts/login/?next=/ HTTP/1.1" 200 4187
+INFO 2024-11-09 17:46:08,642 "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2024-11-09 17:46:08,665 "GET / HTTP/1.1" 200 9514
+INFO 2024-11-09 17:46:09,933 "GET /representative/representatives/2/students/ HTTP/1.1" 200 11827

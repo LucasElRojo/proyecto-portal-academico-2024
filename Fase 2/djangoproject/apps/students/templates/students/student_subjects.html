@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Asignaturas del Alumno{% endblock title %}
+
+{% block content %}
+  <h2>Asignaturas en las que está inscrito {{ students.nombres }} {{ student.apellido_paterno }}</h2>
+  <div class="row">
+    {% for subject in subjects %}
+    <a href="{% url 'student_subjects_detail' subject.id %}" style="text-decoration: none; color: inherit;">
+        <div class="card" style="max-width: 400px; margin: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); border-radius: 8px; overflow: hidden;">
+          <img src="{% static 'dist/img/puentealto.jpg' %}" alt="Card Image" class="card-img-top" style="height: 200px; object-fit: cover;">
+          <div class="card-body" style="padding: 15px;">
+            <h5 class="card-title text-truncate" style="font-weight: bold;">{{ subject.name }}</h5>
+            <p class="card-text" style="color: green; font-weight: bold;">Abierto</p>
+            <hr>
+            <p class="card-text text-truncate" title="{{ teacher.nombres }} {{ teacher.apellido_paterno }} {{ teacher.apellido_materno }}" style="font-weight: bold;">
+              {{ student.nombres }} {{ student.apellido_paterno }} {{ student.apellido_materno }}
+            </p>
+          </div>
+        </div>
+      </a>
+    {% endfor %}
+  </div>
+{% endblock content %}

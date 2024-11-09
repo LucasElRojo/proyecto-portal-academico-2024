@@ -8,7 +8,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.messages.views import SuccessMessageMixin
 from django.forms import widgets
 from django.http import HttpResponse
-from django.shortcuts import redirect, render
+from django.shortcuts import redirect, render, get_object_or_404
 from django.urls import reverse_lazy
 from django.views.generic import DetailView, ListView, View
 from django.views.generic.edit import CreateView, DeleteView, UpdateView
@@ -24,6 +24,12 @@ from apps.representatives.models import Representatives
 
 from .models import Student, StudentBulkUpload
 
+
+import json
+from django.utils.dateparse import parse_datetime, parse_date
+from django.http import JsonResponse
+from django.shortcuts import render
+from apps.teachers.models import Event
 
 class StudentListView(LoginRequiredMixin, ListView):
     model = Student
@@ -341,3 +347,49 @@ def generate_student_excel_template(request):
         df.to_excel(writer, index=False, sheet_name="Estudiantes")
     
     return response
+
+
+
+class StudentSubjectsListView(ListView):
+    model = Subject
+    template_name = 'students/student_subjects.html'
+    context_object_name = 'subjects'
+
+    def get_queryset(self):
+        student_id = self.kwargs['pk']
+        student = get_object_or_404(Student, pk=student_id)
+        return student.subjects.all() 
+    
+
+
+class SubjectDetailView(DetailView):
+    model = Subject
+    template_name = 'students/student_subjects_detail.html'
+    context_object_name = 'subject'
+
+
+
+
+
+
+class EventListView(ListView):
+    model = Event
+    template_name = "students/student_calendar.html"
+    context_object_name = "events"
+
+
+    def get(self, request, *args, **kwargs):
+        if request.headers.get('x-requested-with') == 'XMLHttpRequest':
+            subject_id = self.kwargs.get("subject_id")
+            events = Event.objects.filter(subject_id=subject_id)
+            out = [
+                {
+                    'title': event.title,
+                    'id': event.id,
+                    'start': event.start_time.strftime("%Y-%m-%dT%H:%M:%S"),
+                    'end': event.end_time.strftime("%Y-%m-%dT%H:%M:%S") if event.end_time else event.start_time.strftime("%Y-%m-%dT%H:%M:%S"),
+                }
+                for event in events
+            ]
+            return JsonResponse(out, safe=False)
+        return super().get(request, *args, **kwargs)

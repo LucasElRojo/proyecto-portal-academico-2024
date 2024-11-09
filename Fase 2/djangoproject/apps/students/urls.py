@@ -9,7 +9,10 @@ from .views import (
     StudentDetailView,
     StudentListView,
     StudentUpdateView,
-    AttendanceListView
+    AttendanceListView,
+    StudentSubjectsListView,
+    SubjectDetailView,
+    EventListView
 )
 
 urlpatterns = [
@@ -23,5 +26,8 @@ urlpatterns = [
     path('attendance/', AttendanceListView.as_view(), name='attendance-list'),
     path("download-csv/", views.generate_student_excel_template, name="download-student-template"),
     path("upload/", views.upload_student_excel, name="upload-student-excel"),
+    path("<int:pk>/subject/", StudentSubjectsListView.as_view(), name="student-subjects-list"),
+    path("subject/<int:pk>/", SubjectDetailView.as_view(), name="student_subjects_detail"),
+    path("calendar/<int:subject_id>/", EventListView.as_view(), name="student-calendar"),
 
 ]

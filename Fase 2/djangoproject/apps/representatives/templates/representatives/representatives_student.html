@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Lista de Alumnos del Representante{% endblock title %}
+
+{% block content %}
+  <h2>Lista de Alumnos de {{ representative.nombres }} {{ representative.apellido_paterno }}</h2>
+
+  <div class="row">
+    {% for student in students %}
+      <div class="col-md-4">
+        <div class="card">
+          <img src="{% static 'dist/img/student.jpg' %}" class="card-img-top" alt="Imagen de {{ student.nombres }}">
+          <div class="card-body">
+            <h5 class="card-title">{{ student.nombres }} {{ student.apellido_paterno }}</h5>
+            <p class="card-text">
+              <strong>RUT:</strong> {{ student.rut }}<br>
+              <strong>Correo:</strong> {{ student.correo }}<br>
+              <strong>Teléfono:</strong> {{ student.telefono }}<br>
+              <strong>Curso Actual:</strong> {{ student.curso_actual }}<br>  </p>
+            <a href="{% url 'student_detail' student.pk %}" class="btn btn-primary">Ver detalles</a>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+{% endblock content %}

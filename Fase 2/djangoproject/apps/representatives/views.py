@@ -3,7 +3,7 @@ import string
 
 from django.contrib.messages.views import SuccessMessageMixin
 from django.forms import widgets
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from django.urls import reverse_lazy
 from django.views.generic import DetailView, ListView
 from django.views.generic.edit import CreateView, DeleteView, UpdateView
@@ -13,6 +13,7 @@ from django.conf import settings
 from django.contrib import messages
 
 from .models import Representatives
+from apps.students.models import Student
 
 
 class RepresentativesListView(ListView):
@@ -103,3 +104,17 @@ class RepresentativesUpdateView(SuccessMessageMixin, UpdateView):
 class RepresentativesDeleteView(DeleteView):
     model = Representatives
     success_url = reverse_lazy("representatives-list")
+
+
+
+    
+class RepresentativeStudentsListView(ListView):
+    model = Representatives
+    template_name = 'representatives/Representatives_student.html'
+    context_object_name = 'Representatives'
+
+    def get_queryset(self):
+        representative_id = self.kwargs['pk']
+        representative = get_object_or_404(Representatives, pk=representative_id)
+        return representative.get_estudiantes()
+

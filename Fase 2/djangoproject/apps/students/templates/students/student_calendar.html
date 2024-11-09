@@ -1,0 +1,90 @@
+{% extends 'base.html' %}
+
+{% block title %}Calendario de Eventos{% endblock title %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="card">
+        <div class="card-header">
+            <h2 class="card-title"><strong>Calendario de Eventos</strong></h2>
+        </div>
+        <div id="calendar" data-is-profesor="{{ is_profesor }}"></div>
+    </div>
+</div>
+
+<!-- Modal para agregar un evento -->
+<div class="modal fade" id="eventModal" tabindex="-1" aria-labelledby="eventModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="eventModalLabel">Agregar Evento</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form id="eventForm">
+          <div class="mb-3">
+            <label for="eventTitle" class="form-label">Título del Evento</label>
+            <input type="text" class="form-control" id="eventTitle" required>
+          </div>
+          <div class="mb-3">
+            <label for="eventStart" class="form-label">Fecha de Inicio</label>
+            <input type="datetime-local" class="form-control" id="eventStart" required>
+          </div>
+          <div class="mb-3">
+            <label for="eventEnd" class="form-label">Fecha de Fin</label>
+            <input type="datetime-local" class="form-control" id="eventEnd">
+          </div>
+          <button type="submit" class="btn btn-primary">Guardar Evento</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock content %}
+
+{% block morejs %}
+<!-- CSS y JavaScript de FullCalendar -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/fullcalendar.css" rel="stylesheet" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/fullcalendar.min.js"></script>
+
+<!-- Bootstrap JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+$(document).ready(function () {
+    var isProfesor = $('#calendar').data('is-profesor');  // Verificar si el usuario es profesor
+
+    var calendar = $('#calendar').fullCalendar({
+        header: {
+            left: 'prev,next today',
+            center: 'title',
+            right: 'month,agendaWeek,agendaDay'
+        },
+        events: window.location.pathname,  // URL para cargar los eventos
+        selectable: true,
+        selectHelper: true,
+        editable: true,
+        eventLimit: true,
+
+        // Solo abrir el modal de agregar evento si el usuario es profesor
+        select: function (start, end) {
+            if (isProfesor) {
+                $('#eventModal').modal('show');
+                $('#eventStart').val(moment(start).format("YYYY-MM-DDTHH:mm:ss"));
+                $('#eventEnd').val(moment(end).format("YYYY-MM-DDTHH:mm:ss"));
+            } else {
+                alert("No tienes permiso para agregar eventos.");
+            }
+        },
+
+
+
+    });
+
+
+
+});
+</script>
+{% endblock morejs %}
