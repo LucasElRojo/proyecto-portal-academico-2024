@@ -30011,3 +30011,34 @@ INFO 2024-11-09 19:05:51,176 "GET /representative/2/students/ HTTP/1.1" 200 1084
 WARNING 2024-11-09 19:05:51,210 "GET /static/dist/img/estudiante.jpg HTTP/1.1" 404 1828
 INFO 2024-11-09 19:05:54,252 "GET /representative/2/students/ HTTP/1.1" 200 10842
 WARNING 2024-11-09 19:05:54,284 "GET /static/dist/img/estudiante.jpg HTTP/1.1" 404 1828
+INFO 2024-11-09 19:17:15,690 Watching for file changes with StatReloader
+INFO 2024-11-09 19:17:18,513 "GET / HTTP/1.1" 302 0
+INFO 2024-11-09 19:17:18,542 "GET /accounts/login/?next=/ HTTP/1.1" 200 4187
+INFO 2024-11-09 19:17:18,681 "GET /static/plugins/toastr/toastr.min.css HTTP/1.1" 200 6454
+INFO 2024-11-09 19:17:18,683 "GET /static/plugins/fontawesome-free/css/all.min.css HTTP/1.1" 200 58582
+INFO 2024-11-09 19:17:18,687 "GET /static/plugins/overlayScrollbars/css/OverlayScrollbars.min.css HTTP/1.1" 200 19736
+INFO 2024-11-09 19:17:18,693 "GET /static/dist/css/adminlte.min.css HTTP/1.1" 200 686718
+INFO 2024-11-09 19:17:18,695 "GET /static/dist/css/login-page.css HTTP/1.1" 200 8786
+INFO 2024-11-09 19:17:18,699 "GET /static/dist/img/login.png HTTP/1.1" 200 1197223
+INFO 2024-11-09 19:17:18,714 "GET /static/dist/js/jquery.formset.js HTTP/1.1" 200 13881
+INFO 2024-11-09 19:17:18,746 "GET /static/plugins/jquery/jquery.min.js HTTP/1.1" 200 88147
+INFO 2024-11-09 19:17:18,753 "GET /static/plugins/fontawesome-free/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 79444
+INFO 2024-11-09 19:17:18,755 "GET /static/plugins/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 200 80704
+INFO 2024-11-09 19:17:18,762 "GET /static/dist/img/puentealto.jpg HTTP/1.1" 200 317548
+INFO 2024-11-09 19:17:18,786 "GET /static/plugins/toastr/toastr.min.js HTTP/1.1" 200 5253
+INFO 2024-11-09 19:17:18,796 "GET /static/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js HTTP/1.1" 200 42395
+INFO 2024-11-09 19:17:18,801 "GET /static/dist/js/demo.js HTTP/1.1" 200 13042
+INFO 2024-11-09 19:17:18,837 "GET /static/dist/js/adminlte.js HTTP/1.1" 200 59416
+WARNING 2024-11-09 19:17:18,948 Not Found: /favicon.ico
+WARNING 2024-11-09 19:17:18,948 "GET /favicon.ico HTTP/1.1" 404 6963
+INFO 2024-11-09 19:17:21,215 "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2024-11-09 19:17:21,248 "GET / HTTP/1.1" 200 9140
+INFO 2024-11-09 19:17:21,282 "GET /static/plugins/Datatables/datatables.min.css HTTP/1.1" 200 25807
+INFO 2024-11-09 19:17:22,286 "GET /student/list HTTP/1.1" 200 15088
+INFO 2024-11-09 19:17:22,525 - Broken pipe from ('127.0.0.1', 56125)
+INFO 2024-11-09 19:17:22,529 "GET /static/plugins/Datatables/datatables.min.js HTTP/1.1" 200 2042927
+INFO 2024-11-09 19:17:27,133 "GET /student/upload/ HTTP/1.1" 200 9992
+INFO 2024-11-09 19:17:29,497 "GET /student/create/ HTTP/1.1" 200 16060
+INFO 2024-11-09 19:20:57,701 C:\Users\Lucas Rojas\Desktop\github clone\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\students\views.py changed, reloading.
+INFO 2024-11-09 19:20:58,357 Watching for file changes with StatReloader
+INFO 2024-11-09 19:20:59,927 "GET /student/create/ HTTP/1.1" 200 16589

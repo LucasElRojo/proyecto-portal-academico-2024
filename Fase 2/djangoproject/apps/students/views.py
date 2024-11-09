@@ -55,24 +55,25 @@ class StudentCreateView(LoginRequiredMixin, SuccessMessageMixin, CreateView):
     ]
     success_message = "Estudiante agregado correctamente."
     success_url = reverse_lazy("student-list")
-
+    def get_form(self):
+        form = super(StudentCreateView, self).get_form()
+        form.fields["fecha_nacimiento"].widget = widgets.DateInput(attrs={"type": "date"})
+        form.fields["fecha_admision"].widget = widgets.DateInput(attrs={"type": "date"})
+        form.fields["direccion"].widget = widgets.Textarea(attrs={"rows": 2})
+        form.fields["observaciones"].widget = widgets.Textarea(attrs={"rows": 2})
+        return form
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['subjects'] = Subject.objects.all()  # Pasar las asignaturas al contexto
+        return context
     def form_valid(self, form):
-        student = form.instance
+        response = super().form_valid(form)
+        student = self.object  # El estudiante creado
+        # Crear un usuario con el mismo RUT del estudiante
         username = student.rut
         email = student.email
-
-        # Verificar si el RUT o el correo ya existen
-        if User.objects.filter(username=username).exists():
-            messages.error(self.request, "El RUT ya está en uso.")
-            return self.form_invalid(form)
-        
-        if User.objects.filter(email=email).exists():
-            messages.error(self.request, "El correo ya está en uso.")
-            return self.form_invalid(form)
-
-        # Crear usuario si no existen conflictos
-        response = super().form_valid(form)
         password = self.generate_random_password()
+        # Crear el usuario en auth_user
         user = User.objects.create_user(
             username=username,
             password=password,
@@ -80,12 +81,10 @@ class StudentCreateView(LoginRequiredMixin, SuccessMessageMixin, CreateView):
             last_name=f"{student.apellido_paterno} {student.apellido_materno}",
             email=email,
         )
-
-        # Asignar el usuario al grupo "Alumno"
+        # Asignar al grupo "Alumno"
         alumno_group = Group.objects.get(name="Alumno")
         user.groups.add(alumno_group)
-
-        # Enviar la contraseña por correo electrónico
+        # Enviar contraseña por correo electrónico
         send_mail(
             "Tu cuenta ha sido creada",
             f"Tu usuario es {username} y tu contraseña es: {password}",
@@ -93,11 +92,13 @@ class StudentCreateView(LoginRequiredMixin, SuccessMessageMixin, CreateView):
             [email],
             fail_silently=False,
         )
-
+        # Asignar asignaturas seleccionadas
+        subject_ids = self.request.POST.get("subjects", "").split(",")
+        subjects = Subject.objects.filter(id__in=subject_ids)
+        student.subjects.set(subjects)
         messages.success(self.request, "Estudiante y usuario creados correctamente. Se ha enviado la contraseña por correo.")
         
         return response
-
     def generate_random_password(self, length=8):
         characters = string.ascii_letters + string.digits + string.punctuation
         return ''.join(random.choice(characters) for i in range(length))
