@@ -108,13 +108,13 @@ class RepresentativesDeleteView(DeleteView):
 
 
     
-class RepresentativeStudentsListView(ListView):
+class RepresentativeListView(ListView):
+    template_name = 'representatives/representatives_student.html'
     model = Representatives
-    template_name = 'representatives/Representatives_student.html'
-    context_object_name = 'Representatives'
+    context_object_name = 'students'
 
     def get_queryset(self):
-        representative_id = self.kwargs['pk']
-        representative = get_object_or_404(Representatives, pk=representative_id)
-        return representative.get_estudiantes()
-
+        representative_id = self.kwargs['representative_id']
+        # Filtramos los estudiantes cuyo representante tiene el ID especificado
+        students = Student.objects.filter(representante__id=representative_id)
+        return students
