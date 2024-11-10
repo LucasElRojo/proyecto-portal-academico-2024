@@ -31082,3 +31082,273 @@ INFO 2024-11-09 21:19:25,854 "GET /current-session/ HTTP/1.1" 200 10813
 INFO 2024-11-09 21:19:26,592 "GET /current-session/ HTTP/1.1" 200 10813
 INFO 2024-11-09 21:19:27,172 "GET / HTTP/1.1" 200 9498
 INFO 2024-11-09 21:19:28,916 "GET / HTTP/1.1" 200 9498
+INFO 2024-11-10 19:55:27,828 Watching for file changes with StatReloader
+INFO 2024-11-10 19:55:35,113 "GET / HTTP/1.1" 302 0
+INFO 2024-11-10 19:55:35,165 "GET /accounts/login/?next=/ HTTP/1.1" 200 4187
+INFO 2024-11-10 19:55:41,671 "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2024-11-10 19:55:41,729 "GET / HTTP/1.1" 200 9498
+INFO 2024-11-10 19:55:42,959 "GET /representative/2/students/ HTTP/1.1" 200 13226
+INFO 2024-11-10 19:55:43,080 "GET /static/dist/img/noprofilepicture.jpg HTTP/1.1" 200 41511
+INFO 2024-11-10 19:55:43,096 "GET /media/students/fotos/Sin_t%C3%ADtulo.png HTTP/1.1" 200 2288486
+INFO 2024-11-10 19:55:43,100 "GET /media/students/fotos/GbtowwoXQBU5_wL.png HTTP/1.1" 200 1115599
+INFO 2024-11-10 19:55:54,421 "GET /representative/2/students/ HTTP/1.1" 200 13226
+INFO 2024-11-10 19:55:54,473 "GET /static/dist/img/noprofilepicture.jpg HTTP/1.1" 304 0
+INFO 2024-11-10 19:55:54,485 "GET /media/students/fotos/Sin_t%C3%ADtulo.png HTTP/1.1" 304 0
+INFO 2024-11-10 19:55:54,507 "GET /media/students/fotos/GbtowwoXQBU5_wL.png HTTP/1.1" 304 0
+INFO 2024-11-10 19:55:55,136 "GET /representative/2/students/ HTTP/1.1" 200 13226
+INFO 2024-11-10 19:58:57,810 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\representatives\views.py changed, reloading.
+INFO 2024-11-10 19:58:58,632 Watching for file changes with StatReloader
+INFO 2024-11-10 19:59:01,998 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\representatives\urls.py changed, reloading.
+INFO 2024-11-10 19:59:02,777 Watching for file changes with StatReloader
+INFO 2024-11-10 20:00:14,546 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\representatives\views.py changed, reloading.
+INFO 2024-11-10 20:00:15,171 Watching for file changes with StatReloader
+INFO 2024-11-10 20:00:17,332 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\representatives\views.py changed, reloading.
+INFO 2024-11-10 20:00:17,975 Watching for file changes with StatReloader
+INFO 2024-11-10 20:00:26,539 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\representatives\views.py changed, reloading.
+INFO 2024-11-10 20:00:27,265 Watching for file changes with StatReloader
+INFO 2024-11-10 20:00:29,494 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\representatives\views.py changed, reloading.
+INFO 2024-11-10 20:00:30,184 Watching for file changes with StatReloader
+INFO 2024-11-10 20:00:32,325 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\representatives\views.py changed, reloading.
+INFO 2024-11-10 20:00:32,956 Watching for file changes with StatReloader
+INFO 2024-11-10 20:00:49,905 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\representatives\urls.py changed, reloading.
+INFO 2024-11-10 20:00:50,618 Watching for file changes with StatReloader
+INFO 2024-11-10 20:00:52,491 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\representatives\urls.py changed, reloading.
+INFO 2024-11-10 20:00:53,130 Watching for file changes with StatReloader
+INFO 2024-11-10 20:00:57,048 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\representatives\urls.py changed, reloading.
+INFO 2024-11-10 20:00:57,740 Watching for file changes with StatReloader
+INFO 2024-11-10 20:01:00,583 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\representatives\urls.py changed, reloading.
+INFO 2024-11-10 20:01:01,209 Watching for file changes with StatReloader
+ERROR 2024-11-10 20:02:19,906 Internal Server Error: /representative/2/students/
+Traceback (most recent call last):
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 238, in render
+    nodelist.append(node.render_annotated(context))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'representative_student_detail' with arguments '('', 3)' not found. 1 pattern(s) tried: ['representative/representatives/(?P<representative_pk>[0-9]+)/student/(?P<student_pk>[0-9]+)/\\Z']
+ERROR 2024-11-10 20:02:19,911 "GET /representative/2/students/ HTTP/1.1" 500 195953
+INFO 2024-11-10 20:02:55,582 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\representatives\views.py changed, reloading.
+INFO 2024-11-10 20:02:56,269 Watching for file changes with StatReloader
+INFO 2024-11-10 20:02:58,115 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\representatives\views.py changed, reloading.
+INFO 2024-11-10 20:02:58,806 Watching for file changes with StatReloader
+ERROR 2024-11-10 20:03:02,632 Internal Server Error: /representative/2/students/
+Traceback (most recent call last):
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\generic\list.py", line 174, in get
+    context = self.get_context_data()
+              ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\representatives\views.py", line 127, in get_context_data
+    context['representative'] = Representatives.objects.get(pk=self.kwargs['pk'])
+                                                               ~~~~~~~~~~~^^^^^^
+KeyError: 'pk'
+ERROR 2024-11-10 20:03:02,634 "GET /representative/2/students/ HTTP/1.1" 500 85807
+INFO 2024-11-10 20:03:28,749 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\representatives\views.py changed, reloading.
+INFO 2024-11-10 20:03:29,482 Watching for file changes with StatReloader
+ERROR 2024-11-10 20:03:30,157 Internal Server Error: /representative/2/students/
+Traceback (most recent call last):
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\generic\list.py", line 154, in get
+    self.object_list = self.get_queryset()
+                       ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\representatives\views.py", line 118, in get_queryset
+    representative_id = self.kwargs['pk']
+                        ~~~~~~~~~~~^^^^^^
+KeyError: 'pk'
+ERROR 2024-11-10 20:03:30,159 "GET /representative/2/students/ HTTP/1.1" 500 84526
+ERROR 2024-11-10 20:03:31,219 Internal Server Error: /representative/2/students/
+Traceback (most recent call last):
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\generic\list.py", line 154, in get
+    self.object_list = self.get_queryset()
+                       ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\representatives\views.py", line 118, in get_queryset
+    representative_id = self.kwargs['pk']
+                        ~~~~~~~~~~~^^^^^^
+KeyError: 'pk'
+ERROR 2024-11-10 20:03:31,220 "GET /representative/2/students/ HTTP/1.1" 500 84526
+INFO 2024-11-10 20:03:46,579 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\representatives\views.py changed, reloading.
+INFO 2024-11-10 20:03:47,300 Watching for file changes with StatReloader
+INFO 2024-11-10 20:03:49,170 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\representatives\views.py changed, reloading.
+INFO 2024-11-10 20:03:49,935 Watching for file changes with StatReloader
+ERROR 2024-11-10 20:03:50,653 Internal Server Error: /representative/2/students/
+Traceback (most recent call last):
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\generic\list.py", line 154, in get
+    self.object_list = self.get_queryset()
+                       ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\representatives\views.py", line 119, in get_queryset
+    representative_id = self.kwargs['pk']
+                        ~~~~~~~~~~~^^^^^^
+KeyError: 'pk'
+ERROR 2024-11-10 20:03:50,655 "GET /representative/2/students/ HTTP/1.1" 500 84615
+ERROR 2024-11-10 20:03:51,281 Internal Server Error: /representative/2/students/
+Traceback (most recent call last):
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\generic\list.py", line 154, in get
+    self.object_list = self.get_queryset()
+                       ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\representatives\views.py", line 119, in get_queryset
+    representative_id = self.kwargs['pk']
+                        ~~~~~~~~~~~^^^^^^
+KeyError: 'pk'
+ERROR 2024-11-10 20:03:51,282 "GET /representative/2/students/ HTTP/1.1" 500 84615
+INFO 2024-11-10 20:04:18,564 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\representatives\urls.py changed, reloading.
+INFO 2024-11-10 20:04:19,207 Watching for file changes with StatReloader
+WARNING 2024-11-10 20:04:20,815 Not Found: /representative/2/students/
+WARNING 2024-11-10 20:04:20,816 "GET /representative/2/students/ HTTP/1.1" 404 8673
+WARNING 2024-11-10 20:04:21,609 Not Found: /representative/2/students/
+WARNING 2024-11-10 20:04:21,609 "GET /representative/2/students/ HTTP/1.1" 404 8673
+WARNING 2024-11-10 20:04:22,139 Not Found: /representative/2/students/
+WARNING 2024-11-10 20:04:22,139 "GET /representative/2/students/ HTTP/1.1" 404 8673
+WARNING 2024-11-10 20:04:23,821 Not Found: /representative/2/students/
+WARNING 2024-11-10 20:04:23,822 "GET /representative/2/students/ HTTP/1.1" 404 8673
+WARNING 2024-11-10 20:04:58,469 Not Found: /representative/2/students/
+WARNING 2024-11-10 20:04:58,470 "GET /representative/2/students/ HTTP/1.1" 404 8673
+WARNING 2024-11-10 20:04:59,316 Not Found: /representative/2/students/
+WARNING 2024-11-10 20:04:59,316 "GET /representative/2/students/ HTTP/1.1" 404 8673
+WARNING 2024-11-10 20:05:01,221 Not Found: /representative/2/students/
+WARNING 2024-11-10 20:05:01,222 "GET /representative/2/students/ HTTP/1.1" 404 8673
+INFO 2024-11-10 20:05:08,163 "GET /result/subject_list/ HTTP/1.1" 200 11773
+INFO 2024-11-10 20:05:09,182 "GET /representative/representatives/2/students/ HTTP/1.1" 200 13374
+INFO 2024-11-10 20:05:09,246 "GET /static/dist/img/noprofilepicture.jpg HTTP/1.1" 304 0
+INFO 2024-11-10 20:05:09,265 "GET /media/students/fotos/Sin_t%C3%ADtulo.png HTTP/1.1" 304 0
+INFO 2024-11-10 20:05:09,287 "GET /media/students/fotos/GbtowwoXQBU5_wL.png HTTP/1.1" 304 0
+INFO 2024-11-10 20:05:11,341 "GET /representative/representatives/2/students/ HTTP/1.1" 200 13374
+INFO 2024-11-10 20:05:12,860 "GET /representative/representatives/2/student/6/ HTTP/1.1" 200 16584
+INFO 2024-11-10 20:05:15,937 "GET /representative/representatives/2/student/3/ HTTP/1.1" 200 16583
+INFO 2024-11-10 20:05:19,834 "GET /representative/representatives/2/student/8/ HTTP/1.1" 200 16592
+INFO 2024-11-10 20:05:21,978 "GET /representative/representatives/2/student/3/ HTTP/1.1" 200 16583
+INFO 2024-11-10 20:05:22,794 "GET /representative/representative/2/content/ HTTP/1.1" 200 11728
+INFO 2024-11-10 20:05:24,442 "GET /representative/representative/2/content/?subject_id=2 HTTP/1.1" 200 11736
+INFO 2024-11-10 20:05:25,415 "GET /representative/representative/2/content/?subject_id=1 HTTP/1.1" 200 391759
+INFO 2024-11-10 20:05:46,458 "GET /representative/representatives/2/students/ HTTP/1.1" 200 13374
+INFO 2024-11-10 20:05:47,719 "GET /representative/representatives/2/student/8/ HTTP/1.1" 200 16592
+INFO 2024-11-10 20:05:49,842 "GET /representative/representatives/2/student/6/ HTTP/1.1" 200 16584
+INFO 2024-11-10 20:06:19,510 "GET /representative/representatives/2/students/ HTTP/1.1" 200 13374
+INFO 2024-11-10 20:06:19,556 "GET /static/dist/img/noprofilepicture.jpg HTTP/1.1" 304 0
+INFO 2024-11-10 20:06:19,560 "GET /media/students/fotos/Sin_t%C3%ADtulo.png HTTP/1.1" 304 0
+INFO 2024-11-10 20:06:19,580 "GET /media/students/fotos/GbtowwoXQBU5_wL.png HTTP/1.1" 304 0
+INFO 2024-11-10 20:07:50,572 "GET /representative/representatives/2/student/3/ HTTP/1.1" 200 16583
+INFO 2024-11-10 20:07:54,480 "GET /representative/representatives/2/student/3/ HTTP/1.1" 200 16583
+INFO 2024-11-10 20:07:55,684 "GET /representative/representative/2/content/ HTTP/1.1" 200 11728

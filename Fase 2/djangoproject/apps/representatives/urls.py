@@ -6,7 +6,9 @@ from .views import (
     RepresentativesDetailView,
     RepresentativesListView,
     RepresentativesUpdateView,
-    RepresentativeListView
+    RepresentativeListView,
+    RepresentativeStudentDetailView,
+    RepresentativeContentView,
 )
 
 urlpatterns = [
@@ -15,6 +17,9 @@ urlpatterns = [
     path("create/", RepresentativesCreateView.as_view(), name="representatives-create"),
     path("<int:pk>/update/", RepresentativesUpdateView.as_view(), name="representatives-update"),
     path("<int:pk>/delete/", RepresentativesDeleteView.as_view(), name="representatives-delete"),
-    path("<int:representative_id>/students/", RepresentativeListView.as_view(), name="representative_student"),
+    path("representatives/<int:pk>/students/", RepresentativeListView.as_view(), name="representative_student_list"),
+    path("representatives/<int:representative_pk>/student/<int:student_pk>/", RepresentativeStudentDetailView.as_view(), name="representative_student_detail"),
+    path("representative/<int:pk>/content/", RepresentativeContentView.as_view(), name="representative_content"),
+
 
 ]

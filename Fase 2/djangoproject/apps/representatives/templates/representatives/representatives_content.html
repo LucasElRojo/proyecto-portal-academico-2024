@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+
+{% block title %}Contenido de la Asignatura{% endblock title %}
+
+{% block content %}
+<div class="row mb-3">
+    <!-- Filtro por Asignatura -->
+    <div class="col-md-6">
+        <label for="filter-subject" class="form-label" style="font-weight: bold;">Asignatura:</label>
+        <select id="filter-subject" class="form-control" onchange="filterContentBySubject()">
+            <option value="">Seleccione una asignatura</option>
+            {% for subject in subjects %}
+                <option value="{{ subject.id }}" {% if subject.id == selected_subject.id %}selected{% endif %}>{{ subject.name }}</option>
+            {% endfor %}
+        </select>
+    </div>
+</div>
+
+<div class="table-responsive">
+    <table id="contentTable" class="table table-bordered table-hover" data-page-length='10'>
+        <thead class="thead-light">
+            <tr>
+                <th>S/N</th>
+                <th>Título</th>
+                <th>Descripción</th>
+                <th>Fecha subida</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for content in contents %}
+                <tr onclick="window.location.href='{% url 'content_detail' content.id %}'" style="cursor: pointer;">
+                    <td>{{ forloop.counter }}</td>
+                    <td>{{ content.title }}</td>
+                    <td>{{ content.description | safe }}</td>
+                    <td>{{ content.files.first.uploaded_at|date:"d/m/Y" }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+</div>
+{% endblock content %}
+
+{% block morejs %}
+<script>
+    $(document).ready(function() {
+        // Inicializar DataTable
+        $('#contentTable').DataTable({
+            language: {
+                "sProcessing": "Procesando...",
+                "sLengthMenu": "Mostrar _MENU_ registros",
+                "sZeroRecords": "No se encontraron resultados",
+                "sEmptyTable": "Ningún dato disponible en esta tabla",
+                "sInfo": "Mostrando registros del _START_ al _END_ de un total de _TOTAL_ registros",
+                "sInfoEmpty": "Mostrando registros del 0 al 0 de un total de 0 registros",
+                "sInfoFiltered": "(filtrado de un total de _MAX_ registros)",
+                "sSearch": "Buscar:",
+                "oPaginate": {
+                    "sFirst": "Primero",
+                    "sLast": "Último",
+                    "sNext": "Siguiente",
+                    "sPrevious": "Anterior"
+                }
+            }
+        });
+    });
+
+    function filterContentBySubject() {
+        const subjectId = document.getElementById("filter-subject").value;
+        let url = "{% url 'representative_content' representative.id %}";
+
+        if (subjectId) {
+            url += `?subject_id=${subjectId}`;
+        }
+
+        window.location.href = url;
+    }
+</script>
+{% endblock morejs %}

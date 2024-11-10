@@ -14,6 +14,7 @@ from django.contrib import messages
 
 from .models import Representatives
 from apps.students.models import Student
+from apps.students.models import Subject
 
 
 class RepresentativesListView(ListView):
@@ -114,7 +115,84 @@ class RepresentativeListView(ListView):
     context_object_name = 'students'
 
     def get_queryset(self):
-        representative_id = self.kwargs['representative_id']
-        # Filtramos los estudiantes cuyo representante tiene el ID especificado
-        students = Student.objects.filter(representante__id=representative_id)
-        return students
+        # Filtra los estudiantes que pertenecen al representante actual
+        representative_id = self.kwargs['pk']
+        return Student.objects.filter(representante__id=representative_id)
+    
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        # Incluye el representante en el contexto para usarlo en el template
+        context['representative'] = Representatives.objects.get(pk=self.kwargs['pk'])
+        return context
+
+
+
+
+
+
+class RepresentativeStudentDetailView(DetailView):
+    template_name = 'representatives/representatives_student_detail.html'
+    context_object_name = 'student'
+    model = Student
+
+    def get_object(self):
+        # Obtiene el estudiante solo si pertenece al representante correcto
+        representative_id = self.kwargs['representative_pk']
+        student_id = self.kwargs['student_pk']
+        return get_object_or_404(Student, pk=student_id, representante__id=representative_id)
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        representative = get_object_or_404(Representatives, pk=self.kwargs['representative_pk'])
+        context['representative'] = representative
+        context['subjects'] = self.object.subjects.all()  # Todos los subjects del estudiante
+
+        # Selecciona un subject específico o usa el primero disponible
+        subject_id = self.request.GET.get('subject_id')
+        if subject_id:
+            subject = get_object_or_404(Subject, pk=subject_id)
+        else:
+            subject = self.object.subjects.first()  # Selecciona el primer subject si no se especifica  
+        
+        if subject:
+            context['selected_subject'] = subject
+            context['annotations'] = subject.annotations.all()  
+            context['content_list'] = subject.contents.all()
+        else:
+            # Manejo del caso donde no hay subjects disponibles
+            context['selected_subject'] = None
+            context['annotations'] = []
+            context['content_list'] = []
+
+        return context
+
+        
+
+
+class RepresentativeContentView(DetailView):
+    template_name = 'representatives/representatives_content.html'
+    model = Representatives
+    context_object_name = 'representative'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+
+        # Obtener todos los estudiantes asociados al representante
+        students = Student.objects.filter(representante=self.object)
+
+        # Obtener todas las asignaturas relacionadas con los estudiantes del representante
+        subjects = Subject.objects.filter(students__in=students).distinct()  # Asegúrate de que "students" es el campo de relación
+        context['subjects'] = subjects
+
+        # Filtrar por asignatura seleccionada
+        subject_id = self.request.GET.get('subject_id')
+        if subject_id:
+            selected_subject = get_object_or_404(Subject, pk=subject_id)
+            context['selected_subject'] = selected_subject
+            context['contents'] = selected_subject.contents.all()  # Asegúrate de que 'contents' es el nombre correcto de la relación de contenidos en Subject
+        else:
+            context['selected_subject'] = None
+            context['contents'] = []
+
+        return context

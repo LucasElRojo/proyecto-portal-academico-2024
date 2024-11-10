@@ -7,7 +7,7 @@
 <div class="row representatives" style="justify-content: center">
     {% for student in students %}
     <div class="col-lg-3">
-      <a href="" class="student-card-link">
+      <a href="{% url 'representative_student_detail' representative.pk student.pk  %}" class="student-card-link">
         <div class="student-card shadow-lg rounded-lg" style="cursor: pointer;">
             <div class="student-card-header p-0 rounded-top">
                 {% if student.foto %}
