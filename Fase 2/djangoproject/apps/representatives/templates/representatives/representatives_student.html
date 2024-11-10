@@ -1,24 +1,61 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block title %}Hijos de {{ representatives.nombres }} {{ representatives.apellido_paterno }} {% endblock title %}
+{% block title %}Selecciona al alumno que deseas revisar{% endblock title %}
 
 {% block content %}
-  <h2>Hijos de {{ representatives.nombres }} {{ apoderado.apellido_paterno }}</h2>
-
-  <div class="row">
+<div class="row representatives" style="justify-content: center">
     {% for student in students %}
-      <a href="{}" style="text-decoration: none; color: inherit;">  <div class="card" style="max-width: 400px; margin: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); border-radius: 8px; overflow: hidden;">
-          <img src="{% static 'dist/img/estudiante.jpg' %}" alt="Foto de {{ estudiante.nombre }}" class="card-img-top" style="height: 200px; object-fit: cover;">
-          <div class="card-body" style="padding: 15px;">
-            <h5 class="card-title text-truncate" style="font-weight: bold;">{{ student.nombres }} {{ student.apellido_paterno }}</h5>
-            <p class="card-text">
-              <strong>Curso:</strong> {{ student.curso_actual }}<br>
-
-            </p>
-          </div>
+    <div class="col-lg-3">
+      <a href="" class="student-card-link">
+        <div class="student-card shadow-lg rounded-lg" style="cursor: pointer;">
+            <div class="student-card-header p-0 rounded-top">
+                {% if student.foto %}
+                <img src="{{ student.foto.url }}" class="student-card-img-top rounded-top" alt="Foto de {{ student.nombres }}" style="width: 100%; height: 350px; object-fit: cover;">
+                {% else %}
+                <img src="{% static 'dist/img/noprofilepicture.jpg' %}" class="student-card-img-top rounded-top" alt="Sin foto de perfil" style="width: 100%; height: 350px; object-fit: cover;">
+                {% endif %}
+            </div>
+            <div class="student-card-body bg-light-gray rounded-bottom">
+                <h5 class="student-card-title text-center mb-0">{{ student.nombres }} {{ student.apellido_paterno }}</h5>
+            </div>
+            <div class="student-card-footer bg-light-gray text-center" style="padding: 10px; margin-top: 5px;">
+                <p><i class="fas fa-chalkboard-teacher"></i> <strong>Curso:</strong> {{ student.curso_actual }}</p>
+            </div>
         </div>
       </a>
+    </div>
     {% endfor %}
-  </div>
+</div>
+
+<style>
+    .representatives .student-card-link {
+        text-decoration: none;
+        color: inherit;
+    }
+    .representatives .student-card {
+        transition: transform 0.2s, box-shadow 0.2s;
+        border-radius: 12px;
+        overflow: hidden;
+    }
+    .representatives .student-card:hover {
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        transform: scale(1.03);
+    }
+    .representatives .student-card.selected-card {
+        border: 2px solid #007bff;
+        box-shadow: 0 8px 20px rgba(0, 123, 255, 0.5);
+    }
+    .representatives .student-card-header img {
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px;
+    }
+    .representatives .student-card-body, .student-card-footer {
+        border-bottom-left-radius: 12px;
+        border-bottom-right-radius: 12px;
+    }
+    .bg-light-gray {
+        background-color: #f8f9fa;
+    }
+</style>
 {% endblock content %}
