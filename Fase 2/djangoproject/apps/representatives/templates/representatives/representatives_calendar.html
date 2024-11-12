@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+
+{% block title %}Calendario de Eventos{% endblock title %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="card">
+        <div class="card-header">
+            <h2 class="card-title"><strong>Calendario de Eventos</strong></h2>
+            <!-- Filtro por Asignatura -->
+            <label for="filter-subject" class="form-label" style="font-weight: bold;">Asignatura:</label>
+            <select id="filter-subject" class="form-control" onchange="filterEventsBySubject()">
+                <option value="">Todas</option>
+                {% for subject in subjects %}
+                    <option value="{{ subject.id }}">{{ subject.name }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <div id="calendar"></div>
+    </div>
+</div>
+{% endblock content %}
+
+{% block morejs %}
+<!-- CSS y JavaScript de FullCalendar -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/fullcalendar.css" rel="stylesheet" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/fullcalendar.min.js"></script>
+
+<script>
+$(document).ready(function () {
+    var calendar = $('#calendar').fullCalendar({
+        header: {
+            left: 'prev,next today',
+            center: 'title',
+            right: 'month,agendaWeek,agendaDay'
+        },
+        events: function(start, end, timezone, callback) {
+            const subjectId = $('#filter-subject').val();
+            $.ajax({
+                url: window.location.pathname,
+                dataType: 'json',
+                data: {
+                    subject_id: subjectId
+                },
+                success: function(data) {
+                    callback(data);
+                }
+            });
+        },
+        selectable: true,
+        selectHelper: true,
+        editable: true,
+        eventLimit: true,
+    });
+
+    // Define la función de filtro en el contexto global
+    window.filterEventsBySubject = function() {
+        $('#calendar').fullCalendar('refetchEvents');
+    };
+});
+</script>
+{% endblock morejs %}

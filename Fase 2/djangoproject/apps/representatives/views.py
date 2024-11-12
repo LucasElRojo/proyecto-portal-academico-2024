@@ -12,9 +12,14 @@ from django.core.mail import send_mail
 from django.conf import settings
 from django.contrib import messages
 
+import json
+from django.utils.dateparse import parse_datetime, parse_date
+from django.http import JsonResponse
+
 from .models import Representatives
 from apps.students.models import Student
 from apps.students.models import Subject
+from apps.teachers.models import Event, Annotation
 
 
 class RepresentativesListView(ListView):
@@ -194,5 +199,77 @@ class RepresentativeContentView(DetailView):
         else:
             context['selected_subject'] = None
             context['contents'] = []
+
+        return context
+    
+
+class EventListView(ListView):
+    model = Event
+    template_name = "representatives/representatives_calendar.html"
+    context_object_name = "events"
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        # Obtener todas las asignaturas disponibles para el filtro
+        context['subjects'] = Subject.objects.all()
+        return context
+
+    def get(self, request, *args, **kwargs):
+        if request.headers.get('x-requested-with') == 'XMLHttpRequest':
+            subject_id = request.GET.get("subject_id")
+            
+            # Filtrar eventos por asignatura si se proporciona un subject_id
+            events = Event.objects.all()
+            if subject_id:
+                events = events.filter(subject_id=subject_id)
+            
+            # Convertir los eventos a un formato JSON compatible con FullCalendar
+            out = [
+                {
+                    'title': event.title,
+                    'id': event.id,
+                    'start': event.start_time.strftime("%Y-%m-%dT%H:%M:%S"),
+                    'end': event.end_time.strftime("%Y-%m-%dT%H:%M:%S") if event.end_time else event.start_time.strftime("%Y-%m-%dT%H:%M:%S"),
+                }
+                for event in events
+            ]
+            return JsonResponse(out, safe=False)
+        
+        # Carga de página normal
+        return super().get(request, *args, **kwargs)
+    
+
+
+
+class RepresentativeAnnotationsView(ListView):
+    model = Annotation
+    template_name = "representatives/representatives_annotation_student.html"
+    context_object_name = "annotations"
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+
+        # Obtener el representative
+        representative_id = self.kwargs.get('representative_id')
+        representative = get_object_or_404(Representatives, id=representative_id)
+        context['representative'] = representative
+
+        # Obtener el estudiante específico del representative
+        student_id = self.kwargs.get('student_id')
+        student = get_object_or_404(Student, id=student_id, representante=representative)
+        context['student'] = student
+
+        # Obtener todas las asignaturas del estudiante (para el filtro)
+        subjects = Subject.objects.filter(students=student).distinct()
+        context['subjects'] = subjects
+
+        # Filtrar las anotaciones del estudiante por asignatura (subject_id)
+        subject_id = self.request.GET.get("subject_id")
+        if subject_id:
+            context['selected_subject'] = Subject.objects.get(id=subject_id)
+            context['annotations'] = Annotation.objects.filter(student=student, subject_id=subject_id)
+        else:
+            context['selected_subject'] = None
+            context['annotations'] = Annotation.objects.filter(student=student)
 
         return context

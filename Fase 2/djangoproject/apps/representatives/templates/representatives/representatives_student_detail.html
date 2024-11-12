@@ -26,12 +26,10 @@
 
 
     <!-- Botones de Acción -->
-    {% if selected_subject %}
     <a href="{% url 'representative_content' representative.id %}" class="btn btn-info">Ver Contenidos </a>
-        <a href="{% url 'student-calendar' selected_subject.id %}" class="btn btn-primary">Ver calendario</a>
-    {% else %}
-        <p>No hay asignatura seleccionada.</p>
-    {% endif %}
+    <a href="{% url 'representatives_calendar' selected_subject.id %}" class="btn btn-primary">Ver calendario</a>
+    <a href="{% url 'representative_annotation_list' representative.id student.id %}" class="btn btn-primary">Ver Anotaciones </a>
+
     <div class="row">
     <div class="col-xl-3 col-md-6 mb-4">
         <div class="card border-left-success shadow h-100 py-2">

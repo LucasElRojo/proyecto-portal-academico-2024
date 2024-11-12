@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+
+{% block title %}Anotaciones del Estudiante{% endblock title %}
+
+{% block breadcrumb %}
+<a class="btn btn-primary" href="{% url 'annotation-create' %}"><i class="fas fa-plus"></i> Nueva anotación</a>
+{% endblock breadcrumb %}
+
+{% block content %}
+  <style>
+    .positive {
+      background-color: #d4edda; /* Verde claro */
+      color: #155724; /* Verde oscuro */
+    }
+    .negative {
+      background-color: #f8d7da; /* Rojo claro */
+      color: #721c24; /* Rojo oscuro */
+    }
+  </style>
+
+  <h2>Anotaciones para {{ student.nombres }} {{ student.apellido_paterno }} {{ student.apellido_materno }}</h2>
+
+  <div class="row mb-3">
+    <!-- Filtro por Asignatura -->
+    <div class="col-md-6">
+      <label for="filter-subject" class="form-label" style="font-weight: bold;">Asignatura:</label>
+      <select id="filter-subject" class="form-control" onchange="filterAnnotationsBySubject()">
+        <option value="">Todas</option>
+        {% for subject in subjects %}
+          <option value="{{ subject.id }}" {% if subject == selected_subject %}selected{% endif %}>{{ subject.name }}</option>
+        {% endfor %}
+      </select>
+    </div>
+  </div>
+
+  <div class="table-responsive">
+    <table id="annotationtable" class="table table-bordered table-hover" data-page-length='100'>
+      <thead class="thead-light">
+        <tr>
+          <th>S/N</th>
+          <th>Asignatura</th>
+          <th>Tipo</th>
+          <th>Comentario</th>
+          <th>Fecha</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for annotation in annotations %}
+          <tr class="{% if annotation.annotation_type == 'positiva' %}positive{% elif annotation.annotation_type == 'negativa' %}negative{% endif %}">
+            <td>{{ forloop.counter }}</td>
+            <td>{{ annotation.subject }}</td>
+            <td>{{ annotation.get_annotation_type_display }}</td>
+            <td>{{ annotation.comment }}</td>
+            <td>{{ annotation.date|date:"d/m/Y" }}</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+{% endblock content %}
+
+{% block morejs %}
+<script>
+  function filterAnnotationsBySubject() {
+    const subjectId = document.getElementById("filter-subject").value;
+    let url = "{% url 'representative_annotation_list' representative.id student.id %}";
+
+    // Agregar el parámetro subject_id si se ha seleccionado una asignatura
+    if (subjectId) {
+      url += `?subject_id=${subjectId}`;
+    }
+
+    // Redireccionar a la URL generada
+    window.location.href = url;
+  }
+</script>
+{% endblock morejs %}
