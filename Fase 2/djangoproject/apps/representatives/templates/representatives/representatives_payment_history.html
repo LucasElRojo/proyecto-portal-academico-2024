@@ -1,0 +1,112 @@
+{% extends 'base.html' %}
+{% load humanize %}
+
+{% block content-header %}
+<div class="card-header">
+  <div class="card-tools">
+    <a href="#" class="btn btn-tool">Imprimir</a>
+    <a href="{% url 'invoice-update' object.id %}" class="btn btn-tool">
+      <i class="fas fa-edit"></i>
+    </a>
+    <a href="{% url 'invoice-delete' object.id %}" class="btn btn-tool">
+      <i class="fas fa-times"></i>
+    </a>
+  </div>
+</div>
+{% endblock content-header %}
+
+{% block content %}
+<div class="row">
+  <div class="col-sm-4">
+    <h3>Estudiante: {{ object.student }}</h3>
+    <h5>Año: {{ object.session }}</h5>
+    <h5>Semestre: {{ object.term }}</h5>
+    <h5>Curso: {{ object.class_for }}</h5>
+    <hr>
+    <div>
+      <h4>Saldo Esperado: {{ object.balance | intcomma }}</h4>
+    </div>
+  </div>
+  <div class="col-sm-8">
+    <table class="table table-sm table-bordered">
+      <thead class="thead-light">
+        <tr>
+          <th>No.</th>
+          <th>Descripción</th>
+          <th>Monto</th>
+          <th>Estado</th>
+          <th>Acción</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for item in items %}
+        <tr>
+          <td>{{ forloop.counter }}</td>
+          <td>{{ item.description }}</td>
+          <td>{{ item.amount | intcomma }}</td>
+          <td>
+            {% if item.receipt_set.exists %}
+              Pagado
+            {% else %}
+              Pendiente
+            {% endif %}
+          </td>
+          <td>
+            {% if not item.receipt_set.exists %}
+              <a href="{% url 'make-payment' item.id %}" class="btn btn-primary btn-sm">Pagar</a>
+            {% endif %}
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+      <tfoot>
+        <tr>
+          <td></td>
+          <td>Total del Monto de este período</td>
+          <td>{{ object.amount_payable | intcomma }}</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>Saldo del período anterior</td>
+          <td>{{ object.balance_from_previous_term | intcomma }}</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>Total a Pagar</td>
+          <td>{{ object.total_amount_payable | intcomma }}</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>Total Pagado</td>
+          <td>{{ object.total_amount_paid | intcomma }}</td>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
+</div>
+
+<hr>
+
+<h5>Historial de Pagos</h5>
+<table class="table table-bordered table-sm">
+  <thead class="thead-light">
+    <tr>
+      <th>No.</th>
+      <th>Monto Pagado</th>
+      <th>Fecha de Pago</th>
+      <th>Comentario</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for receipt in receipts %}
+    <tr>
+      <td>{{ forloop.counter }}</td>
+      <td>{{ receipt.amount_paid }}</td>
+      <td>{{ receipt.date_paid }}</td>
+      <td>{{ receipt.comment }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+{% endblock content %}

@@ -1,20 +1,23 @@
+from django.utils import timezone
 import random
 import string
 
 from django.contrib.messages.views import SuccessMessageMixin
 from django.forms import widgets
-from django.shortcuts import render, get_object_or_404
-from django.urls import reverse_lazy
+from django.shortcuts import redirect, render, get_object_or_404
+from django.urls import reverse, reverse_lazy
 from django.views.generic import DetailView, ListView
 from django.views.generic.edit import CreateView, DeleteView, UpdateView
 from django.contrib.auth.models import User, Group
 from django.core.mail import send_mail
 from django.conf import settings
 from django.contrib import messages
-
+from django.contrib.auth.decorators import login_required
 import json
 from django.utils.dateparse import parse_datetime, parse_date
 from django.http import JsonResponse
+
+from apps.finance.models import Invoice, InvoiceItem, Receipt
 
 from .models import Representatives
 from apps.students.models import Student
@@ -309,3 +312,31 @@ class RepresentativeAnnouncementListView(ListView):
             context['announcements'] = Announcement.objects.filter(subject__students=student)
 
         return context
+    
+
+@login_required
+def student_payment_history(request, student_id):
+    invoice = get_object_or_404(Invoice, student__id=student_id)
+    items = InvoiceItem.objects.filter(invoice=invoice)
+    receipts = Receipt.objects.filter(invoice=invoice)
+    context = {
+        'object': invoice,
+        'items': items,
+        'receipts': receipts,
+    }
+    return render(request, 'representatives/representatives_payment_history.html', context)
+
+
+@login_required
+def make_payment(request, item_id):
+    item = get_object_or_404(InvoiceItem, id=item_id)
+    # Aquí se realizaría el proceso de pago con kiphu o alguna wea asi xD
+    # Crear un nuevo recibo de pago asociado al item
+    Receipt.objects.create(
+        invoice=item.invoice,
+        item=item,
+        amount_paid=item.amount,
+        date_paid=timezone.now(),
+        comment="Pago realizado"
+    )
+    return redirect(reverse('student-payment-history', args=[item.invoice.student.id]))

@@ -59,6 +59,7 @@ class InvoiceItem(models.Model):
 
 class Receipt(models.Model):
     invoice = models.ForeignKey(Invoice, on_delete=models.CASCADE, verbose_name="Factura")
+    item = models.ForeignKey(InvoiceItem, on_delete=models.CASCADE, verbose_name="Elemento pagado")
     amount_paid = models.IntegerField(verbose_name="Monto Pagado")
     date_paid = models.DateField(default=timezone.now, verbose_name="Fecha de Pago")
     comment = models.CharField(max_length=200, blank=True, verbose_name="Comentario")
