@@ -345,6 +345,8 @@ def make_payment(request, item_id):
 def make_multiple_payments(request):
     if request.method == "POST":
         selected_items_ids = request.POST.getlist('selected_items')
+        total_selected = float(request.POST.get('selected_total', 0))  # Recuperar el total
+
         for item_id in selected_items_ids:
             item = InvoiceItem.objects.get(id=item_id)
             # Crear el recibo de pago asociado al item
@@ -355,4 +357,7 @@ def make_multiple_payments(request):
                 date_paid=timezone.now(),
                 comment="Pago realizado"
             )
+        
+        print(total_selected)
+
     return redirect(reverse('student-payment-history', args=[item.invoice.student.id]))

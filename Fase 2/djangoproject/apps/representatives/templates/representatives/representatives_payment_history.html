@@ -18,6 +18,9 @@
 {% block content %}
 <form method="post" action="{% url 'make-multiple-payments' %}">
   {% csrf_token %}
+  <!-- Campo oculto para el total seleccionado -->
+  <input type="hidden" id="selected-total-input" name="selected_total" value="0">
+  
   <div class="row">
     <div class="col-sm-4">
       <h3>Estudiante: {{ object.student }}</h3>
@@ -30,6 +33,8 @@
       </div>
     </div>
     <div class="col-sm-8">
+      <h3 id="selected-total" style="color: black; font-weight: bold;">Total Seleccionado: $0</h3>
+      
       <table class="table table-sm table-bordered">
         <thead class="thead-light">
           <tr>
@@ -55,7 +60,7 @@
             </td>
             <td>
               {% if not item.receipt_set.exists %}
-                <input type="checkbox" name="selected_items" value="{{ item.id }}">
+                <input type="checkbox" name="selected_items" value="{{ item.id }}" data-amount="{{ item.amount }}" onchange="updateSelectedTotal()">
               {% endif %}
             </td>
           </tr>
@@ -114,3 +119,22 @@
 </table>
 
 {% endblock content %}
+
+{% block morejs %}
+<script>
+function updateSelectedTotal() {
+    const checkboxes = document.querySelectorAll('input[type="checkbox"][name="selected_items"]:checked');
+    let total = 0;
+
+    checkboxes.forEach((checkbox) => {
+        total += parseFloat(checkbox.getAttribute('data-amount'));
+    });
+
+    // Actualizar el texto del total seleccionado
+    document.getElementById('selected-total').innerText = 'Total Seleccionado: $' + total.toLocaleString('es-CL');
+
+    // Actualizar el campo oculto con el valor total seleccionado
+    document.getElementById('selected-total-input').value = total;
+}
+</script>
+{% endblock morejs %}
