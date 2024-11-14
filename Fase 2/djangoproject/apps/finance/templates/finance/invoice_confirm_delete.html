@@ -1,9 +1,7 @@
 {% extends 'base.html' %}
 
-
 {% block title %}
 {% endblock title %}
-
 
 {% block content %}
 
@@ -11,13 +9,12 @@
   {% csrf_token %}
 
   <div class="alert">
-    <p>Are you sure you want to delete invoice "{{ object }}"?</p>
-    <p>All receipts attached to this invoice will be deleted</p>
+    <p>¿Estás seguro de que deseas eliminar la factura "{{ object }}"?</p>
+    <p>Todos los recibos adjuntos a esta factura serán eliminados</p>
   </div>
 
-  <input type="submit" class="btn btn-primary" value="Confirm">
+  <input type="submit" class="btn btn-primary" value="Confirmar">
 
 </form>
-
 
 {% endblock content %}

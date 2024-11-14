@@ -1,26 +1,37 @@
 {% extends 'base.html' %}
 {% load humanize %}
 
-{% block title %}invoices{% endblock title %}
+{% block title %}Pagos de estudiantes{% endblock title %}
 
 {% block breadcrumb %}
 <a class="btn btn-primary" href="{% url 'invoice-create' %}"><i
-    class="fas fa-plus"></i> New Invoice</a>
+    class="fas fa-plus"></i> Nuevo pago</a>
 <a class="btn btn-primary" href="{% url 'bulk-invoice' %}"><i
     class="fas fa-upload"></i> Bulk Invoice</a>
 {% endblock breadcrumb %}
 
 {% block content %}
+  <p class="card-text text-justify">
+    El botón <strong>"Nuevo pago"</strong> permite crear un nuevo registro de pago asociado a un estudiante en un semestre específico. 
+    Este registro representa el conjunto de pagos que un estudiante debe hacer durante el semestre. 
+    no necesitas crear múltiples registros de pago para un mismo semestre y estudiante. 
+    actualiza este registro agregando los montos correspondientes cada vez que el estudiante realice un pago.
+  </p>
+
+  <p>
+    Elige un estudiante para agregar un nuevo monto o en cambio eliminar el pago completo del estudiante.
+  </p>
+
   <div class="table-responsive">
     <table id="invoicetable" class="table table-bordered table-hover">
       <thead class="thead-light">
         <tr>
           <th>S/N</th>
-          <th>invoice</th>
-          <th>Session-term</th>
-          <th>Total Payable</th>
-          <th>Total Paid</th>
-          <th>Balance</th>
+          <th>Estudiante</th>
+          <th>Año - Semestre</th>
+          <th>Total a pagar</th>
+          <th>Total pagado</th>
+          <th>Balance total</th>
           <th></th>
         </tr>
       </thead>
@@ -30,13 +41,12 @@
           <tr class='clickable-row' data-href="{% url 'invoice-detail' invoice.id %}">
             <td>{{ forloop.counter}}</td>
             <td>{{ invoice}}</td>
-            <td>{{ invoice.session}}-{{ invoice.term}}</td>
+            <td>{{ invoice.session}} - {{ invoice.term}}</td>
             <td>{{ invoice.total_amount_payable | intcomma }}</td>
             <td>{{ invoice.total_amount_paid | intcomma }}</td>
             <td>{{ invoice.balance | intcomma }}</td>
             <td><a class="btn btn-success btn-sm"
-                href="{% url 'receipt-create' %}?invoice={{ invoice.id }}">Add new
-                receipt</a></td>
+                href="{% url 'receipt-create' %}?invoice={{ invoice.id }}">Añadir pago completado</a></td>
           </tr>
         {% endfor %}
 
@@ -48,9 +58,35 @@
 
 {% block morejs %}
 <script>
-   $('#invoicetable').DataTable({
-    select: false
+  $(document).ready(function() {
+    var table = $('#invoicetable').DataTable({
+      select: false,
+      language: {
+        "sProcessing": "Procesando...",
+        "sLengthMenu": "Mostrar _MENU_ registros",
+        "sZeroRecords": "No se encontraron resultados",
+        "sEmptyTable": "Ningún dato disponible en esta tabla",
+        "sInfo": "Mostrando registros del _START_ al _END_ de un total de _TOTAL_ registros",
+        "sInfoEmpty": "Mostrando registros del 0 al 0 de un total de 0 registros",
+        "sInfoFiltered": "(filtrado de un total de _MAX_ registros)",
+        "sInfoPostFix": "",
+        "sSearch": "Buscar:",
+        "sUrl": "",
+        "sInfoThousands": ",",
+        "sLoadingRecords": "Cargando...",
+        "oPaginate": {
+          "sFirst": "Primero",
+          "sLast": "Último",
+          "sNext": "Siguiente",
+          "sPrevious": "Anterior"
+        },
+        "oAria": {
+          "sSortAscending": ": Activar para ordenar la columna de manera ascendente",
+          "sSortDescending": ": Activar para ordenar la columna de manera descendente"
+        }
+      }
     });
+  });
 </script>
 
 {% endblock morejs %}

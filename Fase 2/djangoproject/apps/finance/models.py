@@ -7,15 +7,16 @@ from apps.students.models import Student
 
 
 class Invoice(models.Model):
-    student = models.ForeignKey(Student, on_delete=models.CASCADE)
-    session = models.ForeignKey(AcademicSession, on_delete=models.CASCADE)
-    term = models.ForeignKey(AcademicTerm, on_delete=models.CASCADE)
-    class_for = models.ForeignKey(StudentClass, on_delete=models.CASCADE)
-    balance_from_previous_term = models.IntegerField(default=0)
+    student = models.ForeignKey(Student, on_delete=models.CASCADE, verbose_name="Estudiante")
+    session = models.ForeignKey(AcademicSession, on_delete=models.CASCADE, verbose_name="Año")
+    term = models.ForeignKey(AcademicTerm, on_delete=models.CASCADE, verbose_name="Semestre")
+    class_for = models.ForeignKey(StudentClass, on_delete=models.CASCADE, verbose_name="Curso")
+    balance_from_previous_term = models.IntegerField(default=0, verbose_name="Saldo del periodo anterior")
     status = models.CharField(
         max_length=20,
-        choices=[("active", "Active"), ("closed", "Closed")],
-        default="active",
+        choices=[("activo", "Activo"), ("cerrado", "Cerrado")],
+        default="activo",
+        verbose_name="Estado",
     )
 
     class Meta:
@@ -51,16 +52,16 @@ class Invoice(models.Model):
 
 
 class InvoiceItem(models.Model):
-    invoice = models.ForeignKey(Invoice, on_delete=models.CASCADE)
-    description = models.CharField(max_length=200)
-    amount = models.IntegerField()
+    invoice = models.ForeignKey(Invoice, on_delete=models.CASCADE, verbose_name="Factura")
+    description = models.CharField(max_length=200, verbose_name="Descripción")
+    amount = models.IntegerField(verbose_name="Monto")
 
 
 class Receipt(models.Model):
-    invoice = models.ForeignKey(Invoice, on_delete=models.CASCADE)
-    amount_paid = models.IntegerField()
-    date_paid = models.DateField(default=timezone.now)
-    comment = models.CharField(max_length=200, blank=True)
+    invoice = models.ForeignKey(Invoice, on_delete=models.CASCADE, verbose_name="Factura")
+    amount_paid = models.IntegerField(verbose_name="Monto Pagado")
+    date_paid = models.DateField(default=timezone.now, verbose_name="Fecha de Pago")
+    comment = models.CharField(max_length=200, blank=True, verbose_name="Comentario")
 
     def __str__(self):
-        return f"Receipt on {self.date_paid}"
+        return f"Recibo en {self.date_paid}"

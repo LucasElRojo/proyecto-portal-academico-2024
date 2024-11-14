@@ -1,20 +1,15 @@
 {% extends 'base.html' %}
 {% load widget_tweaks %}
 
-
 {% block title %}
-
 {% if object %}
-Update invoice {{ object }}
+Actualizar factura {{ object }}
 {% else %}
-Add new invoice
+Añadir nueva factura
 {% endif %}
-
 {% endblock title %}
 
-
 {% block content %}
-
 <form method="POST">
   {% csrf_token %}
 
@@ -39,10 +34,10 @@ Add new invoice
     </div>
     <div class="col-sm-6 callout callout-info">
       {{ items.management_form }}
-      <div class="text-center">FEE STRUCTURE</div>
+      <div class="text-center">ESTRUCTURA DE TARIFAS</div>
       <div class="row">
-        <div class="col"><strong>Fee Type</strong></div>
-        <div class="col"><strong>Amount</strong></div>
+        <div class="col"><strong>Tipo de Tarifa</strong></div>
+        <div class="col"><strong>Monto</strong></div>
       </div>
       {% for item in items %}
       <div class="form-group row items-group">
@@ -54,16 +49,15 @@ Add new invoice
     </div>
   </div>
 
-
   {% if object %}
-    <h4>RECEIPTS</h4>
+    <h4>RECIBOS</h4>
     <table class="table table-sm">
       {{ receipts.management_form }}
       <thead class="thead-light">
         <tr>
-          <th>Amount Paid</th>
-          <th>Date Paid</th>
-          <th>Comment</th>
+          <th>Monto Pagado</th>
+          <th>Fecha de Pago</th>
+          <th>Comentario</th>
           <th><i class="fa fa-trash"></i></th>
         </tr>
       </thead>
@@ -78,21 +72,18 @@ Add new invoice
           {% endfor %}
         </tr>
         {% endfor %}
-
       </tbody>
     </table>
   {% endif %}
 
   {% if object %}
-  <input type="submit" class="btn btn-primary" value="Update Record">
+  <input type="submit" class="btn btn-primary" value="Actualizar pagos">
   {% else %}
-  <input type="submit" class="btn btn-primary" value="Add new invoice">
+  <input type="submit" class="btn btn-primary" value="Añadir nuevo pago">
   {% endif %}
 </form>
 
 <hr>
-
-
 {% endblock content %}
 
 {% block morejs %}

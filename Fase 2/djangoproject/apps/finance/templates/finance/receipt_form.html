@@ -17,17 +17,17 @@
 
   <div class="col-4">
     <div class="alert alert-info" role="alert">
-      <h3>INVOICE</h3>
-      <p>{{invoice | upper}}</p>
+      <h3>Pagos</h3>
+      <p>Estudiante: {{invoice}}</p>
       <hr>
       <ul>
 
-        <li>Session: {{ invoice.session }}</li>
-        <li>Term: {{ invoice.term }}</li>
-        <li>Class: {{ invoice.class_for }}</li>
-        <li>Total Amount Payable: {{invoice.total_amount_payable | intcomma }}
+        <li>Año: {{ invoice.session }}</li>
+        <li>Semestre: {{ invoice.term }}</li>
+        <li>Curso: {{ invoice.class_for }}</li>
+        <li>Total a pagar: {{invoice.total_amount_payable | intcomma }}
         </li>
-        <li>Total Amount Paid: {{ invoice.total_amount_paid | intcomma }}</li>
+        <li>Total pagado: {{ invoice.total_amount_paid | intcomma }}</li>
         <li><strong>Balance: {{invoice.balance | intcomma }}</strong></li>
       </ul>
     </div>
