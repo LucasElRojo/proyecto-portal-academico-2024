@@ -35890,3 +35890,595 @@ INFO 2024-11-14 15:24:22,846 "POST /representative/pay-items/ HTTP/1.1" 302 0
 INFO 2024-11-14 15:24:22,865 "GET /representative/student/7/ HTTP/1.1" 200 13532
 INFO 2024-11-14 15:24:30,867 "POST /representative/pay-items/ HTTP/1.1" 302 0
 INFO 2024-11-14 15:24:30,886 "GET /representative/student/7/ HTTP/1.1" 200 13515
+INFO 2024-11-14 19:01:34,251 Watching for file changes with StatReloader
+INFO 2024-11-14 19:01:36,979 "GET / HTTP/1.1" 302 0
+INFO 2024-11-14 19:01:37,036 "GET /accounts/login/?next=/ HTTP/1.1" 200 4187
+INFO 2024-11-14 19:01:59,319 "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2024-11-14 19:01:59,386 "GET / HTTP/1.1" 200 10161
+INFO 2024-11-14 19:02:02,320 "GET /representative/representatives/2/students/ HTTP/1.1" 200 14021
+INFO 2024-11-14 19:02:02,439 "GET /media/students/fotos/GbtowwoXQBU5_wL.png HTTP/1.1" 200 1115599
+INFO 2024-11-14 19:02:02,453 "GET /media/students/fotos/Sin_t%C3%ADtulo.png HTTP/1.1" 200 2288486
+INFO 2024-11-14 19:02:03,017 "GET /representative/representatives/2/student/3/ HTTP/1.1" 200 17453
+INFO 2024-11-14 19:02:03,771 "GET /representative/representative/2/student/3/announcements/ HTTP/1.1" 200 1417782
+INFO 2024-11-14 19:02:11,748 "GET /representative/representative/2/student/3/announcements/ HTTP/1.1" 200 1420056
+INFO 2024-11-14 19:02:30,486 "GET /representative/representative/2/student/3/announcements/ HTTP/1.1" 200 1419900
+INFO 2024-11-14 19:02:47,568 "GET /representative/representative/2/student/3/announcements/?subject_id=2 HTTP/1.1" 200 1057626
+INFO 2024-11-14 19:02:48,652 "GET /representative/representative/2/student/3/announcements/?subject_id=1 HTTP/1.1" 200 373484
+INFO 2024-11-14 19:02:49,754 "GET /representative/representative/2/student/3/announcements/?subject_id=2 HTTP/1.1" 200 1057626
+INFO 2024-11-14 19:02:53,854 "GET /representative/representative/2/student/3/announcements/?subject_id=1 HTTP/1.1" 200 373484
+INFO 2024-11-14 19:02:56,077 "GET /representative/representative/2/student/3/announcements/?subject_id= HTTP/1.1" 200 1419900
+INFO 2024-11-14 19:03:07,110 "GET /finance/list/ HTTP/1.1" 200 12977
+INFO 2024-11-14 19:03:11,706 - Broken pipe from ('127.0.0.1', 49984)
+INFO 2024-11-14 19:03:11,740 "GET /finance/receipt/create?invoice=1 HTTP/1.1" 200 11809
+INFO 2024-11-14 19:03:15,486 "GET /finance/create/ HTTP/1.1" 200 14710
+INFO 2024-11-14 19:03:44,153 "POST /finance/create/ HTTP/1.1" 302 0
+INFO 2024-11-14 19:03:44,184 "GET /finance/list HTTP/1.1" 301 0
+INFO 2024-11-14 19:03:44,211 "GET /finance/list/ HTTP/1.1" 200 13397
+INFO 2024-11-14 19:03:47,680 - Broken pipe from ('127.0.0.1', 50035)
+INFO 2024-11-14 19:03:47,698 "GET /finance/receipt/create?invoice=2 HTTP/1.1" 200 11812
+INFO 2024-11-14 19:04:03,279 "GET /representative/student/7/ HTTP/1.1" 302 0
+INFO 2024-11-14 19:04:03,287 "GET /accounts/login/?next=/representative/student/7/ HTTP/1.1" 200 4212
+INFO 2024-11-14 19:04:03,396 "GET /static/plugins/fontawesome-free/css/all.min.css HTTP/1.1" 200 58582
+INFO 2024-11-14 19:04:03,411 "GET /static/plugins/toastr/toastr.min.css HTTP/1.1" 200 6454
+INFO 2024-11-14 19:04:03,412 "GET /static/plugins/overlayScrollbars/css/OverlayScrollbars.min.css HTTP/1.1" 200 19736
+INFO 2024-11-14 19:04:03,426 "GET /static/dist/css/login-page.css HTTP/1.1" 200 8786
+INFO 2024-11-14 19:04:03,431 "GET /static/dist/css/adminlte.min.css HTTP/1.1" 200 686718
+INFO 2024-11-14 19:04:03,446 "GET /static/dist/img/login.png HTTP/1.1" 200 1197223
+INFO 2024-11-14 19:04:03,482 "GET /static/dist/js/jquery.formset.js HTTP/1.1" 200 13881
+INFO 2024-11-14 19:04:03,517 "GET /static/plugins/jquery/jquery.min.js HTTP/1.1" 200 88147
+INFO 2024-11-14 19:04:03,546 "GET /static/plugins/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 200 80704
+INFO 2024-11-14 19:04:03,562 "GET /static/plugins/toastr/toastr.min.js HTTP/1.1" 200 5253
+INFO 2024-11-14 19:04:03,598 "GET /static/dist/js/demo.js HTTP/1.1" 200 13042
+INFO 2024-11-14 19:04:03,616 "GET /static/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js HTTP/1.1" 200 42395
+INFO 2024-11-14 19:04:03,620 "GET /static/dist/img/puentealto.jpg HTTP/1.1" 200 317548
+INFO 2024-11-14 19:04:03,630 "GET /static/plugins/fontawesome-free/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 79444
+INFO 2024-11-14 19:04:03,664 "GET /static/dist/js/adminlte.js HTTP/1.1" 200 59416
+WARNING 2024-11-14 19:04:03,721 Not Found: /favicon.ico
+WARNING 2024-11-14 19:04:03,721 "GET /favicon.ico HTTP/1.1" 404 6963
+INFO 2024-11-14 19:04:16,292 "GET /student/list HTTP/1.1" 302 0
+INFO 2024-11-14 19:04:16,311 "GET / HTTP/1.1" 200 10161
+INFO 2024-11-14 19:04:17,779 "GET /finance/list/ HTTP/1.1" 200 13397
+INFO 2024-11-14 19:04:29,402 "GET /representative/student/2/ HTTP/1.1" 302 0
+INFO 2024-11-14 19:04:29,414 "GET /accounts/login/?next=/representative/student/2/ HTTP/1.1" 200 4212
+INFO 2024-11-14 19:04:40,465 "POST /accounts/login/ HTTP/1.1" 302 0
+WARNING 2024-11-14 19:04:40,487 Not Found: /representative/student/2/
+WARNING 2024-11-14 19:04:40,488 "GET /representative/student/2/ HTTP/1.1" 404 9546
+INFO 2024-11-14 19:04:41,541 "GET /accounts/login/?next=/representative/student/2/ HTTP/1.1" 200 4283
+INFO 2024-11-14 19:04:44,334 "POST /accounts/login/ HTTP/1.1" 200 4408
+INFO 2024-11-14 19:04:47,776 "POST /accounts/login/ HTTP/1.1" 200 4408
+INFO 2024-11-14 19:04:50,826 "POST /accounts/login/ HTTP/1.1" 302 0
+WARNING 2024-11-14 19:04:50,848 Not Found: /representative/student/2/
+WARNING 2024-11-14 19:04:50,848 "GET /representative/student/2/ HTTP/1.1" 404 9546
+WARNING 2024-11-14 19:05:38,943 Not Found: /representative/student/2/
+WARNING 2024-11-14 19:05:38,943 "GET /representative/student/2/ HTTP/1.1" 404 9546
+INFO 2024-11-14 19:05:39,945 "GET /accounts/login/?next=/representative/student/2/ HTTP/1.1" 200 4283
+INFO 2024-11-14 19:05:52,867 "POST /accounts/login/ HTTP/1.1" 302 0
+WARNING 2024-11-14 19:05:52,890 Not Found: /representative/student/2/
+WARNING 2024-11-14 19:05:52,890 "GET /representative/student/2/ HTTP/1.1" 404 9546
+INFO 2024-11-14 19:05:55,746 "GET /representative/student/3/ HTTP/1.1" 200 13127
+INFO 2024-11-14 19:05:55,794 "GET /static/plugins/overlayScrollbars/css/OverlayScrollbars.min.css HTTP/1.1" 304 0
+INFO 2024-11-14 19:05:55,794 "GET /static/dist/css/adminlte.min.css HTTP/1.1" 304 0
+INFO 2024-11-14 19:05:55,796 "GET /static/plugins/jquery/jquery.min.js HTTP/1.1" 304 0
+INFO 2024-11-14 19:05:55,797 "GET /static/dist/js/jquery.formset.js HTTP/1.1" 304 0
+INFO 2024-11-14 19:05:55,798 "GET /static/plugins/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 304 0
+INFO 2024-11-14 19:05:55,799 "GET /static/plugins/toastr/toastr.min.js HTTP/1.1" 304 0
+INFO 2024-11-14 19:05:55,801 "GET /static/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js HTTP/1.1" 304 0
+INFO 2024-11-14 19:05:55,802 "GET /static/dist/js/adminlte.js HTTP/1.1" 304 0
+INFO 2024-11-14 19:05:55,803 "GET /static/dist/js/demo.js HTTP/1.1" 304 0
+INFO 2024-11-14 19:05:55,805 "GET /static/plugins/Datatables/datatables.min.css HTTP/1.1" 200 25807
+INFO 2024-11-14 19:05:57,265 "GET /static/plugins/Datatables/datatables.min.js HTTP/1.1" 200 2042927
+INFO 2024-11-14 19:06:05,916 "POST /representative/pay-items/ HTTP/1.1" 302 0
+INFO 2024-11-14 19:06:05,944 "GET /representative/student/3/ HTTP/1.1" 200 13115
+INFO 2024-11-14 19:06:19,442 "GET /staff/announcements/ HTTP/1.1" 200 473452
+INFO 2024-11-14 19:06:56,092 "GET /accounts/logout/ HTTP/1.1" 302 0
+INFO 2024-11-14 19:06:56,099 "GET / HTTP/1.1" 302 0
+INFO 2024-11-14 19:06:56,108 "GET /accounts/login/?next=/ HTTP/1.1" 200 4187
+INFO 2024-11-14 19:06:56,142 "GET /static/plugins/fontawesome-free/css/all.min.css HTTP/1.1" 304 0
+INFO 2024-11-14 19:06:56,150 "GET /static/dist/css/login-page.css HTTP/1.1" 304 0
+INFO 2024-11-14 19:06:56,150 "GET /static/plugins/toastr/toastr.min.css HTTP/1.1" 304 0
+INFO 2024-11-14 19:06:56,150 "GET /static/dist/img/login.png HTTP/1.1" 304 0
+INFO 2024-11-14 19:06:56,174 "GET /static/dist/img/puentealto.jpg HTTP/1.1" 304 0
+INFO 2024-11-14 19:07:03,524 "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2024-11-14 19:07:03,543 "GET / HTTP/1.1" 200 10161
+INFO 2024-11-14 19:07:04,830 "GET /representative/representatives/2/students/ HTTP/1.1" 200 14021
+INFO 2024-11-14 19:07:04,892 "GET /static/dist/img/noprofilepicture.jpg HTTP/1.1" 200 41511
+INFO 2024-11-14 19:07:04,909 "GET /media/students/fotos/Sin_t%C3%ADtulo.png HTTP/1.1" 200 2288486
+INFO 2024-11-14 19:07:04,927 "GET /media/students/fotos/GbtowwoXQBU5_wL.png HTTP/1.1" 200 1115599
+INFO 2024-11-14 19:07:07,118 "GET /representative/representatives/2/student/3/ HTTP/1.1" 200 17453
+INFO 2024-11-14 19:07:08,217 "GET /representative/representative/2/content/ HTTP/1.1" 200 12375
+INFO 2024-11-14 19:07:10,132 "GET /representative/calendar/2/ HTTP/1.1" 200 12271
+INFO 2024-11-14 19:07:10,484 "GET /representative/calendar/2/?subject_id= HTTP/1.1" 200 1396
+INFO 2024-11-14 19:07:11,883 "GET /representative/representative/2/student/3/annotations/ HTTP/1.1" 200 13076
+INFO 2024-11-14 19:07:13,361 "GET /representative/representative/2/student/3/announcements/ HTTP/1.1" 200 1419900
+INFO 2024-11-14 19:07:17,753 "GET /staff/announcements/ HTTP/1.1" 200 473725
+INFO 2024-11-14 19:07:19,307 "GET /representative/representatives/2/students/ HTTP/1.1" 200 14021
+INFO 2024-11-14 19:07:21,434 "GET /representative/representatives/2/student/6/ HTTP/1.1" 200 17454
+INFO 2024-11-14 19:07:23,069 "GET /representative/representative/2/student/6/announcements/ HTTP/1.1" 200 1419901
+INFO 2024-11-14 19:08:07,026 "GET /accounts/logout/ HTTP/1.1" 302 0
+INFO 2024-11-14 19:08:07,033 "GET / HTTP/1.1" 302 0
+INFO 2024-11-14 19:08:07,043 "GET /accounts/login/?next=/ HTTP/1.1" 200 4187
+INFO 2024-11-14 19:08:07,090 "GET /static/plugins/overlayScrollbars/css/OverlayScrollbars.min.css HTTP/1.1" 304 0
+INFO 2024-11-14 19:08:07,110 "GET /static/dist/css/adminlte.min.css HTTP/1.1" 304 0
+INFO 2024-11-14 19:08:07,124 "GET /static/plugins/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 304 0
+INFO 2024-11-14 19:08:07,124 "GET /static/dist/js/jquery.formset.js HTTP/1.1" 304 0
+INFO 2024-11-14 19:08:07,124 "GET /static/plugins/jquery/jquery.min.js HTTP/1.1" 304 0
+INFO 2024-11-14 19:08:07,126 "GET /static/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js HTTP/1.1" 304 0
+INFO 2024-11-14 19:08:07,126 "GET /static/plugins/toastr/toastr.min.js HTTP/1.1" 304 0
+INFO 2024-11-14 19:08:07,127 "GET /static/dist/js/adminlte.js HTTP/1.1" 304 0
+INFO 2024-11-14 19:08:07,128 "GET /static/dist/js/demo.js HTTP/1.1" 304 0
+INFO 2024-11-14 19:08:10,144 "POST /accounts/login/ HTTP/1.1" 200 4312
+INFO 2024-11-14 19:08:13,636 "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2024-11-14 19:08:13,653 "GET / HTTP/1.1" 200 9787
+INFO 2024-11-14 19:08:13,687 "GET /static/plugins/Datatables/datatables.min.css HTTP/1.1" 304 0
+INFO 2024-11-14 19:08:13,691 "GET /static/plugins/Datatables/datatables.min.js HTTP/1.1" 304 0
+INFO 2024-11-14 19:08:15,102 "GET /student/list HTTP/1.1" 302 0
+INFO 2024-11-14 19:08:15,129 "GET / HTTP/1.1" 200 9787
+INFO 2024-11-14 19:08:15,542 "GET /student/list HTTP/1.1" 302 0
+INFO 2024-11-14 19:08:15,562 "GET / HTTP/1.1" 200 9787
+INFO 2024-11-14 19:08:15,909 "GET /student/list HTTP/1.1" 302 0
+INFO 2024-11-14 19:08:15,927 "GET / HTTP/1.1" 200 9787
+INFO 2024-11-14 19:09:58,009 "GET /student/list HTTP/1.1" 302 0
+INFO 2024-11-14 19:09:58,027 "GET / HTTP/1.1" 200 9787
+INFO 2024-11-14 19:09:58,545 "GET /teacher/list/ HTTP/1.1" 200 12961
+INFO 2024-11-14 19:09:59,094 "GET /student/list HTTP/1.1" 302 0
+INFO 2024-11-14 19:09:59,112 "GET / HTTP/1.1" 200 9787
+INFO 2024-11-14 19:19:57,604 "GET /staff/announcements/ HTTP/1.1" 200 473452
+INFO 2024-11-14 19:19:57,641 "GET /static/plugins/overlayScrollbars/css/OverlayScrollbars.min.css HTTP/1.1" 304 0
+INFO 2024-11-14 19:19:57,651 "GET /static/plugins/Datatables/datatables.min.css HTTP/1.1" 304 0
+INFO 2024-11-14 19:19:57,656 "GET /static/dist/css/adminlte.min.css HTTP/1.1" 304 0
+INFO 2024-11-14 19:19:57,657 "GET /static/plugins/jquery/jquery.min.js HTTP/1.1" 304 0
+INFO 2024-11-14 19:19:57,658 "GET /static/dist/js/jquery.formset.js HTTP/1.1" 304 0
+INFO 2024-11-14 19:19:57,660 "GET /static/plugins/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 304 0
+INFO 2024-11-14 19:19:57,661 "GET /static/plugins/toastr/toastr.min.js HTTP/1.1" 304 0
+INFO 2024-11-14 19:19:57,663 "GET /static/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js HTTP/1.1" 304 0
+INFO 2024-11-14 19:19:57,664 "GET /static/dist/js/adminlte.js HTTP/1.1" 304 0
+INFO 2024-11-14 19:19:57,665 "GET /static/dist/js/demo.js HTTP/1.1" 304 0
+INFO 2024-11-14 19:19:57,667 "GET /static/plugins/Datatables/datatables.min.js HTTP/1.1" 304 0
+INFO 2024-11-14 19:21:29,948 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\corecode\decorators.py changed, reloading.
+INFO 2024-11-14 19:21:30,705 Watching for file changes with StatReloader
+INFO 2024-11-14 19:23:05,301 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\corecode\decorators.py changed, reloading.
+INFO 2024-11-14 19:23:06,041 Watching for file changes with StatReloader
+INFO 2024-11-14 19:24:39,203 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\corecode\decorators.py changed, reloading.
+INFO 2024-11-14 19:24:39,918 Watching for file changes with StatReloader
+INFO 2024-11-14 19:24:50,169 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\corecode\decorators.py changed, reloading.
+INFO 2024-11-14 19:24:50,851 Watching for file changes with StatReloader
+INFO 2024-11-14 19:25:08,468 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\students\views.py changed, reloading.
+INFO 2024-11-14 19:25:09,218 Watching for file changes with StatReloader
+INFO 2024-11-14 19:25:15,371 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\students\views.py changed, reloading.
+INFO 2024-11-14 19:25:16,081 Watching for file changes with StatReloader
+INFO 2024-11-14 19:25:44,261 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\staffs\views.py changed, reloading.
+INFO 2024-11-14 19:25:44,961 Watching for file changes with StatReloader
+INFO 2024-11-14 19:26:12,066 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\teachers\views.py changed, reloading.
+INFO 2024-11-14 19:26:12,756 Watching for file changes with StatReloader
+INFO 2024-11-14 19:26:19,288 "GET /student/list HTTP/1.1" 200 14872
+INFO 2024-11-14 19:26:19,416 "GET /static/plugins/Datatables/datatables.min.css HTTP/1.1" 304 0
+INFO 2024-11-14 19:26:19,416 "GET /static/plugins/overlayScrollbars/css/OverlayScrollbars.min.css HTTP/1.1" 304 0
+INFO 2024-11-14 19:26:19,417 "GET /static/plugins/jquery/jquery.min.js HTTP/1.1" 304 0
+INFO 2024-11-14 19:26:19,417 "GET /static/dist/css/adminlte.min.css HTTP/1.1" 304 0
+INFO 2024-11-14 19:26:19,418 "GET /static/dist/js/jquery.formset.js HTTP/1.1" 304 0
+INFO 2024-11-14 19:26:19,419 "GET /static/plugins/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 304 0
+INFO 2024-11-14 19:26:19,420 "GET /static/plugins/toastr/toastr.min.js HTTP/1.1" 304 0
+INFO 2024-11-14 19:26:19,420 "GET /static/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js HTTP/1.1" 304 0
+INFO 2024-11-14 19:26:19,421 "GET /static/dist/js/adminlte.js HTTP/1.1" 304 0
+INFO 2024-11-14 19:26:19,421 "GET /static/dist/js/demo.js HTTP/1.1" 304 0
+INFO 2024-11-14 19:26:19,422 "GET /static/plugins/Datatables/datatables.min.js HTTP/1.1" 304 0
+INFO 2024-11-14 19:26:20,582 "GET /teacher/list/ HTTP/1.1" 200 12961
+INFO 2024-11-14 19:26:21,099 "GET /student/list HTTP/1.1" 200 14872
+INFO 2024-11-14 19:26:21,957 "GET /teacher/list/ HTTP/1.1" 200 12961
+INFO 2024-11-14 19:26:22,554 "GET /student/list HTTP/1.1" 200 14872
+INFO 2024-11-14 19:26:23,788 "GET /teacher/list/ HTTP/1.1" 200 12961
+INFO 2024-11-14 19:26:24,383 "GET /student/list HTTP/1.1" 200 14872
+INFO 2024-11-14 19:28:02,341 "GET /teacher/list/ HTTP/1.1" 200 12961
+INFO 2024-11-14 19:28:02,905 "GET /representative/list/ HTTP/1.1" 200 12100
+INFO 2024-11-14 19:28:04,274 "GET /staff/list/ HTTP/1.1" 200 11732
+INFO 2024-11-14 19:28:06,308 "GET /representative/list/ HTTP/1.1" 200 12100
+INFO 2024-11-14 19:28:06,612 "GET /teacher/list/ HTTP/1.1" 200 12961
+INFO 2024-11-14 19:28:07,093 "GET /student/list HTTP/1.1" 200 14872
+INFO 2024-11-14 19:28:17,060 "GET /staff/announcements/ HTTP/1.1" 200 473452
+INFO 2024-11-14 19:29:20,728 "GET /staff/announcements/ HTTP/1.1" 200 475657
+INFO 2024-11-14 19:29:35,672 "GET /staff/announcements/create/ HTTP/1.1" 200 12764
+INFO 2024-11-14 19:29:35,785 "GET /static/ckeditor/ckeditor.css HTTP/1.1" 200 672
+INFO 2024-11-14 19:29:35,799 "GET /static/ckeditor/ckeditor-init.js HTTP/1.1" 200 1526
+INFO 2024-11-14 19:29:35,927 "GET /static/ckeditor/ckeditor/ckeditor.js HTTP/1.1" 200 759716
+INFO 2024-11-14 19:29:35,981 "GET /static/ckeditor/ckeditor/config.js?t=N5UC HTTP/1.1" 200 336
+INFO 2024-11-14 19:29:35,999 "GET /static/ckeditor/ckeditor/skins/moono-lisa/editor.css?t=N5UC HTTP/1.1" 200 48309
+INFO 2024-11-14 19:29:36,007 "GET /static/ckeditor/ckeditor/lang/es-mx.js?t=N5UC HTTP/1.1" 200 20280
+INFO 2024-11-14 19:29:36,037 "GET /static/ckeditor/ckeditor/styles.js?t=N5UC HTTP/1.1" 200 5577
+INFO 2024-11-14 19:29:36,053 "GET /static/ckeditor/ckeditor/plugins/scayt/skins/moono-lisa/scayt.css?t=N5UC HTTP/1.1" 200 381
+INFO 2024-11-14 19:29:36,055 "GET /static/ckeditor/ckeditor/plugins/scayt/dialogs/dialog.css?t=N5UC HTTP/1.1" 200 419
+INFO 2024-11-14 19:29:36,057 "GET /static/ckeditor/ckeditor/plugins/tableselection/styles/tableselection.css?t=N5UC HTTP/1.1" 200 1145
+INFO 2024-11-14 19:29:36,063 "GET /static/ckeditor/ckeditor/plugins/dialog/styles/dialog.css?t=N5UC HTTP/1.1" 200 249
+INFO 2024-11-14 19:29:36,067 "GET /static/ckeditor/ckeditor/plugins/copyformatting/styles/copyformatting.css?t=N5UC HTTP/1.1" 200 1511
+INFO 2024-11-14 19:29:36,079 "GET /static/ckeditor/ckeditor/skins/moono-lisa/icons.png?t=4a1fb11f44 HTTP/1.1" 200 12237
+INFO 2024-11-14 19:29:36,105 "GET /static/ckeditor/ckeditor/contents.css?t=N5UC HTTP/1.1" 200 3092
+INFO 2024-11-14 19:29:40,420 "GET /staff/announcements/ HTTP/1.1" 200 475657
+INFO 2024-11-14 19:29:42,272 "GET /student/list HTTP/1.1" 200 14872
+INFO 2024-11-14 19:29:43,419 "GET /teacher/list/ HTTP/1.1" 200 12961
+INFO 2024-11-14 19:29:45,137 "GET /student/list HTTP/1.1" 200 14872
+INFO 2024-11-14 19:29:47,943 "GET /accounts/logout/ HTTP/1.1" 302 0
+INFO 2024-11-14 19:29:47,951 "GET / HTTP/1.1" 302 0
+INFO 2024-11-14 19:29:47,959 "GET /accounts/login/?next=/ HTTP/1.1" 200 4187
+INFO 2024-11-14 19:29:47,994 "GET /static/plugins/fontawesome-free/css/all.min.css HTTP/1.1" 304 0
+INFO 2024-11-14 19:29:48,001 "GET /static/plugins/toastr/toastr.min.css HTTP/1.1" 304 0
+INFO 2024-11-14 19:29:48,004 "GET /static/dist/css/login-page.css HTTP/1.1" 304 0
+INFO 2024-11-14 19:29:48,004 "GET /static/dist/img/login.png HTTP/1.1" 304 0
+INFO 2024-11-14 19:29:48,004 "GET /static/dist/img/puentealto.jpg HTTP/1.1" 304 0
+INFO 2024-11-14 19:29:48,048 "GET /static/plugins/fontawesome-free/webfonts/fa-solid-900.woff2 HTTP/1.1" 304 0
+INFO 2024-11-14 19:30:00,609 "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2024-11-14 19:30:00,628 "GET / HTTP/1.1" 200 10161
+INFO 2024-11-14 19:30:01,351 "GET /student/list HTTP/1.1" 302 0
+INFO 2024-11-14 19:30:01,369 "GET / HTTP/1.1" 200 10161
+INFO 2024-11-14 19:30:01,883 "GET /student/list HTTP/1.1" 302 0
+INFO 2024-11-14 19:30:01,900 "GET / HTTP/1.1" 200 10161
+INFO 2024-11-14 19:30:03,846 "GET /student/list HTTP/1.1" 302 0
+INFO 2024-11-14 19:30:03,864 "GET / HTTP/1.1" 200 10161
+INFO 2024-11-14 19:30:03,895 "GET /static/plugins/overlayScrollbars/css/OverlayScrollbars.min.css HTTP/1.1" 304 0
+INFO 2024-11-14 19:30:03,906 "GET /static/plugins/Datatables/datatables.min.css HTTP/1.1" 304 0
+INFO 2024-11-14 19:30:03,912 "GET /static/plugins/jquery/jquery.min.js HTTP/1.1" 304 0
+INFO 2024-11-14 19:30:03,912 "GET /static/dist/js/jquery.formset.js HTTP/1.1" 304 0
+INFO 2024-11-14 19:30:03,912 "GET /static/plugins/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 304 0
+INFO 2024-11-14 19:30:03,912 "GET /static/plugins/toastr/toastr.min.js HTTP/1.1" 304 0
+INFO 2024-11-14 19:30:03,913 "GET /static/dist/css/adminlte.min.css HTTP/1.1" 304 0
+INFO 2024-11-14 19:30:03,914 "GET /static/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js HTTP/1.1" 304 0
+INFO 2024-11-14 19:30:03,915 "GET /static/dist/js/demo.js HTTP/1.1" 304 0
+INFO 2024-11-14 19:30:03,915 "GET /static/dist/js/adminlte.js HTTP/1.1" 304 0
+INFO 2024-11-14 19:30:03,915 "GET /static/plugins/Datatables/datatables.min.js HTTP/1.1" 304 0
+INFO 2024-11-14 19:30:04,429 "GET /student/list HTTP/1.1" 302 0
+INFO 2024-11-14 19:30:04,446 "GET / HTTP/1.1" 200 10161
+INFO 2024-11-14 19:30:04,872 "GET /student/list HTTP/1.1" 302 0
+INFO 2024-11-14 19:30:04,890 "GET / HTTP/1.1" 200 10161
+INFO 2024-11-14 19:30:06,835 "GET /accounts/logout/ HTTP/1.1" 302 0
+INFO 2024-11-14 19:30:06,842 "GET / HTTP/1.1" 302 0
+INFO 2024-11-14 19:30:06,850 "GET /accounts/login/?next=/ HTTP/1.1" 200 4187
+INFO 2024-11-14 19:30:11,040 "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2024-11-14 19:30:11,057 "GET / HTTP/1.1" 200 9787
+INFO 2024-11-14 19:30:12,178 "GET /student/list HTTP/1.1" 200 14872
+INFO 2024-11-14 19:30:14,886 "GET /accounts/logout/ HTTP/1.1" 302 0
+INFO 2024-11-14 19:30:14,894 "GET / HTTP/1.1" 302 0
+INFO 2024-11-14 19:30:14,902 "GET /accounts/login/?next=/ HTTP/1.1" 200 4187
+INFO 2024-11-14 19:30:23,222 "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2024-11-14 19:30:23,239 "GET / HTTP/1.1" 200 10161
+INFO 2024-11-14 19:30:27,038 "GET /student/list HTTP/1.1" 302 0
+INFO 2024-11-14 19:30:27,054 "GET / HTTP/1.1" 200 10161
+INFO 2024-11-14 19:31:24,761 "GET /class/list/ HTTP/1.1" 200 13007
+INFO 2024-11-14 19:31:29,740 "GET /subject/list/ HTTP/1.1" 200 12375
+INFO 2024-11-14 19:31:31,072 "GET /term/list/ HTTP/1.1" 200 12887
+INFO 2024-11-14 19:31:43,546 "GET /term/list/ HTTP/1.1" 200 10635
+INFO 2024-11-14 19:31:44,782 "GET /term/list/ HTTP/1.1" 200 10635
+INFO 2024-11-14 19:31:45,651 "GET /term/list/ HTTP/1.1" 200 10635
+INFO 2024-11-14 19:31:46,716 "GET /term/list/ HTTP/1.1" 200 10635
+INFO 2024-11-14 19:31:49,486 "GET /accounts/logout/ HTTP/1.1" 302 0
+INFO 2024-11-14 19:31:49,494 "GET / HTTP/1.1" 302 0
+INFO 2024-11-14 19:31:49,504 "GET /accounts/login/?next=/ HTTP/1.1" 200 4187
+INFO 2024-11-14 19:31:52,074 "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2024-11-14 19:31:52,094 "GET / HTTP/1.1" 200 7560
+INFO 2024-11-14 19:32:11,844 "GET / HTTP/1.1" 200 7560
+INFO 2024-11-14 19:32:12,439 "GET / HTTP/1.1" 200 7560
+INFO 2024-11-14 19:32:12,777 "GET / HTTP/1.1" 200 7560
+INFO 2024-11-14 19:32:12,955 "GET / HTTP/1.1" 200 7560
+INFO 2024-11-14 19:32:13,118 "GET / HTTP/1.1" 200 7560
+INFO 2024-11-14 19:32:13,268 "GET / HTTP/1.1" 200 7560
+INFO 2024-11-14 19:32:23,468 "GET / HTTP/1.1" 200 7560
+INFO 2024-11-14 19:32:24,065 "GET / HTTP/1.1" 200 7560
+INFO 2024-11-14 19:32:25,457 "GET /accounts/logout/ HTTP/1.1" 302 0
+INFO 2024-11-14 19:32:25,465 "GET / HTTP/1.1" 302 0
+INFO 2024-11-14 19:32:25,474 "GET /accounts/login/?next=/ HTTP/1.1" 200 4187
+INFO 2024-11-14 19:32:32,254 "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2024-11-14 19:32:32,272 "GET / HTTP/1.1" 200 10320
+INFO 2024-11-14 19:32:37,162 "GET / HTTP/1.1" 200 7934
+INFO 2024-11-14 19:32:39,432 "GET /accounts/logout/ HTTP/1.1" 302 0
+INFO 2024-11-14 19:32:39,440 "GET / HTTP/1.1" 302 0
+INFO 2024-11-14 19:32:39,449 "GET /accounts/login/?next=/ HTTP/1.1" 200 4187
+INFO 2024-11-14 19:32:42,514 "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2024-11-14 19:32:42,532 "GET / HTTP/1.1" 200 7560
+INFO 2024-11-14 19:33:00,065 "GET /accounts/logout/ HTTP/1.1" 302 0
+INFO 2024-11-14 19:33:00,072 "GET / HTTP/1.1" 302 0
+INFO 2024-11-14 19:33:00,083 "GET /accounts/login/?next=/ HTTP/1.1" 200 4187
+INFO 2024-11-14 19:33:09,307 "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2024-11-14 19:33:09,354 "GET / HTTP/1.1" 200 7560
+INFO 2024-11-14 19:33:19,313 "GET / HTTP/1.1" 200 9946
+INFO 2024-11-14 19:33:26,206 "GET /staff/list/ HTTP/1.1" 200 11891
+INFO 2024-11-14 19:33:28,672 "GET /staff/create/ HTTP/1.1" 200 14127
+INFO 2024-11-14 19:34:32,326 "POST /staff/create/ HTTP/1.1" 302 0
+INFO 2024-11-14 19:34:32,344 "GET /staff/list/ HTTP/1.1" 200 12526
+INFO 2024-11-14 19:34:32,382 "GET /static/plugins/overlayScrollbars/css/OverlayScrollbars.min.css HTTP/1.1" 304 0
+INFO 2024-11-14 19:34:32,396 "GET /static/plugins/Datatables/datatables.min.css HTTP/1.1" 304 0
+INFO 2024-11-14 19:34:32,403 "GET /static/plugins/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 304 0
+INFO 2024-11-14 19:34:32,403 "GET /static/dist/js/jquery.formset.js HTTP/1.1" 304 0
+INFO 2024-11-14 19:34:32,403 "GET /static/plugins/toastr/toastr.min.js HTTP/1.1" 304 0
+INFO 2024-11-14 19:34:32,403 "GET /static/dist/css/adminlte.min.css HTTP/1.1" 304 0
+INFO 2024-11-14 19:34:32,403 "GET /static/plugins/jquery/jquery.min.js HTTP/1.1" 304 0
+INFO 2024-11-14 19:34:32,406 "GET /static/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js HTTP/1.1" 304 0
+INFO 2024-11-14 19:34:32,406 "GET /static/dist/js/demo.js HTTP/1.1" 304 0
+INFO 2024-11-14 19:34:32,407 "GET /static/plugins/Datatables/datatables.min.js HTTP/1.1" 304 0
+INFO 2024-11-14 19:34:32,407 "GET /static/dist/js/adminlte.js HTTP/1.1" 304 0
+INFO 2024-11-14 19:34:58,251 "GET /accounts/logout/ HTTP/1.1" 302 0
+INFO 2024-11-14 19:34:58,258 "GET / HTTP/1.1" 302 0
+INFO 2024-11-14 19:34:58,268 "GET /accounts/login/?next=/ HTTP/1.1" 200 4187
+INFO 2024-11-14 19:34:58,301 "GET /static/plugins/fontawesome-free/css/all.min.css HTTP/1.1" 304 0
+INFO 2024-11-14 19:34:58,307 "GET /static/plugins/toastr/toastr.min.css HTTP/1.1" 304 0
+INFO 2024-11-14 19:34:58,310 "GET /static/dist/css/login-page.css HTTP/1.1" 304 0
+INFO 2024-11-14 19:34:58,311 "GET /static/dist/img/login.png HTTP/1.1" 304 0
+INFO 2024-11-14 19:34:58,327 "GET /static/dist/img/puentealto.jpg HTTP/1.1" 304 0
+INFO 2024-11-14 19:35:07,677 "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2024-11-14 19:35:07,693 "GET / HTTP/1.1" 200 9946
+INFO 2024-11-14 19:35:15,558 "GET / HTTP/1.1" 200 9946
+INFO 2024-11-14 19:35:16,272 "GET / HTTP/1.1" 200 9946
+INFO 2024-11-14 19:35:21,186 "GET / HTTP/1.1" 200 9946
+INFO 2024-11-14 19:35:42,829 "GET /staff/list/ HTTP/1.1" 200 12172
+INFO 2024-11-14 20:05:28,819 "GET /student/list HTTP/1.1" 200 15031
+INFO 2024-11-14 20:05:28,855 "GET /static/plugins/overlayScrollbars/css/OverlayScrollbars.min.css HTTP/1.1" 304 0
+INFO 2024-11-14 20:05:28,866 "GET /static/plugins/Datatables/datatables.min.css HTTP/1.1" 304 0
+INFO 2024-11-14 20:05:28,868 "GET /static/dist/css/adminlte.min.css HTTP/1.1" 304 0
+INFO 2024-11-14 20:05:28,869 "GET /static/plugins/jquery/jquery.min.js HTTP/1.1" 304 0
+INFO 2024-11-14 20:05:28,871 "GET /static/dist/js/jquery.formset.js HTTP/1.1" 304 0
+INFO 2024-11-14 20:05:28,872 "GET /static/plugins/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 304 0
+INFO 2024-11-14 20:05:28,874 "GET /static/plugins/toastr/toastr.min.js HTTP/1.1" 304 0
+INFO 2024-11-14 20:05:28,876 "GET /static/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js HTTP/1.1" 304 0
+INFO 2024-11-14 20:05:28,877 "GET /static/dist/js/adminlte.js HTTP/1.1" 304 0
+INFO 2024-11-14 20:05:28,878 "GET /static/dist/js/demo.js HTTP/1.1" 304 0
+INFO 2024-11-14 20:05:28,879 "GET /static/plugins/Datatables/datatables.min.js HTTP/1.1" 304 0
+INFO 2024-11-14 20:05:30,802 "GET /staff/list/ HTTP/1.1" 200 12172
+INFO 2024-11-14 20:05:32,200 "GET /staff/create/ HTTP/1.1" 200 14127
+ERROR 2024-11-14 20:06:56,211 Internal Server Error: /staff/create/
+Traceback (most recent call last):
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.IntegrityError: UNIQUE constraint failed: auth_user.username
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\generic\edit.py", line 184, in post
+    return super().post(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\views\generic\edit.py", line 153, in post
+    return self.form_valid(form)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\staffs\views.py", line 58, in form_valid
+    user = User.objects.create_user(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\models.py", line 161, in create_user
+    return self._create_user(username, email, password, **extra_fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\models.py", line 155, in _create_user
+    user.save(using=self._db)
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\contrib\auth\base_user.py", line 76, in save
+    super().save(*args, **kwargs)
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\base.py", line 814, in save
+    self.save_base(
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\base.py", line 877, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\base.py", line 1020, in _save_table
+    results = self._do_insert(
+              ^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\base.py", line 1061, in _do_insert
+    return manager._insert(
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\query.py", line 1805, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\models\sql\compiler.py", line 1822, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.IntegrityError: UNIQUE constraint failed: auth_user.username
+ERROR 2024-11-14 20:06:56,216 "POST /staff/create/ HTTP/1.1" 500 193830
+INFO 2024-11-14 20:06:59,692 "GET /staff/create/ HTTP/1.1" 200 14285
+INFO 2024-11-14 20:07:01,860 "POST /staff/create/ HTTP/1.1" 200 14447
+INFO 2024-11-14 20:07:05,867 "GET /student/list HTTP/1.1" 200 15031
+INFO 2024-11-14 20:07:07,255 "GET /staff/list/ HTTP/1.1" 200 12450
+INFO 2024-11-14 20:07:11,282 "GET /staff/create/ HTTP/1.1" 200 14127
+INFO 2024-11-14 20:07:41,866 "GET /staff/2/ HTTP/1.1" 200 11729
+INFO 2024-11-14 20:07:41,909 "GET /static/dist/img/avatar.png HTTP/1.1" 200 8543
+INFO 2024-11-14 20:07:46,362 "GET /staff/3/ HTTP/1.1" 200 11717
+INFO 2024-11-14 20:07:49,232 "GET /staff/3/update/ HTTP/1.1" 200 14247
+INFO 2024-11-14 20:07:52,359 "GET /staff/3/delete/ HTTP/1.1" 200 10411
+INFO 2024-11-14 20:07:53,363 "POST /staff/3/delete/ HTTP/1.1" 302 0
+INFO 2024-11-14 20:07:53,384 "GET /staff/list/ HTTP/1.1" 200 12172
+INFO 2024-11-14 20:07:54,467 "GET /staff/create/ HTTP/1.1" 200 14127
+INFO 2024-11-14 20:08:41,122 "POST /staff/create/ HTTP/1.1" 302 0
+INFO 2024-11-14 20:08:41,144 "GET /staff/list/ HTTP/1.1" 200 12803
+INFO 2024-11-14 20:09:49,410 "GET /staff/list/ HTTP/1.1" 200 12449
+INFO 2024-11-14 20:09:51,463 "GET /accounts/logout/ HTTP/1.1" 302 0
+INFO 2024-11-14 20:09:51,470 "GET / HTTP/1.1" 302 0
+INFO 2024-11-14 20:09:51,479 "GET /accounts/login/?next=/ HTTP/1.1" 200 4187
+INFO 2024-11-14 20:09:51,517 "GET /static/plugins/fontawesome-free/css/all.min.css HTTP/1.1" 304 0
+INFO 2024-11-14 20:09:51,522 "GET /static/plugins/toastr/toastr.min.css HTTP/1.1" 304 0
+INFO 2024-11-14 20:09:51,525 "GET /static/dist/css/login-page.css HTTP/1.1" 304 0
+INFO 2024-11-14 20:09:51,525 "GET /static/dist/img/login.png HTTP/1.1" 304 0
+INFO 2024-11-14 20:09:51,552 "GET /static/dist/img/puentealto.jpg HTTP/1.1" 304 0
+INFO 2024-11-14 20:09:51,568 "GET /static/plugins/fontawesome-free/webfonts/fa-solid-900.woff2 HTTP/1.1" 304 0
+INFO 2024-11-14 20:10:00,793 "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2024-11-14 20:10:00,811 "GET / HTTP/1.1" 200 7934
+INFO 2024-11-14 20:11:31,759 "GET /student/attendance/ HTTP/1.1" 200 11347
+INFO 2024-11-14 20:11:32,460 "GET /student/attendance/ HTTP/1.1" 200 11347
+INFO 2024-11-14 20:11:33,095 "GET /student/attendance/ HTTP/1.1" 200 11347
+INFO 2024-11-14 20:11:33,952 "GET /student/attendance/ HTTP/1.1" 200 11347
+INFO 2024-11-14 20:11:34,762 "GET /student/attendance/ HTTP/1.1" 200 11347
+INFO 2024-11-14 20:11:35,362 "GET /student/attendance/ HTTP/1.1" 200 11347
+INFO 2024-11-14 20:11:36,115 "GET /student/attendance/ HTTP/1.1" 200 11347
+INFO 2024-11-14 20:11:36,676 "GET /student/attendance/ HTTP/1.1" 200 11347
+INFO 2024-11-14 20:11:37,095 "GET /student/attendance/ HTTP/1.1" 200 11347
+INFO 2024-11-14 20:11:37,478 "GET /student/attendance/ HTTP/1.1" 200 11347
+INFO 2024-11-14 20:11:38,953 "GET /representative/representatives/2/students/ HTTP/1.1" 200 11794
+INFO 2024-11-14 20:11:39,023 "GET /media/students/fotos/Sin_t%C3%ADtulo.png HTTP/1.1" 200 2288486
+INFO 2024-11-14 20:11:39,040 "GET /media/students/fotos/GbtowwoXQBU5_wL.png HTTP/1.1" 200 1115599
+INFO 2024-11-14 20:11:39,042 "GET /static/dist/img/noprofilepicture.jpg HTTP/1.1" 304 0
+INFO 2024-11-14 20:11:40,253 "GET /representative/representatives/2/student/3/ HTTP/1.1" 200 15226
+INFO 2024-11-14 20:11:41,421 "GET /representative/representative/2/student/3/announcements/ HTTP/1.1" 200 1417673
+INFO 2024-11-14 20:11:45,233 "GET /representative/representatives/2/students/ HTTP/1.1" 200 11794
+INFO 2024-11-14 20:11:46,837 "GET /staff/announcements/ HTTP/1.1" 200 473648
+INFO 2024-11-14 20:11:49,438 "GET /finance/list/ HTTP/1.1" 200 11170
+INFO 2024-11-14 20:11:51,114 "GET /result/subject_list/ HTTP/1.1" 200 10193
+INFO 2024-11-14 20:11:53,524 "GET /accounts/logout/ HTTP/1.1" 302 0
+INFO 2024-11-14 20:11:53,531 "GET / HTTP/1.1" 302 0
+INFO 2024-11-14 20:11:53,541 "GET /accounts/login/?next=/ HTTP/1.1" 200 4187
+INFO 2024-11-14 20:11:56,538 "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2024-11-14 20:11:56,555 "GET / HTTP/1.1" 200 9946
+INFO 2024-11-14 20:11:59,056 "GET /student/list HTTP/1.1" 200 15031
+INFO 2024-11-14 20:11:59,694 "GET /teacher/list/ HTTP/1.1" 200 13120
+INFO 2024-11-14 20:12:00,398 "GET /representative/list/ HTTP/1.1" 200 12259
+INFO 2024-11-14 20:12:01,258 "GET /staff/list/ HTTP/1.1" 200 12449
+INFO 2024-11-14 20:16:30,934 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\corecode\signals.py changed, reloading.
+INFO 2024-11-14 20:16:31,755 Watching for file changes with StatReloader
+INFO 2024-11-14 20:16:35,124 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\corecode\signals.py changed, reloading.
+INFO 2024-11-14 20:16:35,767 Watching for file changes with StatReloader
+INFO 2024-11-14 20:16:37,074 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\corecode\signals.py changed, reloading.
+INFO 2024-11-14 20:16:37,696 Watching for file changes with StatReloader
+INFO 2024-11-14 20:16:46,171 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\corecode\signals.py changed, reloading.
+INFO 2024-11-14 20:16:46,801 Watching for file changes with StatReloader
+INFO 2024-11-14 20:16:49,138 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\corecode\signals.py changed, reloading.
+INFO 2024-11-14 20:16:49,752 Watching for file changes with StatReloader
+INFO 2024-11-14 20:16:53,117 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\corecode\signals.py changed, reloading.
+INFO 2024-11-14 20:16:53,698 Watching for file changes with StatReloader
+INFO 2024-11-14 20:16:58,066 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\corecode\signals.py changed, reloading.
+INFO 2024-11-14 20:16:58,665 Watching for file changes with StatReloader
+INFO 2024-11-14 20:17:02,038 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\corecode\signals.py changed, reloading.
+INFO 2024-11-14 20:17:02,622 Watching for file changes with StatReloader
+INFO 2024-11-14 20:17:05,955 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\corecode\signals.py changed, reloading.
+INFO 2024-11-14 20:17:06,618 Watching for file changes with StatReloader
+INFO 2024-11-14 20:18:56,551 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\corecode\signals.py changed, reloading.
+INFO 2024-11-14 20:18:57,292 Watching for file changes with StatReloader
+INFO 2024-11-14 20:19:03,706 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\corecode\signals.py changed, reloading.
+INFO 2024-11-14 20:19:04,404 Watching for file changes with StatReloader
+INFO 2024-11-14 20:19:06,756 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\corecode\signals.py changed, reloading.
+INFO 2024-11-14 20:19:07,345 Watching for file changes with StatReloader
+INFO 2024-11-14 20:19:11,714 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\corecode\signals.py changed, reloading.
+INFO 2024-11-14 20:19:12,327 Watching for file changes with StatReloader
+INFO 2024-11-14 20:19:13,636 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\corecode\signals.py changed, reloading.
+INFO 2024-11-14 20:19:14,302 Watching for file changes with StatReloader
+INFO 2024-11-14 20:19:16,490 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\corecode\signals.py changed, reloading.
+INFO 2024-11-14 20:19:17,229 Watching for file changes with StatReloader
+INFO 2024-11-14 20:19:19,411 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\corecode\signals.py changed, reloading.
+INFO 2024-11-14 20:19:20,105 Watching for file changes with StatReloader
+INFO 2024-11-14 20:19:25,503 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\corecode\signals.py changed, reloading.
+INFO 2024-11-14 20:19:26,121 Watching for file changes with StatReloader
+INFO 2024-11-14 20:19:28,458 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\corecode\signals.py changed, reloading.
+INFO 2024-11-14 20:19:29,138 Watching for file changes with StatReloader
+INFO 2024-11-14 20:19:34,538 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\corecode\signals.py changed, reloading.
+INFO 2024-11-14 20:19:35,206 Watching for file changes with StatReloader
+INFO 2024-11-14 20:19:37,406 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\corecode\signals.py changed, reloading.
+INFO 2024-11-14 20:19:38,129 Watching for file changes with StatReloader
+INFO 2024-11-14 20:19:41,475 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\corecode\signals.py changed, reloading.
+INFO 2024-11-14 20:19:42,162 Watching for file changes with StatReloader
+INFO 2024-11-14 20:19:49,700 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\corecode\signals.py changed, reloading.
+INFO 2024-11-14 20:19:50,510 Watching for file changes with StatReloader
+INFO 2024-11-14 20:19:54,789 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\corecode\signals.py changed, reloading.
+INFO 2024-11-14 20:19:55,500 Watching for file changes with StatReloader
+INFO 2024-11-14 20:19:57,718 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\corecode\signals.py changed, reloading.
+INFO 2024-11-14 20:19:58,440 Watching for file changes with StatReloader
+INFO 2024-11-14 20:20:03,843 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\corecode\signals.py changed, reloading.
+INFO 2024-11-14 20:20:04,576 Watching for file changes with StatReloader
+INFO 2024-11-14 20:20:07,819 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\corecode\signals.py changed, reloading.
+INFO 2024-11-14 20:20:08,550 Watching for file changes with StatReloader
+INFO 2024-11-14 20:20:10,735 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\corecode\signals.py changed, reloading.
+INFO 2024-11-14 20:20:11,440 Watching for file changes with StatReloader
+INFO 2024-11-14 20:20:14,784 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\corecode\signals.py changed, reloading.
+INFO 2024-11-14 20:20:15,410 Watching for file changes with StatReloader
+INFO 2024-11-14 20:20:41,898 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\corecode\signals.py changed, reloading.
+INFO 2024-11-14 20:20:42,824 Watching for file changes with StatReloader
+INFO 2024-11-14 20:23:08,986 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\corecode\signals.py changed, reloading.
+INFO 2024-11-14 20:23:09,741 Watching for file changes with StatReloader
+INFO 2024-11-14 20:23:12,035 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\corecode\signals.py changed, reloading.
+INFO 2024-11-14 20:23:12,788 Watching for file changes with StatReloader
+INFO 2024-11-14 20:24:05,828 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\staffs\views.py changed, reloading.
+INFO 2024-11-14 20:24:06,536 Watching for file changes with StatReloader
+INFO 2024-11-14 20:24:12,993 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\staffs\views.py changed, reloading.
+INFO 2024-11-14 20:24:13,736 Watching for file changes with StatReloader
+INFO 2024-11-14 20:24:17,023 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\corecode\signals.py changed, reloading.
+INFO 2024-11-14 20:24:17,745 Watching for file changes with StatReloader
+INFO 2024-11-14 20:24:19,655 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\corecode\signals.py changed, reloading.
+INFO 2024-11-14 20:24:20,446 Watching for file changes with StatReloader
+INFO 2024-11-14 20:24:22,237 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\staffs\views.py changed, reloading.
+INFO 2024-11-14 20:24:22,928 Watching for file changes with StatReloader
+INFO 2024-11-14 20:24:26,193 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\staffs\views.py changed, reloading.
+INFO 2024-11-14 20:24:26,915 Watching for file changes with StatReloader
+INFO 2024-11-14 20:24:35,420 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\staffs\views.py changed, reloading.
+INFO 2024-11-14 20:24:36,155 Watching for file changes with StatReloader
+INFO 2024-11-14 20:30:01,428 "GET /staff/list/ HTTP/1.1" 200 12449
+INFO 2024-11-14 20:30:01,455 "GET /static/plugins/overlayScrollbars/css/OverlayScrollbars.min.css HTTP/1.1" 304 0
+INFO 2024-11-14 20:30:01,465 "GET /static/plugins/Datatables/datatables.min.css HTTP/1.1" 304 0
+INFO 2024-11-14 20:30:01,468 "GET /static/dist/css/adminlte.min.css HTTP/1.1" 304 0
+INFO 2024-11-14 20:30:01,468 "GET /static/plugins/jquery/jquery.min.js HTTP/1.1" 304 0
+INFO 2024-11-14 20:30:01,470 "GET /static/dist/js/jquery.formset.js HTTP/1.1" 304 0
+INFO 2024-11-14 20:30:01,470 "GET /static/plugins/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 304 0
+INFO 2024-11-14 20:30:01,471 "GET /static/plugins/toastr/toastr.min.js HTTP/1.1" 304 0
+INFO 2024-11-14 20:30:01,471 "GET /static/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js HTTP/1.1" 304 0
+INFO 2024-11-14 20:30:01,472 "GET /static/dist/js/adminlte.js HTTP/1.1" 304 0
+INFO 2024-11-14 20:30:01,473 "GET /static/dist/js/demo.js HTTP/1.1" 304 0
+INFO 2024-11-14 20:30:01,474 "GET /static/plugins/Datatables/datatables.min.js HTTP/1.1" 304 0
+INFO 2024-11-14 20:30:04,334 "GET /staff/announcements/ HTTP/1.1" 200 475816
+INFO 2024-11-14 20:30:05,645 "GET /staff/announcements/create/ HTTP/1.1" 200 12923
+INFO 2024-11-14 20:30:31,962 "POST /staff/announcements/create/ HTTP/1.1" 302 0
+INFO 2024-11-14 20:30:31,985 "GET /staff/announcements/ HTTP/1.1" 200 476935
+INFO 2024-11-14 20:34:08,328 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\staffs\views.py changed, reloading.
+INFO 2024-11-14 20:34:09,087 Watching for file changes with StatReloader
+INFO 2024-11-14 20:34:21,376 "GET /staff/announcements/create/ HTTP/1.1" 200 12923
+INFO 2024-11-14 20:35:15,399 "POST /staff/announcements/create/ HTTP/1.1" 302 0
+INFO 2024-11-14 20:35:15,447 "GET /staff/announcements/ HTTP/1.1" 200 1974192
+INFO 2024-11-14 20:40:22,005 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\staffs\views.py changed, reloading.
+INFO 2024-11-14 20:40:22,773 Watching for file changes with StatReloader
+INFO 2024-11-14 20:40:30,344 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\staffs\views.py changed, reloading.
+INFO 2024-11-14 20:40:31,150 Watching for file changes with StatReloader
+INFO 2024-11-14 20:41:06,800 "GET /staff/announcements/ HTTP/1.1" 200 1974029
+INFO 2024-11-14 20:41:06,845 "GET /static/plugins/overlayScrollbars/css/OverlayScrollbars.min.css HTTP/1.1" 304 0
+INFO 2024-11-14 20:41:06,850 "GET /static/plugins/Datatables/datatables.min.css HTTP/1.1" 304 0
+INFO 2024-11-14 20:41:06,853 "GET /static/dist/css/adminlte.min.css HTTP/1.1" 304 0
+INFO 2024-11-14 20:41:06,886 "GET /static/plugins/jquery/jquery.min.js HTTP/1.1" 304 0
+INFO 2024-11-14 20:41:06,905 "GET /static/dist/js/jquery.formset.js HTTP/1.1" 304 0
+INFO 2024-11-14 20:41:06,924 "GET /static/plugins/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 304 0
+INFO 2024-11-14 20:41:06,924 "GET /static/plugins/toastr/toastr.min.js HTTP/1.1" 304 0
+INFO 2024-11-14 20:41:06,925 "GET /static/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js HTTP/1.1" 304 0
+INFO 2024-11-14 20:41:06,926 "GET /static/dist/js/adminlte.js HTTP/1.1" 304 0
+INFO 2024-11-14 20:41:06,927 "GET /static/dist/js/demo.js HTTP/1.1" 304 0
+INFO 2024-11-14 20:41:06,928 "GET /static/plugins/Datatables/datatables.min.js HTTP/1.1" 304 0
+INFO 2024-11-14 20:41:10,973 "GET /staff/announcements/create/ HTTP/1.1" 200 12923
+INFO 2024-11-14 20:41:49,704 "POST /staff/announcements/create/ HTTP/1.1" 302 0
+INFO 2024-11-14 20:41:49,754 "GET /staff/announcements/ HTTP/1.1" 200 2688739
+INFO 2024-11-14 20:42:26,259 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\staffs\views.py changed, reloading.
+INFO 2024-11-14 20:42:26,969 Watching for file changes with StatReloader
+INFO 2024-11-14 20:42:29,127 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\staffs\views.py changed, reloading.
+INFO 2024-11-14 20:42:29,835 Watching for file changes with StatReloader
+INFO 2024-11-14 20:42:35,142 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\staffs\views.py changed, reloading.
+INFO 2024-11-14 20:42:35,925 Watching for file changes with StatReloader
+INFO 2024-11-14 20:42:38,132 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\staffs\views.py changed, reloading.
+INFO 2024-11-14 20:42:38,845 Watching for file changes with StatReloader

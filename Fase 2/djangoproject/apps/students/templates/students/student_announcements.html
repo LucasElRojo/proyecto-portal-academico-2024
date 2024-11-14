@@ -1,3 +1,4 @@
+<!-- templates/students/student_announcements.html -->
 {% extends 'base.html' %}
 
 {% block title %}Anuncios de la Asignatura{% endblock title %}
@@ -6,19 +7,34 @@
 <div class="container mt-5">
     <h1>Anuncios para {{ subject.name }}</h1>
 
-    <!-- Lista de Anuncios -->
-    <div class="card mt-3">
-        <div class="card-body">
-            {% for announcement in announcements %}
-                <div class="mb-3">
-                    <h3>{{ announcement.title }}</h3>
-                    <p>{{ announcement.content|safe }}</p>
-                    <small>Publicado en: {{ announcement.created_at|date:"d/m/Y H:i" }}</small>
+    <!-- Lista de Anuncios como Cartas Desplegables -->
+    <div class="row">
+        {% for announcement in announcements %}
+            <div class="col-12 mb-4">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="mb-0">
+                            <a class="btn btn-link text-decoration-none w-100 text-start" data-bs-toggle="collapse" href="#announcement-{{ announcement.id }}" role="button" aria-expanded="false" aria-controls="announcement-{{ announcement.id }}">
+                                {{ announcement.title }}
+                            </a>
+                        </h5>
+                    </div>
+                    <div id="announcement-{{ announcement.id }}" class="collapse">
+                        <div class="card-body">
+                            {{ announcement.content|safe }}
+                            <p class="text-muted">Publicado en: {{ announcement.created_at|date:"d/m/Y H:i" }}</p>
+                        </div>
+                    </div>
                 </div>
-            {% empty %}
-                <p>No hay anuncios disponibles para esta asignatura.</p>
-            {% endfor %}
-        </div>
+            </div>
+        {% empty %}
+            <p>No hay anuncios disponibles para esta asignatura.</p>
+        {% endfor %}
     </div>
 </div>
 {% endblock content %}
+
+{% block morejs %}
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+{% endblock morejs %}

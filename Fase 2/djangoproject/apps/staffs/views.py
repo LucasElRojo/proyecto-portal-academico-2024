@@ -14,11 +14,15 @@ import random
 from .models import Staff
 from apps.corecode.models import Announcement
 
+from apps.students.models import  Student
+from apps.teachers.models import Teacher
+from apps.representatives.models import Representatives
+
 
 
 
 from django.utils.decorators import method_decorator
-from apps.corecode.decorators import  teacher_required, staff_required, teacher_or_staff_required
+from apps.corecode.decorators import  teacher_required,  teacher_or_staff_required
 
 class StaffListView(ListView):
     model = Staff
@@ -127,5 +131,30 @@ class StaffAnnouncementCreateView(CreateView):
     success_url = reverse_lazy('staff_announcements')
 
     def form_valid(self, form):
-        form.instance.target_user_type = 'global'  # Anuncio global
-        return super().form_valid(form)
+        
+        form.instance.target_user_type = 'global'  
+        response = super().form_valid(form)  
+
+        
+        teacher_emails = list(Teacher.objects.values_list('email', flat=True))
+        student_emails = list(Student.objects.values_list('email', flat=True))
+        representative_emails = list(Representatives.objects.values_list('email', flat=True))
+        staff_emails = list(Staff.objects.values_list('email', flat=True))
+
+        # Combinar todos los correos en una sola lista
+        recipient_list = teacher_emails + student_emails + representative_emails + staff_emails
+
+        # Enviar el correo a todos los destinatarios
+        try:
+            send_mail(
+                subject=f"{form.instance.title}",
+                message=form.instance.content,
+                from_email=settings.DEFAULT_FROM_EMAIL,
+                recipient_list=recipient_list,
+                fail_silently=False,
+            )
+            messages.success(self.request, "Anuncio creado y correos enviados correctamente.")
+        except Exception as e:
+            messages.error(self.request, f"Anuncio creado, pero hubo un error al enviar los correos: {e}")
+
+        return response

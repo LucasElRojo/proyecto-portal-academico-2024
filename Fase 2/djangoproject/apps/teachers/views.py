@@ -26,7 +26,7 @@ from apps.corecode.models import Announcement
 
 
 from django.utils.decorators import method_decorator
-from apps.corecode.decorators import  teacher_required, staff_required, teacher_or_staff_required
+from apps.corecode.decorators import  teacher_required, teacher_or_staff_required
 
 class TeacherListView(ListView):
     model = Teacher

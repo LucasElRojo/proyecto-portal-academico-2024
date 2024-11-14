@@ -18,17 +18,18 @@ def teacher_required(function):
             return redirect('home')  # Redirige al home si el usuario no es un teacher
     return wrap
 
-def staff_required(function):
+def staff_or_superuser_required(function):
     @wraps(function)
     def wrap(request, *args, **kwargs):
         try:
-            # Verifica si el usuario tiene un registro en el modelo Staff
-            staff = Staff.objects.get(email=request.user.email)
-            if staff:
+            if request.user.is_superuser or Staff.objects.filter(email=request.user.email).exists():
                 return function(request, *args, **kwargs)
+            else:
+                return redirect('home')
         except Staff.DoesNotExist:
-            return redirect('home')  # Redirige al home si el usuario no es staff
+            return redirect('home') 
     return wrap
+
 
 def teacher_or_staff_required(function):
     """Permitir acceso si el usuario es staff o teacher"""

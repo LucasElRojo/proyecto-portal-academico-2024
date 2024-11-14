@@ -34,11 +34,11 @@ from apps.corecode.models import Announcement
 
 
 from django.utils.decorators import method_decorator
-from apps.corecode.decorators import  teacher_required, staff_required, teacher_or_staff_required
+from apps.corecode.decorators import  teacher_required, staff_or_superuser_required, teacher_or_staff_required
 
 
 
-@method_decorator(staff_required, name='dispatch')
+@method_decorator(staff_or_superuser_required, name='dispatch')
 class StudentListView(LoginRequiredMixin, ListView):
     model = Student
     template_name = "students/student_list.html"
