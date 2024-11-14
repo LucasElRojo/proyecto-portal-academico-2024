@@ -35396,3 +35396,391 @@ INFO 2024-11-13 23:30:49,825 "GET /finance/1/detail/ HTTP/1.1" 200 11822
 INFO 2024-11-13 23:30:52,752 "GET /representative/student/7/ HTTP/1.1" 200 12181
 INFO 2024-11-13 23:30:57,292 "GET /representative/pay-item/2/ HTTP/1.1" 302 0
 INFO 2024-11-13 23:30:57,310 "GET /representative/student/7/ HTTP/1.1" 200 12198
+INFO 2024-11-14 15:04:07,892 Watching for file changes with StatReloader
+INFO 2024-11-14 15:04:31,892 Watching for file changes with StatReloader
+INFO 2024-11-14 15:05:02,317 Watching for file changes with StatReloader
+INFO 2024-11-14 15:05:05,120 "GET / HTTP/1.1" 302 0
+INFO 2024-11-14 15:05:05,155 "GET /accounts/login/?next=/ HTTP/1.1" 200 4187
+INFO 2024-11-14 15:05:05,379 "GET /static/dist/css/login-page.css HTTP/1.1" 200 8786
+INFO 2024-11-14 15:05:05,380 "GET /static/plugins/fontawesome-free/css/all.min.css HTTP/1.1" 200 58582
+INFO 2024-11-14 15:05:05,383 "GET /static/plugins/toastr/toastr.min.css HTTP/1.1" 200 6454
+INFO 2024-11-14 15:05:05,390 "GET /static/plugins/overlayScrollbars/css/OverlayScrollbars.min.css HTTP/1.1" 200 19736
+INFO 2024-11-14 15:05:05,393 "GET /static/dist/img/login.png HTTP/1.1" 200 1197223
+INFO 2024-11-14 15:05:05,395 "GET /static/dist/css/adminlte.min.css HTTP/1.1" 200 686718
+INFO 2024-11-14 15:05:05,407 "GET /static/dist/js/jquery.formset.js HTTP/1.1" 200 13881
+INFO 2024-11-14 15:05:05,432 "GET /static/plugins/toastr/toastr.min.js HTTP/1.1" 200 5253
+INFO 2024-11-14 15:05:05,433 "GET /static/dist/js/demo.js HTTP/1.1" 200 13042
+INFO 2024-11-14 15:05:05,440 "GET /static/plugins/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 200 80704
+INFO 2024-11-14 15:05:05,441 "GET /static/dist/img/puentealto.jpg HTTP/1.1" 200 317548
+INFO 2024-11-14 15:05:05,449 "GET /static/plugins/jquery/jquery.min.js HTTP/1.1" 200 88147
+INFO 2024-11-14 15:05:05,459 "GET /static/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js HTTP/1.1" 200 42395
+INFO 2024-11-14 15:05:05,460 "GET /static/plugins/fontawesome-free/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 79444
+INFO 2024-11-14 15:05:05,515 "GET /static/dist/js/adminlte.js HTTP/1.1" 200 59416
+WARNING 2024-11-14 15:05:05,581 Not Found: /favicon.ico
+WARNING 2024-11-14 15:05:05,581 "GET /favicon.ico HTTP/1.1" 404 6963
+INFO 2024-11-14 15:05:08,339 "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2024-11-14 15:05:08,375 "GET / HTTP/1.1" 200 9787
+INFO 2024-11-14 15:05:08,410 "GET /static/plugins/Datatables/datatables.min.css HTTP/1.1" 200 25807
+INFO 2024-11-14 15:05:09,722 "GET /static/plugins/Datatables/datatables.min.js HTTP/1.1" 200 2042927
+INFO 2024-11-14 15:05:09,845 "GET /finance/list/ HTTP/1.1" 200 12603
+INFO 2024-11-14 15:05:13,829 "GET /finance/1/detail/ HTTP/1.1" 200 11948
+INFO 2024-11-14 15:05:13,869 "GET /static/plugins/overlayScrollbars/css/OverlayScrollbars.min.css HTTP/1.1" 304 0
+INFO 2024-11-14 15:05:13,873 "GET /static/dist/css/adminlte.min.css HTTP/1.1" 304 0
+INFO 2024-11-14 15:05:13,873 "GET /static/plugins/toastr/toastr.min.js HTTP/1.1" 304 0
+INFO 2024-11-14 15:05:13,873 "GET /static/dist/js/jquery.formset.js HTTP/1.1" 304 0
+INFO 2024-11-14 15:05:13,873 "GET /static/plugins/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 304 0
+INFO 2024-11-14 15:05:13,873 "GET /static/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js HTTP/1.1" 304 0
+INFO 2024-11-14 15:05:13,873 "GET /static/plugins/jquery/jquery.min.js HTTP/1.1" 304 0
+INFO 2024-11-14 15:05:13,874 "GET /static/dist/js/adminlte.js HTTP/1.1" 304 0
+INFO 2024-11-14 15:05:13,874 "GET /static/dist/js/demo.js HTTP/1.1" 304 0
+INFO 2024-11-14 15:05:15,494 "GET /finance/1/detail/ HTTP/1.1" 200 11948
+INFO 2024-11-14 15:05:19,332 "GET /finance/1/detail/ HTTP/1.1" 200 11948
+INFO 2024-11-14 15:05:19,362 "GET /static/plugins/Datatables/datatables.min.css HTTP/1.1" 304 0
+INFO 2024-11-14 15:05:19,365 "GET /static/plugins/Datatables/datatables.min.js HTTP/1.1" 304 0
+INFO 2024-11-14 15:05:22,223 "GET /finance/list/ HTTP/1.1" 200 12603
+INFO 2024-11-14 15:05:22,259 "GET /static/plugins/overlayScrollbars/css/OverlayScrollbars.min.css HTTP/1.1" 304 0
+INFO 2024-11-14 15:05:22,262 "GET /static/dist/css/adminlte.min.css HTTP/1.1" 304 0
+INFO 2024-11-14 15:05:22,263 "GET /static/dist/js/jquery.formset.js HTTP/1.1" 304 0
+INFO 2024-11-14 15:05:22,263 "GET /static/plugins/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 304 0
+INFO 2024-11-14 15:05:22,263 "GET /static/plugins/jquery/jquery.min.js HTTP/1.1" 304 0
+INFO 2024-11-14 15:05:22,263 "GET /static/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js HTTP/1.1" 304 0
+INFO 2024-11-14 15:05:22,263 "GET /static/plugins/toastr/toastr.min.js HTTP/1.1" 304 0
+INFO 2024-11-14 15:05:22,264 "GET /static/dist/js/adminlte.js HTTP/1.1" 304 0
+INFO 2024-11-14 15:05:22,264 "GET /static/dist/js/demo.js HTTP/1.1" 304 0
+INFO 2024-11-14 15:05:23,953 "GET /finance/list/ HTTP/1.1" 200 12603
+INFO 2024-11-14 15:05:24,709 "GET /finance/1/detail/ HTTP/1.1" 200 11948
+INFO 2024-11-14 15:05:38,586 "GET /finance/1/update/ HTTP/1.1" 200 17831
+INFO 2024-11-14 15:05:38,626 "GET /static/plugins/overlayScrollbars/css/OverlayScrollbars.min.css HTTP/1.1" 304 0
+INFO 2024-11-14 15:05:38,630 "GET /static/dist/js/jquery.formset.js HTTP/1.1" 304 0
+INFO 2024-11-14 15:05:38,630 "GET /static/plugins/Datatables/datatables.min.css HTTP/1.1" 304 0
+INFO 2024-11-14 15:05:38,630 "GET /static/plugins/toastr/toastr.min.js HTTP/1.1" 304 0
+INFO 2024-11-14 15:05:38,630 "GET /static/plugins/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 304 0
+INFO 2024-11-14 15:05:38,630 "GET /static/dist/css/adminlte.min.css HTTP/1.1" 304 0
+INFO 2024-11-14 15:05:38,630 "GET /static/plugins/jquery/jquery.min.js HTTP/1.1" 304 0
+INFO 2024-11-14 15:05:38,632 "GET /static/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js HTTP/1.1" 304 0
+INFO 2024-11-14 15:05:38,632 "GET /static/dist/js/demo.js HTTP/1.1" 304 0
+INFO 2024-11-14 15:05:38,632 "GET /static/dist/js/adminlte.js HTTP/1.1" 304 0
+INFO 2024-11-14 15:05:38,632 "GET /static/plugins/Datatables/datatables.min.js HTTP/1.1" 304 0
+INFO 2024-11-14 15:05:46,857 "GET /representative/student/7/ HTTP/1.1" 302 0
+INFO 2024-11-14 15:05:46,864 "GET /accounts/login/?next=/representative/student/7/ HTTP/1.1" 200 4212
+INFO 2024-11-14 15:05:46,957 "GET /static/plugins/fontawesome-free/css/all.min.css HTTP/1.1" 200 58582
+INFO 2024-11-14 15:05:46,958 "GET /static/plugins/toastr/toastr.min.css HTTP/1.1" 200 6454
+INFO 2024-11-14 15:05:46,960 "GET /static/dist/css/login-page.css HTTP/1.1" 200 8786
+INFO 2024-11-14 15:05:46,960 "GET /static/plugins/overlayScrollbars/css/OverlayScrollbars.min.css HTTP/1.1" 200 19736
+INFO 2024-11-14 15:05:46,965 "GET /static/dist/css/adminlte.min.css HTTP/1.1" 200 686718
+INFO 2024-11-14 15:05:46,967 "GET /static/plugins/jquery/jquery.min.js HTTP/1.1" 200 88147
+INFO 2024-11-14 15:05:46,967 "GET /static/dist/img/login.png HTTP/1.1" 200 1197223
+INFO 2024-11-14 15:05:46,969 "GET /static/dist/js/jquery.formset.js HTTP/1.1" 200 13881
+INFO 2024-11-14 15:05:46,969 "GET /static/plugins/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 200 80704
+INFO 2024-11-14 15:05:46,976 "GET /static/plugins/toastr/toastr.min.js HTTP/1.1" 200 5253
+INFO 2024-11-14 15:05:46,976 "GET /static/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js HTTP/1.1" 200 42395
+INFO 2024-11-14 15:05:46,978 "GET /static/dist/js/demo.js HTTP/1.1" 200 13042
+INFO 2024-11-14 15:05:46,978 "GET /static/dist/js/adminlte.js HTTP/1.1" 200 59416
+INFO 2024-11-14 15:05:47,003 "GET /static/dist/img/puentealto.jpg HTTP/1.1" 200 317548
+INFO 2024-11-14 15:05:47,017 "GET /static/plugins/fontawesome-free/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 79444
+WARNING 2024-11-14 15:05:47,064 Not Found: /favicon.ico
+WARNING 2024-11-14 15:05:47,064 "GET /favicon.ico HTTP/1.1" 404 6963
+INFO 2024-11-14 15:05:49,877 "POST /accounts/login/ HTTP/1.1" 200 4337
+INFO 2024-11-14 15:05:52,350 "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2024-11-14 15:05:52,369 "GET /representative/student/7/ HTTP/1.1" 200 12198
+INFO 2024-11-14 15:05:52,396 "GET /static/plugins/Datatables/datatables.min.css HTTP/1.1" 200 25807
+INFO 2024-11-14 15:05:52,401 "GET /static/plugins/Datatables/datatables.min.js HTTP/1.1" 200 2042927
+INFO 2024-11-14 15:06:19,671 "GET /representative/student/7/ HTTP/1.1" 200 12198
+INFO 2024-11-14 15:06:19,709 "GET /static/plugins/overlayScrollbars/css/OverlayScrollbars.min.css HTTP/1.1" 304 0
+INFO 2024-11-14 15:06:19,713 "GET /static/dist/css/adminlte.min.css HTTP/1.1" 304 0
+INFO 2024-11-14 15:06:19,713 "GET /static/plugins/Datatables/datatables.min.css HTTP/1.1" 304 0
+INFO 2024-11-14 15:06:19,713 "GET /static/plugins/toastr/toastr.min.js HTTP/1.1" 304 0
+INFO 2024-11-14 15:06:19,714 "GET /static/dist/js/jquery.formset.js HTTP/1.1" 304 0
+INFO 2024-11-14 15:06:19,714 "GET /static/plugins/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 304 0
+INFO 2024-11-14 15:06:19,714 "GET /static/plugins/jquery/jquery.min.js HTTP/1.1" 304 0
+INFO 2024-11-14 15:06:19,716 "GET /static/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js HTTP/1.1" 304 0
+INFO 2024-11-14 15:06:19,716 "GET /static/dist/js/adminlte.js HTTP/1.1" 304 0
+INFO 2024-11-14 15:06:19,716 "GET /static/dist/js/demo.js HTTP/1.1" 304 0
+INFO 2024-11-14 15:06:19,716 "GET /static/plugins/Datatables/datatables.min.js HTTP/1.1" 304 0
+INFO 2024-11-14 15:06:22,383 "GET /representative/student/7/ HTTP/1.1" 200 12198
+INFO 2024-11-14 15:06:22,530 "GET /representative/student/7/ HTTP/1.1" 200 12198
+INFO 2024-11-14 15:06:30,861 "GET /accounts/login/?next=/representative/student/7/ HTTP/1.1" 200 4283
+INFO 2024-11-14 15:06:32,783 "GET /representative/student/7/ HTTP/1.1" 200 12198
+INFO 2024-11-14 15:06:34,410 "GET /finance/1/update/ HTTP/1.1" 200 17831
+INFO 2024-11-14 15:06:34,457 "GET /static/plugins/overlayScrollbars/css/OverlayScrollbars.min.css HTTP/1.1" 304 0
+INFO 2024-11-14 15:06:34,460 "GET /static/plugins/Datatables/datatables.min.css HTTP/1.1" 304 0
+INFO 2024-11-14 15:06:34,461 "GET /static/dist/css/adminlte.min.css HTTP/1.1" 304 0
+INFO 2024-11-14 15:06:34,462 "GET /static/dist/js/jquery.formset.js HTTP/1.1" 304 0
+INFO 2024-11-14 15:06:34,462 "GET /static/plugins/jquery/jquery.min.js HTTP/1.1" 304 0
+INFO 2024-11-14 15:06:34,462 "GET /static/plugins/toastr/toastr.min.js HTTP/1.1" 304 0
+INFO 2024-11-14 15:06:34,463 "GET /static/plugins/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 304 0
+INFO 2024-11-14 15:06:34,463 "GET /static/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js HTTP/1.1" 304 0
+INFO 2024-11-14 15:06:34,463 "GET /static/dist/js/adminlte.js HTTP/1.1" 304 0
+INFO 2024-11-14 15:06:34,464 "GET /static/dist/js/demo.js HTTP/1.1" 304 0
+INFO 2024-11-14 15:06:34,464 "GET /static/plugins/Datatables/datatables.min.js HTTP/1.1" 304 0
+INFO 2024-11-14 15:06:36,445 "POST /finance/1/update/ HTTP/1.1" 302 0
+INFO 2024-11-14 15:06:36,462 "GET /finance/1/detail/ HTTP/1.1" 200 11822
+INFO 2024-11-14 15:06:37,473 "GET /representative/student/7/ HTTP/1.1" 200 12181
+INFO 2024-11-14 15:06:37,510 "GET /static/plugins/overlayScrollbars/css/OverlayScrollbars.min.css HTTP/1.1" 304 0
+INFO 2024-11-14 15:06:37,513 "GET /static/plugins/Datatables/datatables.min.css HTTP/1.1" 304 0
+INFO 2024-11-14 15:06:37,513 "GET /static/dist/css/adminlte.min.css HTTP/1.1" 304 0
+INFO 2024-11-14 15:06:37,514 "GET /static/dist/js/jquery.formset.js HTTP/1.1" 304 0
+INFO 2024-11-14 15:06:37,514 "GET /static/plugins/toastr/toastr.min.js HTTP/1.1" 304 0
+INFO 2024-11-14 15:06:37,514 "GET /static/plugins/jquery/jquery.min.js HTTP/1.1" 304 0
+INFO 2024-11-14 15:06:37,514 "GET /static/plugins/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 304 0
+INFO 2024-11-14 15:06:37,516 "GET /static/dist/js/adminlte.js HTTP/1.1" 304 0
+INFO 2024-11-14 15:06:37,516 "GET /static/plugins/Datatables/datatables.min.js HTTP/1.1" 304 0
+INFO 2024-11-14 15:06:37,516 "GET /static/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js HTTP/1.1" 304 0
+INFO 2024-11-14 15:06:37,517 "GET /static/dist/js/demo.js HTTP/1.1" 304 0
+ERROR 2024-11-14 15:07:21,643 Internal Server Error: /representative/student/7/
+Traceback (most recent call last):
+  File "C:\Users\Lucas Rojas\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lucas Rojas\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lucas Rojas\AppData\Roaming\Python\Python312\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lucas Rojas\Desktop\github clone\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\representatives\views.py", line 327, in student_payment_history
+    return render(request, 'representatives/representatives_payment_history.html', context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lucas Rojas\AppData\Roaming\Python\Python312\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lucas Rojas\AppData\Roaming\Python\Python312\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lucas Rojas\AppData\Roaming\Python\Python312\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lucas Rojas\AppData\Roaming\Python\Python312\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lucas Rojas\AppData\Roaming\Python\Python312\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lucas Rojas\AppData\Roaming\Python\Python312\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lucas Rojas\AppData\Roaming\Python\Python312\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lucas Rojas\AppData\Roaming\Python\Python312\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lucas Rojas\AppData\Roaming\Python\Python312\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lucas Rojas\AppData\Roaming\Python\Python312\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lucas Rojas\AppData\Roaming\Python\Python312\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lucas Rojas\AppData\Roaming\Python\Python312\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lucas Rojas\AppData\Roaming\Python\Python312\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lucas Rojas\AppData\Roaming\Python\Python312\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lucas Rojas\AppData\Roaming\Python\Python312\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lucas Rojas\AppData\Roaming\Python\Python312\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lucas Rojas\AppData\Roaming\Python\Python312\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lucas Rojas\AppData\Roaming\Python\Python312\site-packages\django\template\defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lucas Rojas\AppData\Roaming\Python\Python312\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lucas Rojas\AppData\Roaming\Python\Python312\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'make-multiple-payments' not found. 'make-multiple-payments' is not a valid view function or pattern name.
+ERROR 2024-11-14 15:07:21,646 "GET /representative/student/7/ HTTP/1.1" 500 191292
+ERROR 2024-11-14 15:07:22,640 Internal Server Error: /representative/student/7/
+Traceback (most recent call last):
+  File "C:\Users\Lucas Rojas\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lucas Rojas\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lucas Rojas\AppData\Roaming\Python\Python312\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lucas Rojas\Desktop\github clone\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\representatives\views.py", line 327, in student_payment_history
+    return render(request, 'representatives/representatives_payment_history.html', context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lucas Rojas\AppData\Roaming\Python\Python312\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lucas Rojas\AppData\Roaming\Python\Python312\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lucas Rojas\AppData\Roaming\Python\Python312\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lucas Rojas\AppData\Roaming\Python\Python312\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lucas Rojas\AppData\Roaming\Python\Python312\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lucas Rojas\AppData\Roaming\Python\Python312\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lucas Rojas\AppData\Roaming\Python\Python312\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lucas Rojas\AppData\Roaming\Python\Python312\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lucas Rojas\AppData\Roaming\Python\Python312\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lucas Rojas\AppData\Roaming\Python\Python312\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lucas Rojas\AppData\Roaming\Python\Python312\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lucas Rojas\AppData\Roaming\Python\Python312\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lucas Rojas\AppData\Roaming\Python\Python312\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lucas Rojas\AppData\Roaming\Python\Python312\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lucas Rojas\AppData\Roaming\Python\Python312\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lucas Rojas\AppData\Roaming\Python\Python312\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lucas Rojas\AppData\Roaming\Python\Python312\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lucas Rojas\AppData\Roaming\Python\Python312\site-packages\django\template\defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lucas Rojas\AppData\Roaming\Python\Python312\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lucas Rojas\AppData\Roaming\Python\Python312\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'make-multiple-payments' not found. 'make-multiple-payments' is not a valid view function or pattern name.
+ERROR 2024-11-14 15:07:22,641 "GET /representative/student/7/ HTTP/1.1" 500 191292
+ERROR 2024-11-14 15:07:22,770 Internal Server Error: /representative/student/7/
+Traceback (most recent call last):
+  File "C:\Users\Lucas Rojas\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lucas Rojas\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lucas Rojas\AppData\Roaming\Python\Python312\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lucas Rojas\Desktop\github clone\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\representatives\views.py", line 327, in student_payment_history
+    return render(request, 'representatives/representatives_payment_history.html', context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lucas Rojas\AppData\Roaming\Python\Python312\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lucas Rojas\AppData\Roaming\Python\Python312\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lucas Rojas\AppData\Roaming\Python\Python312\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lucas Rojas\AppData\Roaming\Python\Python312\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lucas Rojas\AppData\Roaming\Python\Python312\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lucas Rojas\AppData\Roaming\Python\Python312\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lucas Rojas\AppData\Roaming\Python\Python312\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lucas Rojas\AppData\Roaming\Python\Python312\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lucas Rojas\AppData\Roaming\Python\Python312\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lucas Rojas\AppData\Roaming\Python\Python312\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lucas Rojas\AppData\Roaming\Python\Python312\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lucas Rojas\AppData\Roaming\Python\Python312\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lucas Rojas\AppData\Roaming\Python\Python312\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lucas Rojas\AppData\Roaming\Python\Python312\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lucas Rojas\AppData\Roaming\Python\Python312\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lucas Rojas\AppData\Roaming\Python\Python312\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lucas Rojas\AppData\Roaming\Python\Python312\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lucas Rojas\AppData\Roaming\Python\Python312\site-packages\django\template\defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lucas Rojas\AppData\Roaming\Python\Python312\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lucas Rojas\AppData\Roaming\Python\Python312\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'make-multiple-payments' not found. 'make-multiple-payments' is not a valid view function or pattern name.
+ERROR 2024-11-14 15:07:22,772 "GET /representative/student/7/ HTTP/1.1" 500 191292
+INFO 2024-11-14 15:07:41,326 C:\Users\Lucas Rojas\Desktop\github clone\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\representatives\views.py changed, reloading.
+INFO 2024-11-14 15:07:41,913 Watching for file changes with StatReloader
+INFO 2024-11-14 15:07:50,028 C:\Users\Lucas Rojas\Desktop\github clone\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\representatives\urls.py changed, reloading.
+INFO 2024-11-14 15:07:50,630 Watching for file changes with StatReloader
+INFO 2024-11-14 15:07:53,377 "GET /representative/student/7/ HTTP/1.1" 200 12645
+INFO 2024-11-14 15:07:53,413 "GET /static/plugins/overlayScrollbars/css/OverlayScrollbars.min.css HTTP/1.1" 304 0
+INFO 2024-11-14 15:07:53,414 "GET /static/plugins/Datatables/datatables.min.css HTTP/1.1" 304 0
+INFO 2024-11-14 15:07:53,415 "GET /static/dist/css/adminlte.min.css HTTP/1.1" 304 0
+INFO 2024-11-14 15:07:53,416 "GET /static/plugins/jquery/jquery.min.js HTTP/1.1" 304 0
+INFO 2024-11-14 15:07:53,416 "GET /static/dist/js/jquery.formset.js HTTP/1.1" 304 0
+INFO 2024-11-14 15:07:53,416 "GET /static/plugins/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 304 0
+INFO 2024-11-14 15:07:53,417 "GET /static/plugins/toastr/toastr.min.js HTTP/1.1" 304 0
+INFO 2024-11-14 15:07:53,418 "GET /static/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js HTTP/1.1" 304 0
+INFO 2024-11-14 15:07:53,418 "GET /static/dist/js/adminlte.js HTTP/1.1" 304 0
+INFO 2024-11-14 15:07:53,418 "GET /static/dist/js/demo.js HTTP/1.1" 304 0
+INFO 2024-11-14 15:07:53,419 "GET /static/plugins/Datatables/datatables.min.js HTTP/1.1" 304 0
+INFO 2024-11-14 15:07:55,197 "GET /representative/student/7/ HTTP/1.1" 200 12645
+INFO 2024-11-14 15:08:28,561 "GET /representative/student/7/ HTTP/1.1" 200 12645
+INFO 2024-11-14 15:08:28,600 "GET /static/plugins/overlayScrollbars/css/OverlayScrollbars.min.css HTTP/1.1" 304 0
+INFO 2024-11-14 15:08:28,603 "GET /static/dist/js/jquery.formset.js HTTP/1.1" 304 0
+INFO 2024-11-14 15:08:28,603 "GET /static/dist/css/adminlte.min.css HTTP/1.1" 304 0
+INFO 2024-11-14 15:08:28,604 "GET /static/plugins/Datatables/datatables.min.css HTTP/1.1" 304 0
+INFO 2024-11-14 15:08:28,604 "GET /static/plugins/jquery/jquery.min.js HTTP/1.1" 304 0
+INFO 2024-11-14 15:08:28,604 "GET /static/plugins/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 304 0
+INFO 2024-11-14 15:08:28,604 "GET /static/plugins/toastr/toastr.min.js HTTP/1.1" 304 0
+INFO 2024-11-14 15:08:28,605 "GET /static/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js HTTP/1.1" 304 0
+INFO 2024-11-14 15:08:28,605 "GET /static/dist/js/adminlte.js HTTP/1.1" 304 0
+INFO 2024-11-14 15:08:28,605 "GET /static/dist/js/demo.js HTTP/1.1" 304 0
+INFO 2024-11-14 15:08:28,605 "GET /static/plugins/Datatables/datatables.min.js HTTP/1.1" 304 0
+INFO 2024-11-14 15:08:29,111 "GET /representative/student/7/ HTTP/1.1" 200 12645
+INFO 2024-11-14 15:08:30,314 "POST /representative/pay-items/ HTTP/1.1" 302 0
+INFO 2024-11-14 15:08:30,332 "GET /representative/student/7/ HTTP/1.1" 200 12681

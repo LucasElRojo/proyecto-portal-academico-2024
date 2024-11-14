@@ -28,5 +28,5 @@ urlpatterns = [
     path("representative/<int:representative_id>/student/<int:student_id>/annotations/", RepresentativeAnnotationsView.as_view(), name="representative_annotation_list"),
     path("representative/<int:representative_id>/student/<int:student_id>/announcements/", RepresentativeAnnouncementListView.as_view(), name="representative_announcements"),
     path('student/<int:student_id>/', views.student_payment_history, name='student-payment-history'),
-    path('pay-item/<int:item_id>/', views.make_payment, name='make-payment'),
+    path('pay-items/', views.make_multiple_payments, name='make-multiple-payments'),
 ]

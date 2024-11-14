@@ -340,3 +340,19 @@ def make_payment(request, item_id):
         comment="Pago realizado"
     )
     return redirect(reverse('student-payment-history', args=[item.invoice.student.id]))
+
+@login_required
+def make_multiple_payments(request):
+    if request.method == "POST":
+        selected_items_ids = request.POST.getlist('selected_items')
+        for item_id in selected_items_ids:
+            item = InvoiceItem.objects.get(id=item_id)
+            # Crear el recibo de pago asociado al item
+            Receipt.objects.create(
+                invoice=item.invoice,
+                item=item,
+                amount_paid=item.amount,
+                date_paid=timezone.now(),
+                comment="Pago realizado"
+            )
+    return redirect(reverse('student-payment-history', args=[item.invoice.student.id]))
