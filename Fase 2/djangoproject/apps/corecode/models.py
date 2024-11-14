@@ -1,5 +1,6 @@
 from django.db import models
 from django.utils import timezone
+from ckeditor.fields import RichTextField
 # Create your models here.
 
 
@@ -82,4 +83,20 @@ class StudentClass(models.Model):
         return self.name
 
 
+class Announcement(models.Model):
+    
+    USER_TYPE_CHOICES = [
+        ('global', 'Global'),           
+        ('teacher', 'Profesor'),        
+        ('student', 'Estudiante'),      
+        ('representative', 'Representante'),  
+    ]
 
+    title = models.CharField(max_length=255)                     
+    content = RichTextField()                           
+    created_at = models.DateTimeField(default=timezone.now)      
+    target_user_type = models.CharField(max_length=20, choices=USER_TYPE_CHOICES, default='global')  
+    subject = models.ForeignKey(Subject, on_delete=models.CASCADE, null=True, blank=True, related_name="announcements")  
+
+    def __str__(self):
+        return self.title

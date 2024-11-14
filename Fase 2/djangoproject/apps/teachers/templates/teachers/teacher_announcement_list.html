@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block title %}Anuncios para {{ subject.name }}{% endblock title %}
+
+{% block content %}
+<div class="container mt-5">
+    <h1>Anuncios para {{ subject.name }}</h1>
+    <a class="btn btn-primary" href="{% url 'teacher_announcement_create' subject.id %}">Crear Anuncio para {{ subject.name }}</a>
+
+    <div class="card mt-3">
+        <div class="card-body">
+            {% for announcement in announcements %}
+                <div class="mb-3">
+                    <h3>{{ announcement.title }}</h3>
+                    <p>{{ announcement.content|safe }}</p>  <!-- Renderizar el contenido como HTML -->
+                    <small>Publicado en: {{ announcement.created_at|date:"d/m/Y" }}</small>
+                </div>
+            {% empty %}
+                <p>No hay anuncios disponibles para {{ subject.name }}.</p>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block title %}Anuncios de la Asignatura{% endblock title %}
+
+{% block content %}
+<div class="container mt-5">
+    <h1>Anuncios para {{ student.nombres }} {{ student.apellido_paterno }}</h1>
+
+    <!-- Filtro por Asignatura -->
+    <form method="get" class="mb-4">
+        <label for="subject_id" class="form-label"><strong>Filtrar por Asignatura:</strong></label>
+        <select name="subject_id" id="subject_id" class="form-control" onchange="this.form.submit()">
+            <option value="">Todos los anuncios</option>
+            {% for subject in subjects %}
+                <option value="{{ subject.id }}" {% if subject == selected_subject %}selected{% endif %}>
+                    {{ subject.name }}
+                </option>
+            {% endfor %}
+        </select>
+    </form>
+
+    <!-- Lista de Anuncios -->
+    <div class="card mt-3">
+        <div class="card-body">
+            {% for announcement in announcements %}
+                <div class="mb-3">
+                    <h3>{{ announcement.title }}</h3>
+                    <p>{{ announcement.content|safe }}</p>
+                    <small>Publicado en: {{ announcement.created_at|date:"d/m/Y H:i" }}</small>
+                </div>
+            {% empty %}
+                <p>No hay anuncios disponibles para esta asignatura.</p>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock content %}

@@ -12,7 +12,13 @@ import string
 import random
 
 from .models import Staff
+from apps.corecode.models import Announcement
 
+
+
+
+from django.utils.decorators import method_decorator
+from apps.corecode.decorators import  teacher_required, staff_required, teacher_or_staff_required
 
 class StaffListView(ListView):
     model = Staff
@@ -101,3 +107,25 @@ class StaffUpdateView(SuccessMessageMixin, UpdateView):
 class StaffDeleteView(DeleteView):
     model = Staff
     success_url = reverse_lazy("staff-list")
+
+
+
+
+class StaffAnnouncementListView(ListView):
+    model = Announcement
+    template_name = "staffs/staff_announcement_list.html"
+    context_object_name = "announcements"
+
+    def get_queryset(self):
+        # Filtra solo anuncios globales
+        return  Announcement.objects.filter(target_user_type='global').order_by('-created_at')
+
+class StaffAnnouncementCreateView(CreateView):
+    model = Announcement
+    template_name = "staffs/staff_announcement_form.html"
+    fields = ['title', 'content']  # Solo título y contenido
+    success_url = reverse_lazy('staff_announcements')
+
+    def form_valid(self, form):
+        form.instance.target_user_type = 'global'  # Anuncio global
+        return super().form_valid(form)

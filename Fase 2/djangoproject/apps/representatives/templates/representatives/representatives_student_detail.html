@@ -29,6 +29,7 @@
     <a href="{% url 'representative_content' representative.id %}" class="btn btn-info">Ver Contenidos </a>
     <a href="{% url 'representatives_calendar' selected_subject.id %}" class="btn btn-primary">Ver calendario</a>
     <a href="{% url 'representative_annotation_list' representative.id student.id %}" class="btn btn-primary">Ver Anotaciones </a>
+    <a href="{% url 'representative_announcements' representative.id  student.id %}" class="btn btn-primary">Ver Anuncios </a>
 
     <div class="row">
     <div class="col-xl-3 col-md-6 mb-4">

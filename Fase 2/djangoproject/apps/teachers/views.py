@@ -22,7 +22,11 @@ from apps.students.models import Student
 from apps.teachers.forms import AnnotationFilterForm, AnnotationForm, TeacherAnnotationForm
 
 from .models import Annotation, Teacher, Event
+from apps.corecode.models import Announcement
 
+
+from django.utils.decorators import method_decorator
+from apps.corecode.decorators import  teacher_required, staff_required, teacher_or_staff_required
 
 class TeacherListView(ListView):
     model = Teacher
@@ -267,6 +271,7 @@ class TeacherAnnotationCreateView(CreateView):
         return reverse_lazy("annotation-list")
     
 
+@method_decorator(teacher_or_staff_required, name='dispatch')
 class EventListView(ListView):
     model = Event
     template_name = "teachers/teacher_calendar.html"
@@ -347,3 +352,59 @@ class EventListView(ListView):
         except Exception as e:
             print("Error al eliminar evento:", e)
             return JsonResponse({"status": "error", "message": str(e)}, status=500)
+        
+
+
+
+class TeacherAnnouncementListView(ListView):
+    model = Announcement
+    template_name = "teachers/teacher_announcement_list.html"
+    context_object_name = "announcements"
+
+    def get_queryset(self):
+        # Obtener el ID de la asignatura de la URL
+        subject_id = self.kwargs.get("subject_id")
+        # Obtener el usuario actual y buscar al profesor 
+        user = self.request.user
+           
+        teacher = get_object_or_404(Teacher, email=user.email)  
+
+        # Verificar que el profesor esté asociado con la asignatura específica
+        subject = get_object_or_404(teacher.subjects, id=subject_id)  
+
+        # Filtrar los anuncios por tipo de usuario, asignatura y ordenarlos por fecha
+        return Announcement.objects.filter(
+            target_user_type='teacher',
+            subject=subject
+        ).order_by('-created_at')
+
+    def get_context_data(self, **kwargs):
+        # Añadir la asignatura al contexto para mostrar su nombre en el template
+        context = super().get_context_data(**kwargs)
+        context['subject'] = get_object_or_404(Subject, id=self.kwargs.get("subject_id"))
+        return context
+
+
+class TeacherAnnouncementCreateView(CreateView):
+    model = Announcement
+    template_name = "teachers/teacher_announcement_form.html"
+    fields = ['title', 'content']
+    
+    def form_valid(self, form):
+        # Obtener el subject desde la URL y asignarlo al anuncio
+        subject_id = self.kwargs.get("subject_id")
+        teacher = get_object_or_404(Teacher, email=self.request.user.email)  
+        subject = get_object_or_404(teacher.subjects, id=subject_id)
+
+        form.instance.target_user_type = 'teacher'
+        form.instance.subject = subject  # Asigna la asignatura al anuncio
+        return super().form_valid(form)
+
+    def get_success_url(self):
+        # Redirige de nuevo a la lista de anuncios de esta asignatura
+        return reverse_lazy('teacher_announcements', kwargs={'subject_id': self.kwargs.get("subject_id")})
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['subject'] = get_object_or_404(Subject, id=self.kwargs.get("subject_id"))  # Asegura que el contexto tenga 'subject'
+        return context

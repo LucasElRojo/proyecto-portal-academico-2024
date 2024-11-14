@@ -20,6 +20,7 @@ from .models import Representatives
 from apps.students.models import Student
 from apps.students.models import Subject
 from apps.teachers.models import Event, Annotation
+from apps.corecode.models import Announcement
 
 
 class RepresentativesListView(ListView):
@@ -271,5 +272,40 @@ class RepresentativeAnnotationsView(ListView):
         else:
             context['selected_subject'] = None
             context['annotations'] = Annotation.objects.filter(student=student)
+
+        return context
+    
+
+
+class RepresentativeAnnouncementListView(ListView):
+    model = Announcement
+    template_name = "representatives/representatives_announcements.html"
+    context_object_name = "announcements"
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+
+        # Obtener el representative
+        representative_id = self.kwargs.get('representative_id')
+        representative = get_object_or_404(Representatives, id=representative_id)
+        context['representative'] = representative
+
+        # Obtener el estudiante específico del representative
+        student_id = self.kwargs.get('student_id')
+        student = get_object_or_404(Student, id=student_id, representante=representative)
+        context['student'] = student
+
+        # Obtener todas las asignaturas del estudiante (para el filtro)
+        subjects = Subject.objects.filter(students=student).distinct()
+        context['subjects'] = subjects
+
+        # Filtrar los anuncios del estudiante por asignatura (`subject_id`)
+        subject_id = self.request.GET.get("subject_id")
+        if subject_id:
+            context['selected_subject'] = Subject.objects.get(id=subject_id)
+            context['announcements'] = Announcement.objects.filter(subject_id=subject_id)
+        else:
+            context['selected_subject'] = None
+            context['announcements'] = Announcement.objects.filter(subject__students=student)
 
         return context

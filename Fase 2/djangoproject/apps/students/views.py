@@ -30,7 +30,15 @@ from django.utils.dateparse import parse_datetime, parse_date
 from django.http import JsonResponse
 from django.shortcuts import render
 from apps.teachers.models import Event
+from apps.corecode.models import Announcement
 
+
+from django.utils.decorators import method_decorator
+from apps.corecode.decorators import  teacher_required, staff_required, teacher_or_staff_required
+
+
+
+@method_decorator(staff_required, name='dispatch')
 class StudentListView(LoginRequiredMixin, ListView):
     model = Student
     template_name = "students/student_list.html"
@@ -361,16 +369,10 @@ class StudentSubjectsListView(ListView):
         student = get_object_or_404(Student, pk=student_id)
         return student.subjects.all() 
     
-
-
 class SubjectDetailView(DetailView):
     model = Subject
     template_name = 'students/student_subjects_detail.html'
     context_object_name = 'subject'
-
-
-
-
 
 
 class EventListView(ListView):
@@ -394,3 +396,17 @@ class EventListView(ListView):
             ]
             return JsonResponse(out, safe=False)
         return super().get(request, *args, **kwargs)
+    
+
+class AnnouncementListView(ListView):
+    model = Announcement
+    template_name = "students/student_announcements.html"
+    context_object_name = "announcements"
+
+    def get_queryset(self):
+        # Filtra los anuncios por `subject_id` obtenido de la URL
+        subject_id = self.kwargs.get("subject_id")
+        return Announcement.objects.filter(subject_id=subject_id)
+    
+
+
