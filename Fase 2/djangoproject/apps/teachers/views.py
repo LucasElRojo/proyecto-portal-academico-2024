@@ -26,8 +26,10 @@ from apps.corecode.models import Announcement
 
 
 from django.utils.decorators import method_decorator
-from apps.corecode.decorators import  teacher_required, teacher_or_staff_required
+from apps.corecode.decorators import  teacher_required, teacher_or_staff_required, staff_or_superuser_required
 
+
+@method_decorator(staff_or_superuser_required, name='dispatch')
 class TeacherListView(ListView):
     model = Teacher
     template_name = "teachers/teacher_list.html"
@@ -203,7 +205,9 @@ class SubjectDetailView(DetailView):
     model = Subject
     template_name = 'teachers/teacher_subjects_detail.html'
     context_object_name = 'subject'
-    
+
+
+
 class AnnotationListView(ListView):
     model = Annotation
     template_name = "teachers/teacher_annotation_list.html"
@@ -226,7 +230,8 @@ class AnnotationListView(ListView):
         context["form"] = AnnotationFilterForm(self.request.GET)
         context["students"] = Student.objects.all()
         return context
-    
+
+@method_decorator(teacher_required, name='dispatch')
 class AnnotationCreateView(CreateView):
     model = Annotation
     form_class = AnnotationForm
@@ -271,7 +276,7 @@ class TeacherAnnotationCreateView(CreateView):
         return reverse_lazy("annotation-list")
     
 
-@method_decorator(teacher_or_staff_required, name='dispatch')
+@method_decorator(teacher_required, name='dispatch')
 class EventListView(ListView):
     model = Event
     template_name = "teachers/teacher_calendar.html"
@@ -384,7 +389,7 @@ class TeacherAnnouncementListView(ListView):
         context['subject'] = get_object_or_404(Subject, id=self.kwargs.get("subject_id"))
         return context
 
-
+@method_decorator(teacher_required, name='dispatch')
 class TeacherAnnouncementCreateView(CreateView):
     model = Announcement
     template_name = "teachers/teacher_announcement_form.html"
