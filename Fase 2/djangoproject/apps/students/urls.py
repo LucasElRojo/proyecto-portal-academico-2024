@@ -13,6 +13,8 @@ from .views import (
     StudentSubjectsListView,
     SubjectDetailView,
     EventListView,
+    AnnouncementListView,
+    
 
 )
 
@@ -30,6 +32,8 @@ urlpatterns = [
     path("<int:pk>/subject/", StudentSubjectsListView.as_view(), name="student-subjects-list"),
     path("subject/<int:pk>/", SubjectDetailView.as_view(), name="student_subjects_detail"),
     path("calendar/<int:subject_id>/", EventListView.as_view(), name="student-calendar"),
+    path("announcements/<int:subject_id>/", AnnouncementListView.as_view(), name="student_announcements"),
+
     
     
 

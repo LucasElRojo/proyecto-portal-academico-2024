@@ -36482,3 +36482,460 @@ INFO 2024-11-14 20:42:35,142 C:\Users\Benjamin\Desktop\Archivos cosos git\proyec
 INFO 2024-11-14 20:42:35,925 Watching for file changes with StatReloader
 INFO 2024-11-14 20:42:38,132 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\staffs\views.py changed, reloading.
 INFO 2024-11-14 20:42:38,845 Watching for file changes with StatReloader
+INFO 2024-11-17 19:28:38,063 Watching for file changes with StatReloader
+INFO 2024-11-17 19:28:41,062 "GET / HTTP/1.1" 302 0
+INFO 2024-11-17 19:28:41,104 "GET /accounts/login/?next=/ HTTP/1.1" 200 4187
+INFO 2024-11-17 19:28:41,391 "GET /static/dist/css/login-page.css HTTP/1.1" 200 8786
+INFO 2024-11-17 19:28:41,394 "GET /static/plugins/toastr/toastr.min.css HTTP/1.1" 200 6454
+INFO 2024-11-17 19:28:41,399 "GET /static/plugins/overlayScrollbars/css/OverlayScrollbars.min.css HTTP/1.1" 200 19736
+INFO 2024-11-17 19:28:41,410 "GET /static/dist/img/login.png HTTP/1.1" 200 1197223
+INFO 2024-11-17 19:28:41,418 "GET /static/plugins/fontawesome-free/css/all.min.css HTTP/1.1" 200 58582
+INFO 2024-11-17 19:28:41,430 "GET /static/dist/css/adminlte.min.css HTTP/1.1" 200 686718
+INFO 2024-11-17 19:28:41,434 "GET /static/dist/js/jquery.formset.js HTTP/1.1" 200 13881
+INFO 2024-11-17 19:28:41,470 "GET /static/plugins/toastr/toastr.min.js HTTP/1.1" 200 5253
+INFO 2024-11-17 19:28:41,472 "GET /static/plugins/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 200 80704
+INFO 2024-11-17 19:28:41,476 "GET /static/dist/img/puentealto.jpg HTTP/1.1" 200 317548
+INFO 2024-11-17 19:28:41,478 "GET /static/dist/js/demo.js HTTP/1.1" 200 13042
+INFO 2024-11-17 19:28:41,494 "GET /static/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js HTTP/1.1" 200 42395
+INFO 2024-11-17 19:28:41,495 "GET /static/plugins/jquery/jquery.min.js HTTP/1.1" 200 88147
+INFO 2024-11-17 19:28:41,550 "GET /static/dist/js/adminlte.js HTTP/1.1" 200 59416
+INFO 2024-11-17 19:28:41,612 "GET /static/plugins/fontawesome-free/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 79444
+WARNING 2024-11-17 19:28:41,914 Not Found: /favicon.ico
+WARNING 2024-11-17 19:28:41,915 "GET /favicon.ico HTTP/1.1" 404 6963
+INFO 2024-11-17 19:29:19,609 "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2024-11-17 19:29:19,661 "GET / HTTP/1.1" 200 9946
+INFO 2024-11-17 19:29:19,700 "GET /static/plugins/Datatables/datatables.min.css HTTP/1.1" 200 25807
+INFO 2024-11-17 19:29:21,024 "GET /static/plugins/Datatables/datatables.min.js HTTP/1.1" 200 2042927
+INFO 2024-11-17 19:29:29,966 "GET /staff/announcements/ HTTP/1.1" 200 2688576
+INFO 2024-11-17 19:29:32,829 "GET /staff/announcements/create/ HTTP/1.1" 200 12923
+INFO 2024-11-17 19:29:32,864 "GET /static/ckeditor/ckeditor.css HTTP/1.1" 200 672
+INFO 2024-11-17 19:29:32,888 "GET /static/ckeditor/ckeditor-init.js HTTP/1.1" 200 1526
+INFO 2024-11-17 19:29:33,027 "GET /static/ckeditor/ckeditor/ckeditor.js HTTP/1.1" 200 759716
+INFO 2024-11-17 19:29:33,080 "GET /static/ckeditor/ckeditor/config.js?t=N5UC HTTP/1.1" 200 336
+INFO 2024-11-17 19:29:33,096 "GET /static/ckeditor/ckeditor/skins/moono-lisa/editor.css?t=N5UC HTTP/1.1" 200 48309
+INFO 2024-11-17 19:29:33,107 "GET /static/ckeditor/ckeditor/lang/es-mx.js?t=N5UC HTTP/1.1" 200 20280
+INFO 2024-11-17 19:29:33,131 "GET /static/ckeditor/ckeditor/styles.js?t=N5UC HTTP/1.1" 200 5577
+INFO 2024-11-17 19:29:33,146 "GET /static/ckeditor/ckeditor/plugins/dialog/styles/dialog.css?t=N5UC HTTP/1.1" 200 249
+INFO 2024-11-17 19:29:33,146 "GET /static/ckeditor/ckeditor/plugins/scayt/skins/moono-lisa/scayt.css?t=N5UC HTTP/1.1" 200 381
+INFO 2024-11-17 19:29:33,146 "GET /static/ckeditor/ckeditor/plugins/scayt/dialogs/dialog.css?t=N5UC HTTP/1.1" 200 419
+INFO 2024-11-17 19:29:33,147 "GET /static/ckeditor/ckeditor/plugins/tableselection/styles/tableselection.css?t=N5UC HTTP/1.1" 200 1145
+INFO 2024-11-17 19:29:33,153 "GET /static/ckeditor/ckeditor/plugins/copyformatting/styles/copyformatting.css?t=N5UC HTTP/1.1" 200 1511
+INFO 2024-11-17 19:29:33,167 "GET /static/ckeditor/ckeditor/skins/moono-lisa/icons.png?t=4a1fb11f44 HTTP/1.1" 200 12237
+INFO 2024-11-17 19:29:33,196 "GET /static/ckeditor/ckeditor/contents.css?t=N5UC HTTP/1.1" 200 3092
+INFO 2024-11-17 19:31:17,516 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\staffs\views.py changed, reloading.
+INFO 2024-11-17 19:31:18,168 Watching for file changes with StatReloader
+INFO 2024-11-17 19:31:27,703 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\staffs\views.py changed, reloading.
+INFO 2024-11-17 19:31:28,349 Watching for file changes with StatReloader
+INFO 2024-11-17 19:31:35,744 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\staffs\views.py changed, reloading.
+INFO 2024-11-17 19:31:36,399 Watching for file changes with StatReloader
+INFO 2024-11-17 19:31:42,835 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\staffs\views.py changed, reloading.
+INFO 2024-11-17 19:31:43,477 Watching for file changes with StatReloader
+INFO 2024-11-17 19:31:53,011 "GET /staff/announcements/ HTTP/1.1" 200 2688576
+INFO 2024-11-17 19:31:55,792 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\staffs\views.py changed, reloading.
+INFO 2024-11-17 19:31:56,436 Watching for file changes with StatReloader
+INFO 2024-11-17 19:31:59,112 "GET /staff/announcements/create/ HTTP/1.1" 200 12923
+INFO 2024-11-17 19:32:28,256 "POST /staff/announcements/create/ HTTP/1.1" 302 0
+INFO 2024-11-17 19:32:28,315 "GET /staff/announcements/ HTTP/1.1" 200 3233242
+INFO 2024-11-17 19:33:44,152 "GET /staff/announcements/create/ HTTP/1.1" 200 12923
+INFO 2024-11-17 19:33:59,321 "POST /staff/announcements/create/ HTTP/1.1" 302 0
+INFO 2024-11-17 19:33:59,368 "GET /staff/announcements/ HTTP/1.1" 200 3234162
+INFO 2024-11-17 19:38:40,535 "GET /staff/announcements/create/ HTTP/1.1" 200 12923
+INFO 2024-11-17 19:38:47,235 "GET /staff/announcements/ HTTP/1.1" 200 3233999
+INFO 2024-11-17 19:41:35,641 "GET /result/subject_list/ HTTP/1.1" 200 12205
+INFO 2024-11-17 19:41:37,473 "GET /finance/list/ HTTP/1.1" 200 13182
+INFO 2024-11-17 19:41:38,107 "GET /class/list/ HTTP/1.1" 200 12767
+INFO 2024-11-17 19:41:38,543 "GET /subject/list/ HTTP/1.1" 200 12135
+INFO 2024-11-17 19:41:38,934 "GET /term/list/ HTTP/1.1" 200 12647
+INFO 2024-11-17 19:41:39,494 "GET /session/list/ HTTP/1.1" 200 12668
+INFO 2024-11-17 20:06:55,574 "GET /accounts/logout/ HTTP/1.1" 302 0
+INFO 2024-11-17 20:06:55,582 "GET / HTTP/1.1" 302 0
+INFO 2024-11-17 20:06:55,589 "GET /accounts/login/?next=/ HTTP/1.1" 200 4187
+INFO 2024-11-17 20:07:05,492 "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2024-11-17 20:07:05,509 "GET / HTTP/1.1" 200 7934
+INFO 2024-11-17 20:07:07,343 "GET /student/attendance/ HTTP/1.1" 200 11347
+INFO 2024-11-17 20:07:10,259 "GET /student/attendance/ HTTP/1.1" 200 11347
+INFO 2024-11-17 20:07:10,621 "GET /student/attendance/ HTTP/1.1" 200 11347
+INFO 2024-11-17 20:07:11,006 "GET /student/attendance/ HTTP/1.1" 200 11347
+INFO 2024-11-17 20:07:15,299 "GET /result/subject_list/ HTTP/1.1" 200 10193
+INFO 2024-11-17 20:07:16,181 - Broken pipe from ('127.0.0.1', 60933)
+INFO 2024-11-17 20:07:16,199 "GET /result/subject/2/add_results/ HTTP/1.1" 200 13667
+INFO 2024-11-17 20:07:26,077 "GET /staff/announcements/ HTTP/1.1" 200 3231831
+INFO 2024-11-17 20:07:27,985 "GET /result/subject_list/ HTTP/1.1" 200 10193
+INFO 2024-11-17 20:07:29,310 "GET /finance/list/ HTTP/1.1" 200 11170
+INFO 2024-11-17 20:07:30,877 "GET /staff/announcements/ HTTP/1.1" 200 3231831
+INFO 2024-11-17 20:07:39,695 "GET /representative/representatives/2/students/ HTTP/1.1" 200 11794
+INFO 2024-11-17 20:07:39,808 "GET /static/dist/img/noprofilepicture.jpg HTTP/1.1" 200 41511
+INFO 2024-11-17 20:07:39,815 "GET /media/students/fotos/Sin_t%C3%ADtulo.png HTTP/1.1" 200 2288486
+INFO 2024-11-17 20:07:39,823 "GET /media/students/fotos/GbtowwoXQBU5_wL.png HTTP/1.1" 200 1115599
+INFO 2024-11-17 20:07:46,174 "GET /representative/representatives/2/student/3/ HTTP/1.1" 200 15226
+INFO 2024-11-17 20:07:48,164 "GET /representative/representative/2/content/ HTTP/1.1" 200 10148
+INFO 2024-11-17 20:07:49,704 "GET /representative/representative/2/content/?subject_id=1 HTTP/1.1" 200 390179
+INFO 2024-11-17 20:07:51,010 "GET /representative/representative/2/content/?subject_id=2 HTTP/1.1" 200 10156
+INFO 2024-11-17 20:07:51,805 "GET /representative/representative/2/content/?subject_id=1 HTTP/1.1" 200 390179
+INFO 2024-11-17 20:07:56,748 "GET /representative/representatives/2/students/ HTTP/1.1" 200 11794
+INFO 2024-11-17 20:07:57,684 "GET /representative/representatives/2/student/3/ HTTP/1.1" 200 15226
+INFO 2024-11-17 20:07:58,306 "GET /representative/calendar/2/ HTTP/1.1" 200 10044
+INFO 2024-11-17 20:07:58,592 "GET /representative/calendar/2/?subject_id= HTTP/1.1" 200 1396
+INFO 2024-11-17 20:07:59,800 "GET /representative/calendar/2/?subject_id=2 HTTP/1.1" 200 924
+INFO 2024-11-17 20:08:00,726 "GET /representative/calendar/2/?subject_id=1 HTTP/1.1" 200 472
+INFO 2024-11-17 20:08:14,412 "GET /representative/calendar/2/?subject_id=1 HTTP/1.1" 200 472
+INFO 2024-11-17 20:08:14,704 "GET /representative/calendar/2/?subject_id=1 HTTP/1.1" 200 472
+INFO 2024-11-17 20:08:15,946 "GET /representative/representatives/2/students/ HTTP/1.1" 200 11794
+INFO 2024-11-17 20:08:16,864 "GET /representative/representatives/2/student/3/ HTTP/1.1" 200 15226
+INFO 2024-11-17 20:08:17,743 "GET /representative/representative/2/student/3/annotations/ HTTP/1.1" 200 10849
+INFO 2024-11-17 20:08:20,025 "GET /representative/representative/2/student/3/annotations/?subject_id=2 HTTP/1.1" 200 10061
+INFO 2024-11-17 20:08:21,115 "GET /representative/representative/2/student/3/annotations/?subject_id=1 HTTP/1.1" 200 10467
+INFO 2024-11-17 20:08:21,823 "GET /representative/representative/2/student/3/annotations/ HTTP/1.1" 200 10849
+INFO 2024-11-17 20:08:24,865 "GET /representative/representative/2/student/3/announcements/ HTTP/1.1" 200 1417673
+INFO 2024-11-17 20:08:36,097 "GET /representative/representative/2/student/3/announcements/?subject_id=2 HTTP/1.1" 200 1055399
+INFO 2024-11-17 20:08:37,045 "GET /representative/representative/2/student/3/announcements/?subject_id=1 HTTP/1.1" 200 371257
+INFO 2024-11-17 20:08:58,459 "GET /accounts/logout/ HTTP/1.1" 302 0
+INFO 2024-11-17 20:08:58,465 "GET / HTTP/1.1" 302 0
+INFO 2024-11-17 20:08:58,471 "GET /accounts/login/?next=/ HTTP/1.1" 200 4187
+INFO 2024-11-17 20:09:04,497 "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2024-11-17 20:09:04,513 "GET / HTTP/1.1" 200 7923
+INFO 2024-11-17 20:09:05,870 "GET /student/attendance/ HTTP/1.1" 200 11336
+INFO 2024-11-17 20:09:09,248 "GET /student/attendance/ HTTP/1.1" 200 11336
+INFO 2024-11-17 20:09:13,229 "GET /student/attendance/ HTTP/1.1" 200 11336
+INFO 2024-11-17 20:09:13,747 "GET /student/attendance/ HTTP/1.1" 200 11336
+INFO 2024-11-17 20:09:14,286 "GET /student/attendance/ HTTP/1.1" 200 11336
+INFO 2024-11-17 20:09:14,615 "GET /student/attendance/ HTTP/1.1" 200 11336
+INFO 2024-11-17 20:09:16,663 "GET /student/attendance/ HTTP/1.1" 200 11336
+INFO 2024-11-17 20:09:17,066 "GET /student/attendance/ HTTP/1.1" 200 11336
+INFO 2024-11-17 20:09:17,462 "GET /student/attendance/ HTTP/1.1" 200 11336
+INFO 2024-11-17 20:09:18,083 "GET /student/attendance/ HTTP/1.1" 200 11336
+INFO 2024-11-17 20:09:18,458 "GET /student/attendance/ HTTP/1.1" 200 11336
+INFO 2024-11-17 20:09:19,393 "GET /result/subject_list/ HTTP/1.1" 200 10182
+INFO 2024-11-17 20:09:20,987 "GET /finance/list/ HTTP/1.1" 200 11159
+INFO 2024-11-17 20:09:21,722 "GET /staff/announcements/ HTTP/1.1" 200 3231820
+INFO 2024-11-17 20:09:22,736 "GET /teacher/4/subjects/ HTTP/1.1" 200 9584
+INFO 2024-11-17 20:09:23,767 "GET /teacher/subject/2/ HTTP/1.1" 200 15390
+INFO 2024-11-17 20:09:24,931 "GET /teacher/register/2/ HTTP/1.1" 200 11328
+INFO 2024-11-17 20:09:42,895 "POST /teacher/register/2/ HTTP/1.1" 302 0
+INFO 2024-11-17 20:09:42,911 "GET / HTTP/1.1" 200 7923
+INFO 2024-11-17 20:09:44,861 "GET /teacher/4/subjects/ HTTP/1.1" 200 9584
+INFO 2024-11-17 20:09:45,688 "GET /teacher/subject/2/ HTTP/1.1" 200 15390
+INFO 2024-11-17 20:09:47,881 "GET /teacher/register/2/ HTTP/1.1" 200 11328
+INFO 2024-11-17 20:09:54,601 "POST /teacher/register/2/ HTTP/1.1" 302 0
+INFO 2024-11-17 20:09:54,616 "GET / HTTP/1.1" 200 7923
+INFO 2024-11-17 20:09:55,590 "GET /student/attendance/ HTTP/1.1" 200 12441
+INFO 2024-11-17 20:10:09,286 "GET /teacher/4/subjects/ HTTP/1.1" 200 9584
+INFO 2024-11-17 20:10:09,865 "GET /teacher/subject/2/ HTTP/1.1" 200 15390
+INFO 2024-11-17 20:10:10,724 "GET /teacher/register/2/ HTTP/1.1" 200 11328
+INFO 2024-11-17 20:10:21,916 "POST /teacher/register/2/ HTTP/1.1" 302 0
+INFO 2024-11-17 20:10:21,930 "GET / HTTP/1.1" 200 7923
+INFO 2024-11-17 20:10:23,144 "GET /student/attendance/ HTTP/1.1" 200 12442
+INFO 2024-11-17 20:10:33,161 "GET /teacher/4/subjects/ HTTP/1.1" 200 9584
+INFO 2024-11-17 20:10:33,813 "GET /teacher/subject/2/ HTTP/1.1" 200 15390
+INFO 2024-11-17 20:10:34,958 "GET /teacher/annotations/2/create/ HTTP/1.1" 200 9708
+INFO 2024-11-17 20:10:39,372 "POST /teacher/annotations/2/create/ HTTP/1.1" 302 0
+INFO 2024-11-17 20:10:39,422 "GET /teacher/annotations/ HTTP/1.1" 200 13014
+INFO 2024-11-17 20:10:43,081 "GET /teacher/4/subjects/ HTTP/1.1" 200 9584
+INFO 2024-11-17 20:10:43,630 "GET /teacher/subject/1/ HTTP/1.1" 200 15395
+INFO 2024-11-17 20:10:45,885 "GET /teacher/annotations/1/create/ HTTP/1.1" 200 9713
+INFO 2024-11-17 20:10:49,305 "POST /teacher/annotations/1/create/ HTTP/1.1" 302 0
+INFO 2024-11-17 20:10:49,333 "GET /teacher/annotations/ HTTP/1.1" 200 13325
+INFO 2024-11-17 20:11:04,627 "GET /teacher/calendar/1/ HTTP/1.1" 200 13248
+INFO 2024-11-17 20:11:04,939 "GET /teacher/calendar/1/?start=2024-10-27&end=2024-12-08&_=1731885064734 HTTP/1.1" 200 472
+INFO 2024-11-17 20:11:21,074 "POST /teacher/calendar/1/ HTTP/1.1" 200 133
+INFO 2024-11-17 20:11:21,089 "GET /teacher/calendar/1/?start=2024-10-27&end=2024-12-08&_=1731885064735 HTTP/1.1" 200 575
+INFO 2024-11-17 20:11:27,607 "GET /teacher/announcements/1/ HTTP/1.1" 200 370835
+INFO 2024-11-17 20:11:28,679 "GET /teacher/announcements/1/create/ HTTP/1.1" 200 10871
+INFO 2024-11-17 20:12:10,930 "POST /teacher/announcements/1/create/ HTTP/1.1" 302 0
+INFO 2024-11-17 20:12:10,956 "GET /teacher/announcements/1/ HTTP/1.1" 200 1217255
+INFO 2024-11-17 20:12:19,386 "GET /teacher/4/subjects/ HTTP/1.1" 200 9584
+INFO 2024-11-17 20:12:20,221 "GET /teacher/subject/1/ HTTP/1.1" 200 15395
+INFO 2024-11-17 20:12:21,565 "GET /teacher/subject/2/ HTTP/1.1" 200 15390
+INFO 2024-11-17 20:12:22,258 "GET /teacher/announcements/2/ HTTP/1.1" 200 1054918
+INFO 2024-11-17 20:12:23,623 "GET /teacher/4/subjects/ HTTP/1.1" 200 9584
+INFO 2024-11-17 20:12:24,181 "GET /teacher/subject/1/ HTTP/1.1" 200 15395
+INFO 2024-11-17 20:12:24,901 "GET /teacher/announcements/1/ HTTP/1.1" 200 1217255
+INFO 2024-11-17 20:12:30,789 "GET /teacher/4/subjects/ HTTP/1.1" 200 9584
+INFO 2024-11-17 20:12:31,899 "GET /teacher/subject/1/ HTTP/1.1" 200 15395
+INFO 2024-11-17 20:12:33,921 "GET /content/subject/1/files/ HTTP/1.1" 200 389132
+INFO 2024-11-17 20:12:36,169 "GET /content/subject/1/add_content/ HTTP/1.1" 200 10156
+INFO 2024-11-17 20:12:54,932 "POST /content/subject/1/add_content/ HTTP/1.1" 302 0
+INFO 2024-11-17 20:12:54,956 "GET /content/subject/1/files/ HTTP/1.1" 200 1234805
+INFO 2024-11-17 20:12:57,521 "GET /content/content/8/detail/ HTTP/1.1" 200 853990
+INFO 2024-11-17 20:13:02,371 "GET /content/subject/1/files/ HTTP/1.1" 200 1234805
+INFO 2024-11-17 20:13:03,545 "GET /teacher/4/subjects/ HTTP/1.1" 200 9584
+INFO 2024-11-17 20:13:04,609 "GET /teacher/subject/1/ HTTP/1.1" 200 15395
+INFO 2024-11-17 20:13:12,344 "GET /accounts/logout/ HTTP/1.1" 302 0
+INFO 2024-11-17 20:13:12,358 "GET / HTTP/1.1" 302 0
+INFO 2024-11-17 20:13:12,373 "GET /accounts/login/?next=/ HTTP/1.1" 200 4187
+INFO 2024-11-17 20:13:28,515 "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2024-11-17 20:13:28,531 "GET / HTTP/1.1" 200 7934
+INFO 2024-11-17 20:13:29,854 "GET /representative/representatives/2/students/ HTTP/1.1" 200 11794
+INFO 2024-11-17 20:13:29,904 "GET /media/students/fotos/Sin_t%C3%ADtulo.png HTTP/1.1" 200 2288486
+INFO 2024-11-17 20:13:29,910 "GET /media/students/fotos/GbtowwoXQBU5_wL.png HTTP/1.1" 200 1115599
+INFO 2024-11-17 20:13:30,954 "GET /staff/announcements/ HTTP/1.1" 200 3231831
+INFO 2024-11-17 20:13:34,949 "GET /representative/representatives/2/students/ HTTP/1.1" 200 11794
+INFO 2024-11-17 20:13:41,055 "GET /representative/representatives/2/students/ HTTP/1.1" 200 11794
+INFO 2024-11-17 20:13:43,980 "GET /accounts/logout/ HTTP/1.1" 302 0
+INFO 2024-11-17 20:13:43,986 "GET / HTTP/1.1" 302 0
+INFO 2024-11-17 20:13:43,992 "GET /accounts/login/?next=/ HTTP/1.1" 200 4187
+INFO 2024-11-17 20:13:54,704 "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2024-11-17 20:13:54,720 "GET / HTTP/1.1" 200 7940
+INFO 2024-11-17 20:13:55,738 "GET /student/6/subject/ HTTP/1.1" 200 9599
+ERROR 2024-11-17 20:13:57,030 Internal Server Error: /student/subject/2/
+Traceback (most recent call last):
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'student_announcements' not found. 'student_announcements' is not a valid view function or pattern name.
+ERROR 2024-11-17 20:13:57,034 "GET /student/subject/2/ HTTP/1.1" 500 174019
+ERROR 2024-11-17 20:14:05,213 Internal Server Error: /student/subject/1/
+Traceback (most recent call last):
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'student_announcements' not found. 'student_announcements' is not a valid view function or pattern name.
+ERROR 2024-11-17 20:14:05,215 "GET /student/subject/1/ HTTP/1.1" 500 174189
+ERROR 2024-11-17 20:14:06,646 Internal Server Error: /student/subject/2/
+Traceback (most recent call last):
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\template\defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Benjamin\AppData\Local\Programs\Python\Python312\Lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'student_announcements' not found. 'student_announcements' is not a valid view function or pattern name.
+ERROR 2024-11-17 20:14:06,648 "GET /student/subject/2/ HTTP/1.1" 500 174019
+INFO 2024-11-17 20:15:09,043 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\students\urls.py changed, reloading.
+INFO 2024-11-17 20:15:09,842 Watching for file changes with StatReloader
+INFO 2024-11-17 20:15:28,961 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\students\urls.py changed, reloading.
+INFO 2024-11-17 20:15:29,737 Watching for file changes with StatReloader
+INFO 2024-11-17 20:15:34,023 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\students\urls.py changed, reloading.
+INFO 2024-11-17 20:15:34,733 Watching for file changes with StatReloader
+INFO 2024-11-17 20:15:37,918 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\students\urls.py changed, reloading.
+INFO 2024-11-17 20:15:38,570 Watching for file changes with StatReloader
+INFO 2024-11-17 20:15:42,791 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\students\urls.py changed, reloading.
+INFO 2024-11-17 20:15:43,591 Watching for file changes with StatReloader
+INFO 2024-11-17 20:15:45,837 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\students\urls.py changed, reloading.
+INFO 2024-11-17 20:15:46,503 Watching for file changes with StatReloader
+INFO 2024-11-17 20:15:48,634 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\students\urls.py changed, reloading.
+INFO 2024-11-17 20:15:49,291 Watching for file changes with StatReloader
+INFO 2024-11-17 20:15:51,505 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\students\urls.py changed, reloading.
+INFO 2024-11-17 20:15:52,233 Watching for file changes with StatReloader
+INFO 2024-11-17 20:15:56,462 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\students\urls.py changed, reloading.
+INFO 2024-11-17 20:15:57,092 Watching for file changes with StatReloader
+INFO 2024-11-17 20:16:00,271 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\students\urls.py changed, reloading.
+INFO 2024-11-17 20:16:00,946 Watching for file changes with StatReloader
+INFO 2024-11-17 20:16:05,212 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\students\urls.py changed, reloading.
+INFO 2024-11-17 20:16:05,873 Watching for file changes with StatReloader
+INFO 2024-11-17 20:16:09,066 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\students\urls.py changed, reloading.
+INFO 2024-11-17 20:16:09,709 Watching for file changes with StatReloader
+INFO 2024-11-17 20:16:11,843 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\students\urls.py changed, reloading.
+INFO 2024-11-17 20:16:12,496 Watching for file changes with StatReloader
+INFO 2024-11-17 20:16:17,788 C:\Users\Benjamin\Desktop\Archivos cosos git\proyecto-portal-academico-2024\Fase 2\djangoproject\apps\students\urls.py changed, reloading.
+INFO 2024-11-17 20:16:18,510 Watching for file changes with StatReloader
+INFO 2024-11-17 20:16:19,283 "GET /student/subject/2/ HTTP/1.1" 200 15119
+INFO 2024-11-17 20:16:22,828 "GET /content/subject/2/files/ HTTP/1.1" 200 9193
+INFO 2024-11-17 20:16:24,615 "GET /student/calendar/2/ HTTP/1.1" 200 11014
+INFO 2024-11-17 20:16:24,731 "GET /student/calendar/2/?start=2024-10-27&end=2024-12-08&_=1731885384700 HTTP/1.1" 200 924
+INFO 2024-11-17 20:16:33,973 "GET /student/announcements/2/ HTTP/1.1" 200 1054784
+INFO 2024-11-17 20:16:36,357 "GET /student/6/subject/ HTTP/1.1" 200 9599
+INFO 2024-11-17 20:16:36,890 "GET /student/subject/1/ HTTP/1.1" 200 15124
+INFO 2024-11-17 20:16:37,857 "GET /student/announcements/1/ HTTP/1.1" 200 1217018
+INFO 2024-11-17 20:16:40,457 "GET /content/subject/1/files/ HTTP/1.1" 200 1234822
+INFO 2024-11-17 20:16:43,985 "GET /student/attendance/ HTTP/1.1" 200 12459
+INFO 2024-11-17 20:16:47,474 "GET /student/6/subject/ HTTP/1.1" 200 9599
+INFO 2024-11-17 20:16:48,360 "GET /student/subject/1/ HTTP/1.1" 200 15124
+INFO 2024-11-17 20:16:49,123 "GET /student/calendar/1/ HTTP/1.1" 200 11014
+INFO 2024-11-17 20:16:49,231 "GET /student/calendar/1/?start=2024-10-27&end=2024-12-08&_=1731885409202 HTTP/1.1" 200 575
+INFO 2024-11-17 20:16:53,930 "GET /student/6/subject/ HTTP/1.1" 200 9599
+INFO 2024-11-17 20:16:56,564 "GET /student/subject/1/ HTTP/1.1" 200 15124
+INFO 2024-11-17 20:17:02,928 "GET /result/subject_list/ HTTP/1.1" 200 10199
+INFO 2024-11-17 20:17:03,839 - Broken pipe from ('127.0.0.1', 61273)
+INFO 2024-11-17 20:17:03,852 "GET /result/subject/2/add_results/ HTTP/1.1" 200 13673
+INFO 2024-11-17 20:17:09,589 "GET /result/subject_list/ HTTP/1.1" 200 10199
+INFO 2024-11-17 20:17:10,630 "GET /result/subject/1/add_results/ HTTP/1.1" 200 14611
+INFO 2024-11-17 20:17:10,634 - Broken pipe from ('127.0.0.1', 61271)
+INFO 2024-11-17 20:17:18,463 "GET /student/6/subject/ HTTP/1.1" 200 9599
+INFO 2024-11-17 20:17:19,350 "GET /student/subject/2/ HTTP/1.1" 200 15119
+INFO 2024-11-17 20:17:25,839 "GET /result/subject_list/ HTTP/1.1" 200 10199
+INFO 2024-11-17 20:17:27,511 "GET /student/6/subject/ HTTP/1.1" 200 9599
+INFO 2024-11-17 20:17:28,364 "GET /student/subject/2/ HTTP/1.1" 200 15119

@@ -18,7 +18,7 @@ from apps.students.models import  Student
 from apps.teachers.models import Teacher
 from apps.representatives.models import Representatives
 
-
+from django.core.mail import EmailMultiAlternatives
 
 
 from django.utils.decorators import method_decorator
@@ -127,32 +127,35 @@ class StaffAnnouncementListView(ListView):
 class StaffAnnouncementCreateView(CreateView):
     model = Announcement
     template_name = "staffs/staff_announcement_form.html"
-    fields = ['title', 'content']  # Solo título y contenido
+    fields = ['title', 'content']
     success_url = reverse_lazy('staff_announcements')
 
     def form_valid(self, form):
-        
-        form.instance.target_user_type = 'global'  
-        response = super().form_valid(form)  
+        # Configuración del anuncio
+        form.instance.target_user_type = 'global'
+        response = super().form_valid(form)
 
-        
+        # Obtener los correos electrónicos
         teacher_emails = list(Teacher.objects.values_list('email', flat=True))
         student_emails = list(Student.objects.values_list('email', flat=True))
         representative_emails = list(Representatives.objects.values_list('email', flat=True))
         staff_emails = list(Staff.objects.values_list('email', flat=True))
-
-        # Combinar todos los correos en una sola lista
         recipient_list = teacher_emails + student_emails + representative_emails + staff_emails
 
-        # Enviar el correo a todos los destinatarios
+        # Enviar correo con contenido HTML
+        subject = form.instance.title
+        html_content = form.instance.content  # Contenido de CKEditor
+
         try:
-            send_mail(
-                subject=f"{form.instance.title}",
-                message=form.instance.content,
+            email = EmailMultiAlternatives(
+                subject=subject,
+                body="Este correo incluye un anuncio global. Por favor, habilita HTML para ver el contenido completo.",
                 from_email=settings.DEFAULT_FROM_EMAIL,
-                recipient_list=recipient_list,
-                fail_silently=False,
+                to=recipient_list,
             )
+            email.attach_alternative(html_content, "text/html")  # HTML como alternativa
+            email.send()
+
             messages.success(self.request, "Anuncio creado y correos enviados correctamente.")
         except Exception as e:
             messages.error(self.request, f"Anuncio creado, pero hubo un error al enviar los correos: {e}")
