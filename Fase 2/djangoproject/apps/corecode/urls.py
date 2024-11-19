@@ -20,7 +20,10 @@ from .views import (
     TermDeleteView,
     TermListView,
     TermUpdateView,
-    attendance_register
+    attendance_register,
+    get_estado_data,
+    get_payment_distribution,
+    get_kpi_data
 )
 
 urlpatterns = [
@@ -62,4 +65,8 @@ urlpatterns = [
         name="subject-delete",
     ),
     path('teacher/register/<int:subject_id>/', attendance_register, name='attendance_register'),
+    path('get-estado-data/', get_estado_data, name='get_estado_data'),
+    path('get-payment-distribution/', get_payment_distribution, name='get_payment_distribution'),
+    path('get-kpi-data/', get_kpi_data, name='get_kpi_data'),
+
 ]

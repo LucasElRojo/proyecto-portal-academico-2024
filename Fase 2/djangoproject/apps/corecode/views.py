@@ -9,6 +9,8 @@ from django.views.generic import ListView, TemplateView, View
 from django.views.generic.edit import CreateView, DeleteView, UpdateView
 from .models import Attendance, Subject
 from apps.students.models import Student
+from django.db import connection
+from django.http import JsonResponse
 
 from .forms import (
     AcademicSessionForm,
@@ -293,3 +295,44 @@ def attendance_register(request, subject_id):
         'subject': subject,
         'students': students,
     })
+    
+## Graficos del index
+def get_estado_data(request):
+    with connection.cursor() as cursor:
+        cursor.execute("SELECT * FROM estados()")
+        data = cursor.fetchall()
+    # Formatear los datos para el gráfico
+    estado_data = [{"estado": row[0], "cantidad": row[1]} for row in data]
+    return JsonResponse(estado_data, safe=False)
+
+def get_payment_distribution(request):
+    with connection.cursor() as cursor:
+        cursor.execute("SELECT * FROM valores()")
+        data = cursor.fetchall()
+    # Formatear los datos para el gráfico
+    distribution_data = [{"valores": row[0], "cantidad_valor": row[1]} for row in data]
+    return JsonResponse(distribution_data, safe=False)
+
+def get_kpi_data(request):
+    with connection.cursor() as cursor:
+        # Ejecutar cada función almacenada
+        cursor.execute("SELECT total_students();")
+        total_students = cursor.fetchone()[0]
+
+        cursor.execute("SELECT total_teachers();")
+        total_teachers = cursor.fetchone()[0]
+
+        cursor.execute("SELECT total_admins();")
+        total_admins = cursor.fetchone()[0]
+
+        cursor.execute("SELECT porcentaje_pagos_realizados();")
+        porcentaje_pagos_realizados = cursor.fetchone()[0]
+
+    # Formatear los datos para enviarlos al frontend
+    data = {
+        "total_students": total_students,
+        "total_teachers": total_teachers,
+        "total_admins": total_admins,
+        "porcentaje_pagos_realizados": round(porcentaje_pagos_realizados, 2)
+    }
+    return JsonResponse(data)

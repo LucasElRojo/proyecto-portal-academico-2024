@@ -102,10 +102,36 @@ WSGI_APPLICATION = "school_app.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
+#DATABASES = {
+#    "default": {
+#        "ENGINE": "django.db.backends.sqlite3",
+#        "NAME": os.path.join(BASE_DIR, "db.sqlite3"),
+#    }
+#}
+
+#DATABASES = {
+#    'default': {
+#        'ENGINE': 'django.db.backends.postgresql',
+#        'HOST': "aws-0-us-east-1.pooler.supabase.com",
+#        'NAME': "postgres",
+#        'USER': "postgres.kmcujloiikbmdrqawwtk",
+#        'PASSWORD': "F0vXoNnatZhyiY9Q",
+#        'PORT': "6543"
+#
+#    }
+#}
+
 DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": os.path.join(BASE_DIR, "db.sqlite3"),
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'school_appdb',  # Nombre de la base de datos
+        'USER': 'school_appdb_owner',  # Nombre de usuario
+        'PASSWORD': 'VK0yM3DeHgIq',  # Contraseña
+        'HOST': 'ep-long-sea-a4m2kl2u.us-east-1.aws.neon.tech',  # Host
+        'PORT': '5432',  # Puerto predeterminado de PostgreSQL
+        'OPTIONS': {
+            'sslmode': 'require',  # Activar SSL
+        },
     }
 }
 

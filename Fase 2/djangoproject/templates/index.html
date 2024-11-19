@@ -1,10 +1,168 @@
 {% extends 'base.html' %}
 {% load static %}
+{% block title %}Dashboard{% endblock title %}
 
-{% block title %}Bienvenido{% endblock title %}
-
+{% block morestylesheet %}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<style>
+    /* Estilo para las tarjetas KPI */
+    .kpi-card {
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 20px;
+        text-align: center;
+        background-color: #f8f9fa;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
+    }
+    .kpi-card h1 {
+        font-size: 2.5rem;
+        margin: 0;
+    }
+    .kpi-card span {
+        font-size: 1.2rem;
+        color: #6c757d;
+    }
+    /* Estilo para los gráficos */
+    .chart-container {
+        position: relative;
+        max-width: 400px; /* Limitar el ancho máximo */
+        height: 300px;    /* Altura fija */
+        margin: auto;     /* Centrar los gráficos */
+    }
+</style>
+{% endblock morestylesheet %}
 
 {% block content %}
+<div class="container">
+    <!-- Fila 1: KPIs -->
+    <div class="row text-center">
+        <div class="col-md-3">
+            <div class="kpi-card">
+                <h1 id="totalStudents">0</h1>
+                <span>Total de Alumnos</span>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="kpi-card">
+                <h1 id="totalTeachers">0</h1>
+                <span>Total de Profesores</span>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="kpi-card">
+                <h1 id="totalAdmins">0</h1>
+                <span>Total de Administradores</span>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="kpi-card">
+                <h1 id="paymentPercentage">0%</h1>
+                <span>Pagos Realizados</span>
+            </div>
+        </div>
+    </div>
 
+    <!-- Fila 2: Gráficos -->
+    <div class="row">
+        <!-- Gráfico de barras -->
+        <div class="col-md-6">
+            <div class="kpi-card">
+                <h5>Distribución de Estados de los Alumnos</h5>
+                <div class="chart-container">
+                    <canvas id="estadoChart"></canvas>
+                </div>
+            </div>
+        </div>
+        <!-- Gráfico circular -->
+        <div class="col-md-6">
+            <div class="kpi-card">
+                <h5>Distribución de Pagos</h5>
+                <div class="chart-container">
+                    <canvas id="paymentChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Cargar KPIs
+    fetch('/get-kpi-data/')
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById('totalStudents').textContent = data.total_students;
+            document.getElementById('totalTeachers').textContent = data.total_teachers;
+            document.getElementById('totalAdmins').textContent = data.total_admins;
+            document.getElementById('paymentPercentage').textContent = data.porcentaje_pagos_realizados + '%';
+        })
+        .catch(error => console.error('Error al cargar los KPIs:', error));
+
+    // Gráfico de barras: Distribución de Estados
+    fetch('/get-estado-data/')
+        .then(response => response.json())
+        .then(data => {
+            const estados = data.map(item => item.estado);
+            const cantidades = data.map(item => item.cantidad);
+
+            const ctx = document.getElementById('estadoChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: estados,
+                    datasets: [{
+                        label: 'Cantidad de Alumnos',
+                        data: cantidades,
+                        backgroundColor: ['rgba(75, 192, 192, 0.5)', 'rgba(255, 99, 132, 0.5)'],
+                        borderColor: ['rgba(75, 192, 192, 1)', 'rgba(255, 99, 132, 1)'],
+                        borderWidth: 2
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { position: 'top' },
+                        title: { display: false }
+                    },
+                    scales: {
+                        y: { beginAtZero: true }
+                    }
+                }
+            });
+        })
+        .catch(error => console.error('Error al cargar el gráfico de estados:', error));
+
+    // Gráfico circular: Distribución de Pagos
+    fetch('/get-payment-distribution/')
+        .then(response => response.json())
+        .then(data => {
+            const valores = data.map(item => item.valores);
+            const cantidades = data.map(item => item.cantidad_valor);
+
+            const ctx = document.getElementById('paymentChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'pie',
+                data: {
+                    labels: valores,
+                    datasets: [{
+                        data: cantidades,
+                        backgroundColor: ['rgba(75, 192, 75, 0.5)', 'rgba(255, 99, 132, 0.5)'],
+                        borderColor: ['rgba(75, 192, 75, 1)', 'rgba(255, 99, 132, 1)'],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { position: 'top' },
+                        title: { display: false }
+                    }
+                }
+            });
+        })
+        .catch(error => console.error('Error al cargar el gráfico de pagos:', error));
+</script>
 {% endblock content %}
-
