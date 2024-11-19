@@ -65,6 +65,8 @@ MIDDLEWARE = [
     "apps.teachers.middleware.TeacherID",
     "apps.students.middleware.StudentID",
     "apps.representatives.middleware.RepresentativesID",
+    "django.middleware.security.SecurityMiddleware",
+    "whitenoise.middleware.WhiteNoiseMiddleware", # Here
 ]
 
 ROOT_URLCONF = "school_app.urls"
@@ -188,36 +190,33 @@ DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 
 CKEDITOR_RESTRICT_BY_USER = False
 
+
 LOGGING = {
-    "version": 1,
-    "disable_existing_loggers": False,
-    "formatters": {
-        "verbose": {
-            "format": "{levelname} {asctime} {message}",
-            "style": "{",
+    'version': 1,
+    'disable_existing_loggers': False,
+    'formatters': {
+        'verbose': {
+            'format': '{levelname} {asctime} {module} {message}',
+            'style': '{',
         },
     },
-    "handlers": {
-        "file": {
-            "level": "INFO",
-            "class": "logging.handlers.TimedRotatingFileHandler",
-            "when": "W6",
-            "interval": 4,
-            "backupCount": 3,
-            "encoding": "utf8",
-            "filename": os.path.join(BASE_DIR, "debug.log"),
-            "formatter": "verbose",
+    'handlers': {
+        'console': {
+            'level': 'DEBUG',
+            'class': 'logging.StreamHandler',  # Logs a la consola
+            'formatter': 'verbose',
         },
     },
-    "loggers": {
-        "django": {
-            "handlers": ["file"],
-            "level": "INFO",
-            "propagate": True,
-        },
+    'root': {
+        'handlers': ['console'],  # Solo consola
+        'level': 'INFO',  
     },
 }
+
 
 DEFAULT_AUTO_FIELD = "django.db.models.AutoField"
 
 # Site Default values
+
+
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "school_app.settings")

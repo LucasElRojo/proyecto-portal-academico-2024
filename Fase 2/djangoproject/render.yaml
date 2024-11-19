@@ -1,0 +1,15 @@
+# Exported from Render on 2024-11-19T00:11:14Z
+services:
+- type: web
+  name: testparahero
+  runtime: python
+  repo: https://github.com/LucasElRojo/proyecto-portal-academico-2024.git
+  plan: free
+  envVars:
+  - key: djangoproject.settings
+    sync: false
+  region: oregon
+  buildCommand: pip install -r requirements.txt
+  startCommand: gunicorn school_app.wsgi:application
+  rootDir: Fase 2/djangoproject
+version: "1"
