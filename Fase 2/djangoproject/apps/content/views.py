@@ -13,7 +13,15 @@ from django.urls import reverse_lazy
 def content_list(request, subject_id):
     subject = get_object_or_404(Subject, id=subject_id)
     contents = Content.objects.filter(subject=subject)
-    return render(request, 'content/content_list.html', {'contents': contents, 'subject': subject})
+
+    # Verificar si el usuario pertenece al grupo "teachers"
+    is_teacher = request.user.groups.filter(name='teachers').exists()
+
+    return render(request, 'content/content_list.html', {
+        'contents': contents,
+        'subject': subject,
+        'is_teacher': is_teacher
+    })
 
 def add_content(request, subject_id):
     subject = get_object_or_404(Subject, id=subject_id)

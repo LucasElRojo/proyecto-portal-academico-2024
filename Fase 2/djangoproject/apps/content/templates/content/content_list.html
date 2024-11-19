@@ -25,7 +25,9 @@
     {% endfor %}
     </tbody>
 </table>
-<a href="{% url 'add_content' subject.id %}" class="btn btn-primary mb-3">Agregar Contenido</a>
+{% if is_teacher %}
+    <a href="{% url 'add_content' subject.id %}" class="btn btn-primary mb-3">Agregar Contenido</a>
+{% endif %}
 </div>
 {% endblock content %}
 
