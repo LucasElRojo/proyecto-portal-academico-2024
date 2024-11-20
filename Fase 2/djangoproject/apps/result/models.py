@@ -18,6 +18,7 @@ class Result(models.Model):
     subject = models.ForeignKey(Subject, on_delete=models.CASCADE)
     score = models.DecimalField(max_digits=4, decimal_places=2, null=True, blank=True)
     n_score = models.PositiveIntegerField(null=True)
+    average = models.DecimalField(max_digits=5, decimal_places=2, null=True, blank=True)
     
     class Meta:
         ordering = ["subject"]

@@ -4,6 +4,14 @@
 
 {% block content %}
 <h2>Lista de asignaturas</h2>
+
+<!-- Botón para redirigir a la página de resultados -->
+<div class="mb-3">
+  <a href="{% url 'view_results' %}" class="btn btn-primary">
+    Ver Resultados de Estudiantes
+  </a>
+</div>
+
 <div class="table-responsive">
   <table id="subjectTable" class="table table-bordered table-hover" data-page-length='10'>
     <thead class="thead-light">
@@ -31,6 +39,7 @@
     </tbody>
   </table>
 </div>
+
 {% endblock content %}
 
 {% block morejs %}

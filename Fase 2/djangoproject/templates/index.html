@@ -55,32 +55,9 @@ Profesor
 
         <!-- Columna para las cartas -->
         <div class="col-md-4 d-flex flex-column align-items-center">
-          <!-- Contenedor de tarjetas centrado -->
-          <div class="card-container w-100">
-            <!-- Ejemplo de tarjetas -->
-            <div class="card mb-3" style="width: 100%;">
-              <div class="card-body">
-                <h5 class="card-title">Ver anuncios</h5>
-                <p class="card-text">Revisa los ultimos anuncios de tus hijos</p>
-                <a href="#" class="btn btn-primary">Ver más</a>
-              </div>
-            </div>
-            <div class="card mb-3" style="width: 100%;">
-              <div class="card-body">
-                <h5 class="card-title">Ver notas</h5>
-                <p class="card-text">Informate de tus notas de tus hijos</p>
-                <a href="#" class="btn btn-primary">Ver más</a>
-              </div>
-            </div>
-            <div class="card mb-3" style="width: 100%;">
-              <div class="card-body">
-                <h5 class="card-title">Ver calendario</h5>
-                <p class="card-text">Mantente informado de las ultimas pruebas que tienen tus hijos</p>
-                <a href="#" class="btn btn-primary">Ver más</a>
-              </div>
-            </div>
-          </div>
+            {% include 'isle/representatives_dashboard.html' %}
         </div>
+</div>
     </div>
 {% endif %}
 

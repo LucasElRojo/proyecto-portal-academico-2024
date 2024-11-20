@@ -8,6 +8,8 @@ from apps.corecode.models import Subject
 from apps.students.models import Student
 
 from .models import Result
+from django.db.models import Avg
+
 
 
 @login_required
@@ -103,3 +105,73 @@ class ResultListView(LoginRequiredMixin, View):
 def subject_list(request):
     subjects = Subject.objects.prefetch_related('teachers').all()
     return render(request, 'result/subject_list.html', {'subjects': subjects})
+
+
+
+
+
+
+class ResultViews(ListView):
+    template_name = "result/view_result.html"
+    context_object_name = "student_results"
+
+    def get_queryset(self):
+        return []  # ListView espera un queryset, pero no lo usamos aqui
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+
+        # Obtener todas las asignaturas
+        subjects = Subject.objects.all()
+        context['subjects'] = subjects
+
+        # Filtrar por asignatura si `subject_id` está presente en los parámetros GET
+        subject_id = self.request.GET.get('subject_id')
+        if subject_id:
+            selected_subject = get_object_or_404(Subject, id=subject_id)
+            context['selected_subject'] = selected_subject
+        else:
+            selected_subject = None
+            context['selected_subject'] = None
+
+        # Procesar resultados de los estudiantes
+        students = Student.objects.all()
+        student_results = []
+
+        for student in students:
+            student_data = {
+                "student": student,
+                "subjects": [],
+            }
+
+            # Filtrar asignaturas según el filtro seleccionado
+            filtered_subjects = [selected_subject] if selected_subject else subjects
+
+            for subject in filtered_subjects:
+                results = Result.objects.filter(student=student, subject=subject).order_by("n_score")
+
+                # Verifica si hay resultados y calcula el promedio
+                if results.exists():
+                    total_score = sum(result.score for result in results if result.score is not None)
+                    count_scores = results.filter(score__isnull=False).count()
+                    average = total_score / count_scores if count_scores > 0 else None
+                    subject_data = {
+                        "subject": subject,
+                        "scores": [result.score for result in results],  # Todas las notas
+                        "average": average,  
+                    }
+                else:
+                    subject_data = {
+                        "subject": subject,
+                        "scores": [None] * 5,  # Asume 5 notas por asignatura si no hay datos
+                        "average": None,
+                    }
+
+                student_data["subjects"].append(subject_data)
+
+            student_results.append(student_data)
+
+        context['student_results'] = student_results
+        context['n_range'] = range(1, 6)  # Suponiendo que hay 5 notas
+        return context
+

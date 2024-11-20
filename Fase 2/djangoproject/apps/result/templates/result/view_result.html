@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load custom_tags %}
+
+{% block title %}Resultados de los Estudiantes{% endblock title %}
+
+{% block fullcard %}
+<h1 class="text-center">Resultados de Todas las Asignaturas</h1>
+
+<div class="row mb-3">
+    <!-- Filtro por Asignatura -->
+    <div class="col-md-6">
+        <label for="filter-subject" class="form-label" style="font-weight: bold;">Asignatura:</label>
+        <form method="get">
+            <select id="filter-subject" name="subject_id" class="form-control" onchange="this.form.submit()">
+                <option value="">Todas</option>
+                {% for subject in subjects %}
+                    <option value="{{ subject.id }}" {% if subject == selected_subject %}selected{% endif %}>
+                        {{ subject.name }}
+                    </option>
+                {% endfor %}
+            </select>
+        </form>
+    </div>
+</div>
+
+<div class="table-responsive">
+    <table id="studenttable" class="table table-bordered table-hover" data-page-length="100">
+        <thead class="thead-light">
+            <tr>
+                <th>Estudiante</th>
+                <th>Asignatura</th>
+                {% for n in n_range %}
+                    <th>Nota {{ n }}</th>
+                {% endfor %}
+                <th>Promedio</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for result in student_results %}
+                {% for subject in result.subjects %}
+                    <tr>
+                        {% if forloop.first %}
+                            <td rowspan="{{ result.subjects|length }}">{{ result.student.nombres }} {{ result.student.apellido_paterno }}</td>
+                        {% endif %}
+                        <td>{{ subject.subject.name }}</td>
+                        {% for score in subject.scores %}
+                            <td>
+                                <span class="{% if score and score < 4 %}text-danger{% else %}text-success{% endif %}">
+                                    {{ score|default:"-" }}
+                                </span>
+                            </td>
+                        {% endfor %}
+                        <td>
+                            <span class="{% if subject.average and subject.average < 4 %}text-danger{% else %}text-success{% endif %}">
+                                {{ subject.average|floatformat:2|default:"-" }}
+                            </span>
+                        </td>
+                    </tr>
+                {% endfor %}
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock fullcard %}
+
+{% block morejs %}
+<script>
+    $(document).ready(function () {
+        $('#studenttable').DataTable({
+            language: {
+                url: '//cdn.datatables.net/plug-ins/1.13.6/i18n/es-ES.json'
+            },
+            paging: true,
+            searching: true,
+            ordering: true,
+            info: true,
+        });
+    });
+</script>
+{% endblock morejs %}

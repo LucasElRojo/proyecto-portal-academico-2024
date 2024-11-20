@@ -119,6 +119,16 @@
             </li>
           {% endif %}
 
+          <li class="nav-header">Anuncios</li>
+          <li class="nav-item">
+            <a href="{% url 'staff_announcements' %}" class="nav-link">
+              <i class="nav-icon fas fa-square-poll-horizontal"></i>
+              <p>
+                Anuncios
+              </p>
+            </a>
+          </li>
+
           {% if user|in_group:2 %}
           <li class="nav-header" style="padding: 1.7rem 1rem .5rem;">Asignaturas</li>
           <li class="nav-item">
@@ -145,6 +155,18 @@
               </p>
             </a>
           </li>
+
+
+          <li class="nav-header" style="padding: 1.7rem 1rem .5rem;">Hijos</li>
+          <li class="nav-item">
+            <a href="{% url 'representative_student_list' request.session.Representatives_id %}" class="nav-link">
+              <i class="nav-icon fas fa-list"></i>
+              <p>
+                Hijos
+              </p>
+            </a>
+          </li>
+    
           
           <script>
             function updateHref(selectElement) {
@@ -277,15 +299,7 @@
               </a>
             </li>
 
-            <li class="nav-header">Anuncios</li>
-            <li class="nav-item">
-              <a href="{% url 'staff_announcements' %}" class="nav-link">
-                <i class="nav-icon fas fa-square-poll-horizontal"></i>
-                <p>
-                  Anuncios
-                </p>
-              </a>
-            </li>
+
 
             <li class="nav-header">Carrucel</li>
             <li class="nav-item">

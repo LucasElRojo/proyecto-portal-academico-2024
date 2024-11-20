@@ -5,6 +5,12 @@ from django.shortcuts import render
 from .models import CarouselItem
 from .serializers import CarouselItemSerializer
 
+from apps.representatives.models import Representatives
+from apps.students.models import Student
+
+from django.shortcuts import get_object_or_404
+from django.views.generic import TemplateView
+
 def carousel_view(request):
     return render(request, 'isle/index.html')
 
@@ -49,3 +55,19 @@ class CarouselItemDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = CarouselItem.objects.all()
     serializer_class = CarouselItemSerializer
     lookup_field = 'pk'  # Use 'id' as the lookup field
+
+
+class RepresentativeDashboardView(TemplateView):
+    template_name = "isle/representatives_dashboard.html"
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        representative_id = self.request.session.get('Representatives_id')  # Del session
+        representative = get_object_or_404(Representatives, id=representative_id)
+        context['representative'] = representative
+        context['representative_id'] = representative_id
+
+        # Obtiene todos los estudiantes asociados al representante
+        context['students'] = Student.objects.filter(representante=representative)
+
+        return context
