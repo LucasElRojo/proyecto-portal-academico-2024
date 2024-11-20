@@ -1,5 +1,6 @@
 {% load static %}
 {% load custom_templatetag %}
+{% load representative_tags %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -8,7 +9,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-  <title>{{ school_name | default:"MySchool" }}</title>
+  <title>{{ school_name | default:"Escuelita Gamer" }}</title>
 
   <!-- Font Awesome Icons -->
 
@@ -41,11 +42,10 @@
       <!-- Left navbar links -->
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i
-              class="fas fa-bars"></i></a>
+          <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
         </li>
         <li class="nav-item d-none d-sm-inline-block">
-          <a href="{% url 'home' %} " class="nav-link"><i class="fa fa-home"></i></a>
+          <a href="{% url 'home' %}" class="nav-link"><i class="fa fa-home"></i></a>
         </li>
         <li class="nav-item d-none d-sm-inline-block">
           <a href="{% url 'current-session' %}" class="nav-link">Año: {{ current_session }}</a>
@@ -53,7 +53,22 @@
         <li class="nav-item d-none d-sm-inline-block">
           <a href="{% url 'current-session' %}" class="nav-link">Semestre: {{ current_term }}</a>
         </li>
+        {% if user|in_group:3 %}
+        <li class="nav-item">
+          <div class="form-group">
+            <select class="form-control" onchange="updateHref(this)">
+              <option value="" disabled selected>-- Seleccione un estudiante --</option>
+              {% get_representative_id as representative_id %}
+              {% get_hijos as hijos %}
+              {% for hijo in hijos %}
+                <option value="{{ hijo.id }}">{{ hijo.nombres }} {{ hijo.apellido_paterno }}</option>
+              {% endfor %}
+            </select>
+          </div>
+        </li>
+        {% endif %}
       </ul>
+      
 
 
 
@@ -66,11 +81,11 @@
           </a>
           <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
             <a href="#" class="dropdown-item">
-              <i class="fas fa-user mr-2"></i> Profile
+              <i class="fas fa-user mr-1"></i> Perfil
             </a>
             <div class="dropdown-divider"></div>
             <a href="{% url 'logout' %}" class="dropdown-item">
-              <i class="fas fa-sign-out"></i> Sign out
+              <i class="fas fa-sign-out"></i> Cerrar Sesión
             </a>
           </div>
         </li>
@@ -91,7 +106,72 @@
           <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
 
             <!-- -->
-            {% if user.is_staff %}
+
+          {% if user|in_group:1 %}
+            <li class="nav-header" style="padding: 1.7rem 1rem .5rem;">Asignaturas</li>
+            <li class="nav-item">
+              <a href="{% url 'student-subjects-list' request.session.student_id %}" class="nav-link">
+                <i class="nav-icon fas fa-list"></i>
+                <p>
+                  Mis asignaturas
+                </p>
+              </a>
+            </li>
+          {% endif %}
+
+          {% if user|in_group:2 %}
+          <li class="nav-header" style="padding: 1.7rem 1rem .5rem;">Asignaturas</li>
+          <li class="nav-item">
+            <a href="{% url 'teacher-subjects-list' request.session.teacher_id %}" class="nav-link">
+              <i class="nav-icon fas fa-list"></i>
+              <p>
+                Mis asignaturas
+              </p>
+            </a>
+          </li>
+          {% endif %}
+          
+
+
+
+          {% if user|in_group:3 %}
+          <li class="nav-header" style="padding: 1.7rem 1rem .5rem;">Asignaturas</li>
+          <li class="nav-item">
+            {% url 'representative_annotation_list' representative_id 0 as annotation_url_base %}
+            <a id="annotation-link" href="#" data-href-template="{{ annotation_url_base }}" class="nav-link">
+              <i class="nav-icon fas fa-list"></i>
+              <p>
+                Ver anotaciones
+              </p>
+            </a>
+          </li>
+          
+          <script>
+            function updateHref(selectElement) {
+              // Get the selected student ID
+              const selectedStudentId = selectElement.value;
+          
+              // Get the annotation link element
+              const annotationLink = document.getElementById("annotation-link");
+          
+              if (selectedStudentId) {
+                // Get the URL template from the data attribute
+                const urlTemplate = annotationLink.getAttribute('data-href-template');
+          
+                // Replace '/0/' with the selected student ID
+                const newHref = urlTemplate.replace('/0/', `/${selectedStudentId}/`);
+          
+                // Update the href attribute
+                annotationLink.setAttribute("href", newHref);
+              } else {
+                // If no student is selected, disable the link
+                annotationLink.setAttribute("href", "#");
+              }
+            }
+          </script>
+          {% endif %}
+
+            {% if user|in_group:4 %}
               <li class="nav-header" style="padding: 1.7rem 1rem .5rem;">Personas</li>
               <li class="nav-item">
                 <a href="{% url 'student-list' %}" class="nav-link">
@@ -159,7 +239,7 @@
                   </p>
                 </a>
               </li>
-            {% endif %}
+            
             <li class="nav-header" style="padding: 1.7rem 1rem .5rem;">Alumno</li>
             <li class="nav-item">
               <a href="{% url 'attendance-list' %}" class="nav-link">
@@ -206,43 +286,25 @@
                 </p>
               </a>
             </li>
-            
-            {% if user|in_group:2 %}
-            <li class="nav-header" style="padding: 1.7rem 1rem .5rem;">Asignaturas</li>
+
+            <li class="nav-header">Carrucel</li>
             <li class="nav-item">
-              <a href="{% url 'teacher-subjects-list' request.session.teacher_id %}" class="nav-link">
-                <i class="nav-icon fas fa-list"></i>
+              <a href="{% url 'form' %}" class="nav-link">
+                <i class="nav-icon fas fa-square-poll-horizontal"></i>
                 <p>
-                  Mis asignaturas
+                  Añadir imagen carrucel
+                </p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="/isle/list" class="nav-link">
+                <i class="nav-icon fas fa-square-poll-horizontal"></i>
+                <p>
+                  Modificar carrucel
                 </p>
               </a>
             </li>
             {% endif %}
-            
-            {% if user|in_group:1 %}
-              <li class="nav-header" style="padding: 1.7rem 1rem .5rem;">Asignaturas</li>
-              <li class="nav-item">
-                <a href="{% url 'student-subjects-list' request.session.student_id %}" class="nav-link">
-                  <i class="nav-icon fas fa-list"></i>
-                  <p>
-                    Mis asignaturas
-                  </p>
-                </a>
-              </li>
-            {% endif %}
-
-
-            {% if user|in_group:3 %}
-            <li class="nav-header" style="padding: 1.7rem 1rem .5rem;">Asignaturas</li>
-            <li class="nav-item">
-              <a href="{% url 'representative_student_list' request.session.Representatives_id %}" class="nav-link">
-                <i class="nav-icon fas fa-list"></i>
-                <p>
-                  Hijos
-                </p>
-              </a>
-            </li>
-          {% endif %}
 
           </ul>
         </nav>
@@ -341,6 +403,8 @@
 
   <script src="{% static 'plugins/Datatables/datatables.min.js' %}"></script>
 
+  
+
   <script>
     (function ($) {
       $('.clickable-row').css('cursor', 'pointer');
@@ -354,8 +418,7 @@
   {% block morejs %}
 
   {% endblock morejs %}
-
-
+  
 
 </body>
 

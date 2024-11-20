@@ -1,9 +1,10 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load custom_templatetag %}
 {% block title %}Dashboard{% endblock title %}
 
 {% block morestylesheet %}
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+{% if user|in_group:4 %}
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <style>
     /* Estilo para las tarjetas KPI */
@@ -32,9 +33,61 @@
         margin: auto;     /* Centrar los gráficos */
     }
 </style>
+{% endif %}
+
 {% endblock morestylesheet %}
 
 {% block content %}
+
+{% if user|in_group:1 %}
+Alumno
+{% endif %}
+{% if user|in_group:2 %}
+Profesor
+{% endif %}
+
+{% if user|in_group:3 %}
+    <div class="row">
+        <!-- Columna para el carrusel -->
+        <div class="col-md-8">
+            {% include 'isle/index.html' %}
+        </div>
+
+        <!-- Columna para las cartas -->
+        <div class="col-md-4 d-flex flex-column align-items-center">
+          <!-- Contenedor de tarjetas centrado -->
+          <div class="card-container w-100">
+            <!-- Ejemplo de tarjetas -->
+            <div class="card mb-3" style="width: 100%;">
+              <div class="card-body">
+                <h5 class="card-title">Ver anuncios</h5>
+                <p class="card-text">Revisa los ultimos anuncios de tus hijos</p>
+                <a href="#" class="btn btn-primary">Ver más</a>
+              </div>
+            </div>
+            <div class="card mb-3" style="width: 100%;">
+              <div class="card-body">
+                <h5 class="card-title">Ver notas</h5>
+                <p class="card-text">Informate de tus notas de tus hijos</p>
+                <a href="#" class="btn btn-primary">Ver más</a>
+              </div>
+            </div>
+            <div class="card mb-3" style="width: 100%;">
+              <div class="card-body">
+                <h5 class="card-title">Ver calendario</h5>
+                <p class="card-text">Mantente informado de las ultimas pruebas que tienen tus hijos</p>
+                <a href="#" class="btn btn-primary">Ver más</a>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+{% endif %}
+
+
+
+
+{% if user|in_group:4 %}
 <div class="container">
     <!-- Fila 1: KPIs -->
     <div class="row text-center">
@@ -165,4 +218,5 @@
         })
         .catch(error => console.error('Error al cargar el gráfico de pagos:', error));
 </script>
+{% endif %}
 {% endblock content %}

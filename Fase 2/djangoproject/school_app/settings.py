@@ -47,8 +47,10 @@ INSTALLED_APPS = [
     "apps.teachers",
     "apps.representatives",
     "apps.content",
+    "apps.isle",
     "ckeditor",
-    "ckeditor_uploader"
+    "ckeditor_uploader",
+    "rest_framework"
 ]
 
 X_FRAME_OPTIONS = "SAMEORIGIN"
@@ -91,6 +93,7 @@ TEMPLATES = [
                 "custom_templatetag": 'apps.templatetags.user_groups',
                 "student_extras": 'apps.templatetags.student_extras',
                 "custom_tags": 'apps.templatetags.custom_tag',
+                "representative_tags": 'apps.templatetags.student_tags',
                 }
         },
     },
@@ -121,20 +124,33 @@ WSGI_APPLICATION = "school_app.wsgi.application"
 #    }
 #}
 
+#DATABASES = {
+#    'default': {
+#        'ENGINE': 'django.db.backends.postgresql',
+#        'NAME': 'school_appdb',  # Nombre de la base de datos
+#        'USER': 'school_appdb_owner',  # Nombre de usuario
+#        'PASSWORD': 'VK0yM3DeHgIq',  # Contraseña
+#        'HOST': 'ep-long-sea-a4m2kl2u.us-east-1.aws.neon.tech',  # Host
+#        'PORT': '5432',  # Puerto predeterminado de PostgreSQL
+#        'OPTIONS': {
+#            'sslmode': 'require',  # Activar SSL
+#        },
+#    }
+#}
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'school_appdb',  # Nombre de la base de datos
-        'USER': 'school_appdb_owner',  # Nombre de usuario
-        'PASSWORD': 'VK0yM3DeHgIq',  # Contraseña
-        'HOST': 'ep-long-sea-a4m2kl2u.us-east-1.aws.neon.tech',  # Host
-        'PORT': '5432',  # Puerto predeterminado de PostgreSQL
+        'NAME': 'school_appdb',
+        'USER': 'postgres',
+        'PASSWORD': 'asdasd123',
+        'HOST': 'localhost',
+        'PORT': '5432',
         'OPTIONS': {
-            'sslmode': 'require',  # Activar SSL
+            'options': '-c client_encoding=UTF8'  # Forzar UTF-8
         },
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
