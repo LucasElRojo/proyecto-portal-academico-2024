@@ -9,6 +9,7 @@ urlpatterns = [
     path('update/<int:pk>/', views.carousel_update, name='update'),  
     path('api/', views.CarouselItemList.as_view(), name='carousel-item-list'),
     path('api/<int:pk>/', views.CarouselItemDetail.as_view(), name='carousel-item-detail'),
+    path('dashboard/', RepresentativeDashboardView.as_view(), name='representative_dashboard'),
 
-    path("representative/<int:representative_id>/student/<int:student_id>/dashboard/", RepresentativeDashboardView.as_view(), name="representative_dashboard"),
+    
 ]

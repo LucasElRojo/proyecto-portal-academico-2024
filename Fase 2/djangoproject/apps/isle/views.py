@@ -57,17 +57,37 @@ class CarouselItemDetail(generics.RetrieveUpdateDestroyAPIView):
     lookup_field = 'pk'  # Use 'id' as the lookup field
 
 
+
 class RepresentativeDashboardView(TemplateView):
     template_name = "isle/representatives_dashboard.html"
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        representative_id = self.request.session.get('Representatives_id')  # Del session
+
+        # Obtener el representante desde la sesión
+        representative_id = self.request.session.get('Representatives_id')
+        if not representative_id:
+            raise ValueError("No se encontró el 'Representatives_id' en la sesión.")
+
         representative = get_object_or_404(Representatives, id=representative_id)
         context['representative'] = representative
-        context['representative_id'] = representative_id
 
-        # Obtiene todos los estudiantes asociados al representante
-        context['students'] = Student.objects.filter(representante=representative)
+        # Obtener todos los estudiantes asociados al representante
+        students = Student.objects.filter(representante=representative)
+
+        if students.exists():
+            # Selecciona un estudiante específico si está en los parámetros GET
+            student_id = self.request.GET.get('student_id')
+            if student_id:
+                student = get_object_or_404(students, id=student_id)
+            else:
+                student = students.first()  # Selecciona el primer estudiante por defecto
+
+            context['student'] = student
+            context['students'] = students
+        else:
+            # No hay estudiantes asignados
+            context['students'] = []
+            context['student'] = None
 
         return context
