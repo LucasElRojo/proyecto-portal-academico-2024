@@ -1,8 +1,6 @@
 from django.db import models
 from django.utils import timezone
 from ckeditor.fields import RichTextField
-# Create your models here.
-
 
 class SiteConfig(models.Model):
     """Site Configurations"""
@@ -12,7 +10,6 @@ class SiteConfig(models.Model):
 
     def __str__(self):
         return self.key
-
 
 class AcademicSession(models.Model):
     """Academic Session"""
@@ -26,7 +23,6 @@ class AcademicSession(models.Model):
     def __str__(self):
         return self.name
 
-
 class AcademicTerm(models.Model):
     """Academic Term"""
 
@@ -38,7 +34,6 @@ class AcademicTerm(models.Model):
 
     def __str__(self):
         return self.name
-
 
 class Subject(models.Model):
     """Subject"""
@@ -61,15 +56,16 @@ class Attendance(models.Model):
 
     student = models.ForeignKey('students.Student', on_delete=models.CASCADE)
     subject = models.ForeignKey(Subject, on_delete=models.CASCADE)
+    class_record = models.ForeignKey('teachers.ClassRecord', on_delete=models.CASCADE, related_name='attendances')
     date = models.DateField(default=timezone.now)
     status = models.CharField(max_length=12, choices=ATTENDANCE_CHOICES, default='ausente')
 
     class Meta:
-        unique_together = ('student', 'subject', 'date')
+        unique_together = ('student', 'class_record')
         ordering = ["date"]
 
     def __str__(self):
-        return f"{self.student} - {self.subject} - {self.status}"
+        return f"{self.student} - {self.subject} - {self.class_record.date} - {self.status}"
 
 class StudentClass(models.Model):
     name = models.CharField(max_length=200, unique=True)
@@ -82,21 +78,19 @@ class StudentClass(models.Model):
     def __str__(self):
         return self.name
 
-
 class Announcement(models.Model):
-    
     USER_TYPE_CHOICES = [
-        ('global', 'Global'),           
-        ('teacher', 'Profesor'),        
-        ('student', 'Estudiante'),      
-        ('representative', 'Representante'),  
+        ('global', 'Global'),
+        ('teacher', 'Profesor'),
+        ('student', 'Estudiante'),
+        ('representative', 'Representante'),
     ]
 
-    title = models.CharField(max_length=255)                     
-    content = RichTextField()                           
-    created_at = models.DateTimeField(default=timezone.now)      
-    target_user_type = models.CharField(max_length=20, choices=USER_TYPE_CHOICES, default='global')  
-    subject = models.ForeignKey(Subject, on_delete=models.CASCADE, null=True, blank=True, related_name="announcements")  
+    title = models.CharField(max_length=255)
+    content = RichTextField()
+    created_at = models.DateTimeField(default=timezone.now)
+    target_user_type = models.CharField(max_length=20, choices=USER_TYPE_CHOICES, default='global')
+    subject = models.ForeignKey(Subject, on_delete=models.CASCADE, null=True, blank=True, related_name="announcements")
 
     def __str__(self):
         return self.title

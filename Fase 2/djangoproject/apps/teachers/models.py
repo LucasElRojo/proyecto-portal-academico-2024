@@ -2,8 +2,6 @@ from django.core.validators import RegexValidator, EmailValidator
 from django.db import models
 from django.urls import reverse
 from django.utils import timezone
-from apps.corecode.models import Subject
-from apps.students.models import Student
 
 class Teacher(models.Model):
     STATUS = [("activo", "Activo"), ("inactivo", "Inactivo")]
@@ -36,7 +34,7 @@ class Teacher(models.Model):
     )
     foto = models.ImageField(blank=True, upload_to="students/fotos/")
 
-    subjects = models.ManyToManyField(Subject, related_name="teachers", blank=True)
+    subjects = models.ManyToManyField('corecode.Subject', related_name="teachers", blank=True)
     
     class Meta:
         ordering = ["apellido_paterno", "apellido_materno", "nombres"]
@@ -50,9 +48,9 @@ class Teacher(models.Model):
 class Annotation(models.Model):
     ANNOTATION_TYPE_CHOICES = [("positiva", "Positiva"), ("negativa", "Negativa")]
     
-    student = models.ForeignKey(Student, on_delete=models.CASCADE, related_name="annotations")
+    student = models.ForeignKey('students.Student', on_delete=models.CASCADE, related_name="annotations")
     teacher = models.ForeignKey(Teacher, on_delete=models.CASCADE, related_name="annotations")
-    subject = models.ForeignKey(Subject, on_delete=models.CASCADE, related_name="annotations") 
+    subject = models.ForeignKey('corecode.Subject', on_delete=models.CASCADE, related_name="annotations") 
     annotation_type = models.CharField(max_length=10, choices=ANNOTATION_TYPE_CHOICES)
     comment = models.TextField()
     date = models.DateField(default=timezone.now)
@@ -62,16 +60,25 @@ class Annotation(models.Model):
 
     def __str__(self):
         return f"{self.annotation_type} annotation for {self.student} in {self.subject}"
+    
+class ClassRecord(models.Model):
+    """Registro de clases por curso y asignatura"""
+    subject = models.ForeignKey('corecode.Subject', on_delete=models.CASCADE)
+    teacher = models.ForeignKey(Teacher, on_delete=models.CASCADE)
+    date = models.DateTimeField(default=timezone.now)  # Fecha y hora del registro
+    description = models.TextField(blank=True, null=True)  # Descripción opcional de la clase
 
+    class Meta:
+        ordering = ["-date"]
 
-
+    def __str__(self):
+        return f"Clase de {self.subject} - {self.teacher} - {self.date}"
 
 class Event(models.Model):
     title = models.CharField(max_length=200)
     start_time = models.DateTimeField()
     end_time = models.DateTimeField(null=True, blank=True)
-    subject = models.ForeignKey(Subject, on_delete=models.CASCADE, related_name="events", null=True, blank=True)
-
+    subject = models.ForeignKey('corecode.Subject', on_delete=models.CASCADE, related_name="events", null=True, blank=True)
 
     def __str__(self):
         return self.title

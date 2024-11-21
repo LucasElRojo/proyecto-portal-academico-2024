@@ -21,3 +21,4 @@ django-ckeditor
 gunicorn
 pandas
 whitenoise
+psycopg2

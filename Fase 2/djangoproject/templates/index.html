@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 {% load custom_templatetag %}
+
 {% block title %}Dashboard{% endblock title %}
 
 {% block morestylesheet %}
@@ -53,53 +54,26 @@ Profesor
             {% include 'isle/index.html' %}
         </div>
 
+        <div class="col-md-4">
+            <div class="card mb-3" style="width: 100%;">
+                <div class="card-body">
+                    <h5 class="card-title">Ver anuncios</h5>
+                    <p class="card-text">Revisa los últimos anuncios de tus hijos</p>
+                        {% url 'representative_announcements' representative_id 0 as representative_announcements_url %}
+                        <a id="announcements-link" href="#" data-href-template="{{ representative_announcements_url }}" class="btn btn-primary">Ver más</a>
+                </div>
+              </div>              
+        </div>
 
-
-
-
-        <!-- Ver Anuncios -->
-<div class="card mb-3" style="width: 100%;">
-    <div class="card-body">
-        <h5 class="card-title">Ver anuncios</h5>
-        <p class="card-text">Revisa los últimos anuncios de tus hijos</p>
-        {% if student %}
-            <a href="{% url 'representative_announcements' representative.id student.id %}" class="btn btn-primary">Ver más</a>
-        {% else %}
-            <p class="text-danger">No hay estudiantes asignados. Contacta al administrador para más información.</p>
-        {% endif %}
-    </div>
-  </div>
-  
-  
-  <!-- Ver Notas -->
-  <div class="card mb-3" style="width: 100%;">
-    <div class="card-body">
-        <h5 class="card-title">Ver notas</h5>
-        <p class="card-text">Infórmate sobre las notas de tus hijos</p>
-        {% if student %}
-            <a href="{% url 'view_results' %}?student_id={{ student.id }}" class="btn btn-primary">Ver más</a>
-        {% else %}
-            <p class="text-danger">No hay estudiantes asignados.</p>
-        {% endif %}
-    </div>
-  </div>
-  
-  <!-- Historial de Pagos -->
-  <div class="card mb-3" style="width: 100%;">
-    <div class="card-body">
-        <h5 class="card-title">Historial de pagos</h5>
-        <p class="card-text">Consulta los pagos realizados para este estudiante</p>
-        {% if student %}
-            <a href="{% url 'student-payment-history' student.id %}" class="btn btn-primary">Ver más</a>
-        {% else %}
-            <p class="text-danger">No hay estudiantes asignados.</p>
-        {% endif %}
-    </div>
-  </div>
-  
-
-
-</div>
+        <!-- Ver Notas -->
+        <div class="card mb-3" style="width: 100%;">
+            <div class="card-body">
+                <h5 class="card-title">Ver notas</h5>
+                <p class="card-text">Infórmate sobre las notas de tus hijos</p>
+                    {% url 'view_results' representative_id 0 as representative_announcements_url %}
+                    <a href="{% url 'view_results' %}?student_id={{ student.id }}" class="btn btn-primary">Ver más</a>
+            </div>
+        </div>
     </div>
 {% endif %}
 

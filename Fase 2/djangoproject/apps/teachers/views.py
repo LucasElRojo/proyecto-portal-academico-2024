@@ -17,17 +17,18 @@ from django.contrib import messages
 import json
 from django.utils.dateparse import parse_datetime, parse_date
 
-from apps.corecode.models import Subject
+from apps.corecode.models import Attendance, Subject
+from apps.result.models import Result
 from apps.students.models import Student
 from apps.teachers.forms import AnnotationFilterForm, AnnotationForm, TeacherAnnotationForm
 
-from .models import Annotation, Teacher, Event
+from .models import Annotation, ClassRecord, Teacher, Event
 from apps.corecode.models import Announcement
 
 
 from django.utils.decorators import method_decorator
 from apps.corecode.decorators import  teacher_required, teacher_or_staff_required, staff_or_superuser_required
-
+from django.utils import timezone
 
 @method_decorator(staff_or_superuser_required, name='dispatch')
 class TeacherListView(ListView):
@@ -413,3 +414,140 @@ class TeacherAnnouncementCreateView(CreateView):
         context = super().get_context_data(**kwargs)
         context['subject'] = get_object_or_404(Subject, id=self.kwargs.get("subject_id"))  # Asegura que el contexto tenga 'subject'
         return context
+    
+    
+# Seccion de notas
+
+def teacher_subject_list(request):
+    # Obtener al profesor autenticado basado en el username y rut
+    try:
+        teacher = Teacher.objects.get(rut=request.user.username)
+    except Teacher.DoesNotExist:
+        messages.error(request, "No se encontró al profesor asociado al usuario.")
+        return redirect('home')  # Redirige a la página principal o al login
+
+    # Obtener las asignaturas del profesor
+    subjects = teacher.subjects.all()
+    return render(request, 'teachers/teacher_subject_list.html', {'subjects': subjects})
+
+def teacher_create_result(request, subject_id):
+    try:
+        teacher = Teacher.objects.get(rut=request.user.username)
+    except Teacher.DoesNotExist:
+        messages.error(request, "No se encontró al profesor asociado al usuario.")
+        return redirect('home')
+
+    subject = get_object_or_404(Subject, id=subject_id)
+
+    # Verificar que el profesor está asignado a la asignatura
+    if subject not in teacher.subjects.all():
+        messages.error(request, "No tienes permiso para acceder a esta asignatura.")
+        return redirect('teacher_subject_list')
+
+    students = Student.objects.filter(subjects=subject)
+    n_scores = 5  # Número de notas
+    n_range = range(1, n_scores + 1)
+
+    # Obtener resultados existentes
+    results = Result.objects.filter(subject=subject, student__in=students)
+    results_dict = {f'{result.student.id}_{result.n_score}': result.score for result in results}
+
+    if request.method == 'POST':
+        for student in students:
+            for n in n_range:
+                score_value = request.POST.get(f'score_{student.id}_{n}')
+                if score_value:
+                    # Normalizar la nota al rango permitido
+                    score_value = float(score_value)
+                    if score_value > 7.0 or score_value < 1.0:  # Si no está en el rango [1.0, 7.0]
+                        score_value = normalize_score(score_value)
+
+                    Result.objects.update_or_create(
+                        student=student,
+                        subject=subject,
+                        n_score=n,
+                        defaults={'score': score_value, 'current_class': student.curso_actual}
+                    )
+                else:
+                    Result.objects.filter(student=student, subject=subject, n_score=n).delete()
+        messages.success(request, 'Notas guardadas exitosamente.')
+        return redirect('teacher_create_result', subject_id=subject.id)
+
+    context = {
+        'subject': subject,
+        'students': students,
+        'results_dict': results_dict,
+        'n_range': n_range,
+    }
+    return render(request, 'teachers/teacher_add_results.html', context)
+
+def normalize_score(score_value):
+    """
+    Normaliza una nota al rango permitido [1.0, 7.0].
+    """
+    score_str = str(int(score_value))  # Asegura que sea entero para manipularlo como string
+    if len(score_str) > 1:
+        # Inserta el punto decimal entre los dos últimos dígitos
+        normalized = float(score_str[:-1] + '.' + score_str[-1])
+    else:
+        # Si es un solo dígito, lo interpreta como una nota válida
+        normalized = float(score_str + '.0')
+
+    # Asegura que esté dentro del rango permitido
+    return min(max(normalized, 1.0), 7.0)
+
+
+def teacher_subject_list_get(request):
+    """
+    Lista las asignaturas asociadas al profesor autenticado.
+    """
+    teacher = get_object_or_404(Teacher, rut=request.user.username)  # Basado en el RUT (username)
+    subjects = teacher.subjects.all()  # Asignaturas asignadas al profesor
+
+    context = {
+        'subjects': subjects,
+        'current_date': timezone.now()
+    }
+    return render(request, 'teachers/teacher_subject_attendance.html', context)
+
+def attendance_register(request, subject_id):
+    """
+    Registra una nueva clase y permite registrar la asistencia de los estudiantes.
+    """
+    teacher = get_object_or_404(Teacher, rut=request.user.username)
+    subject = get_object_or_404(Subject, id=subject_id)
+
+    # Verificar que el profesor está asignado a la asignatura
+    if subject not in teacher.subjects.all():
+        messages.error(request, "No tienes permiso para registrar una clase en esta asignatura.")
+        return redirect('teacher_subject_list')
+
+    students = Student.objects.filter(subjects=subject)
+
+    if request.method == 'POST':
+        # Crear un nuevo registro de clase
+        class_record = ClassRecord.objects.create(
+            subject=subject,
+            teacher=teacher,
+            description=request.POST.get('description', ''),
+        )
+
+        # Registrar la asistencia de los estudiantes
+        for student in students:
+            status = request.POST.get(f'status_{student.id}', 'ausente')
+            Attendance.objects.update_or_create(
+                student=student,
+                subject=subject,
+                class_record=class_record,
+                defaults={'status': status}
+            )
+
+        messages.success(request, "Clase y asistencia registradas exitosamente.")
+        return redirect('teacher_subject_list')
+
+    context = {
+        'subject': subject,
+        'students': students,
+        'current_date': timezone.now(),
+    }
+    return render(request, 'teachers/teacher_attendance_register.html', context)

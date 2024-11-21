@@ -116,7 +116,7 @@ class ResultViews(ListView):
     context_object_name = "student_results"
 
     def get_queryset(self):
-        return []  # ListView espera un queryset, pero no lo usamos aqui
+        return []  # ListView espera un queryset, pero no lo usamos aquí
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -136,6 +136,11 @@ class ResultViews(ListView):
 
         # Procesar resultados de los estudiantes
         students = Student.objects.all()
+
+        # Si hay un subject seleccionado, filtrar los estudiantes inscritos en ese subject
+        if selected_subject:
+            students = students.filter(subjects=selected_subject)
+
         student_results = []
 
         for student in students:
@@ -148,6 +153,10 @@ class ResultViews(ListView):
             filtered_subjects = [selected_subject] if selected_subject else subjects
 
             for subject in filtered_subjects:
+                # Validar que el estudiante esté inscrito en la asignatura
+                if subject not in student.subjects.all():
+                    continue  # Saltar si el estudiante no está inscrito en esta asignatura
+
                 results = Result.objects.filter(student=student, subject=subject).order_by("n_score")
 
                 # Verifica si hay resultados y calcula el promedio
@@ -158,7 +167,7 @@ class ResultViews(ListView):
                     subject_data = {
                         "subject": subject,
                         "scores": [result.score for result in results],  # Todas las notas
-                        "average": average,  
+                        "average": average,
                     }
                 else:
                     subject_data = {
@@ -169,9 +178,11 @@ class ResultViews(ListView):
 
                 student_data["subjects"].append(subject_data)
 
-            student_results.append(student_data)
+            if student_data["subjects"]:  # Solo agregar estudiantes con asignaturas válidas
+                student_results.append(student_data)
 
         context['student_results'] = student_results
         context['n_range'] = range(1, 6)  # Suponiendo que hay 5 notas
         return context
+
 

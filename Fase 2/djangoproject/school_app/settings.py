@@ -105,12 +105,12 @@ WSGI_APPLICATION = "school_app.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
-#DATABASES = {
-#    "default": {
-#        "ENGINE": "django.db.backends.sqlite3",
-#        "NAME": os.path.join(BASE_DIR, "db.sqlite3"),
-#    }
-#}
+DATABASES = {
+    "default": {
+        "ENGINE": "django.db.backends.sqlite3",
+        "NAME": os.path.join(BASE_DIR, "db.sqlite3"),
+    }
+}
 
 #DATABASES = {
 #    'default': {
@@ -138,19 +138,19 @@ WSGI_APPLICATION = "school_app.wsgi.application"
 #    }
 #}
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'school_appdb',
-        'USER': 'postgres',
-        'PASSWORD': 'Contigopipo1',
-        'HOST': 'localhost',
-        'PORT': '5432',
-        'OPTIONS': {
-            'options': '-c client_encoding=UTF8'  # Forzar UTF-8
-        },
-    }
-}
+#DATABASES = {
+#    'default': {
+#        'ENGINE': 'django.db.backends.postgresql',
+#        'NAME': 'school_appdb',
+#        'USER': 'postgres',
+#        'PASSWORD': 'asdasd123',
+#        'HOST': 'localhost',
+#        'PORT': '5432',
+#        'OPTIONS': {
+#            'options': '-c client_encoding=UTF8'  # Forzar UTF-8
+#        },
+#    }
+#}
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators

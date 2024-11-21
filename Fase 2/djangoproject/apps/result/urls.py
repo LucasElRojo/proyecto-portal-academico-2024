@@ -9,7 +9,6 @@ urlpatterns = [
     path('create/<int:subject_id>/', subject_detail, name='subject_detail'),
     path('subject/<int:subject_id>/add_results/', create_result, name='create_result'),
     path('subject_list/', subject_list, name='subject_list'),
-    path('result/view_results/', ResultViews.as_view(), name='view_results'),
-
-
+    path('view_results/', ResultViews.as_view(), name='view_results'),
+    path('results/<int:student_id>/', ResultViews.as_view(), name='view_results_student'),
 ]

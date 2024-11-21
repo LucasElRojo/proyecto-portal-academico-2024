@@ -11,6 +11,7 @@ from .models import Attendance, Subject
 from apps.students.models import Student
 from django.db import connection
 from django.http import JsonResponse
+from apps.teachers.models import ClassRecord, Teacher
 
 from .forms import (
     AcademicSessionForm,
@@ -336,3 +337,40 @@ def get_kpi_data(request):
         "porcentaje_pagos_realizados": round(porcentaje_pagos_realizados, 2)
     }
     return JsonResponse(data)
+
+
+def admin_attendance_list(request):
+    """
+    Vista para listar todas las clases registradas con filtros por profesor y asignatura.
+    """
+    classes = ClassRecord.objects.all()
+    teachers = Teacher.objects.all()
+    subjects = Subject.objects.all()
+
+    # Filtros
+    teacher_id = request.GET.get('teacher')
+    subject_id = request.GET.get('subject')
+    if teacher_id:
+        classes = classes.filter(teacher_id=teacher_id)
+    if subject_id:
+        classes = classes.filter(subject_id=subject_id)
+
+    context = {
+        'classes': classes,
+        'teachers': teachers,
+        'subjects': subjects,
+    }
+    return render(request, 'corecode/admin_attendance_list.html', context)
+
+def admin_class_details(request, class_id):
+    """
+    Vista para mostrar los detalles de una clase específica y sus asistencias.
+    """
+    class_record = get_object_or_404(ClassRecord, id=class_id)
+    attendances = Attendance.objects.filter(class_record=class_record)
+
+    context = {
+        'class_record': class_record,
+        'attendances': attendances,
+    }
+    return render(request, 'corecode/admin_class_details.html', context)

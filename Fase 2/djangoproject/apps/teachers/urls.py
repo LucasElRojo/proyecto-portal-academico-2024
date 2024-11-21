@@ -1,4 +1,5 @@
 from django.urls import path
+from . import views
 
 from .views import (
     TeacherCreateView,
@@ -32,7 +33,11 @@ urlpatterns = [
     path('calendar/<int:subject_id>/', EventListView.as_view(), name="teacher-calendar"),
     path('announcements/<int:subject_id>/', TeacherAnnouncementListView.as_view(), name='teacher_announcements'),
     path('announcements/<int:subject_id>/create/', TeacherAnnouncementCreateView.as_view(), name='teacher_announcement_create'),
-
-
+    #Notas
+    path('subjects/', views.teacher_subject_list, name='teacher_subject_list'),
+    path('subjects/<int:subject_id>/result/', views.teacher_create_result, name='teacher_create_result'),
+    #Registro
+    path('attendance/subjects/', views.teacher_subject_list_get, name='teacher_subject_list_get'),
+    path('attendance/register/<int:subject_id>/', views.attendance_register, name='attendance_register'),
 
 ]

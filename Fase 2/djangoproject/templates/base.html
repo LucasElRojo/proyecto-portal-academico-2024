@@ -119,17 +119,30 @@
             </li>
           {% endif %}
 
-          <li class="nav-header">Anuncios</li>
+
+
+          {% if user|in_group:2 %}
+
+          <li class="nav-header" style="padding: 1.7rem 1rem .5rem;">Horario</li>
           <li class="nav-item">
-            <a href="{% url 'staff_announcements' %}" class="nav-link">
-              <i class="nav-icon fas fa-square-poll-horizontal"></i>
+            <a href="{% url 'teacher_subject_list_get' %}" class="nav-link">
+              <i class="nav-icon fas fa-arrow-up-9-1"></i>
               <p>
-                Anuncios
+                Registrar clase
               </p>
             </a>
           </li>
 
-          {% if user|in_group:2 %}
+          <li class="nav-header" style="padding: 1.7rem 1rem .5rem;">Notas</li>
+          <li class="nav-item">
+            <a href="{% url 'teacher_subject_list' %}" class="nav-link">
+              <i class="nav-icon fas fa-arrow-up-9-1"></i>
+              <p>
+                Asignar notas
+              </p>
+            </a>
+          </li>
+
           <li class="nav-header" style="padding: 1.7rem 1rem .5rem;">Asignaturas</li>
           <li class="nav-item">
             <a href="{% url 'teacher-subjects-list' request.session.teacher_id %}" class="nav-link">
@@ -142,7 +155,15 @@
           {% endif %}
           
 
-
+          <li class="nav-header">Anuncios</li>
+          <li class="nav-item">
+            <a href="{% url 'staff_announcements' %}" class="nav-link">
+              <i class="nav-icon fas fa-square-poll-horizontal"></i>
+              <p>
+                Anuncios
+              </p>
+            </a>
+          </li>
 
           {% if user|in_group:3 %}
           <li class="nav-header" style="padding: 1.7rem 1rem .5rem;">Asignaturas</li>
@@ -175,19 +196,22 @@
           
               // Get the annotation link element
               const annotationLink = document.getElementById("annotation-link");
-          
+              const announcementsLink = document.getElementById("announcements-link");
+
               if (selectedStudentId) {
                 // Get the URL template from the data attribute
                 const urlTemplate = annotationLink.getAttribute('data-href-template');
-          
+                const urlTemplateAnnouncement = announcementsLink.getAttribute('data-href-template');
                 // Replace '/0/' with the selected student ID
                 const newHref = urlTemplate.replace('/0/', `/${selectedStudentId}/`);
-          
+                const newHrefAnnouncement = urlTemplateAnnouncement.replace('/0/', `/${selectedStudentId}/`);
                 // Update the href attribute
                 annotationLink.setAttribute("href", newHref);
+                announcementsLink.setAttribute("href", newHref);
               } else {
                 // If no student is selected, disable the link
                 annotationLink.setAttribute("href", "#");
+                announcementsLink.setAttribute("href", "#");
               }
             }
           </script>
@@ -264,7 +288,7 @@
             
             <li class="nav-header" style="padding: 1.7rem 1rem .5rem;">Alumno</li>
             <li class="nav-item">
-              <a href="{% url 'attendance-list' %}" class="nav-link">
+              <a href="{% url 'admin_attendance_list' %}" class="nav-link">
                 <i class="nav-icon fas fa-list"></i>
                 <p>
                   Ver asistencia

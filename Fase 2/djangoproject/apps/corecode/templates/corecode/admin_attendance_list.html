@@ -1,0 +1,99 @@
+{% extends 'base.html' %}
+{% block title %}Administrar Asistencias{% endblock title %}
+
+{% block content %}
+<h2>Administrar Asistencias</h2>
+
+<!-- Filtros automáticos -->
+<div class="row mb-3">
+    <div class="col-md-6">
+        <label for="teacherFilter">Filtrar por Profesor:</label>
+        <select id="teacherFilter" class="form-control">
+            <option value="">Todos los Profesores</option>
+            {% for teacher in teachers %}
+            <option value="{{ teacher }}">{{ teacher }}</option>
+            {% endfor %}
+        </select>
+    </div>
+    <div class="col-md-6">
+        <label for="subjectFilter">Filtrar por Asignatura:</label>
+        <select id="subjectFilter" class="form-control">
+            <option value="">Todas las Asignaturas</option>
+            {% for subject in subjects %}
+            <option value="{{ subject.name }}">{{ subject.name }}</option>
+            {% endfor %}
+        </select>
+    </div>
+</div>
+
+<!-- Tabla -->
+<div class="table-responsive">
+    <table id="attendanceTable" class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Fecha</th>
+                <th>Asignatura</th>
+                <th>Profesor</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for class_record in classes %}
+            <tr>
+                <td>{{ forloop.counter }}</td>
+                <td>{{ class_record.date|date:"d/m/Y H:i" }}</td>
+                <td>{{ class_record.subject.name }}</td>
+                <td>{{ class_record.teacher }}</td>
+                <td>
+                    <a href="{% url 'admin_class_details' class_record.id %}" class="btn btn-primary">
+                        Ver Detalle
+                    </a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock content %}
+
+{% block morejs %}
+<script src="//cdn.datatables.net/1.13.5/js/jquery.dataTables.min.js"></script>
+<link rel="stylesheet" href="//cdn.datatables.net/1.13.5/css/jquery.dataTables.min.css">
+
+<script>
+$(document).ready(function() {
+    // Inicializar DataTable
+    const table = $('#attendanceTable').DataTable({
+        language: {
+            "sProcessing": "Procesando...",
+            "sLengthMenu": "Mostrar _MENU_ registros",
+            "sZeroRecords": "No se encontraron resultados",
+            "sEmptyTable": "Ningún dato disponible en esta tabla",
+            "sInfo": "Mostrando registros del _START_ al _END_ de un total de _TOTAL_ registros",
+            "sInfoEmpty": "Mostrando registros del 0 al 0 de un total de 0 registros",
+            "sInfoFiltered": "(filtrado de un total de _MAX_ registros)",
+            "sSearch": "Buscar:",
+            "oPaginate": {
+                "sFirst": "Primero",
+                "sLast": "Último",
+                "sNext": "Siguiente",
+                "sPrevious": "Anterior"
+            }
+        }
+    });
+
+    // Filtro por Profesor
+    $('#teacherFilter').on('change', function() {
+        const selectedTeacher = $(this).val();
+        table.column(3).search(selectedTeacher).draw(); // Columna 3: Profesor
+    });
+
+    // Filtro por Asignatura
+    $('#subjectFilter').on('change', function() {
+        const selectedSubject = $(this).val();
+        table.column(2).search(selectedSubject).draw(); // Columna 2: Asignatura
+    });
+});
+</script>
+{% endblock morejs %}

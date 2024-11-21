@@ -1,4 +1,5 @@
 from django.urls import path
+from . import views
 
 from .views import (
     ClassCreateView,
@@ -68,5 +69,7 @@ urlpatterns = [
     path('get-estado-data/', get_estado_data, name='get_estado_data'),
     path('get-payment-distribution/', get_payment_distribution, name='get_payment_distribution'),
     path('get-kpi-data/', get_kpi_data, name='get_kpi_data'),
+    path('global/attendance/', views.admin_attendance_list, name='admin_attendance_list'),
+    path('global/class/<int:class_id>/', views.admin_class_details, name='admin_class_details'),
 
 ]

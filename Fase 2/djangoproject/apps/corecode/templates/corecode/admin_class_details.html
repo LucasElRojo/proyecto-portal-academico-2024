@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block title %}Detalles de la Clase{% endblock title %}
+
+{% block content %}
+<h2>Detalles de la Clase</h2>
+<p><strong>Asignatura:</strong> {{ class_record.subject.name }}</p>
+<p><strong>Profesor:</strong> {{ class_record.teacher }}</p>
+<p><strong>Fecha:</strong> {{ class_record.date|date:"d/m/Y H:i" }}</p>
+
+<h3>Asistencia de Estudiantes</h3>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Estudiante</th>
+            <th>Estado</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for attendance in attendances %}
+        <tr>
+            <td>{{ attendance.student }}</td>
+            <td>{{ attendance.status }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+<a href="{% url 'admin_attendance_list' %}" class="btn btn-secondary">Volver</a>
+{% endblock content %}
