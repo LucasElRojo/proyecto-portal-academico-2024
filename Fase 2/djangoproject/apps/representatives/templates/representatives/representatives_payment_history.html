@@ -1,7 +1,10 @@
 {% extends 'base.html' %}
+{% load static %}
+{% load custom_templatetag %}
 {% load humanize %}
 
 {% block content-header %}
+{% if user|in_group:4 %}
 <div class="card-header">
   <div class="card-tools">
     <a href="#" class="btn btn-tool">Imprimir</a>
@@ -13,6 +16,7 @@
     </a>
   </div>
 </div>
+{% endif %}
 {% endblock content-header %}
 
 {% block content %}
@@ -94,6 +98,7 @@
   </div>
 </form>
 
+
 <hr>
 
 <h5>Historial de Pagos</h5>
@@ -117,7 +122,6 @@
     {% endfor %}
   </tbody>
 </table>
-
 {% endblock content %}
 
 {% block morejs %}

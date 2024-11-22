@@ -262,3 +262,6 @@ DEFAULT_AUTO_FIELD = "django.db.models.AutoField"
 
 
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "school_app.settings")
+
+WEBPAY_COMMERCE_CODE = "597055555532"
+WEBPAY_API_KEY = "tu-api-key-aqui"

@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block title %}Error de Pago{% endblock title %}
+
+{% block content %}
+<h2>Error de Pago</h2>
+<p>{{ message }}</p>
+<a href="{% url 'home' %}">Volver al inicio</a>
+{% endblock content %}

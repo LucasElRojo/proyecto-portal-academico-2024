@@ -15,7 +15,7 @@ def content_list(request, subject_id):
     contents = Content.objects.filter(subject=subject)
 
     # Verificar si el usuario pertenece al grupo "teachers"
-    is_teacher = request.user.groups.filter(name='teachers').exists()
+    is_teacher = request.user.groups.filter(name='Profesor').exists()
 
     return render(request, 'content/content_list.html', {
         'contents': contents,

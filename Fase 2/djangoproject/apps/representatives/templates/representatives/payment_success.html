@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}Pago Exitoso{% endblock title %}
+
+{% block content %}
+<h2>¡Pago Realizado con Éxito!</h2>
+<p>Tu pago ha sido autorizado. Detalles:</p>
+<ul>
+    <li>Orden: {{ response.buy_order }}</li>
+    <li>Monto: ${{ response.amount }}</li>
+    <li>Fecha: {{ response.transaction_date }}</li>
+</ul>
+<a href="{% url 'home' %}">Volver al inicio</a>
+{% endblock content %}

@@ -27,6 +27,12 @@ urlpatterns = [
     path("calendar/<int:subject_id>/", EventListView.as_view(), name="representatives_calendar"),
     path("<int:representative_id>/student/<int:student_id>/annotations/", RepresentativeAnnotationsView.as_view(), name="representative_annotation_list"),
     path("<int:representative_id>/student/<int:student_id>/announcements/", RepresentativeAnnouncementListView.as_view(), name="representative_announcements"),
-    path('student/<int:student_id>/', views.student_payment_history, name='student-payment-history'),
+    path('student/payment/<int:student_id>/', views.student_payment_history, name='student-payment-history'),
     path('pay-items/', views.make_multiple_payments, name='make-multiple-payments'),
+    path('student/<int:student_id>/grades/', views.student_grades_view, name='student-grades'),
+
+    # Webpay :D
+    path("webpay/confirm-payment/", views.confirm_payment, name="webpay-confirm-payment"),
+    path('representative/dashboard/', views.dashboard, name='dashboard'),
+    path("confirmar-pago/", views.confirm_payment, name="webpay-confirm-payment"),
 ]

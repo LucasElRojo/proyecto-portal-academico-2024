@@ -207,6 +207,19 @@ class SubjectDetailView(DetailView):
     template_name = 'teachers/teacher_subjects_detail.html'
     context_object_name = 'subject'
 
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        
+        # Obtener la asignatura actual
+        subject = self.get_object()
+        
+        # Filtrar los estudiantes inscritos en esta asignatura
+        students_enrolled = Student.objects.filter(subjects=subject)
+        
+        # Añadir al contexto
+        context['students'] = students_enrolled
+        return context
+
 
 
 class AnnotationListView(ListView):
@@ -510,6 +523,19 @@ def teacher_subject_list_get(request):
     }
     return render(request, 'teachers/teacher_subject_attendance.html', context)
 
+def teacher_subject_content_list(request):
+    """
+    Lista las asignaturas asociadas al profesor autenticado.
+    """
+    teacher = get_object_or_404(Teacher, rut=request.user.username)  # Basado en el RUT (username)
+    subjects = teacher.subjects.all()  # Asignaturas del profesor
+
+    context = {
+        'subjects': subjects,
+        'current_date': timezone.now(),
+    }
+    return render(request, 'teachers/teacher_subjects_for_content.html', context)
+
 def attendance_register(request, subject_id):
     """
     Registra una nueva clase y permite registrar la asistencia de los estudiantes.
@@ -551,3 +577,30 @@ def attendance_register(request, subject_id):
         'current_date': timezone.now(),
     }
     return render(request, 'teachers/teacher_attendance_register.html', context)
+
+
+def teacher_subjects_for_calendar(request):
+    """
+    Lista las asignaturas del profesor autenticado para acceder al calendario.
+    """
+    teacher = get_object_or_404(Teacher, rut=request.user.username)  # Basado en el RUT (username)
+    subjects = teacher.subjects.all()  # Asignaturas asociadas al profesor
+
+    context = {
+        'subjects': subjects,
+        'current_date': timezone.now(),
+    }
+    return render(request, 'teachers/teacher_subjects_for_calendar.html', context)
+
+def teacher_subjects_for_announcements(request):
+    """
+    Lista las asignaturas del profesor autenticado para agregar o ver anuncios.
+    """
+    teacher = get_object_or_404(Teacher, rut=request.user.username)  # Basado en el RUT (username)
+    subjects = teacher.subjects.all()  # Asignaturas asociadas al profesor
+
+    context = {
+        'subjects': subjects,
+        'current_date': timezone.now(),
+    }
+    return render(request, 'teachers/teacher_subjects_for_announcements.html', context)

@@ -18,23 +18,34 @@
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         margin-bottom: 20px;
     }
+
     .kpi-card h1 {
         font-size: 2.5rem;
         margin: 0;
     }
+
     .kpi-card span {
         font-size: 1.2rem;
         color: #6c757d;
     }
+
     /* Estilo para los gráficos */
     .chart-container {
         position: relative;
-        max-width: 400px; /* Limitar el ancho máximo */
-        height: 300px;    /* Altura fija */
-        margin: auto;     /* Centrar los gráficos */
+        max-width: 400px;
+        /* Limitar el ancho máximo */
+        height: 300px;
+        /* Altura fija */
+        margin: auto;
+        /* Centrar los gráficos */
     }
 </style>
 {% endif %}
+
+{% if user|in_group:3 %}
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+{% endif %}
+
 
 {% endblock morestylesheet %}
 
@@ -48,34 +59,38 @@ Profesor
 {% endif %}
 
 {% if user|in_group:3 %}
-    <div class="row">
-        <!-- Columna para el carrusel -->
-        <div class="col-md-8">
-            {% include 'isle/index.html' %}
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+    <!-- Columna para el carrusel -->
+    <div class="col-span-2">
+        {% include 'isle/index.html' %}
+    </div>
+
+    <!-- Columna para las tarjetas -->
+    <div class="space-y-4">
+        <div class="bg-white shadow-md rounded-lg p-6 border-l-4 border-blue-500 hover:shadow-lg transition">
+            <h5 class="text-xl font-bold text-gray-800 mb-2 flex items-center">
+                <i class="fas fa-bullhorn text-blue-500 mr-2"></i> Ver anuncios
+            </h5>
+            <p class="text-gray-600 mb-4">Revisa los últimos anuncios de tus hijos</p>
+            {% url 'representative_announcements' representative_id 0 as representative_announcements_url %}
+            <a id="announcements-link" href="#" data-href-template="{{ representative_announcements_url }}"
+                class="inline-block bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition">Ver más</a>
         </div>
 
-        <div class="col-md-4">
-            <div class="card mb-3" style="width: 100%;">
-                <div class="card-body">
-                    <h5 class="card-title">Ver anuncios</h5>
-                    <p class="card-text">Revisa los últimos anuncios de tus hijos</p>
-                        {% url 'representative_announcements' representative_id 0 as representative_announcements_url %}
-                        <a id="announcements-link" href="#" data-href-template="{{ representative_announcements_url }}" class="btn btn-primary">Ver más</a>
-                </div>
-              </div>              
-        </div>
-
-        <!-- Ver Notas -->
-        <div class="card mb-3" style="width: 100%;">
-            <div class="card-body">
-                <h5 class="card-title">Ver notas</h5>
-                <p class="card-text">Infórmate sobre las notas de tus hijos</p>
-                    {% url 'view_results' representative_id 0 as representative_announcements_url %}
-                    <a href="{% url 'view_results' %}?student_id={{ student.id }}" class="btn btn-primary">Ver más</a>
-            </div>
+        <div class="bg-white shadow-md rounded-lg p-6 border-l-4 border-green-500 hover:shadow-lg transition">
+            <h5 class="text-xl font-bold text-gray-800 mb-2 flex items-center">
+                <i class="fas fa-clipboard-list text-green-500 mr-2"></i> Ver notas
+            </h5>
+            <p class="text-gray-600 mb-4">Infórmate sobre las notas de tus hijos</p>
+            {% url 'view_results' representative_id 0 as representative_announcements_url %}
+            <a href="{% url 'view_results' %}?student_id={{ student.id }}"
+                class="inline-block bg-green-500 text-white py-2 px-4 rounded hover:bg-green-600 transition">Ver más</a>
         </div>
     </div>
+</div>
+<hr>
 {% endif %}
+
 
 
 

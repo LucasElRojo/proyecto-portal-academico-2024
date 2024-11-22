@@ -1,0 +1,103 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Notas de {{ student.nombres }} {{ student.apellido_paterno }}{% endblock title %}
+
+{% block morestylesheet %}
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
+<style>
+    .table-container {
+        overflow-x: auto;
+    }
+    .table-container table th, 
+    .table-container table td {
+        font-size: 1.125rem; /* Tamaño de texto más grande solo para la tabla */
+    }
+</style>
+{% endblock morestylesheet %}
+
+{% block content %}
+
+
+
+<!-- Filtro por asignatura -->
+<div class="mb-6 flex justify-content-start">
+    <form method="get">
+        <label for="filter-subject" class="block text-sm font-medium text-gray-700 mb-2 text-center">Filtrar por Asignatura:</label>
+        <select id="filter-subject" name="subject_id" class="form-control border border-gray-300 rounded px-3 py-2 w-72" onchange="this.form.submit()">
+            <option value="">Todas</option>
+            {% for subject in subjects %}
+                <option value="{{ subject.id }}" {% if subject == selected_subject %}selected{% endif %}>
+                    {{ subject.name }}
+                </option>
+            {% endfor %}
+        </select>
+    </form>
+</div>
+
+<!-- Tabla de notas -->
+<div class="table-container bg-white shadow-md rounded-lg p-4 border border-gray-200 w-full">
+    <table id="grades-table" class="table-auto w-full text-sm text-left text-gray-800">
+        <thead class="text-base text-gray-700 uppercase bg-gray-100">
+            <tr>
+                <th class="py-3 px-6">Asignatura</th>
+                {% for n in n_range %}
+                    <th class="py-3 px-6">Nota {{ n }}</th>
+                {% endfor %}
+                <th class="py-3 px-6">Promedio</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for grade in grades_data %}
+            <tr class="bg-white border-b">
+                <td class="py-4 px-6">{{ grade.subject.name }}</td>
+                {% for score in grade.scores %}
+                    <td class="py-4 px-6">
+                        <span class="{% if score and score < 4 %}text-red-500{% elif score %}text-green-500{% endif %}">
+                            {{ score|default:"-" }}
+                        </span>
+                    </td>
+                {% endfor %}
+                <td class="py-4 px-6">
+                    <span class="{% if grade.average and grade.average < 4 %}text-red-500{% elif grade.average %}text-green-500{% endif %}">
+                        {{ grade.average|floatformat:2|default:"-" }}
+                    </span>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock content %}
+
+{% block morejs %}
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('#grades-table').DataTable({
+            language: {
+                "sProcessing": "Procesando...",
+                "sLengthMenu": "Mostrar _MENU_ registros",
+                "sZeroRecords": "No se encontraron resultados",
+                "sEmptyTable": "Ningún dato disponible en esta tabla",
+                "sInfo": "Mostrando registros del _START_ al _END_ de un total de _TOTAL_ registros",
+                "sInfoEmpty": "Mostrando registros del 0 al 0 de un total de 0 registros",
+                "sInfoFiltered": "(filtrado de un total de _MAX_ registros)",
+                "sSearch": "Buscar:",
+                "oPaginate": {
+                "sFirst": "Primero",
+                "sLast": "Último",
+                "sNext": "Siguiente",
+                "sPrevious": "Anterior"
+                }
+            },
+            paging: true,
+            searching: false,  // Deshabilitar la barra de búsqueda global
+            ordering: true,
+            info: true,
+        });
+    });
+</script>
+{% endblock morejs %}
