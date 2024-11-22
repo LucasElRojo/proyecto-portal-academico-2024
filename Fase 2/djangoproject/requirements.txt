@@ -22,3 +22,6 @@ gunicorn
 pandas
 whitenoise
 psycopg2
+transbank-sdk
+djangrestframework
+openpyxl

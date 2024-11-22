@@ -407,6 +407,13 @@ class AnnouncementListView(ListView):
         # Filtra los anuncios por `subject_id` obtenido de la URL
         subject_id = self.kwargs.get("subject_id")
         return Announcement.objects.filter(subject_id=subject_id)
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        subject_id = self.kwargs.get("subject_id")
+        context["subject"] = Subject.objects.get(id=subject_id)  # Asegúrate de importar Subject
+        return context
+
     
 
 

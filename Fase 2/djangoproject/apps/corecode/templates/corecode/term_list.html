@@ -3,14 +3,14 @@
 
 
 {% block title %}
-Academic Term
+Semestre
 {% endblock title %}
 
 
 {% block breadcrumb %}
   <a class="btn btn-primary" href="#" data-toggle="modal" data-target="#modal1">
     <i class="fa fa-plus"></i>
-    Add new term
+    Añadir un semestre
   </a>
 {% endblock breadcrumb %}
   
@@ -26,7 +26,7 @@ Academic Term
               <td>{{ object }}</td>
               <td>
                 {% if object.current == True %}
-                  Current <i class="fa fa-check"></i>
+                  Actual <i class="fa fa-check"></i>
                 {% endif %}
               </td>
               <td><a href="{% url 'term-update' object.id %}"><i
@@ -47,7 +47,7 @@ Academic Term
       <div class="modal-content">
         <form action="{% url 'term-create' %}" method="POST">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Add new term</h5>
+            <h5 class="modal-title" id="exampleModalLabel">Añadir</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
@@ -66,8 +66,8 @@ Academic Term
           </div>
 
           <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="submit" class="btn btn-primary">Save</button>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+            <button type="submit" class="btn btn-primary">Guardar</button>
           </div>
         </form>
       </div>

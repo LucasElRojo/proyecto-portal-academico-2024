@@ -3,14 +3,14 @@
 
 
 {% block title %}
-Academic Sessions
+Año escolar
 {% endblock title %}
 
 
 {% block breadcrumb %}
   <a class="btn btn-primary" href="#" data-toggle="modal" data-target="#modal1">
     <i class="fa fa-plus"></i>
-    Add new session
+    Añadir nuevo año
   </a>
 {% endblock breadcrumb %}
   
@@ -26,7 +26,7 @@ Academic Sessions
               <td>{{ object }}</td>
               <td>
                 {% if object.current == True %}
-                  Current <i class="fa fa-check"></i>
+                  Actual <i class="fa fa-check"></i>
                 {% endif %}
               </td>
               <td><a href="{% url 'session-update' object.id %}"><i
