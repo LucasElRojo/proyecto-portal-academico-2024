@@ -407,27 +407,25 @@ class TeacherAnnouncementListView(ListView):
 class TeacherAnnouncementCreateView(CreateView):
     model = Announcement
     template_name = "teachers/teacher_announcement_form.html"
-    fields = ['title', 'content']
+    fields = ['title', 'content']  # El campo 'content' ya usa CKEditor
     
     def form_valid(self, form):
-        # Obtener el subject desde la URL y asignarlo al anuncio
+        # Asignar el subject al anuncio basado en la URL
         subject_id = self.kwargs.get("subject_id")
-        teacher = get_object_or_404(Teacher, email=self.request.user.email)  
+        teacher = get_object_or_404(Teacher, email=self.request.user.email)
         subject = get_object_or_404(teacher.subjects, id=subject_id)
 
         form.instance.target_user_type = 'teacher'
-        form.instance.subject = subject  # Asigna la asignatura al anuncio
+        form.instance.subject = subject
         return super().form_valid(form)
 
     def get_success_url(self):
-        # Redirige de nuevo a la lista de anuncios de esta asignatura
         return reverse_lazy('teacher_announcements', kwargs={'subject_id': self.kwargs.get("subject_id")})
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['subject'] = get_object_or_404(Subject, id=self.kwargs.get("subject_id"))  # Asegura que el contexto tenga 'subject'
+        context['subject'] = get_object_or_404(Subject, id=self.kwargs.get("subject_id"))
         return context
-    
     
 # Seccion de notas
 

@@ -1,6 +1,7 @@
 from django.db import models
 from django.utils import timezone
 from ckeditor.fields import RichTextField
+from cloudinary.models import CloudinaryField
 
 class SiteConfig(models.Model):
     """Site Configurations"""
@@ -91,6 +92,9 @@ class Announcement(models.Model):
     created_at = models.DateTimeField(default=timezone.now)
     target_user_type = models.CharField(max_length=20, choices=USER_TYPE_CHOICES, default='global')
     subject = models.ForeignKey(Subject, on_delete=models.CASCADE, null=True, blank=True, related_name="announcements")
+
+    # Campo para almacenar la imagen en Cloudinary
+    image = CloudinaryField('image', blank=True, null=True)
 
     def __str__(self):
         return self.title

@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
+import cloudinary_storage
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -50,7 +51,9 @@ INSTALLED_APPS = [
     "apps.isle",
     "ckeditor",
     "ckeditor_uploader",
-    "rest_framework"
+    "rest_framework",
+    'cloudinary',
+    'cloudinary_storage'
 ]
 
 X_FRAME_OPTIONS = "SAMEORIGIN"
@@ -143,7 +146,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'school_appdb',
         'USER': 'postgres',
-        'PASSWORD': 'asdasd123',
+        'PASSWORD': 'Contigopipo1',
         'HOST': 'localhost',
         'PORT': '5432',
         'OPTIONS': {
@@ -190,7 +193,10 @@ CKEDITOR_ALLOW_NONIMAGE_FILES = True
 CKEDITOR_CONFIGS = {
     'default': {
         'toolbar': 'full',
-        'extraPlugins': ','.join(['image']),
+        'extraPlugins': ','.join(['image2']),  # Usa 'image2' para manejar imágenes mejoradas
+        'removePlugins': 'uploadimage',  # Desactiva el plugin de subida local
+        'imageUploadUrl': '/ckeditor/upload/',  # Ruta de subida para imágenes
+        'autoParagraph': False,
     },
 }
 
@@ -232,6 +238,12 @@ DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 
 CKEDITOR_RESTRICT_BY_USER = False
 
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': 'dnoiutiy8',
+    'API_KEY': '233776879178243',
+    'API_SECRET': 'E1bEZOXj60xecIuqHIUSIKiOl-s'
+}
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 LOGGING = {
     'version': 1,

@@ -1,4 +1,4 @@
-from django.urls import path
+from django.urls import path,include
 from . import views
 
 from .views import (
@@ -46,5 +46,6 @@ urlpatterns = [
     path('attendance/register/<int:subject_id>/', views.attendance_register, name='attendance_register'),
     #contenido
     path('content-list/', views.teacher_subject_content_list, name='teacher_subject_content_list'),
+    path('ckeditor/', include('ckeditor_uploader.urls')),  # Incluir esta ruta para CKEditor
 
 ]

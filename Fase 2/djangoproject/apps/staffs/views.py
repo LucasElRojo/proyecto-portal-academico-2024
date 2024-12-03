@@ -24,6 +24,13 @@ from django.core.mail import EmailMultiAlternatives
 from django.utils.decorators import method_decorator
 from apps.corecode.decorators import  teacher_required,  teacher_or_staff_required
 
+import base64
+from pathlib import Path
+from bs4 import BeautifulSoup
+from django.conf import settings
+
+
+
 class StaffListView(ListView):
     model = Staff
 
@@ -123,11 +130,35 @@ class StaffAnnouncementListView(ListView):
     def get_queryset(self):
         # Filtra solo anuncios globales
         return  Announcement.objects.filter(target_user_type='global').order_by('-created_at')
+    
+
+
+def embed_images_in_email(content):
+    """
+    Convierte las imágenes en URLs Base64 dentro del contenido HTML.
+    """
+    soup = BeautifulSoup(content, "html.parser")  # Analizar el HTML
+
+    for img in soup.find_all("img"):  # Buscar etiquetas <img>
+        img_src = img.get("src")
+        if img_src.startswith("/media/"):  # Si la imagen está en el directorio de media
+            # Ruta completa de la imagen en el sistema de archivos
+            image_path = Path(settings.MEDIA_ROOT) / img_src.lstrip("/media/")
+            try:
+                with open(image_path, "rb") as img_file:
+                    # Codificar la imagen en base64
+                    encoded_image = base64.b64encode(img_file.read()).decode("utf-8")
+                    mime_type = f"image/{image_path.suffix.lstrip('.')}"  # Detectar tipo MIME
+                    # Reemplazar la URL con datos Base64
+                    img["src"] = f"data:{mime_type};base64,{encoded_image}"
+            except FileNotFoundError:
+                print(f"Imagen no encontrada: {image_path}")
+    return str(soup)  # Retornar el contenido HTML modificado
 
 class StaffAnnouncementCreateView(CreateView):
     model = Announcement
     template_name = "staffs/staff_announcement_form.html"
-    fields = ['title', 'content']
+    fields = ['title', 'content', 'image']  # Incluimos el campo 'image' en los campos del formulario
     success_url = reverse_lazy('staff_announcements')
 
     def form_valid(self, form):
@@ -142,10 +173,12 @@ class StaffAnnouncementCreateView(CreateView):
         staff_emails = list(Staff.objects.values_list('email', flat=True))
         recipient_list = teacher_emails + student_emails + representative_emails + staff_emails
 
-        # Enviar correo con contenido HTML
-        subject = form.instance.title
-        html_content = form.instance.content  # Contenido de CKEditor
+        # Convertir el contenido HTML a Base64 e incluir imágenes embebidas
+        raw_html_content = form.instance.content  # Contenido de CKEditor
+        html_content = embed_images_in_email(raw_html_content)  # Procesar imágenes embebidas
 
+        # Enviar el correo con contenido HTML
+        subject = form.instance.title
         try:
             email = EmailMultiAlternatives(
                 subject=subject,
@@ -153,9 +186,18 @@ class StaffAnnouncementCreateView(CreateView):
                 from_email=settings.DEFAULT_FROM_EMAIL,
                 to=recipient_list,
             )
-            email.attach_alternative(html_content, "text/html")  # HTML como alternativa
-            email.send()
+            email.attach_alternative(html_content, "text/html")  # HTML con imágenes embebidas
 
+            # Adjuntar la imagen cargada al correo si existe
+            if form.instance.image:
+                image_url = form.instance.image.url  # Obtener la URL de la imagen de Cloudinary
+                email.attach(
+                    form.instance.image.name,  # Nombre de la imagen
+                    form.instance.image.file.read(),  # Contenido de la imagen
+                    "image/png"  # Tipo MIME
+                )
+
+            email.send()
             messages.success(self.request, "Anuncio creado y correos enviados correctamente.")
         except Exception as e:
             messages.error(self.request, f"Anuncio creado, pero hubo un error al enviar los correos: {e}")

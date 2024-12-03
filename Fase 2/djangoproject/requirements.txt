@@ -25,3 +25,5 @@ psycopg2
 transbank-sdk
 djangrestframework
 openpyxl
+beautifulsoup4
+django_cloudinary_storage
