@@ -1,5 +1,10 @@
 from django.urls import path,include
 from . import views
+from django.conf import settings
+from django.conf.urls.static import static
+
+
+
 
 from .views import (
     TeacherCreateView,
@@ -46,6 +51,14 @@ urlpatterns = [
     path('attendance/register/<int:subject_id>/', views.attendance_register, name='attendance_register'),
     #contenido
     path('content-list/', views.teacher_subject_content_list, name='teacher_subject_content_list'),
-    path('ckeditor/', include('ckeditor_uploader.urls')),  # Incluir esta ruta para CKEditor
+
+
+
+
+
+
+
 
 ]
+
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

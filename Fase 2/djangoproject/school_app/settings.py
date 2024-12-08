@@ -185,7 +185,7 @@ USE_I18N = True
 
 USE_L10N = True
 
-USE_TZ = True
+USE_TZ = True   
 
 CKEDITOR_UPLOAD_PATH = "uploads/"
 CKEDITOR_ALLOW_NONIMAGE_FILES = True
@@ -193,10 +193,10 @@ CKEDITOR_ALLOW_NONIMAGE_FILES = True
 CKEDITOR_CONFIGS = {
     'default': {
         'toolbar': 'full',
-        'extraPlugins': ','.join(['image2']),  # Usa 'image2' para manejar imágenes mejoradas
-        'removePlugins': 'uploadimage',  # Desactiva el plugin de subida local
+        'extraPlugins': ','.join(['image', 'uploadimage']),  # Agregar 'uploadimage' para subir imágenes
         'imageUploadUrl': '/ckeditor/upload/',  # Ruta de subida para imágenes
         'autoParagraph': False,
+        'allowedContent': True,  # Permitir todos los tipos de contenido
     },
 }
 
@@ -236,12 +236,12 @@ EMAIL_HOST_USER = "lrojaspaila@gmail.com"
 EMAIL_HOST_PASSWORD = "lmjc gapy ucye uvbe"
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 
-CKEDITOR_RESTRICT_BY_USER = False
+
 
 CLOUDINARY_STORAGE = {
     'CLOUD_NAME': 'dnoiutiy8',
-    'API_KEY': '233776879178243',
-    'API_SECRET': 'E1bEZOXj60xecIuqHIUSIKiOl-s'
+    'API_KEY': '173315584416318',
+    'API_SECRET': 'x0fRVijY5q1mFo8wAvPEhri5Wbk'
 }
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 

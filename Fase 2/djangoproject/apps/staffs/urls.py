@@ -1,4 +1,4 @@
-from django.urls import path
+from django.urls import path,include
 
 from .views import (
     StaffCreateView,
@@ -18,4 +18,5 @@ urlpatterns = [
     path("<int:pk>/delete/", StaffDeleteView.as_view(), name="staff-delete"),
     path('announcements/', StaffAnnouncementListView.as_view(), name='staff_announcements'),
     path('announcements/create/', StaffAnnouncementCreateView.as_view(), name='staff_announcement_create'),
+    path('ckeditor/', include('ckeditor_uploader.urls')),  # Incluir esta ruta para CKEditor
 ]

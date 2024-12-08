@@ -403,14 +403,13 @@ class TeacherAnnouncementListView(ListView):
         context['subject'] = get_object_or_404(Subject, id=self.kwargs.get("subject_id"))
         return context
 
-@method_decorator(teacher_required, name='dispatch')
+
 class TeacherAnnouncementCreateView(CreateView):
     model = Announcement
     template_name = "teachers/teacher_announcement_form.html"
-    fields = ['title', 'content']  # El campo 'content' ya usa CKEditor
-    
+    fields = ['title', 'content']  # Asegúrate de incluir 'content' con CKEditor
+
     def form_valid(self, form):
-        # Asignar el subject al anuncio basado en la URL
         subject_id = self.kwargs.get("subject_id")
         teacher = get_object_or_404(Teacher, email=self.request.user.email)
         subject = get_object_or_404(teacher.subjects, id=subject_id)
@@ -426,7 +425,6 @@ class TeacherAnnouncementCreateView(CreateView):
         context = super().get_context_data(**kwargs)
         context['subject'] = get_object_or_404(Subject, id=self.kwargs.get("subject_id"))
         return context
-    
 # Seccion de notas
 
 def teacher_subject_list(request):

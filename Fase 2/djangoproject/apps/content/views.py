@@ -10,6 +10,16 @@ from django.views.generic.edit import DeleteView
 from django.contrib import messages
 from django.urls import reverse_lazy
 
+from django.db import models
+from cloudinary.models import CloudinaryField
+
+
+class LocalFile(models.Model):
+    file = models.FileField(upload_to='local_files/')  # Archivos locales
+
+class CloudinaryFile(models.Model):
+    file = CloudinaryField('file')  # Archivos en Cloudinary
+
 def content_list(request, subject_id):
     subject = get_object_or_404(Subject, id=subject_id)
     contents = Content.objects.filter(subject=subject)
@@ -26,19 +36,21 @@ def content_list(request, subject_id):
 def add_content(request, subject_id):
     subject = get_object_or_404(Subject, id=subject_id)
     if request.method == 'POST':
-        form = ContentForm(request.POST)
+        form = ContentForm(request.POST, request.FILES)  # Incluye request.FILES
         if form.is_valid():
             content = form.save(commit=False)
             content.subject = subject
             content.save()
             
-            # Guardar cada archivo subido en la relación de archivos
+            # Procesar cada archivo subido
             if 'files' in request.FILES:
                 for uploaded_file in request.FILES.getlist('files'):
+                    # Crear instancia de archivo usando almacenamiento local
                     file_instance = File(file=uploaded_file)
                     file_instance.save()
                     content.files.add(file_instance)  # Asociar archivo al contenido
-            content.save()  # Asegurarse de que el contenido se guarde con los archivos
+
+            content.save()  # Guardar el contenido completo
             return redirect('content_list', subject_id=subject.id)
     else:
         form = ContentForm()
