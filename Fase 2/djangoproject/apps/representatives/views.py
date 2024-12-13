@@ -43,7 +43,7 @@ class RepresentativesCreateView(SuccessMessageMixin, CreateView):
     model = Representatives
     fields = "__all__"
     success_message = "Apoderado agregado correctamente!"
-    success_url = reverse_lazy("teacher-list")
+    success_url = reverse_lazy("representatives-list")
     
     def get_form(self):
         """add date picker in forms"""

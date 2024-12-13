@@ -23,7 +23,7 @@ pandas
 whitenoise
 psycopg2
 transbank-sdk
-djangrestframework
+djangorestframework
 openpyxl
 beautifulsoup4
 django_cloudinary_storage

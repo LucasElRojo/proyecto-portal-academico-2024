@@ -1,47 +1,53 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Create Carousel Item</title>
+{% extends 'base.html' %}
+{% load static %}
 
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-</head>
-<body>
+{% block title %}Carrucel{% endblock title %}
 
-  <div class="container mt-5">
-    <h2>Create Carousel Item</h2>
 
-    <form id="carouselForm" enctype="multipart/form-data">
-      <div class="form-group">
-        <label for="title">Title:</label>
-        <input type="text" class="form-control" id="title" name="title" required>
-        <div class="invalid-feedback">Title is required.</div>
-      </div>
 
-      <div class="form-group">
-        <label for="image_url">Image URL:</label>
-        <input type="url" class="form-control" id="image_url" name="image_url" placeholder="Enter an image URL">
-      </div>
+{% block content %}
 
-      <div class="form-group">
-        <label for="image_file">Upload Image:</label>
-        <input type="file" class="form-control" id="image_file" name="image_file" accept="image/*">
-      </div>
+<div class="col-md-12">
+  {% include 'isle/index.html' %}
+</div>
 
-      <small class="text-muted">* You can either provide an image URL or upload a file, but not both.</small>
 
-      <div class="form-group mt-3">
-        <label for="description">Description:</label>
-        <textarea class="form-control" id="description" name="description" required></textarea>
-        <div class="invalid-feedback">Description is required.</div>
-      </div>
+<div class="container mt-5">
+  <h2>Agregar una imagen al carrucel</h2>
 
-      <button type="button" class="btn btn-primary" onclick="postData()">Submit</button>
-    </form>
-  </div>
+  <form id="carouselForm" enctype="multipart/form-data">
+    <div class="form-group">
+      <label for="title">Titulo:</label>
+      <input type="text" class="form-control" id="title" name="title" required>
+      <div class="invalid-feedback">Titulo de imagen.</div>
+    </div>
 
+    <div class="form-group">
+      <label for="image_url">URL de la iamgen:</label>
+      <input type="url" class="form-control" id="image_url" name="image_url" placeholder="Ingresa la URL">
+    </div>
+
+    <div class="form-group">
+      <label for="image_file">Subir imagen:</label>
+      <input type="file" class="form-control" id="image_file" name="image_file" accept="image/*">
+    </div>
+
+    <small class="text-muted">* Puedes subir una imagen o una URL, pero no puedes subir las dos cosas a la vez</small>
+
+    <div class="form-group mt-3">
+      <label for="description">Descripción:</label>
+      <textarea class="form-control" id="description" name="description" required></textarea>
+      <div class="invalid-feedback">Descripción es requerida.</div>
+    </div>
+
+    <button type="button" class="btn btn-primary" onclick="postData()">Subir</button>
+  </form>
+</div>
+{% endblock content %}
+
+
+
+{% block morejs %}
   <!-- Bootstrap JS and dependencies -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
@@ -77,12 +83,12 @@
       const description = document.getElementById('description').value.trim();
 
       if (!title || !description) {
-        alert('Please fill in all required fields.');
+        alert('Porfavor rellena todos los campos.');
         return false;
       }
 
       if (!imageUrlInput.value.trim() && !imageFileInput.value.trim()) {
-        alert('Please provide either an image URL or upload a file.');
+        alert('Porfavor ingresa una imagen o una URL.');
         return false;
       }
 
@@ -141,5 +147,4 @@
       return cookieValue;
     }
   </script>
-</body>
-</html>
+{% endblock morejs %}

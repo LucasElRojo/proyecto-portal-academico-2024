@@ -15,14 +15,22 @@ class SiteConfig(models.Model):
 class AcademicSession(models.Model):
     """Academic Session"""
 
-    name = models.CharField(max_length=200, unique=True)
-    current = models.BooleanField(default=True)
+    name = models.CharField(
+        max_length=200, 
+        unique=True, 
+        verbose_name="Año"
+    )
+    current = models.BooleanField(
+        default=True, 
+        verbose_name="Año actual"
+    )
 
     class Meta:
         ordering = ["-name"]
 
     def __str__(self):
         return self.name
+
 
 class AcademicTerm(models.Model):
     """Academic Term"""

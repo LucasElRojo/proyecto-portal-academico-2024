@@ -42,7 +42,7 @@ def create_result(request, subject_id):
                     # Eliminar resultado si el campo está vacío
                     Result.objects.filter(student=student, subject=subject, n_score=n).delete()
         messages.success(request, 'Notas guardadas exitosamente.')
-        return redirect('subject_detail', subject_id=subject.id)
+        return redirect('subject_list')
 
     context = {
         'subject': subject,

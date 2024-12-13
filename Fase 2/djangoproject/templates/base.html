@@ -9,7 +9,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-  <title>{{ school_name | default:"Escuelita Gamer" }}</title>
+  <title>Aula Virtual</title>
 
   <!-- Font Awesome Icons -->
 
@@ -82,7 +82,7 @@
     <!-- Main Sidebar Container -->
     <aside class="main-sidebar sidebar-dark-primary elevation-4">
       <!-- Brand Logo -->
-      <a href="{% url 'home' %}" class="brand-link">{{ school_name | default:"MySchool" }}</a>
+      <a href="{% url 'home' %}" class="brand-link">Aula Virtual</a>
 
       <!-- Sidebar -->
       <div class="sidebar">
@@ -153,7 +153,7 @@
             <a href="{% url 'teacher_subjects_for_announcements' %}" class="nav-link">
               <i class="nav-icon fas fa-bullhorn"></i>
               <p>
-                Ver Anuncios
+                Ver Anuncios Cursos
               </p>
             </a>
           </li>
@@ -232,16 +232,6 @@
           {% endif %}
 
             {% if user|in_group:4 %}
-
-            <li class="nav-header" style="padding: 1.7rem 1rem .5rem;">Anuncios</li>
-            <li class="nav-item">
-              <a href="{% url 'student-list' %}" class="nav-link">
-                <i class="nav-icon fas fa-square-poll-horizontal"></i>
-                <p>
-                  Anuncios
-                </p>
-              </a>
-            </li>
 
               <li class="nav-header" style="padding: 1.7rem 1rem .5rem;">Personas</li>
               <li class="nav-item">

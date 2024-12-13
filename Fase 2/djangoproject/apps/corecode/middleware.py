@@ -5,8 +5,15 @@ class SiteWideConfigs:
         self.get_response = get_response
 
     def __call__(self, request):
-        current_session = AcademicSession.objects.get(current=True)
-        current_term = AcademicTerm.objects.get(current=True)
+        try:
+            current_session = AcademicSession.objects.get(current=True)
+        except AcademicSession.DoesNotExist:
+            current_session = AcademicSession.objects.get(current=1)
+
+        try:
+            current_term = AcademicTerm.objects.get(current=True)
+        except AcademicTerm.DoesNotExist:
+            current_term = "Sin semestre asignado"  #
 
         request.current_session = current_session
         request.current_term = current_term
